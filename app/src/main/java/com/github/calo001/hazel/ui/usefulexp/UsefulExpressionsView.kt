@@ -10,6 +10,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.github.calo001.hazel.model.Phrase
@@ -18,6 +19,7 @@ import com.github.calo001.hazel.ui.common.HazelToolbarContent
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.common.safeSpacer
 
+@ExperimentalComposeUiApi
 @Composable
 fun UsefulExpressionsView(
     usefulPhrase: UsefulPhrase,
@@ -39,9 +41,9 @@ fun UsefulExpressionsView(
             items(items.size) { index ->
                 Text(
                     text = items[index].expression,
-                    style = MaterialTheme.typography.h5,
+                    style = MaterialTheme.typography.h6,
                     modifier = Modifier
-                        .clickable { onClickPhrase(usefulPhrase.phrases[index]) }
+                        .clickable { onClickPhrase(items[index]) }
                         .padding(vertical = 24.dp)
                         .padding(horizontal = 16.dp)
                         .fillMaxWidth()

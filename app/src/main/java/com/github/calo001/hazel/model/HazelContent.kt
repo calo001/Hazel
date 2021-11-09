@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class HazelContent(
     @SerialName("colors")
-    val colors: List<Color>,
+    val colorHazels: List<ColorHazel>,
     @SerialName("countries")
     val countries: List<Country>,
     @SerialName("irregular_verbs")

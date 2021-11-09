@@ -8,7 +8,15 @@
           "how_to_use": "\"Sorry\" is a general short apology. We use this when we bump into people on the street. At other times, it sounds too weak."
         },
         {
-          "expression": "I'm so sorry. && I'm very sorry. && I'm terribly sorry.",
+          "expression": "I'm so sorry.",
+          "how_to_use": "We use 'so', 'very' and 'terribly' to make the meaning stronger. 'Terribly' is the strongest. If we use one of the words in brackets, it is stressed."
+        },
+        {
+          "expression": "I'm very sorry.",
+          "how_to_use": "We use 'so', 'very' and 'terribly' to make the meaning stronger. 'Terribly' is the strongest. If we use one of the words in brackets, it is stressed."
+        },
+        {
+          "expression": "I'm terribly sorry.",
           "how_to_use": "We use 'so', 'very' and 'terribly' to make the meaning stronger. 'Terribly' is the strongest. If we use one of the words in brackets, it is stressed."
         },
         {
@@ -16,7 +24,7 @@
           "how_to_use": "It's quite formal but it's a stronger apology than just 'sorry'."
         },
         {
-          "expression": "How stupid of me. && How careless of me. && How thoughtless of me.",
+          "expression": "How stupid of me.",
           "how_to_use": "We use this phrase to criticise ourselves and the mistake that we have just made."
         },
         {
@@ -27,7 +35,7 @@
       "emoji_code": "openmoji_1f647"
     },
     {
-      "category": "Asking about health/life",
+      "category": "Asking about health or life",
       "phrases": [
         {
           "expression": "How are you?",
@@ -120,7 +128,11 @@
           "how_to_use": "It's a quite informal and friendly way to say goodbye."
         },
         {
-          "expression": "See you! && See ya!",
+          "expression": "See you!",
+          "how_to_use": "It's a quite informal and friendly way to say goodbye."
+        },
+        {
+          "expression": "See ya!",
           "how_to_use": "It's a quite informal and friendly way to say goodbye."
         },
         {
@@ -7864,7 +7876,8 @@
         "verb": "agree",
         "phonetic": "/əˈɡriː/",
         "examples": [
-
+          "If you want to travel you have to agree to take a Covid test.",
+          "I don't necessarily agree with everything I say."
         ]
       },
       "simplePast": {
@@ -7991,7 +8004,8 @@
         "verb": "approve",
         "phonetic": "/əˈpruːv/",
         "examples": [
-
+          "The islamic law officially approves polygyny.",
+          "The board sets long-term goals and oversees the company. It has the power to fire the CEO and approve a replacement."
         ]
       },
       "simplePast": {
@@ -8177,7 +8191,8 @@
         "verb": "bake",
         "phonetic": "/beɪk/",
         "examples": [
-
+          "My grandmother always bake cookies for us on Christmas Eve.",
+          "Jamie has a ceramic workshop where he bakes almost all day."
         ]
       },
       "simplePast": {
@@ -8208,7 +8223,8 @@
         "verb": "beg",
         "phonetic": "/beɡ/",
         "examples": [
-
+          "I beg the vampire not to go outside in the sun because he could die.",
+          "He begs her not to leave him."
         ]
       },
       "simplePast": {
@@ -8229,7 +8245,8 @@
         "verb": "begging",
         "phonetic": "/ˈbeɡɪŋ/",
         "examples": [
-
+          "The dog is begging to go outside for a walk.",
+          "i'm begging you to stay away from that boy."
         ]
       },
       "emojiCode": "openmoji_1f97a"
@@ -8239,7 +8256,8 @@
         "verb": "behave",
         "phonetic": "/bɪˈheɪv/",
         "examples": [
-
+          "Karla doesn't want to be a mom. She says that kids behave poorly.",
+          "Fredy's dog behaves so well that I've been thinking to adopt one."
         ]
       },
       "simplePast": {
@@ -8270,7 +8288,8 @@
         "verb": "boil",
         "phonetic": "/bɔɪl/",
         "examples": [
-
+          "You boil the eggs and I will cook the rice.",
+          "you have to be careful when you boil any liquid and there are kids near the kitchen."
         ]
       },
       "simplePast": {
@@ -8491,7 +8510,8 @@
         "verb": "cheat",
         "phonetic": "/tʃiːt/",
         "examples": [
-
+          "Anybody that cheats on the math test will be suspended.",
+          "A male that cheats on his partner has no right to talk about true love or loyalty."
         ]
       },
       "simplePast": {
@@ -8987,7 +9007,8 @@
         "verb": "damage",
         "phonetic": "/ˈdæmɪdʒ/",
         "examples": [
-
+          "Simple slips, twists, and falls can damage ligaments.",
+          "Strong tornadoes can damage weak houses."
         ]
       },
       "simplePast": {
@@ -9018,7 +9039,8 @@
         "verb": "dance",
         "phonetic": "/dæns/",
         "examples": [
-
+          "When you dance you let your body express art.",
+          "There are a lot of animals that dances to attract their partners."
         ]
       },
       "simplePast": {
@@ -9174,7 +9196,8 @@
         "verb": "earn",
         "phonetic": "/ɜːrn/",
         "examples": [
-
+          "Many people in the US starts working early to earn money to pay their student loan's.",
+          "Katie's dream is to earn enough money so she can buy herself a house."
         ]
       },
       "simplePast": {
@@ -9236,7 +9259,8 @@
         "verb": "encourage",
         "phonetic": "/ɪnˈkɜːrɪdʒ/",
         "examples": [
-
+          "Good parents will always encourage you to accomplish your dreams.",
+          "I encouraged you to take the job it might be your best option."
         ]
       },
       "simplePast": {
@@ -9484,14 +9508,16 @@
         "verb": "gather",
         "phonetic": "/ˈɡæðər/",
         "examples": [
-
+          "Teachers gather all kids on the auditorium to give them the news.",
+          "I went to several libraries to gather information about the plans."
         ]
       },
       "simplePast": {
         "verb": "gathered",
         "phonetic": "/ˈɡæðərd/",
         "examples": [
-
+          "We gathered blueberries from the bushes.",
+          "She gathered up the newspapers that were scattered around the floor."
         ]
       },
       "pastParticiple": {
@@ -9515,7 +9541,8 @@
         "verb": "greet",
         "phonetic": "/ɡriːt/",
         "examples": [
-
+          "Mrs. green lives on the next floor let's go greet her.",
+          "The true adventurer goes forth aimless and uncalculating to meet and greet unknown fate."
         ]
       },
       "simplePast": {
@@ -9640,7 +9667,8 @@
         "verb": "help",
         "phonetic": "/help/",
         "examples": [
-
+          "We can do it together you just have to help me.",
+          "Bella helps her grandmother on Sundays."
         ]
       },
       "simplePast": {
@@ -9703,7 +9731,8 @@
         "verb": "identify",
         "phonetic": "/aɪˈdentɪfaɪ/",
         "examples": [
-
+          "You can identify a new specie if you go to the Amazon jungle.",
+          "Cops identify the missing boy as Michael."
         ]
       },
       "simplePast": {
@@ -9734,7 +9763,8 @@
         "verb": "interrupt",
         "phonetic": "/ˌɪntəˈrʌpt/",
         "examples": [
-
+          "If you arrive late you are going to interrupt class.",
+          "The neighbor's kids always interrupts my calm with their noises."
         ]
       },
       "simplePast": {
@@ -9827,7 +9857,8 @@
         "verb": "joke",
         "phonetic": "/dʒəʊk/",
         "examples": [
-
+          "Don't joke around with hurtful things.",
+          "it's hard when a comedian jokes about politics and racism."
         ]
       },
       "simplePast": {
@@ -9890,7 +9921,8 @@
         "verb": "kick",
         "phonetic": "/kɪk/",
         "examples": [
-
+          "After five minutes of exchanging movements Canelo kick him to knock out.",
+          "You've got to kick fear to the side, because pay off is huge."
         ]
       },
       "simplePast": {
@@ -9952,7 +9984,8 @@
         "verb": "kiss",
         "phonetic": "/kɪs/",
         "examples": [
-
+          "Royer comes from a culture where people nose kiss as a friendly gesture.",
+          "You can kiss the bride."
         ]
       },
       "simplePast": {
@@ -9983,7 +10016,8 @@
         "verb": "laugh",
         "phonetic": "/læf/",
         "examples": [
-
+          "When you laugh the world lights up.",
+          "Lauren laughs and stay positive in every argument but in reality she's not okay."
         ]
       },
       "simplePast": {
@@ -10014,7 +10048,8 @@
         "verb": "like",
         "phonetic": "/laɪk/",
         "examples": [
-
+          "I like rainy days.",
+          "Paloma likes blue cheese the most."
         ]
       },
       "simplePast": {
@@ -10294,7 +10329,8 @@
         "verb": "offend",
         "phonetic": "/əˈfend/",
         "examples": [
-
+          "When you travel abroad you have to be careful not to offend people with different cultures.",
+          "You can offend the priest with your noises if you don't shut off your phone."
         ]
       },
       "simplePast": {
@@ -10356,7 +10392,8 @@
         "verb": "open",
         "phonetic": "/ˈəʊpən/",
         "examples": [
-
+          "Charlie doesn't open the door to strangers.",
+          "How do you open a new account?"
         ]
       },
       "simplePast": {
@@ -10387,7 +10424,8 @@
         "verb": "paint",
         "phonetic": "/peɪnt/",
         "examples": [
-
+          "Karen paints her nails according to the color of her outfit.",
+          "My mother paints her hair every month."
         ]
       },
       "simplePast": {
@@ -10418,7 +10456,8 @@
         "verb": "park",
         "phonetic": "/pɑːrk/",
         "examples": [
-
+          "You can park your car in the next block.",
+          "we can ask the schedule for the next trip when the bus parks."
         ]
       },
       "simplePast": {
@@ -10511,7 +10550,8 @@
         "verb": "play",
         "phonetic": "/pleɪ/",
         "examples": [
-
+          "Camille likes to play volleyball since she was a kid.",
+          "Dolphins like to play with puffers."
         ]
       },
       "simplePast": {
@@ -10821,7 +10861,8 @@
         "verb": "relax",
         "phonetic": "/rɪˈlæks/",
         "examples": [
-
+          "I will babysit your daughter so you can relax and take it easy.",
+          "Some people can slow down their heart rate while they relax."
         ]
       },
       "simplePast": {
@@ -10978,7 +11019,7 @@
         "phonetic": "/rʌb/",
         "examples": [
           "Hedgehogs rub themselves around to hide their smell and protect themselves from predators.",
-          "Stop rubbing your feet on the carpet you're going to get shocked."
+          "A nose kiss is when two people rub their noses together."
         ]
       },
       "simplePast": {
@@ -11040,7 +11081,8 @@
         "verb": "select",
         "phonetic": "/sɪˈlekt/",
         "examples": [
-
+          "Select the topic you want to talk about in the next meeting.",
+          "if you are ready to continue please select the next page."
         ]
       },
       "simplePast": {
@@ -11071,7 +11113,8 @@
         "verb": "smoke",
         "phonetic": "/sməʊk/",
         "examples": [
-
+          "It is considered rude if you smoke around non-smokers.",
+          "There are places where you aren't allowed to smoke."
         ]
       },
       "simplePast": {
@@ -11259,7 +11302,8 @@
         "verb": "thank",
         "phonetic": "/θæŋk/",
         "examples": [
-
+          "Maria wants to thank them for their hospitality with a cake.",
+          "I will forever thank you for saving my life."
         ]
       },
       "simplePast": {

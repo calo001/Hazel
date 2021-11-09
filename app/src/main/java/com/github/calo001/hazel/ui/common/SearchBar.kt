@@ -18,6 +18,7 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 
 @ExperimentalComposeUiApi
@@ -34,7 +35,11 @@ fun SearchBar(
         singleLine = true,
         shape = MaterialTheme.shapes.large,
         label = {
-            Text(text = placeholder)
+            Text(
+                text = placeholder,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
         },
         colors = TextFieldDefaults.textFieldColors(
             focusedIndicatorColor = Color.Transparent,

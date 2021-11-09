@@ -5,7 +5,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Color(
+data class ColorHazel(
     @SerialName("code")
     val code: String, // #FFFFFF
     @SerialName("examples")

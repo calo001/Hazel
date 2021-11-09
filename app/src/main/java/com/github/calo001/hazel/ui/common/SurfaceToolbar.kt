@@ -13,14 +13,14 @@ import androidx.compose.ui.unit.dp
 fun SurfaceToolbar(content: @Composable () -> Unit) {
     Column(
         modifier = Modifier
+            .padding(bottom = 16.dp)
             .background(
                 brush = Brush.verticalGradient(
-                    colors = listOf(
-                        MaterialTheme.colors.background.copy(alpha = 1f),
-                        MaterialTheme.colors.background.copy(alpha = 0f),
-                    )
+                    (0f to MaterialTheme.colors.background),
+                    (0.95f to MaterialTheme.colors.background.copy(alpha = 0.9f)),
+                    (1f to MaterialTheme.colors.background.copy(alpha = 0f)),
                 )
-            ).padding(bottom = 16.dp)
+            )
     ) {
         content()
     }

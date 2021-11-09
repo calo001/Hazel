@@ -141,7 +141,7 @@ fun PhraseView(
                         .padding(16.dp)
                 )
             }
-            ControlsPhrase(
+            ControlsItem(
                 onPreviousClick = onPreviousClick,
                 onNextClick = onNextClick,
                 onListenClick = onListenClick,
@@ -160,7 +160,7 @@ fun PhraseView(
 
 @ExperimentalMaterialApi
 @Composable
-fun ControlsPhrase(
+fun ControlsItem(
     modifier: Modifier = Modifier,
     onPreviousClick: () -> Unit,
     onNextClick: () -> Unit,

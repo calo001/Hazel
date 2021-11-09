@@ -16,12 +16,15 @@ import com.google.accompanist.systemuicontroller.SystemUiController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import android.speech.tts.TextToSpeech
 import android.util.Log
+import androidx.compose.ui.ExperimentalComposeUiApi
+import com.github.calo001.hazel.util.browse
 import java.util.*
 
 
 class MainActivity : ComponentActivity() {
     private val viewModel: MainViewModel by viewModels()
 
+    @ExperimentalComposeUiApi
     @ExperimentalMaterialApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,11 +56,17 @@ class MainActivity : ComponentActivity() {
                         hazelContentStatus = hazelContentStatus,
                         painterIdentifier = painterIdentifier,
                         onListenClick = { speak(it) },
+                        onOpenLink = { term -> openInBrowser(term) },
                         viewModel = viewModel
                     )
                 }
             }
         }
+    }
+
+    private fun openInBrowser(term: String) {
+        val url = "https://www.oxfordlearnersdictionaries.com/definition/english/$term"
+        browse(url)
     }
 
     private fun speak(text: String) {

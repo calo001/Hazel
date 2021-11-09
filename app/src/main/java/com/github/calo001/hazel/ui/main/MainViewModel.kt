@@ -2,6 +2,7 @@ package com.github.calo001.hazel.ui.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.github.calo001.hazel.model.ColorHazel
 import com.github.calo001.hazel.model.HazelContent
 import com.github.calo001.hazel.model.Phrase
 import com.github.calo001.hazel.model.UsefulPhrase
@@ -48,6 +49,19 @@ class MainViewModel : ViewModel() {
             ?.find { ufContent ->
                 ufContent.category == typeOfUsefulExp
             }
+    }
+
+    fun getColors(): List<ColorHazel> {
+        return (hazelContent.value as? HazelContentStatus.Success)
+            ?.content
+            ?.colorHazels
+            ?: listOf()
+    }
+
+    fun getColorByCode(colorCode: String): ColorHazel? {
+        return getColors().firstOrNull {
+            it.code == colorCode
+        }
     }
 }
 

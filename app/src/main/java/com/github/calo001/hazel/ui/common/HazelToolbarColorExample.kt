@@ -16,13 +16,13 @@ import androidx.compose.ui.unit.dp
 
 @ExperimentalComposeUiApi
 @Composable
-fun HazelToolbarContent(
+fun HazelToolbarColorExample(
     title: String,
     subtitle: String,
     onBackClick: () -> Unit,
-    onTextChange: (String) -> Unit,
+    modifier: Modifier = Modifier,
 ) {
-    Column {
+    Column(modifier = modifier) {
         HazelToolbarButton(
             icon = Icons.Filled.ArrowBack,
             onClick = onBackClick,
@@ -40,22 +40,17 @@ fun HazelToolbarContent(
             modifier = Modifier.padding(horizontal = 16.dp)
         )
         Spacer(modifier = Modifier.size(18.dp))
-        SearchBar(
-            placeholder = "Search in $title",
-            onTextChange = onTextChange,
-            modifier = Modifier.padding(horizontal = 16.dp),
-        )
     }
 }
 
 @ExperimentalComposeUiApi
 @Preview
 @Composable
-fun HazelToolbarContentPreview() {
-    HazelToolbarContent(
-        title = "Apologizing",
-        subtitle = "Useful expressions",
+fun HazelToolbarColorExamplePreview() {
+    HazelToolbarColorExample(
+        title = "Example",
+        subtitle = "White",
         onBackClick = {},
-        onTextChange = {}
+        modifier = Modifier
     )
 }

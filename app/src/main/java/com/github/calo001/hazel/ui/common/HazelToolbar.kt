@@ -37,6 +37,7 @@ fun HazelToolbar() {
 @Composable
 fun HazelToolbarButton(
     modifier: Modifier = Modifier,
+    label: String = "",
     icon: ImageVector,
     onClick: () -> Unit,
     enabled: Boolean = true,
@@ -52,7 +53,14 @@ fun HazelToolbarButton(
                 )
                 .size(48.dp)
         ) {
-            Icon(imageVector = icon, contentDescription = null)
+            if (label.isNotEmpty()) {
+                Text(
+                    text = label,
+                    style = MaterialTheme.typography.button
+                )
+            } else {
+                Icon(imageVector = icon, contentDescription = null)
+            }
         }
     }
 }

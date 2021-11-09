@@ -6,6 +6,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -13,10 +14,14 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.github.calo001.hazel.routes.Routes
+import com.github.calo001.hazel.ui.colors.ColorExamplesView
+import com.github.calo001.hazel.ui.colors.ColorsView
+import com.github.calo001.hazel.ui.colors.OneColorView
 import com.github.calo001.hazel.ui.usefulexp.PhraseView
 import com.github.calo001.hazel.ui.usefulexp.UsefulExpressionsView
 import com.github.calo001.hazel.util.PainterIdentifier
 
+@ExperimentalComposeUiApi
 @ExperimentalMaterialApi
 @Composable
 fun Router(
@@ -24,12 +29,105 @@ fun Router(
     hazelContentStatus: HazelContentStatus,
     painterIdentifier: PainterIdentifier,
     onListenClick: (String) -> Unit,
-    viewModel: MainViewModel
+    viewModel: MainViewModel,
+    onOpenLink: (String) -> Unit,
 ) {
     NavHost(
         navController = navController,
         startDestination = Routes.Main.name
     ) {
+        composable(Routes.Colors.name) {
+            val colors = viewModel.getColors()
+            ColorsView(
+                colorHazels = colors,
+                onBackClick = { navController.navigateUp() },
+                onClickColor = { color ->
+                    navController.navigate(
+                    "${Routes.Colors.name}/${color.code}"
+                ) }
+            )
+        }
+
+        composable(
+            route = "${Routes.Colors.name}/color-example/{color}",
+            arguments = listOf(
+                navArgument("color") { type = NavType.StringType }
+            )
+        ) { navBackStackEntry ->
+            val colorArg =navBackStackEntry.arguments?.getString("color") ?: ""
+            val colors = viewModel.getColors()
+            val colorByCode = colors.firstOrNull() { it.code == colorArg }
+            var colorExample by rememberSaveable { mutableStateOf(colorByCode?.examples?.firstOrNull() ?: "") }
+
+            if (colorExample.isNotEmpty() && colorByCode != null) {
+                val indexOfExample = colorByCode.examples.indexOfFirst { it == colorExample }
+                val hideNext = indexOfExample >= colorByCode.examples.lastIndex
+                val hidePrevious = indexOfExample == 0
+                ColorExamplesView(
+                    colorName = colorByCode.name,
+                    example = colorExample,
+                    onBackClick = { navController.navigateUp() },
+                    hideNext = hideNext,
+                    hidePrevious = hidePrevious,
+                    onPreviousClick = {
+                        colorExample = colorByCode.examples.getOrElse(indexOfExample - 1) { colorExample }
+                    },
+                    onNextClick = {
+                        colorExample = colorByCode.examples.getOrElse(indexOfExample + 1) { colorExample }
+                    },
+                    onListenClick = {
+                        onListenClick(colorExample)
+                    },
+                    modifier = Modifier
+                )
+            }
+        }
+
+        composable(
+            route = "${Routes.Colors.name}/{color}",
+            arguments = listOf(
+                navArgument("color") { type = NavType.StringType }
+            )
+        ) { navBackStackEntry ->
+            val colors = viewModel.getColors()
+            var colorArg by rememberSaveable {
+                mutableStateOf(navBackStackEntry.arguments?.getString("color") ?: "")
+            }
+            val currentColor = viewModel.getColorByCode(colorArg)
+
+            currentColor?.let { color ->
+                val currentIndex = colors.indexOfFirst {
+                    it.code == color.code
+                }
+                val hasNext = currentIndex < colors.lastIndex
+                val hasPrevious = currentIndex != 0
+                OneColorView(
+                    colorHazel = color,
+                    onOpenLink = { onOpenLink(color.name) },
+                    onNavBack = { navController.navigateUp() },
+                    onListen = onListenClick,
+                    onSeeExamples = {
+                        navController.navigate(
+                            "${Routes.Colors.name}/color-example/${color.code}"
+                        )
+                    },
+                    onGallery = {
+                        navController.navigate(
+                            "${Routes.Colors.name}/color-gallery/${color.name}"
+                        )
+                    },
+                    hasNext = hasNext,
+                    hasPrevious = hasPrevious,
+                    onNextClick = {
+                        colorArg = colors.getOrElse(currentIndex + 1) { color }.code
+                    },
+                    onPreviousClick = {
+                        colorArg = colors.getOrElse(currentIndex - 1) { color }.code
+                    },
+                )
+            }
+        }
+
         composable(Routes.Main.name) {
             MainScreen(
                 status = hazelContentStatus,
