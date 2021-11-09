@@ -61,6 +61,9 @@ fun Router(
                 viewModel.getUsefulExpressionCategory(typeOfUsefulExp)?.let { phrases ->
                     UsefulExpressionsView(
                         usefulPhrase = phrases,
+                        onBackClick = {
+                            navController.navigateUp()
+                        },
                         onClickPhrase = { phrase ->
                             navController.navigate(
                                 "${Routes.UsefulExpressionsPhrase.name}/${phrases.category}/${phrase.expression}"
@@ -112,6 +115,9 @@ fun Router(
                         },
                         onListenClick = {
                             onListenClick(currentPhrase?.expression ?: "")
+                        },
+                        onNavigate = {
+                            navController.navigateUp()
                         }
                     )
                 }

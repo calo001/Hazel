@@ -18,6 +18,7 @@ fun HazelToolbarContent(
     title: String,
     subtitle: String,
     onBackClick: () -> Unit,
+    onTextChange: (String) -> Unit,
 ) {
     Column {
         HazelToolbarButton(
@@ -39,7 +40,8 @@ fun HazelToolbarContent(
         Spacer(modifier = Modifier.size(18.dp))
         SearchBar(
             placeholder = "Search in $title",
-            modifier = Modifier.padding(horizontal = 16.dp)
+            onTextChange = onTextChange,
+            modifier = Modifier.padding(horizontal = 16.dp),
         )
     }
 }
@@ -50,6 +52,7 @@ fun HazelToolbarContentPreview() {
     HazelToolbarContent(
         title = "Apologizing",
         subtitle = "Useful expressions",
-        onBackClick = {}
+        onBackClick = {},
+        onTextChange = {}
     )
 }

@@ -31,7 +31,7 @@ sealed interface ColorVariant {
             secondary = LightGreenA100,
             onSecondary = Black,
             background = Gray900,
-            onBackground = Black,
+            onBackground = White,
             surface = GreenA200,
             onSurface = Black,
         )

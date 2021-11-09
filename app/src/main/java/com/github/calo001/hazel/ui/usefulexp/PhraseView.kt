@@ -27,6 +27,7 @@ fun PhraseView(
     onPreviousClick: () -> Unit,
     onNextClick: () -> Unit,
     onListenClick: () -> Unit,
+    onNavigate: () -> Unit,
     hideNext: Boolean,
     hidePrevious: Boolean,
 ) {
@@ -109,7 +110,7 @@ fun PhraseView(
         ) {
             val (toolbar, phrase, controls) = createRefs()
             PhraseToolbar(
-                onNavigate = {},
+                onNavigate = onNavigate,
                 onHelp = {
                     coroutineScope.launch {
                         if (bottomSheetScaffoldState.bottomSheetState.isCollapsed) {
@@ -231,6 +232,7 @@ fun PhraseViewPreview() {
         onNextClick = {},
         onListenClick = {},
         hideNext = false,
-        hidePrevious = false
+        hidePrevious = false,
+        onNavigate = {}
     )
 }

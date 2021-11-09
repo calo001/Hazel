@@ -49,8 +49,11 @@ fun MainScreen(
         SurfaceToolbar {
             HazelToolbar()
             SearchBar(
+                modifier = Modifier.padding(horizontal = 16.dp),
                 placeholder = "Search what you need",
-                modifier = Modifier.padding(horizontal = 16.dp)
+                onTextChange = {
+
+                },
             )
         }
     }
