@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun SearchBar(
     modifier: Modifier = Modifier,
+    placeholder: String,
 ) {
     var input by rememberSaveable {
         mutableStateOf("")
@@ -27,7 +28,7 @@ fun SearchBar(
         singleLine = true,
         shape = MaterialTheme.shapes.large,
         label = {
-            Text(text = "Search what you need")
+            Text(text = placeholder)
         },
         colors = TextFieldDefaults.textFieldColors(
             focusedIndicatorColor = Color.Transparent,

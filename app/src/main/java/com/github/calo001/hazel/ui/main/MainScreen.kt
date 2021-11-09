@@ -1,19 +1,13 @@
 package com.github.calo001.hazel.ui.main
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
-import androidx.compose.foundation.lazy.LazyVerticalGrid
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
@@ -23,9 +17,10 @@ import com.github.calo001.hazel.model.HazelContent
 import com.github.calo001.hazel.model.view.ItemMenuData
 import com.github.calo001.hazel.routes.Routes
 import com.github.calo001.hazel.util.PainterIdentifier
-import com.github.calo001.hazel.R
 import com.github.calo001.hazel.ui.common.HazelToolbar
 import com.github.calo001.hazel.ui.common.SearchBar
+import com.github.calo001.hazel.ui.common.SurfaceToolbar
+import com.github.calo001.hazel.ui.common.safeSpacer
 
 @ExperimentalMaterialApi
 @Composable
@@ -51,19 +46,10 @@ fun MainScreen(
             }
         }
 
-        Column(
-            modifier = Modifier
-                .background(
-                    brush = Brush.verticalGradient(
-                        colors = listOf(
-                            MaterialTheme.colors.background.copy(alpha = 1f),
-                            MaterialTheme.colors.background.copy(alpha = 0f),
-                        )
-                    )
-                ).padding(bottom = 16.dp)
-        ) {
+        SurfaceToolbar {
             HazelToolbar()
             SearchBar(
+                placeholder = "Search what you need",
                 modifier = Modifier.padding(horizontal = 16.dp)
             )
         }
@@ -85,9 +71,7 @@ fun MainMenu(
     LazyColumn(
         contentPadding = PaddingValues(16.dp),
     ) {
-        item {
-            Spacer(modifier = Modifier.height(150.dp))
-        }
+        safeSpacer(20.dp)
 
         val usefulPhraseCategory = hazelContent.usefulPhrases
         SectionMenu(

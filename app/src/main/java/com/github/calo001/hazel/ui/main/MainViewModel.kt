@@ -3,6 +3,8 @@ package com.github.calo001.hazel.ui.main
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.github.calo001.hazel.model.HazelContent
+import com.github.calo001.hazel.model.Phrase
+import com.github.calo001.hazel.model.UsefulPhrase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -37,6 +39,15 @@ class MainViewModel : ViewModel() {
                 _hazelContent.tryEmit(HazelContentStatus.Error(e))
             }
         }
+    }
+
+    fun getUsefulExpressionCategory(typeOfUsefulExp: String): UsefulPhrase? {
+        return (hazelContent.value as? HazelContentStatus.Success)
+            ?.content
+            ?.usefulPhrases
+            ?.find { ufContent ->
+                ufContent.category == typeOfUsefulExp
+            }
     }
 }
 
