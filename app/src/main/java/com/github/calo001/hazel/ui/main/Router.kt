@@ -13,10 +13,12 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import com.github.calo001.hazel.model.unsplash.Result
 import com.github.calo001.hazel.routes.Routes
 import com.github.calo001.hazel.ui.colors.ColorExamplesView
 import com.github.calo001.hazel.ui.colors.ColorsView
 import com.github.calo001.hazel.ui.colors.OneColorView
+import com.github.calo001.hazel.ui.gallery.GalleryView
 import com.github.calo001.hazel.ui.usefulexp.PhraseView
 import com.github.calo001.hazel.ui.usefulexp.UsefulExpressionsView
 import com.github.calo001.hazel.util.PainterIdentifier
@@ -45,6 +47,30 @@ fun Router(
                     navController.navigate(
                     "${Routes.Colors.name}/${color.code}"
                 ) }
+            )
+        }
+
+        composable(
+            route = "${Routes.Colors.name}/color-gallery/{color}",
+            arguments = listOf(
+                navArgument("color") { type = NavType.StringType }
+            )
+        ) { navBackStackEntry ->
+            val colorArg = navBackStackEntry.arguments?.getString("color") ?: ""
+            val result by viewModel.galleryStatus.collectAsState()
+            DisposableEffect(colorArg) {
+                if (colorArg.isNotEmpty()) {
+                    viewModel.search(colorArg)
+                }
+                onDispose {  }
+            }
+
+            val resultList = (result as? GalleryStatus.Success)?.content?.results ?: listOf()
+
+            GalleryView(
+                title = colorArg,
+                unsplashResult = resultList,
+                onBackClick = { navController.navigateUp() }
             )
         }
 

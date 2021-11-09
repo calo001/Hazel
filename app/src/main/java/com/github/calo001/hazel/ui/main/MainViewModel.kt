@@ -4,8 +4,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.github.calo001.hazel.model.ColorHazel
 import com.github.calo001.hazel.model.HazelContent
-import com.github.calo001.hazel.model.Phrase
 import com.github.calo001.hazel.model.UsefulPhrase
+import com.github.calo001.hazel.model.unsplash.UnsplashResult
+import com.github.calo001.hazel.network.UnsplashServiceProvider
+import com.github.calo001.hazel.repository.NetworkResult
+import com.github.calo001.hazel.repository.UnsplashRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -19,6 +22,11 @@ import java.io.InputStream
 class MainViewModel : ViewModel() {
     private val _hazelContent = MutableStateFlow<HazelContentStatus>(HazelContentStatus.Loading)
     val hazelContent: StateFlow<HazelContentStatus> get() = _hazelContent
+    private val unsplashService = UnsplashServiceProvider.service
+    private val unsplashRepository by lazy { UnsplashRepository(unsplashService) }
+
+    private val _galleryStatus = MutableStateFlow<GalleryStatus>(GalleryStatus.Loading)
+    val galleryStatus: StateFlow<GalleryStatus> get() = _galleryStatus
 
     fun loadHazelContent(hazelDb: InputStream) {
         viewModelScope.launch(Dispatchers.IO) {
@@ -63,10 +71,25 @@ class MainViewModel : ViewModel() {
             it.code == colorCode
         }
     }
+
+    fun search(query: String) = viewModelScope.launch {
+        _galleryStatus.tryEmit(GalleryStatus.Loading)
+        when (val result = unsplashRepository.search(query)) {
+            is NetworkResult.Error -> _galleryStatus.tryEmit(GalleryStatus.Error(result.error))
+            NetworkResult.Loading -> _galleryStatus.tryEmit(GalleryStatus.Loading)
+            is NetworkResult.Success -> _galleryStatus.tryEmit(GalleryStatus.Success(result.unsplashResult))
+        }
+    }
 }
 
 sealed interface HazelContentStatus {
     object Loading: HazelContentStatus
     class Success(val content: HazelContent): HazelContentStatus
     class Error(val error: Exception): HazelContentStatus
+}
+
+sealed interface GalleryStatus {
+    object Loading: GalleryStatus
+    class Success(val content: UnsplashResult): GalleryStatus
+    class Error(val error: Exception): GalleryStatus
 }
