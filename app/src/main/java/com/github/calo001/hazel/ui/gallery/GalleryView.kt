@@ -8,16 +8,12 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
-import coil.transform.CircleCropTransformation
-import coil.transform.RoundedCornersTransformation
 import com.github.calo001.hazel.model.unsplash.Result
-import com.github.calo001.hazel.model.unsplash.UnsplashResult
-import com.github.calo001.hazel.ui.common.HazelToolbarColorExample
+import com.github.calo001.hazel.ui.common.HazelToolbarSimpleExample
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.common.safeSpacer
 import com.github.calo001.hazel.ui.main.calculateItemsPerColumn
@@ -43,7 +39,7 @@ fun GalleryView(
         )
 
         SurfaceToolbar {
-            HazelToolbarColorExample(
+            HazelToolbarSimpleExample(
                 title = title,
                 subtitle = "Gallery",
                 onBackClick = onBackClick,

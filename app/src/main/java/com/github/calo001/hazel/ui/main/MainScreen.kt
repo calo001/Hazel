@@ -137,7 +137,7 @@ fun MainMenu(
                     Routes.Colors.name -> onNavigate(Routes.Colors, "")
                     Routes.Countries.name -> onNavigate(Routes.Countries, "")
                     Routes.VerbsRegular.name -> onNavigate(Routes.VerbsRegular, "")
-                    Routes.VerbsIrregular.name -> onNavigate(Routes.VerbsRegular, "")
+                    Routes.VerbsIrregular.name -> onNavigate(Routes.VerbsIrregular, "")
                     Routes.Animals.name -> onNavigate(Routes.Animals, "")
                 }
             }

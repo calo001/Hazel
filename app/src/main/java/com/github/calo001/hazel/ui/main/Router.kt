@@ -16,7 +16,7 @@ import androidx.navigation.navArgument
 import com.github.calo001.hazel.routes.Routes
 import com.github.calo001.hazel.ui.animals.AnimalContentView
 import com.github.calo001.hazel.ui.animals.AnimalsView
-import com.github.calo001.hazel.ui.colors.ColorExamplesView
+import com.github.calo001.hazel.ui.colors.SimpleExamplesView
 import com.github.calo001.hazel.ui.colors.ColorsView
 import com.github.calo001.hazel.ui.colors.OneColorView
 import com.github.calo001.hazel.ui.countries.CountryContentView
@@ -24,6 +24,9 @@ import com.github.calo001.hazel.ui.countries.CountryView
 import com.github.calo001.hazel.ui.gallery.GalleryView
 import com.github.calo001.hazel.ui.usefulexp.PhraseView
 import com.github.calo001.hazel.ui.usefulexp.UsefulExpressionsView
+import com.github.calo001.hazel.ui.verbs.VerbContentView
+import com.github.calo001.hazel.ui.verbs.VerbData
+import com.github.calo001.hazel.ui.verbs.VerbsView
 import com.github.calo001.hazel.util.PainterIdentifier
 
 @ExperimentalComposeUiApi
@@ -42,6 +45,163 @@ fun Router(
         navController = navController,
         startDestination = Routes.Main.name
     ) {
+        composable(
+            route = "${Routes.Verbs.name}/{type}/{verb}",
+            arguments = listOf(
+                navArgument("type") { type = NavType.StringType },
+                navArgument("verb") { type = NavType.StringType }
+            )
+        ) { navBackStackEntry ->
+            var verbArg by rememberSaveable {
+                mutableStateOf(navBackStackEntry.arguments?.getString("verb") ?: "")
+            }
+
+            val type = navBackStackEntry.arguments?.getString("type") ?: ""
+            val verbs = when (type) {
+                "regular" -> Pair("Regular verbs", viewModel.getRegularVerbs())
+                "irregular" -> Pair("Irregular verbs", viewModel.getIrregularVerbs())
+                else -> Pair("Verbs", listOf())
+            }
+
+            val currentVerb = verbs.second.firstOrNull { it.base.verb == verbArg }
+
+            if (currentVerb != null) {
+                val indexCurrent = verbs.second.indexOfFirst { it.base.verb == verbArg }
+                VerbContentView(
+                    verb = currentVerb,
+                    onNext = {
+                        verbArg = verbs.second.getOrElse(indexCurrent + 1) { verbs.second[indexCurrent] }.base.verb
+                    },
+                    onPrevious = {
+                        verbArg = verbs.second.getOrElse(indexCurrent - 1) { verbs.second[indexCurrent] }.base.verb
+                    },
+                    onOpenLink = { term ->
+                        onOpenLink(term)
+                    },
+                    onSeeExamples = { form ->
+                        navController.navigate("${when(type) {
+                                "regular" -> Routes.VerbsRegular.name
+                                "irregular" -> Routes.VerbsIrregular.name
+                                else -> Routes.VerbsRegular.name }
+                            }/example/${form}/${
+                                when(form) {
+                                    VerbData.BaseForm.name -> currentVerb.base.verb
+                                    VerbData.PastForm.name -> currentVerb.simplePast.verb
+                                    VerbData.PastParticipleForm.name -> currentVerb.pastParticiple.verb
+                                    VerbData.IngForm.name -> currentVerb.ing.verb
+                                    else -> currentVerb.base.verb
+                                }
+                            }"
+                        )
+                    },
+                    onListen = { onListenClick(it) },
+                    onNavBack = { navController.navigateUp() },
+                    hasNext = indexCurrent < verbs.second.lastIndex,
+                    hasPrevious = indexCurrent != 0,
+                    painterIdentifier = painterIdentifier,
+                )
+            }
+        }
+
+        composable(
+            route = "${Routes.Verbs.name}/{type}",
+            arguments = listOf(
+                navArgument("type") { type = NavType.StringType }
+            )) { navBackStackEntry ->
+            val verbs = when (navBackStackEntry.arguments?.getString("type") ?: "") {
+                "regular" -> Pair("Regular verbs", viewModel.getRegularVerbs())
+                "irregular" -> Pair("Irregular verbs", viewModel.getIrregularVerbs())
+                else -> Pair("Verbs", listOf())
+            }
+
+            VerbsView(
+                title = verbs.first,
+                verbs = verbs.second,
+                onBackClick = { navController.navigateUp() },
+                onClickVerb = { verb ->
+                    when (navBackStackEntry.arguments?.getString("type") ?: "") {
+                        "regular" -> navController.navigate(
+                            "${Routes.VerbsRegular.name}/${verb.base.verb}"
+                        )
+                        "irregular" -> navController.navigate(
+                            "${Routes.VerbsIrregular.name}/${verb.base.verb}"
+                        )
+                        else -> Unit
+                    }
+                },
+                painterIdentifier = painterIdentifier
+            )
+        }
+
+        composable(
+            route = "${Routes.Verbs.name}/{type}/example/{form}/{verb}",
+            arguments = listOf(
+                navArgument("type") { type = NavType.StringType },
+                navArgument("form") { type = NavType.StringType },
+                navArgument("verb") { type = NavType.StringType }
+            )
+        ) { navBackStackEntry ->
+            val verbType = navBackStackEntry.arguments?.getString("type") ?: ""
+            val verbArg = navBackStackEntry.arguments?.getString("verb") ?: ""
+            val form = navBackStackEntry.arguments?.getString("form") ?: ""
+
+            var verbIndex by rememberSaveable { mutableStateOf(0) }
+
+            val verbs = when (verbType) {
+                "regular" -> viewModel.getRegularVerbs()
+                "irregular" -> viewModel.getIrregularVerbs()
+                else -> listOf()
+            }
+
+            val verbByForm = verbs.firstOrNull() {
+                when(form) {
+                    VerbData.BaseForm.name -> it.base.verb == verbArg
+                    VerbData.PastForm.name -> it.simplePast.verb == verbArg
+                    VerbData.PastParticipleForm.name -> it.pastParticiple.verb == verbArg
+                    VerbData.IngForm.name -> it.ing.verb == verbArg
+                    else -> it.base.verb == verbArg
+                }
+            }
+
+            val examplesByForm = when(form) {
+                VerbData.BaseForm.name -> verbByForm?.base?.examples
+                VerbData.PastForm.name -> verbByForm?.simplePast?.examples
+                VerbData.PastParticipleForm.name -> verbByForm?.pastParticiple?.examples
+                VerbData.IngForm.name -> verbByForm?.ing?.examples
+                else -> verbByForm?.base?.examples
+            } ?: listOf()
+
+            if (examplesByForm.isNotEmpty()) {
+                val hideNext = verbIndex >= examplesByForm.lastIndex
+                val hidePrevious = verbIndex == 0
+                SimpleExamplesView(
+                    title = verbArg,
+                    example = examplesByForm[verbIndex],
+                    onBackClick = { navController.navigateUp() },
+                    hideNext = hideNext,
+                    hidePrevious = hidePrevious,
+                    onPreviousClick = {
+                        verbIndex = if (verbIndex.minus(1) in examplesByForm.indices) {
+                            verbIndex.minus(1)
+                        } else {
+                            verbIndex
+                        }
+                    },
+                    onNextClick = {
+                        verbIndex = if (verbIndex.plus(1) in examplesByForm.indices) {
+                            verbIndex.plus(1)
+                        } else {
+                            verbIndex
+                        }
+                    },
+                    onListenClick = {
+                        onListenClick(examplesByForm[verbIndex])
+                    },
+                    modifier = Modifier
+                )
+            }
+        }
+
         composable(Routes.Countries.name) {
             val countries = viewModel.getCountries()
             CountryView(
@@ -196,8 +356,8 @@ fun Router(
                 val indexOfExample = colorByCode.examples.indexOfFirst { it == colorExample }
                 val hideNext = indexOfExample >= colorByCode.examples.lastIndex
                 val hidePrevious = indexOfExample == 0
-                ColorExamplesView(
-                    colorName = colorByCode.name,
+                SimpleExamplesView(
+                    title = colorByCode.name,
                     example = colorExample,
                     onBackClick = { navController.navigateUp() },
                     hideNext = hideNext,

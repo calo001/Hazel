@@ -11,9 +11,9 @@ data class HazelContent(
     @SerialName("countries")
     val countries: List<Country>,
     @SerialName("irregular_verbs")
-    val irregularVerbs: List<IrregularVerb>,
+    val irregularVerbs: List<Verb>,
     @SerialName("regular_verbs")
-    val regularVerbs: List<RegularVerb>,
+    val regularVerbs: List<Verb>,
     @SerialName("useful_phrases")
     val usefulPhrases: List<UsefulPhrase>,
     @SerialName("animals")

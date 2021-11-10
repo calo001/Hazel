@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 
 @ExperimentalComposeUiApi
 @Composable
-fun HazelToolbarColorExample(
+fun HazelToolbarSimpleExample(
     title: String,
     subtitle: String,
     onBackClick: () -> Unit,
@@ -47,7 +47,7 @@ fun HazelToolbarColorExample(
 @Preview
 @Composable
 fun HazelToolbarColorExamplePreview() {
-    HazelToolbarColorExample(
+    HazelToolbarSimpleExample(
         title = "Example",
         subtitle = "White",
         onBackClick = {},

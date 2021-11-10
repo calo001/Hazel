@@ -7,7 +7,8 @@ sealed class Routes(val name: String, val label: String) {
     object Colors: Routes(name = "color", label = "Colors")
     object Gallery: Routes(name = "gallery", label = "Gallery")
     object Animals: Routes(name = "animals", label = "Animals")
-    object VerbsRegular: Routes(name = "regular_verbs", label = "Regular verbs")
-    object VerbsIrregular: Routes("irregular_verbs", label = "Irregular verbs")
+    object VerbsRegular: Routes(name = "verbs/regular", label = "Regular verbs")
+    object VerbsIrregular: Routes("verbs/irregular", label = "Irregular verbs")
+    object Verbs: Routes("verbs", label = "Irregular verbs")
     object Countries: Routes(name = "countries", label = "Countries")
 }

@@ -13,14 +13,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
-import com.github.calo001.hazel.ui.common.HazelToolbarColorExample
+import com.github.calo001.hazel.ui.common.HazelToolbarSimpleExample
 import com.github.calo001.hazel.ui.usefulexp.ControlsItem
 
 @ExperimentalMaterialApi
 @ExperimentalComposeUiApi
 @Composable
-fun ColorExamplesView(
-    colorName: String,
+fun SimpleExamplesView(
+    title: String,
     example: String,
     onBackClick: () -> Unit,
     hideNext: Boolean,
@@ -34,8 +34,8 @@ fun ColorExamplesView(
         modifier = modifier.fillMaxSize()
     ) {
         val (toolbar, content, controls) = createRefs()
-        HazelToolbarColorExample(
-            title = colorName,
+        HazelToolbarSimpleExample(
+            title = title,
             subtitle = "Examples with",
             onBackClick = onBackClick,
             modifier = Modifier
@@ -76,8 +76,8 @@ fun ColorExamplesView(
 @Preview
 @Composable
 fun ColorExamplesViewPreview() {
-    ColorExamplesView(
-        colorName = "Blue",
+    SimpleExamplesView(
+        title = "Blue",
         example = "Ejemplo 1",
         onBackClick = {},
         hideNext = false,

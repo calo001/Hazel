@@ -1,17 +1,12 @@
 package com.github.calo001.hazel.ui.countries
 
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.github.calo001.hazel.R
 import com.github.calo001.hazel.model.hazeldb.Country
@@ -26,13 +21,19 @@ fun CountryInfo(
     selectedInfo: CountryData,
     onSelectedInfoChange: (CountryData) -> Unit,
 ) {
+    val menu = listOf(
+        CountryData.Name,
+        CountryData.Nationality,
+        CountryData.Language,
+    )
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier
     ) {
-        ToggleGroup(
-            dataSelected = selectedInfo,
-            onClick = { onSelectedInfoChange(it) }
+        TabBarCountry(
+            menu = menu,
+            selectedInfo = selectedInfo,
+            onSelectedInfoChange = { onSelectedInfoChange(it) }
         )
         when (selectedInfo) {
             CountryData.Language -> LanguageInfo(
@@ -159,89 +160,8 @@ fun CountryNameInfo(
     }
 }
 
-@Composable
-fun ToggleGroup(
-    dataSelected: CountryData,
-    onClick: (CountryData) -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    Row(modifier = modifier) {
-        ToggleButton(
-            text = "Country",
-            selected = dataSelected is CountryData.Name,
-            onClick = { onClick(CountryData.Name) },
-            isOnStart = true,
-            isOnEnd = false,
-        )
-        ToggleButton(
-            text = "Nationality",
-            selected = dataSelected is CountryData.Nationality,
-            isOnStart = false,
-            isOnEnd = false,
-            onClick = { onClick(CountryData.Nationality) }
-        )
-        ToggleButton(
-            text = "Language",
-            selected = dataSelected is CountryData.Language,
-            isOnStart = false,
-            isOnEnd = true,
-            onClick = { onClick(CountryData.Language) }
-        )
-    }
-}
-
-@Composable
-fun ToggleButton(
-    text: String,
-    selected: Boolean,
-    onClick: () -> Unit,
-    isOnStart: Boolean,
-    isOnEnd: Boolean
-) {
-    val shape = if (isOnStart) {
-        MaterialTheme.shapes.large.copy(
-            topEnd = CornerSize(0.dp),
-            bottomEnd = CornerSize(0.dp),
-        )
-    } else if (isOnEnd) {
-        MaterialTheme.shapes.large.copy(
-            topStart = CornerSize(0.dp),
-            bottomStart = CornerSize(0.dp),
-        )
-    } else {
-        RectangleShape
-    }
-    if (selected) {
-        Button(
-            shape = shape,
-            modifier = Modifier,
-            onClick = onClick
-        ) { Text(text = text) }
-    } else {
-        OutlinedButton(
-            shape = shape,
-            colors = ButtonDefaults.outlinedButtonColors(
-                contentColor = MaterialTheme.colors.onPrimary,
-                backgroundColor = MaterialTheme.colors.primaryVariant
-            ),
-            border = BorderStroke(0.dp, Color.Transparent),
-            modifier = Modifier,
-            onClick = onClick
-        ) { Text(text = text) }
-    }
-}
-
-@Preview
-@Composable
-fun ToggleGroupPreview() {
-    ToggleGroup(
-        CountryData.Nationality,
-        onClick = {}
-    )
-}
-
-sealed interface CountryData {
-    object Name: CountryData
-    object Nationality: CountryData
-    object Language: CountryData
+sealed class CountryData(val name: String) {
+    object Name: CountryData("Country")
+    object Nationality: CountryData("Nationality")
+    object Language: CountryData("Language")
 }

@@ -92,6 +92,20 @@ class MainViewModel : ViewModel() {
             ?.countries
             ?: listOf()
     }
+
+    fun getIrregularVerbs(): List<Verb> {
+        return (hazelContent.value as? HazelContentStatus.Success)
+            ?.content
+            ?.irregularVerbs
+            ?: listOf()
+    }
+
+    fun getRegularVerbs(): List<Verb> {
+        return (hazelContent.value as? HazelContentStatus.Success)
+            ?.content
+            ?.regularVerbs
+            ?: listOf()
+    }
 }
 
 sealed interface HazelContentStatus {

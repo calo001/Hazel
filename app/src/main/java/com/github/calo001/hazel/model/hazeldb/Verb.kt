@@ -5,7 +5,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class IrregularVerb(
+data class Verb(
     @SerialName("base")
     val base: VerbForm,
     @SerialName("emojiCode")
