@@ -19,6 +19,8 @@ import android.util.Log
 import androidx.compose.ui.ExperimentalComposeUiApi
 import com.github.calo001.hazel.util.browse
 import java.util.*
+import android.content.Intent
+import android.net.Uri
 
 
 class MainActivity : ComponentActivity() {
@@ -57,10 +59,21 @@ class MainActivity : ComponentActivity() {
                         painterIdentifier = painterIdentifier,
                         onListenClick = { speak(it) },
                         onOpenLink = { term -> openInBrowser(term) },
+                        onOpenMaps = { link -> openMaps(link) },
                         viewModel = viewModel
                     )
                 }
             }
+        }
+    }
+
+    private fun openMaps(link: String) {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
+        intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity")
+        try {
+            startActivity(intent)
+        } catch (e: Exception) {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(link)))
         }
     }
 

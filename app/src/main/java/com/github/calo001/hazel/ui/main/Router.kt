@@ -19,6 +19,8 @@ import com.github.calo001.hazel.ui.animals.AnimalsView
 import com.github.calo001.hazel.ui.colors.ColorExamplesView
 import com.github.calo001.hazel.ui.colors.ColorsView
 import com.github.calo001.hazel.ui.colors.OneColorView
+import com.github.calo001.hazel.ui.countries.CountryContentView
+import com.github.calo001.hazel.ui.countries.CountryView
 import com.github.calo001.hazel.ui.gallery.GalleryView
 import com.github.calo001.hazel.ui.usefulexp.PhraseView
 import com.github.calo001.hazel.ui.usefulexp.UsefulExpressionsView
@@ -34,11 +36,64 @@ fun Router(
     onListenClick: (String) -> Unit,
     viewModel: MainViewModel,
     onOpenLink: (String) -> Unit,
+    onOpenMaps: (String) -> Unit,
 ) {
     NavHost(
         navController = navController,
         startDestination = Routes.Main.name
     ) {
+        composable(Routes.Countries.name) {
+            val countries = viewModel.getCountries()
+            CountryView(
+                countries = countries,
+                painterIdentifier = painterIdentifier,
+                onClickCountry = { country ->
+                    navController.navigate(
+                    "${Routes.Countries.name}/${country.name}"
+                ) },
+                onBackClick = { navController.navigateUp() }
+            )
+        }
+
+        composable(
+            route = "${Routes.Countries.name}/{country}",
+            arguments = listOf(
+                navArgument("country") { type = NavType.StringType }
+            )
+        ) { navBackStackEntry ->
+            var countryArg by rememberSaveable {
+                mutableStateOf(navBackStackEntry.arguments?.getString("country") ?: "")
+            }
+            val countries = viewModel.getCountries()
+            val currentCountry = countries.firstOrNull { it.name == countryArg }
+
+            if (currentCountry != null) {
+                val indexCurrent = countries.indexOfFirst { it.name == countryArg }
+                CountryContentView(
+                    country = currentCountry,
+                    onNext = {
+                        countryArg = countries.getOrElse(indexCurrent + 1) { countries[indexCurrent] }.name
+                    },
+                    onPrevious = {
+                        countryArg = countries.getOrElse(indexCurrent - 1) { countries[indexCurrent] }.name
+                    },
+                    onListen = { onListenClick(it) },
+                    onNavBack = { navController.navigateUp() },
+                    onOpenMap = {
+                        onOpenMaps(countries[indexCurrent].linkMaps)
+                    },
+                    onGallery = {
+                        navController.navigate(
+                        "${Routes.Gallery.name}/${currentCountry.name}"
+                        )
+                    },
+                    hasNext = indexCurrent < countries.lastIndex,
+                    hasPrevious = indexCurrent != 0,
+                    painterIdentifier = painterIdentifier,
+                )
+            }
+        }
+
         composable(Routes.Animals.name) {
             val animals = viewModel.getAnimals()
             AnimalsView(

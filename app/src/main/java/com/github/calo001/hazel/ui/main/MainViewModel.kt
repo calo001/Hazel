@@ -2,10 +2,7 @@ package com.github.calo001.hazel.ui.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.github.calo001.hazel.model.hazeldb.Animal
-import com.github.calo001.hazel.model.hazeldb.ColorHazel
-import com.github.calo001.hazel.model.hazeldb.HazelContent
-import com.github.calo001.hazel.model.hazeldb.UsefulPhrase
+import com.github.calo001.hazel.model.hazeldb.*
 import com.github.calo001.hazel.model.unsplash.UnsplashResult
 import com.github.calo001.hazel.network.UnsplashServiceProvider
 import com.github.calo001.hazel.repository.NetworkResult
@@ -86,6 +83,13 @@ class MainViewModel : ViewModel() {
         return (hazelContent.value as? HazelContentStatus.Success)
             ?.content
             ?.animals
+            ?: listOf()
+    }
+
+    fun getCountries(): List<Country> {
+        return (hazelContent.value as? HazelContentStatus.Success)
+            ?.content
+            ?.countries
             ?: listOf()
     }
 }
