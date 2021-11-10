@@ -35,6 +35,7 @@ fun TabBarVerbs(
                     AnimatedVisibility(item == selectedInfo) {
                         Text(
                             text = item.name,
+                            color = MaterialTheme.colors.onPrimary,
                             modifier = Modifier
                                 .background(
                                     color = MaterialTheme.colors.primarySurface,

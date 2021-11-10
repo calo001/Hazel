@@ -21,6 +21,7 @@ import com.github.calo001.hazel.util.browse
 import java.util.*
 import android.content.Intent
 import android.net.Uri
+import androidx.compose.foundation.isSystemInDarkTheme
 
 
 class MainActivity : ComponentActivity() {
@@ -36,10 +37,10 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             val systemUiController = rememberSystemUiController()
-            val useDarkIcons = MaterialTheme.colors.isLight
+            val useDarkIcons = !isSystemInDarkTheme()
 
             HazelTheme(
-                colorVariant = ColorVariant.Green
+                colorVariant = ColorVariant.Blue
             ) {
                 SystemBars(systemUiController, useDarkIcons)
                 val navController = rememberNavController()

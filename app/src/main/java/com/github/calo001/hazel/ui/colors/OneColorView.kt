@@ -34,7 +34,7 @@ fun OneColorView(
     hasPrevious: Boolean,
 ) {
     ConstraintLayout {
-        val (toolbar, content) = createRefs()
+        val (toolbar, content, controls) = createRefs()
 
         HazelToolbarOneColor(
             onNavBack = onNavBack,
@@ -50,14 +50,21 @@ fun OneColorView(
         )
         OneColorContent(
             colorHazel = colorHazel,
-            onPreviousClick = onPreviousClick,
-            onNextClick = onNextClick,
-            onListenClick = { onListen(colorHazel.name) },
-            hasNext = hasNext,
-            hasPrevious = hasPrevious,
             modifier = Modifier.constrainAs(content) {
                 centerHorizontallyTo(parent)
                 top.linkTo(toolbar.bottom)
+                bottom.linkTo(parent.bottom)
+            }
+        )
+
+        ControlsItem(
+            onPreviousClick = onPreviousClick,
+            onNextClick = onNextClick,
+            onListenClick = { onListen(colorHazel.name) },
+            hideNext = !hasNext,
+            hidePrevious = !hasPrevious,
+            modifier = Modifier.constrainAs(controls) {
+                centerHorizontallyTo(parent)
                 bottom.linkTo(parent.bottom)
             }
         )
@@ -67,13 +74,8 @@ fun OneColorView(
 @ExperimentalMaterialApi
 @Composable
 private fun OneColorContent(
-    colorHazel: ColorHazel,
     modifier: Modifier = Modifier,
-    onPreviousClick: () -> Unit,
-    onNextClick: () -> Unit,
-    onListenClick: () -> Unit,
-    hasNext: Boolean,
-    hasPrevious: Boolean,
+    colorHazel: ColorHazel,
 ) {
     Column(
         verticalArrangement = Arrangement.Center,
@@ -106,15 +108,6 @@ private fun OneColorContent(
                 )
             }
         }
-
-        Spacer(modifier = Modifier.size(16.dp))
-        ControlsItem(
-            onPreviousClick = onPreviousClick,
-            onNextClick = onNextClick,
-            onListenClick = onListenClick,
-            hideNext = !hasNext,
-            hidePrevious = !hasPrevious,
-        )
     }
 }
 

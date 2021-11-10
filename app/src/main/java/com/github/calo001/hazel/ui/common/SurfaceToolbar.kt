@@ -17,7 +17,7 @@ fun SurfaceToolbar(content: @Composable () -> Unit) {
             .background(
                 brush = Brush.verticalGradient(
                     (0f to MaterialTheme.colors.background),
-                    (0.95f to MaterialTheme.colors.background.copy(alpha = 0.9f)),
+                    (0.8f to MaterialTheme.colors.background.copy(alpha = 0.8f)),
                     (1f to MaterialTheme.colors.background.copy(alpha = 0f)),
                 )
             )

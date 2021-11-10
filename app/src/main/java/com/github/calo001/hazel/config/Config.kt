@@ -39,10 +39,10 @@ sealed interface ColorVariant {
 
     object Blue: ColorVariant {
         override val lightColors = lightColors(
-            primary = LightBlueA200,
+            primary = CyanA100,
             primaryVariant = Cyan100,
             onPrimary = Black,
-            secondary = Cyan100,
+            secondary = CyanA100,
             onSecondary = Black,
             background = Cyan50,
             onBackground = Black,
@@ -51,13 +51,13 @@ sealed interface ColorVariant {
         )
 
         override val darkColors = darkColors(
-            primary = LightBlueA200,
+            primary = CyanA100,
             primaryVariant = Cyan200,
             onPrimary = Black,
-            secondary = Cyan100,
+            secondary = CyanA100,
             onSecondary = Black,
             background = Gray900,
-            onBackground = Black,
+            onBackground = White,
             surface = LightBlueA200,
             onSurface = Black,
         )

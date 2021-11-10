@@ -10,9 +10,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import com.github.calo001.hazel.model.hazeldb.Phrase
 import com.github.calo001.hazel.ui.common.HazelToolbarButton
@@ -44,7 +46,7 @@ fun PhraseView(
             val heightSheet = if (currentHeight < 500) {
                 LocalConfiguration.current.screenHeightDp.dp
             } else {
-                LocalConfiguration.current.screenHeightDp.dp / 2
+                LocalConfiguration.current.screenHeightDp.dp / 3
             }
             ConstraintLayout(
                 Modifier
@@ -84,7 +86,9 @@ fun PhraseView(
                         .padding(top = 16.dp)
                         .fillMaxSize()
                         .background(
-                            color = MaterialTheme.colors.background.copy(0.6f),
+                            color = Color.White.copy(
+                                alpha = 0.4f
+                            ),
                             shape = MaterialTheme.shapes.large
                         )
                         .padding(16.dp)
@@ -97,7 +101,8 @@ fun PhraseView(
                         Text(
                             text = currentPhrase?.howToUse ?: "",
                             style = LocalTextStyle.current.copy(
-                                fontFamily = Lato
+                                fontFamily = Lato,
+                                fontSize = 18.sp
                             ),
                         )
                     }
