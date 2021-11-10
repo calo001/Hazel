@@ -1,15 +1,15 @@
-package com.github.calo001.hazel.model
+package com.github.calo001.hazel.model.hazeldb
 
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class PastParticipleX(
+data class SimplePast(
     @SerialName("examples")
     val examples: List<String>,
     @SerialName("phonetic")
-    val phonetic: String, // /əkˈseptɪd/
+    val phonetic: String, // /biːt/
     @SerialName("verb")
-    val verb: String // accepted
+    val verb: String // beat
 )

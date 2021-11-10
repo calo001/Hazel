@@ -14,7 +14,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
-import com.github.calo001.hazel.model.Phrase
+import com.github.calo001.hazel.model.hazeldb.Phrase
 import com.github.calo001.hazel.ui.common.HazelToolbarButton
 import com.github.calo001.hazel.ui.common.HazelToolbarMiniButton
 import com.github.calo001.hazel.ui.theme.Lato

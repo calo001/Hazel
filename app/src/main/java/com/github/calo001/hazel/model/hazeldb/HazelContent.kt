@@ -1,4 +1,4 @@
-package com.github.calo001.hazel.model
+package com.github.calo001.hazel.model.hazeldb
 
 
 import kotlinx.serialization.SerialName
@@ -15,5 +15,7 @@ data class HazelContent(
     @SerialName("regular_verbs")
     val regularVerbs: List<RegularVerb>,
     @SerialName("useful_phrases")
-    val usefulPhrases: List<UsefulPhrase>
+    val usefulPhrases: List<UsefulPhrase>,
+    @SerialName("animals")
+    val animals: List<Animal>,
 )

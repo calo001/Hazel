@@ -13,8 +13,9 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.github.calo001.hazel.model.unsplash.Result
 import com.github.calo001.hazel.routes.Routes
+import com.github.calo001.hazel.ui.animals.AnimalContentView
+import com.github.calo001.hazel.ui.animals.AnimalsView
 import com.github.calo001.hazel.ui.colors.ColorExamplesView
 import com.github.calo001.hazel.ui.colors.ColorsView
 import com.github.calo001.hazel.ui.colors.OneColorView
@@ -38,6 +39,57 @@ fun Router(
         navController = navController,
         startDestination = Routes.Main.name
     ) {
+        composable(Routes.Animals.name) {
+            val animals = viewModel.getAnimals()
+            AnimalsView(
+                animals = animals,
+                painterIdentifier = painterIdentifier,
+                onClickAnimal = { animal ->
+                    navController.navigate(
+                    "${Routes.Animals.name}/${animal.name}"
+                    )
+                },
+                onBackClick = {
+                    navController.navigateUp()
+                }
+            )
+        }
+
+        composable(
+            route = "${Routes.Animals.name}/{animal}",
+            arguments = listOf(
+                navArgument("animal") { type = NavType.StringType }
+            )
+        ) { navBackStackEntry ->
+            var animalArg by rememberSaveable {
+                mutableStateOf(navBackStackEntry.arguments?.getString("animal") ?: "")
+            }
+            val animals = viewModel.getAnimals()
+            val currentAnimal = animals.firstOrNull { it.name == animalArg }
+
+            if (currentAnimal != null) {
+                val indexCurrent = animals.indexOfFirst { it.name == animalArg }
+                AnimalContentView(
+                    animal = currentAnimal,
+                    onNext = {
+                        animalArg = animals.getOrElse(indexCurrent + 1) { animals[indexCurrent] }.name
+                    },
+                    onPrevious = {
+                        animalArg = animals.getOrElse(indexCurrent - 1) { animals[indexCurrent] }.name
+                    },
+                    onListen = { onListenClick(currentAnimal.name) },
+                    onNavBack = { navController.navigateUp() },
+                    onOpenLink = { onOpenLink(currentAnimal.name) },
+                    onGallery = { navController.navigate(
+                        "${Routes.Gallery.name}/${currentAnimal.name}"
+                    ) },
+                    hasNext = indexCurrent < animals.lastIndex,
+                    hasPrevious = indexCurrent != 0,
+                    painterIdentifier = painterIdentifier,
+                )
+            }
+        }
+
         composable(Routes.Colors.name) {
             val colors = viewModel.getColors()
             ColorsView(
@@ -51,12 +103,12 @@ fun Router(
         }
 
         composable(
-            route = "${Routes.Colors.name}/color-gallery/{color}",
+            route = "${Routes.Gallery.name}/{query}",
             arguments = listOf(
-                navArgument("color") { type = NavType.StringType }
+                navArgument("query") { type = NavType.StringType }
             )
         ) { navBackStackEntry ->
-            val colorArg = navBackStackEntry.arguments?.getString("color") ?: ""
+            val colorArg = navBackStackEntry.arguments?.getString("query") ?: ""
             val result by viewModel.galleryStatus.collectAsState()
             DisposableEffect(colorArg) {
                 if (colorArg.isNotEmpty()) {
@@ -139,7 +191,7 @@ fun Router(
                     },
                     onGallery = {
                         navController.navigate(
-                            "${Routes.Colors.name}/color-gallery/${color.name}"
+                            "${Routes.Gallery.name}/${color.name}"
                         )
                     },
                     hasNext = hasNext,

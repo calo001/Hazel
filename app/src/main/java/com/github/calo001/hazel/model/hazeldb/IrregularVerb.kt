@@ -1,19 +1,19 @@
-package com.github.calo001.hazel.model
+package com.github.calo001.hazel.model.hazeldb
 
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class RegularVerb(
+data class IrregularVerb(
     @SerialName("base")
-    val base: BaseX,
+    val base: VerbForm,
     @SerialName("emojiCode")
-    val emojiCode: String, // 1F91D
+    val emojiCode: String, // 1F94A
     @SerialName("ing")
-    val ing: IngX,
+    val ing: Ing,
     @SerialName("pastParticiple")
-    val pastParticiple: PastParticipleX,
+    val pastParticiple: PastParticiple,
     @SerialName("simplePast")
-    val simplePast: SimplePastX
+    val simplePast: SimplePast
 )

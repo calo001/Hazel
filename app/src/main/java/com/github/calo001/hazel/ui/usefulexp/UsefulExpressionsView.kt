@@ -13,8 +13,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.github.calo001.hazel.model.Phrase
-import com.github.calo001.hazel.model.UsefulPhrase
+import com.github.calo001.hazel.model.hazeldb.Phrase
+import com.github.calo001.hazel.model.hazeldb.UsefulPhrase
 import com.github.calo001.hazel.ui.common.HazelToolbarContent
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.common.safeSpacer

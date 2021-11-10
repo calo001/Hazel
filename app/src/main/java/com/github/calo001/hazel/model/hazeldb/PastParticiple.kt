@@ -1,4 +1,4 @@
-package com.github.calo001.hazel.model
+package com.github.calo001.hazel.model.hazeldb
 
 
 import kotlinx.serialization.SerialName
