@@ -47,8 +47,12 @@ class MainActivity : ComponentActivity() {
             val colorScheme by dataStore.colorScheme.collectAsState(initial = ColorVariant.Green)
             val dictionary by dataStore.dictionary.collectAsState(initial = Dictionaries.Oxford)
             val darkMode by dataStore.darkMode.collectAsState(initial = DarkMode.FollowSystem)
+            val useDarkIcons = when(darkMode) {
+                DarkMode.Dark -> false
+                DarkMode.Light -> true
+                DarkMode.FollowSystem -> !isSystemInDarkTheme()
+            }
             val systemUiController = rememberSystemUiController()
-            val useDarkIcons = !isSystemInDarkTheme()
 
             HazelTheme(
                 darkTheme = when(darkMode) {
