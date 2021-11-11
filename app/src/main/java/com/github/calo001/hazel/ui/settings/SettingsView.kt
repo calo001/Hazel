@@ -3,11 +3,15 @@ package com.github.calo001.hazel.ui.settings
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Book
+import androidx.compose.material.icons.filled.DarkMode
 import androidx.compose.material.icons.filled.Palette
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -17,6 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.github.calo001.hazel.config.ColorVariant
+import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.ui.common.HazelToolbarSimple
 import com.github.calo001.hazel.ui.theme.*
 
@@ -25,13 +30,17 @@ import com.github.calo001.hazel.ui.theme.*
 @Composable
 fun SettingsView(
     onBackClick: () -> Unit,
+    darkMode: DarkMode,
     colorVariant: ColorVariant,
     dictionaries: Dictionaries,
     onSelectColorScheme: (ColorVariant) -> Unit,
     onSelectDictionary: (Dictionaries) -> Unit,
+    onSelectDarkMode: (DarkMode) -> Unit,
 ) {
     Column(
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier
+            .fillMaxSize()
+            .scrollable(rememberScrollState(), Orientation.Vertical)
     ) {
         HazelToolbarSimple(
             title = "Settings",
@@ -62,7 +71,7 @@ fun SettingsView(
                 modifier = Modifier
             ) },
             text = { Text(text = "Color scheme") },
-            secondaryText = { Text(text = "Select a color scheme to chance color in the app.")  },
+            secondaryText = { Text(text = "Select a color scheme for the app.")  },
             modifier = Modifier.fillMaxWidth()
         )
 
@@ -70,7 +79,107 @@ fun SettingsView(
             selected = colorVariant,
             onSelectColorScheme = onSelectColorScheme
         )
+
+        ListItem(
+            icon = { Icon(
+                imageVector = Icons.Filled.DarkMode,
+                contentDescription = null,
+                modifier = Modifier
+            ) },
+            text = { Text(text = "Dark mode") },
+            secondaryText = { Text(text = "Select dark mode preference for the app.")  },
+            modifier = Modifier.fillMaxWidth()
+        )
+
+        DarkModeGroup(
+            selected = darkMode,
+            onSelectDarkMode = onSelectDarkMode
+        )
     }
+}
+
+@Composable
+private fun DarkModeGroup(
+    selected: DarkMode,
+    onSelectDarkMode: (DarkMode) -> Unit,
+) {
+    val uiModes = listOf(
+        DarkMode.Light,
+        DarkMode.Dark,
+        DarkMode.FollowSystem,
+    )
+    Row(modifier = Modifier
+        .padding(start = 60.dp)
+        .padding(end = 8.dp)
+        .padding(vertical = 8.dp)
+    ) {
+        uiModes.forEach { uiMode ->
+            val background = if (selected == uiMode) {
+                MaterialTheme.colors.surface
+            } else {
+                Color.Transparent
+            }
+            Surface(
+                shape = MaterialTheme.shapes.medium,
+                color = background,
+                modifier = Modifier
+                    .padding(4.dp)
+            ) {
+                Box(modifier = Modifier.clickable { onSelectDarkMode(uiMode) }) {
+                    when(uiMode) {
+                        DarkMode.Dark -> DarkCircle()
+                        DarkMode.Light -> LightCircle()
+                        DarkMode.FollowSystem -> AutoCircle()
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun LightCircle() {
+    val border = MaterialTheme.colors.onPrimary
+    val colorsCircle = listOf(
+        Color.White,
+        Color.White,
+        Color.White,
+        Color.White
+    )
+    ColorCircle(
+        border = border,
+        palette = colorsCircle
+    )
+}
+
+@Composable
+fun AutoCircle() {
+    val border = MaterialTheme.colors.onPrimary
+    val colorsCircle = listOf(
+        Color.White,
+        Color.White,
+        Gray900,
+        Gray900
+    )
+    ColorCircle(
+        border = border,
+        palette = colorsCircle
+    )
+}
+
+@Composable
+fun DarkCircle() {
+    val border = MaterialTheme.colors.onPrimary
+    val colorsCircle = listOf(
+        Gray900,
+        Gray900,
+        Gray900,
+        Gray900
+    )
+    ColorCircle(
+        border = border,
+        palette = colorsCircle
+    )
 }
 
 @Composable
@@ -251,8 +360,10 @@ fun SettingsViewPreview() {
             onBackClick = {},
             onSelectColorScheme = {},
             onSelectDictionary = {},
+            onSelectDarkMode = {},
             colorVariant = ColorVariant.Green,
             dictionaries = Dictionaries.Oxford,
+            darkMode = DarkMode.FollowSystem,
         )
     }
 }

@@ -4,14 +4,26 @@ import android.content.Context
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import com.github.calo001.hazel.config.ColorVariant
-import com.github.calo001.hazel.ui.theme.Dictionaries
+import com.github.calo001.hazel.config.DarkMode
+import com.github.calo001.hazel.ui.settings.Dictionaries
 import kotlinx.coroutines.flow.map
 
 private val COLOR_SCHEME = stringPreferencesKey("color_scheme")
-private val DICTIONARY = stringPreferencesKey("Dictionary")
+private val DICTIONARY = stringPreferencesKey("dictionary")
+private val DARK_MODE = stringPreferencesKey("dark_mode")
 
 class DataStoreProvider(val context: Context) {
     private val settingsDataStore = context.dataStore
+
+    suspend fun setDarkMode(darkMode: DarkMode) {
+        settingsDataStore.edit { settings ->
+            settings[DARK_MODE] = when(darkMode) {
+                DarkMode.Dark -> DarkMode.Dark.name
+                DarkMode.FollowSystem -> DarkMode.FollowSystem.name
+                DarkMode.Light -> DarkMode.Light.name
+            }
+        }
+    }
 
     suspend fun setColorScheme(color: ColorVariant) {
         settingsDataStore.edit { settings ->
@@ -25,6 +37,15 @@ class DataStoreProvider(val context: Context) {
     suspend fun setDictionary(dictionary: Dictionaries) {
         settingsDataStore.edit { settings ->
             settings[DICTIONARY] = dictionary.name
+        }
+    }
+
+    val darkMode = settingsDataStore.data.map { preferences ->
+        when(preferences[DARK_MODE]) {
+            DarkMode.Dark.name -> DarkMode.Dark
+            DarkMode.Light.name -> DarkMode.Light
+            DarkMode.FollowSystem.name -> DarkMode.FollowSystem
+            else -> DarkMode.FollowSystem
         }
     }
 
