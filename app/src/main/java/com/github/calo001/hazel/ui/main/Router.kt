@@ -13,6 +13,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.routes.Routes
 import com.github.calo001.hazel.ui.animals.AnimalContentView
 import com.github.calo001.hazel.ui.animals.AnimalsView
@@ -22,6 +23,8 @@ import com.github.calo001.hazel.ui.colors.OneColorView
 import com.github.calo001.hazel.ui.countries.CountryContentView
 import com.github.calo001.hazel.ui.countries.CountryView
 import com.github.calo001.hazel.ui.gallery.GalleryView
+import com.github.calo001.hazel.ui.theme.Dictionaries
+import com.github.calo001.hazel.ui.theme.SettingsView
 import com.github.calo001.hazel.ui.usefulexp.PhraseView
 import com.github.calo001.hazel.ui.usefulexp.UsefulExpressionsView
 import com.github.calo001.hazel.ui.verbs.VerbContentView
@@ -40,6 +43,10 @@ fun Router(
     viewModel: MainViewModel,
     onOpenLink: (String) -> Unit,
     onOpenMaps: (String) -> Unit,
+    onSelectColorScheme: (ColorVariant) -> Unit,
+    onSelectDictionary: (Dictionaries) -> Unit,
+    colorScheme: ColorVariant,
+    dictionary: Dictionaries,
 ) {
     NavHost(
         navController = navController,
@@ -425,6 +432,7 @@ fun Router(
             MainScreen(
                 status = hazelContentStatus,
                 painterIdentifier = painterIdentifier,
+                onSettingsClick = { navController.navigate(Routes.Settings.name) },
                 onNavigate = { route, subsection ->
                     if (route is Routes.UsefulExpressions) {
                         navController.navigate(
@@ -513,6 +521,16 @@ fun Router(
                     )
                 }
             }
+        }
+
+        composable(route = Routes.Settings.name) {
+            SettingsView(
+                onBackClick = { navController.navigateUp() },
+                onSelectDictionary = onSelectDictionary,
+                onSelectColorScheme = onSelectColorScheme,
+                colorVariant = colorScheme,
+                dictionaries = dictionary,
+            )
         }
     }
 }

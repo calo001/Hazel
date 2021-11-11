@@ -13,7 +13,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
 import com.github.calo001.hazel.model.unsplash.Result
-import com.github.calo001.hazel.ui.common.HazelToolbarSimpleExample
+import com.github.calo001.hazel.ui.common.HazelToolbarSimple
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.common.safeSpacer
 import com.github.calo001.hazel.ui.main.calculateItemsPerColumn
@@ -39,7 +39,7 @@ fun GalleryView(
         )
 
         SurfaceToolbar {
-            HazelToolbarSimpleExample(
+            HazelToolbarSimple(
                 title = title,
                 subtitle = "Gallery",
                 onBackClick = onBackClick,

@@ -30,6 +30,7 @@ fun MainScreen(
     status: HazelContentStatus,
     painterIdentifier: PainterIdentifier,
     onNavigate: (Routes, String) -> Unit,
+    onSettingsClick: () -> Unit,
 ) {
     Box {
         when (status) {
@@ -49,7 +50,9 @@ fun MainScreen(
         }
 
         SurfaceToolbar {
-            HazelToolbar()
+            HazelToolbar(
+                onSettingsClick = onSettingsClick,
+            )
             SearchBar(
                 modifier = Modifier.padding(horizontal = 16.dp),
                 placeholder = "Search what you need",

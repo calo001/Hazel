@@ -2,6 +2,7 @@ package com.github.calo001.hazel.routes
 
 sealed class Routes(val name: String, val label: String) {
     object Main: Routes(name = "main", label = "Main")
+    object Settings: Routes(name = "settins", label = "Countries")
     object UsefulExpressions: Routes(name = "useful_expressions", label = "Useful expressions")
     object UsefulExpressionsPhrase: Routes(name = "useful_expressions_phrase", label = "Useful expressions")
     object Colors: Routes(name = "color", label = "Colors")

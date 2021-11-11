@@ -14,7 +14,9 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun HazelToolbar() {
+fun HazelToolbar(
+    onSettingsClick: () -> Unit,
+) {
     Row(
         horizontalArrangement = Arrangement.End,
         modifier = Modifier.fillMaxWidth()
@@ -28,7 +30,7 @@ fun HazelToolbar() {
 
         HazelToolbarButton(
             icon = Icons.Filled.Settings,
-            onClick = {},
+            onClick = onSettingsClick,
             modifier = Modifier.padding(8.dp)
         )
     }

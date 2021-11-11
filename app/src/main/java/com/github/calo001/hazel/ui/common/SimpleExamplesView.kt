@@ -13,7 +13,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
-import com.github.calo001.hazel.ui.common.HazelToolbarSimpleExample
+import com.github.calo001.hazel.ui.common.HazelToolbarSimple
 import com.github.calo001.hazel.ui.usefulexp.ControlsItem
 
 @ExperimentalMaterialApi
@@ -34,7 +34,7 @@ fun SimpleExamplesView(
         modifier = modifier.fillMaxSize()
     ) {
         val (toolbar, content, controls) = createRefs()
-        HazelToolbarSimpleExample(
+        HazelToolbarSimple(
             title = title,
             subtitle = "Examples with",
             onBackClick = onBackClick,

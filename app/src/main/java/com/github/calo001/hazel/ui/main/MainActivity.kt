@@ -22,6 +22,9 @@ import java.util.*
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.foundation.isSystemInDarkTheme
+import com.github.calo001.hazel.platform.DataStoreProvider
+import com.github.calo001.hazel.ui.theme.Dictionaries
+import kotlinx.coroutines.launch
 
 
 class MainActivity : ComponentActivity() {
@@ -32,17 +35,21 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val dataStore = DataStoreProvider(applicationContext)
         val hazelDb = resources.openRawResource(R.raw.hazel)
         viewModel.loadHazelContent(hazelDb)
 
         setContent {
+            val colorScheme by dataStore.colorScheme.collectAsState(initial = ColorVariant.Green)
+            val dictionary by dataStore.dictionary.collectAsState(initial = Dictionaries.Oxford)
             val systemUiController = rememberSystemUiController()
             val useDarkIcons = !isSystemInDarkTheme()
 
             HazelTheme(
-                colorVariant = ColorVariant.Blue
+                colorVariant = colorScheme
             ) {
                 SystemBars(systemUiController, useDarkIcons)
+                val scope = rememberCoroutineScope()
                 val navController = rememberNavController()
                 val painterIdentifier = PainterIdentifier(
                     resources = resources,
@@ -59,9 +66,17 @@ class MainActivity : ComponentActivity() {
                         hazelContentStatus = hazelContentStatus,
                         painterIdentifier = painterIdentifier,
                         onListenClick = { speak(it) },
-                        onOpenLink = { term -> openInBrowser(term) },
+                        onOpenLink = { term -> openInBrowser(term, dictionary) },
                         onOpenMaps = { link -> openMaps(link) },
-                        viewModel = viewModel
+                        colorScheme = colorScheme,
+                        dictionary = dictionary,
+                        onSelectColorScheme = {
+                            scope.launch { dataStore.setColorScheme(it) }
+                        },
+                        onSelectDictionary = {
+                            scope.launch { dataStore.setDictionary(it) }
+                        },
+                        viewModel = viewModel,
                     )
                 }
             }
@@ -78,8 +93,8 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    private fun openInBrowser(term: String) {
-        val url = "https://www.oxfordlearnersdictionaries.com/definition/english/$term"
+    private fun openInBrowser(term: String, dictionaries: Dictionaries) {
+        val url = "${dictionaries.url}$term"
         browse(url)
     }
 
@@ -129,20 +144,6 @@ class MainActivity : ComponentActivity() {
                 color = color,
                 darkIcons = useDarkIcons
             )
-        }
-    }
-}
-
-@Preview(
-    showBackground = true,
-)
-@Composable
-fun DefaultPreview() {
-    HazelTheme(
-        colorVariant = ColorVariant.Green
-    ) {
-        Surface(color = MaterialTheme.colors.background) {
-            //ContentT(resources, packageName)
         }
     }
 }
