@@ -15,6 +15,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.github.calo001.hazel.config.ColorVariant
+import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.routes.Routes
 import com.github.calo001.hazel.ui.animals.AnimalContentView
 import com.github.calo001.hazel.ui.animals.AnimalsView
@@ -47,6 +48,8 @@ fun Router(
     onOpenMaps: (String) -> Unit,
     onSelectColorScheme: (ColorVariant) -> Unit,
     onSelectDictionary: (Dictionaries) -> Unit,
+    onSelectDarkMode: (DarkMode) -> Unit,
+    darkMode: DarkMode,
     colorScheme: ColorVariant,
     dictionary: Dictionaries,
 ) {
@@ -436,6 +439,7 @@ fun Router(
         composable(Routes.Main.name) {
             val searchResult by viewModel.searchStatus.collectAsState()
             MainScreen(
+                darkMode = darkMode,
                 status = hazelContentStatus,
                 painterIdentifier = painterIdentifier,
                 onSettingsClick = { navController.navigate(Routes.Settings.name) },
@@ -444,7 +448,10 @@ fun Router(
                     viewModel.searchQuery(query)
                 },
                 onNavigate = { route ->
-                        navController.navigate(route)
+                    navController.navigate(route)
+                },
+                onDarkModeChange = { darkMode ->
+                    onSelectDarkMode(darkMode)
                 }
             )
         }
@@ -532,8 +539,10 @@ fun Router(
                 onBackClick = { navController.navigateUp() },
                 onSelectDictionary = onSelectDictionary,
                 onSelectColorScheme = onSelectColorScheme,
+                onSelectDarkMode = onSelectDarkMode,
                 colorVariant = colorScheme,
                 dictionaries = dictionary,
+                darkMode = darkMode,
             )
         }
     }

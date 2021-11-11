@@ -21,8 +21,10 @@ import com.github.calo001.hazel.util.browse
 import java.util.*
 import android.content.Intent
 import android.net.Uri
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.isSystemInDarkTheme
+import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.platform.DataStoreProvider
 import com.github.calo001.hazel.ui.settings.Dictionaries
 import kotlinx.coroutines.launch
@@ -44,10 +46,16 @@ class MainActivity : ComponentActivity() {
         setContent {
             val colorScheme by dataStore.colorScheme.collectAsState(initial = ColorVariant.Green)
             val dictionary by dataStore.dictionary.collectAsState(initial = Dictionaries.Oxford)
+            val darkMode by dataStore.darkMode.collectAsState(initial = DarkMode.FollowSystem)
             val systemUiController = rememberSystemUiController()
             val useDarkIcons = !isSystemInDarkTheme()
 
             HazelTheme(
+                darkTheme = when(darkMode) {
+                    DarkMode.FollowSystem -> isSystemInDarkTheme()
+                    DarkMode.Dark -> true
+                    DarkMode.Light -> false
+                },
                 colorVariant = colorScheme
             ) {
                 SystemBars(systemUiController, useDarkIcons)
@@ -64,6 +72,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background,
                 ) {
                     Router(
+                        viewModel = viewModel,
                         navController = navController,
                         hazelContentStatus = hazelContentStatus,
                         painterIdentifier = painterIdentifier,
@@ -72,13 +81,16 @@ class MainActivity : ComponentActivity() {
                         onOpenMaps = { link -> openMaps(link) },
                         colorScheme = colorScheme,
                         dictionary = dictionary,
+                        darkMode = darkMode,
                         onSelectColorScheme = {
                             scope.launch { dataStore.setColorScheme(it) }
                         },
                         onSelectDictionary = {
                             scope.launch { dataStore.setDictionary(it) }
                         },
-                        viewModel = viewModel,
+                        onSelectDarkMode = {
+                            scope.launch { dataStore.setDarkMode(it) }
+                        }
                     )
                 }
             }

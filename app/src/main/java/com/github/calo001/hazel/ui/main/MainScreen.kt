@@ -15,7 +15,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
@@ -24,6 +23,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.model.hazeldb.HazelContent
 import com.github.calo001.hazel.model.view.ItemMenuData
 import com.github.calo001.hazel.routes.Routes
@@ -42,6 +42,8 @@ fun MainScreen(
     onSettingsClick: () -> Unit,
     searchStatus: SearchStatus,
     onSearchQuery: (String) -> Unit,
+    darkMode: DarkMode,
+    onDarkModeChange: (DarkMode) -> Unit,
 ) {
     var querySearch by rememberSaveable { mutableStateOf("") }
 
@@ -97,7 +99,9 @@ fun MainScreen(
                 }
                 Column {
                     HazelToolbar(
+                        darkMode = darkMode,
                         onSettingsClick = onSettingsClick,
+                        onDarkModeChange = onDarkModeChange,
                     )
                     SearchBar(
                         modifier = Modifier.padding(horizontal = 16.dp),
