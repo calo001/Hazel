@@ -57,7 +57,7 @@ fun ItemMenuPreview() {
     HazelTheme(
         colorVariant = ColorVariant.Green
     ) {
-        val painter = painterResource(id = R.drawable.ic_launcher_background)
+        val painter = painterResource(id = R.drawable.ic_launcher_foreground)
         ItemMenu(
             title = "Apologizing",
             image = painter,

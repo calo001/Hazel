@@ -1,5 +1,6 @@
 package com.github.calo001.hazel.ui.countries
 
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
@@ -13,6 +14,7 @@ import com.github.calo001.hazel.model.hazeldb.Country
 import com.github.calo001.hazel.ui.theme.Lato
 import com.github.calo001.hazel.util.PainterIdentifier
 
+@ExperimentalAnimationApi
 @Composable
 fun CountryInfo(
     country: Country,

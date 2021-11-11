@@ -1,6 +1,7 @@
 package com.github.calo001.hazel.ui.verbs
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -19,6 +20,7 @@ import com.github.calo001.hazel.ui.common.HazelToolbarVerb
 import com.github.calo001.hazel.ui.usefulexp.ControlsItem
 import com.github.calo001.hazel.util.PainterIdentifier
 
+@ExperimentalAnimationApi
 @ExperimentalMaterialApi
 @Composable
 fun VerbContentView(
@@ -109,6 +111,7 @@ fun VerbContentView(
     }
 }
 
+@ExperimentalAnimationApi
 @Composable
 fun VerbInfo(
     verb: Verb,

@@ -1,4 +1,4 @@
-package com.github.calo001.hazel.ui.theme
+package com.github.calo001.hazel.ui.settings
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -18,6 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.ui.common.HazelToolbarSimple
+import com.github.calo001.hazel.ui.theme.*
 
 @ExperimentalMaterialApi
 @ExperimentalComposeUiApi

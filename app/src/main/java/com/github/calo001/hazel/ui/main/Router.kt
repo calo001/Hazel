@@ -1,5 +1,6 @@
 package com.github.calo001.hazel.ui.main
 
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
@@ -23,8 +24,8 @@ import com.github.calo001.hazel.ui.colors.OneColorView
 import com.github.calo001.hazel.ui.countries.CountryContentView
 import com.github.calo001.hazel.ui.countries.CountryView
 import com.github.calo001.hazel.ui.gallery.GalleryView
-import com.github.calo001.hazel.ui.theme.Dictionaries
-import com.github.calo001.hazel.ui.theme.SettingsView
+import com.github.calo001.hazel.ui.settings.Dictionaries
+import com.github.calo001.hazel.ui.settings.SettingsView
 import com.github.calo001.hazel.ui.usefulexp.PhraseView
 import com.github.calo001.hazel.ui.usefulexp.UsefulExpressionsView
 import com.github.calo001.hazel.ui.verbs.VerbContentView
@@ -32,6 +33,7 @@ import com.github.calo001.hazel.ui.verbs.VerbData
 import com.github.calo001.hazel.ui.verbs.VerbsView
 import com.github.calo001.hazel.util.PainterIdentifier
 
+@ExperimentalAnimationApi
 @ExperimentalComposeUiApi
 @ExperimentalMaterialApi
 @Composable

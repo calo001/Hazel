@@ -31,6 +31,7 @@ import com.github.calo001.hazel.ui.common.*
 import com.github.calo001.hazel.util.PainterIdentifier
 import com.github.calo001.hazel.ui.theme.Lato
 
+@ExperimentalAnimationApi
 @ExperimentalComposeUiApi
 @ExperimentalMaterialApi
 @Composable
@@ -64,8 +65,8 @@ fun MainScreen(
         SurfaceToolbar {
             Box(modifier = Modifier.fillMaxWidth()) {
                 AnimatedVisibility(
-                    enter = fadeIn() + expandVertically { 0 },
-                    exit = fadeOut() + shrinkVertically { 0 },
+                    enter = fadeIn() + expandVertically(),
+                    exit = fadeOut() + shrinkVertically(),
                     visible = querySearch.isNotEmpty()
                 ) {
                     Box {

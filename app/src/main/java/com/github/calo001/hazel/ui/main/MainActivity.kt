@@ -21,15 +21,17 @@ import com.github.calo001.hazel.util.browse
 import java.util.*
 import android.content.Intent
 import android.net.Uri
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.isSystemInDarkTheme
 import com.github.calo001.hazel.platform.DataStoreProvider
-import com.github.calo001.hazel.ui.theme.Dictionaries
+import com.github.calo001.hazel.ui.settings.Dictionaries
 import kotlinx.coroutines.launch
 
 
 class MainActivity : ComponentActivity() {
     private val viewModel: MainViewModel by viewModels()
 
+    @ExperimentalAnimationApi
     @ExperimentalComposeUiApi
     @ExperimentalMaterialApi
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,7 +56,7 @@ class MainActivity : ComponentActivity() {
                 val painterIdentifier = PainterIdentifier(
                     resources = resources,
                     packageName = packageName,
-                    default = R.drawable.ic_launcher_background
+                    default = R.drawable.ic_launcher_foreground
                 )
                 val hazelContentStatus by viewModel.hazelContent.collectAsState()
 

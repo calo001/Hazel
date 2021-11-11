@@ -1,5 +1,6 @@
 package com.github.calo001.hazel.ui.countries
 
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -13,6 +14,7 @@ import com.github.calo001.hazel.ui.common.HazelToolbarCountry
 import com.github.calo001.hazel.ui.usefulexp.ControlsItem
 import com.github.calo001.hazel.util.PainterIdentifier
 
+@ExperimentalAnimationApi
 @ExperimentalMaterialApi
 @Composable
 fun CountryContentView(
