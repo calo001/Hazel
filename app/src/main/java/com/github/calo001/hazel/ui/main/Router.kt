@@ -53,34 +53,38 @@ fun Router(
         startDestination = Routes.Main.name
     ) {
         composable(
-            route = "${Routes.Verbs.name}/{type}/{verb}",
+            route = "${Routes.Verbs.name}/{type}/{verb}/{form}",
             arguments = listOf(
                 navArgument("type") { type = NavType.StringType },
-                navArgument("verb") { type = NavType.StringType }
+                navArgument("verb") { type = NavType.StringType },
+                navArgument("form") { type = NavType.StringType },
             )
         ) { navBackStackEntry ->
-            var verbArg by rememberSaveable {
+            var verbBaseFormArg by rememberSaveable {
                 mutableStateOf(navBackStackEntry.arguments?.getString("verb") ?: "")
             }
 
             val type = navBackStackEntry.arguments?.getString("type") ?: ""
+            val form = navBackStackEntry.arguments?.getString("form") ?: VerbData.BaseForm.name
+
             val verbs = when (type) {
                 "regular" -> Pair("Regular verbs", viewModel.getRegularVerbs())
                 "irregular" -> Pair("Irregular verbs", viewModel.getIrregularVerbs())
                 else -> Pair("Verbs", listOf())
             }
 
-            val currentVerb = verbs.second.firstOrNull { it.base.verb == verbArg }
+            val currentVerb = verbs.second.firstOrNull { it.base.verb == verbBaseFormArg }
 
             if (currentVerb != null) {
-                val indexCurrent = verbs.second.indexOfFirst { it.base.verb == verbArg }
+                val indexCurrent = verbs.second.indexOfFirst { it.base.verb == verbBaseFormArg }
                 VerbContentView(
                     verb = currentVerb,
+                    selectedForm = form,
                     onNext = {
-                        verbArg = verbs.second.getOrElse(indexCurrent + 1) { verbs.second[indexCurrent] }.base.verb
+                        verbBaseFormArg = verbs.second.getOrElse(indexCurrent + 1) { verbs.second[indexCurrent] }.base.verb
                     },
                     onPrevious = {
-                        verbArg = verbs.second.getOrElse(indexCurrent - 1) { verbs.second[indexCurrent] }.base.verb
+                        verbBaseFormArg = verbs.second.getOrElse(indexCurrent - 1) { verbs.second[indexCurrent] }.base.verb
                     },
                     onOpenLink = { term ->
                         onOpenLink(term)
@@ -128,10 +132,10 @@ fun Router(
                 onClickVerb = { verb ->
                     when (navBackStackEntry.arguments?.getString("type") ?: "") {
                         "regular" -> navController.navigate(
-                            "${Routes.VerbsRegular.name}/${verb.base.verb}"
+                            "${Routes.VerbsRegular.name}/${verb.base.verb}/${VerbData.BaseForm.name}"
                         )
                         "irregular" -> navController.navigate(
-                            "${Routes.VerbsIrregular.name}/${verb.base.verb}"
+                            "${Routes.VerbsIrregular.name}/${verb.base.verb}/${VerbData.BaseForm.name}"
                         )
                         else -> Unit
                     }
@@ -330,20 +334,19 @@ fun Router(
                 navArgument("query") { type = NavType.StringType }
             )
         ) { navBackStackEntry ->
-            val colorArg = navBackStackEntry.arguments?.getString("query") ?: ""
+            val queryArg = navBackStackEntry.arguments?.getString("query") ?: ""
             val result by viewModel.galleryStatus.collectAsState()
-            DisposableEffect(colorArg) {
-                if (colorArg.isNotEmpty()) {
-                    viewModel.search(colorArg)
+            DisposableEffect(queryArg) {
+                if (queryArg.isNotEmpty()) {
+                    viewModel.searchUnsplash(queryArg)
                 }
                 onDispose {  }
             }
 
-            val resultList = (result as? GalleryStatus.Success)?.content?.results ?: listOf()
-
             GalleryView(
-                title = colorArg,
-                unsplashResult = resultList,
+                title = queryArg,
+                unsplashResult = result,
+                painterIdentifier = painterIdentifier,
                 onBackClick = { navController.navigateUp() }
             )
         }
@@ -429,18 +432,17 @@ fun Router(
         }
 
         composable(Routes.Main.name) {
+            val searchResult by viewModel.searchStatus.collectAsState()
             MainScreen(
                 status = hazelContentStatus,
                 painterIdentifier = painterIdentifier,
                 onSettingsClick = { navController.navigate(Routes.Settings.name) },
-                onNavigate = { route, subsection ->
-                    if (route is Routes.UsefulExpressions) {
-                        navController.navigate(
-                            "${route.name}/${subsection}"
-                        )
-                    } else {
-                        navController.navigate(route.name)
-                    }
+                searchStatus = searchResult,
+                onSearchQuery = { query ->
+                    viewModel.searchQuery(query)
+                },
+                onNavigate = { route ->
+                        navController.navigate(route)
                 }
             )
         }

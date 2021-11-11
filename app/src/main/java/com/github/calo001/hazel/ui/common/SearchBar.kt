@@ -42,6 +42,7 @@ fun SearchBar(
             )
         },
         colors = TextFieldDefaults.textFieldColors(
+            textColor = MaterialTheme.colors.onPrimary,
             focusedIndicatorColor = Color.Transparent,
             unfocusedIndicatorColor = Color.Transparent,
             backgroundColor = MaterialTheme.colors.secondary,
@@ -58,6 +59,7 @@ fun SearchBar(
             IconButton(onClick = {
                 input = ""
                 onTextChange("")
+                keyboardController?.hide()
             }) {
                 Icon(
                     imageVector = Icons.Filled.Clear,

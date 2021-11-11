@@ -22,9 +22,17 @@ class MainViewModel : ViewModel() {
     val hazelContent: StateFlow<HazelContentStatus> get() = _hazelContent
     private val unsplashService = UnsplashServiceProvider.service
     private val unsplashRepository by lazy { UnsplashRepository(unsplashService) }
+    private val searchHelper by lazy {
+        (hazelContent.value as? HazelContentStatus.Success)?.content?.let {
+            SearchHelper(it)
+        }
+    }
 
     private val _galleryStatus = MutableStateFlow<GalleryStatus>(GalleryStatus.Loading)
     val galleryStatus: StateFlow<GalleryStatus> get() = _galleryStatus
+
+    private val _searchStatus = MutableStateFlow<SearchStatus>(SearchStatus.Loading)
+    val searchStatus: StateFlow<SearchStatus> get() = _searchStatus
 
     fun loadHazelContent(hazelDb: InputStream) {
         viewModelScope.launch(Dispatchers.IO) {
@@ -70,7 +78,7 @@ class MainViewModel : ViewModel() {
         }
     }
 
-    fun search(query: String) = viewModelScope.launch {
+    fun searchUnsplash(query: String) = viewModelScope.launch {
         _galleryStatus.tryEmit(GalleryStatus.Loading)
         when (val result = unsplashRepository.search(query)) {
             is NetworkResult.Error -> _galleryStatus.tryEmit(GalleryStatus.Error(result.error))
@@ -106,6 +114,17 @@ class MainViewModel : ViewModel() {
             ?.regularVerbs
             ?: listOf()
     }
+
+    fun searchQuery(query: String) = viewModelScope.launch(Dispatchers.IO) {
+        _searchStatus.tryEmit(SearchStatus.Loading)
+        searchHelper?.searchQuery(query)?.apply {
+            if (this.isNotEmpty()) {
+                _searchStatus.tryEmit(SearchStatus.Success(this))
+            } else {
+                _searchStatus.tryEmit(SearchStatus.Error)
+            }
+        }
+    }
 }
 
 sealed interface HazelContentStatus {
@@ -118,4 +137,10 @@ sealed interface GalleryStatus {
     object Loading: GalleryStatus
     class Success(val content: UnsplashResult): GalleryStatus
     class Error(val error: Exception): GalleryStatus
+}
+
+sealed interface SearchStatus {
+    object Loading: SearchStatus
+    class Success(val result: List<SearchResult>): SearchStatus
+    object Error: SearchStatus
 }

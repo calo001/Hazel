@@ -32,8 +32,9 @@ fun VerbContentView(
     hasNext: Boolean,
     hasPrevious: Boolean,
     painterIdentifier: PainterIdentifier,
+    selectedForm: String,
 ) {
-    var selectedInfoName by rememberSaveable { mutableStateOf(VerbData.BaseForm.name) }
+    var selectedInfoName by rememberSaveable { mutableStateOf(selectedForm) }
     val selectedInfo = when (selectedInfoName) {
         VerbData.BaseForm.name -> VerbData.BaseForm
         VerbData.PastForm.name -> VerbData.PastForm
@@ -84,11 +85,9 @@ fun VerbContentView(
         ControlsItem(
             onPreviousClick = {
                 onPrevious()
-                selectedInfoName = VerbData.BaseForm.name
             },
             onNextClick = {
                 onNext()
-                selectedInfoName = VerbData.BaseForm.name
             },
             onListenClick = {
                 onListen(
