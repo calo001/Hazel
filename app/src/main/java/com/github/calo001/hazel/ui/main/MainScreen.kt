@@ -16,6 +16,7 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -23,6 +24,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.github.calo001.hazel.R
 import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.model.hazeldb.HazelContent
 import com.github.calo001.hazel.model.view.ItemMenuData
@@ -49,8 +51,19 @@ fun MainScreen(
 
     Box {
         when (status) {
+            is HazelContentStatus.Error,
             HazelContentStatus.Loading -> {
-
+                Box(
+                    contentAlignment = Alignment.Center,
+                    modifier = Modifier.fillMaxSize()
+                ) {
+                    Image(painter = painterResource(
+                        id = R.drawable.ic_hazel_logo_ext_dark),
+                        contentDescription = null,
+                        modifier = Modifier
+                            .width(180.dp)
+                    )
+                }
             }
             is HazelContentStatus.Success -> {
                 MainMenu(
@@ -58,9 +71,6 @@ fun MainScreen(
                     painterIdentifier = painterIdentifier,
                     onNavigate = onNavigate,
                 )
-            }
-            is HazelContentStatus.Error -> {
-
             }
         }
 

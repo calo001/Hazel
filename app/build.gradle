@@ -42,6 +42,11 @@ android {
         kotlinCompilerExtensionVersion compose_version
         kotlinCompilerVersion '1.5.10'
     }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
 }
 
 dependencies {
@@ -78,6 +83,7 @@ dependencies {
     // Accompanist
     def accompanist_version = '0.21.2-beta'
     implementation "com.google.accompanist:accompanist-systemuicontroller:$accompanist_version"
+    implementation "com.google.accompanist:accompanist-flowlayout:$accompanist_version"
     def coil_version = '1.4.0'
     implementation("io.coil-kt:coil-compose:$coil_version")
 

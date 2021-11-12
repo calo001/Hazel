@@ -30,6 +30,10 @@ class DataStoreProvider(val context: Context) {
             settings[COLOR_SCHEME] = when(color) {
                 ColorVariant.Blue -> "blue"
                 ColorVariant.Green -> "green"
+                ColorVariant.Amber -> "amber"
+                ColorVariant.Indigo -> "indigo"
+                ColorVariant.Pink -> "pink"
+                ColorVariant.Purple -> "purple"
             }
         }
     }
@@ -53,6 +57,10 @@ class DataStoreProvider(val context: Context) {
         when(preferences[COLOR_SCHEME]) {
             "blue" -> ColorVariant.Blue
             "green" -> ColorVariant.Green
+            "amber" -> ColorVariant.Amber
+            "indigo" -> ColorVariant.Indigo
+            "pink" -> ColorVariant.Pink
+            "purple" -> ColorVariant.Purple
             else -> ColorVariant.Green
         }
     }

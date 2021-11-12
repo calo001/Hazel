@@ -1,12 +1,9 @@
 package com.github.calo001.hazel.ui.settings
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.*
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
@@ -23,7 +20,9 @@ import androidx.compose.ui.unit.dp
 import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.ui.common.HazelToolbarSimple
+import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.theme.*
+import com.google.accompanist.flowlayout.FlowRow
 
 @ExperimentalMaterialApi
 @ExperimentalComposeUiApi
@@ -37,65 +36,100 @@ fun SettingsView(
     onSelectDictionary: (Dictionaries) -> Unit,
     onSelectDarkMode: (DarkMode) -> Unit,
 ) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .scrollable(rememberScrollState(), Orientation.Vertical)
-    ) {
-        HazelToolbarSimple(
-            title = "Settings",
-            subtitle = "Main",
-            onBackClick = onBackClick,
-        )
 
-        ListItem(
-            icon = { Icon(
+    Box(modifier = Modifier
+        .fillMaxSize()
+    ) {
+        val scrollState = rememberScrollState()
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(scrollState)
+        ) {
+            Spacer(modifier = Modifier.height(180.dp))
+            SettingsContent(
+                dictionaries,
+                onSelectDictionary,
+                colorVariant,
+                onSelectColorScheme,
+                darkMode,
+                onSelectDarkMode
+            )
+        }
+        SurfaceToolbar {
+            HazelToolbarSimple(
+                title = "Settings",
+                subtitle = "Main",
+                onBackClick = onBackClick,
+                modifier = Modifier.fillMaxWidth()
+            )
+        }
+    }
+}
+
+@ExperimentalMaterialApi
+@Composable
+private fun SettingsContent(
+    dictionaries: Dictionaries,
+    onSelectDictionary: (Dictionaries) -> Unit,
+    colorVariant: ColorVariant,
+    onSelectColorScheme: (ColorVariant) -> Unit,
+    darkMode: DarkMode,
+    onSelectDarkMode: (DarkMode) -> Unit
+) {
+    ListItem(
+        icon = {
+            Icon(
                 imageVector = Icons.Filled.Book,
                 contentDescription = null,
                 modifier = Modifier
-            ) },
-            text = { Text(text = "Dictionary") },
-            secondaryText = { Text(text = "Select a dictionary to open when click an external link.")  },
-            modifier = Modifier.fillMaxWidth()
-        )
+            )
+        },
+        text = { Text(text = "Dictionary") },
+        secondaryText = { Text(text = "Select a dictionary to open when click an external link.") },
+        modifier = Modifier.fillMaxWidth()
+    )
 
-        RadioGroupDictionaries(
-            selectedDictionary = dictionaries,
-            onSelectDictionary = onSelectDictionary,
-        )
+    RadioGroupDictionaries(
+        selectedDictionary = dictionaries,
+        onSelectDictionary = onSelectDictionary,
+    )
 
-        ListItem(
-            icon = { Icon(
+    ListItem(
+        icon = {
+            Icon(
                 imageVector = Icons.Filled.Palette,
                 contentDescription = null,
                 modifier = Modifier
-            ) },
-            text = { Text(text = "Color scheme") },
-            secondaryText = { Text(text = "Select a color scheme for the app.")  },
-            modifier = Modifier.fillMaxWidth()
-        )
+            )
+        },
+        text = { Text(text = "Color scheme") },
+        secondaryText = { Text(text = "Select a color scheme for the app.") },
+        modifier = Modifier.fillMaxWidth()
+    )
 
-        ColorSchemeGroup(
-            selected = colorVariant,
-            onSelectColorScheme = onSelectColorScheme
-        )
+    ColorSchemeGroup(
+        selected = colorVariant,
+        onSelectColorScheme = onSelectColorScheme
+    )
 
-        ListItem(
-            icon = { Icon(
+    ListItem(
+        icon = {
+            Icon(
                 imageVector = Icons.Filled.DarkMode,
                 contentDescription = null,
                 modifier = Modifier
-            ) },
-            text = { Text(text = "Dark mode") },
-            secondaryText = { Text(text = "Select dark mode preference for the app.")  },
-            modifier = Modifier.fillMaxWidth()
-        )
+            )
+        },
+        text = { Text(text = "Dark mode") },
+        secondaryText = { Text(text = "Select dark mode preference for the app.") },
+        modifier = Modifier.fillMaxWidth()
+    )
 
-        DarkModeGroup(
-            selected = darkMode,
-            onSelectDarkMode = onSelectDarkMode
-        )
-    }
+    DarkModeGroup(
+        selected = darkMode,
+        onSelectDarkMode = onSelectDarkMode
+    )
 }
 
 @Composable
@@ -158,8 +192,8 @@ fun AutoCircle() {
     val colorsCircle = listOf(
         Color.White,
         Color.White,
-        Gray900,
-        Gray900
+        Color.Black,
+        Color.Black
     )
     ColorCircle(
         border = border,
@@ -171,10 +205,10 @@ fun AutoCircle() {
 fun DarkCircle() {
     val border = MaterialTheme.colors.onPrimary
     val colorsCircle = listOf(
-        Gray900,
-        Gray900,
-        Gray900,
-        Gray900
+        Color.Black,
+        Color.Black,
+        Color.Black,
+        Color.Black
     )
     ColorCircle(
         border = border,
@@ -189,9 +223,13 @@ private fun ColorSchemeGroup(
 ) {
     val colorSchemes = listOf(
         ColorVariant.Green,
-        ColorVariant.Blue
+        ColorVariant.Blue,
+        ColorVariant.Pink,
+        ColorVariant.Indigo,
+        ColorVariant.Purple,
+        ColorVariant.Amber,
     )
-    Row(modifier = Modifier
+    FlowRow (modifier = Modifier
         .padding(start = 60.dp)
         .padding(end = 8.dp)
         .padding(vertical = 8.dp)
@@ -210,8 +248,12 @@ private fun ColorSchemeGroup(
             ) {
                 Box(modifier = Modifier.clickable { onSelectColorScheme(color) }) {
                     when(color) {
-                        ColorVariant.Blue -> BlueCircle()
-                        ColorVariant.Green -> GreenCircle()
+                        ColorVariant.Blue -> CyanCircle()
+                        ColorVariant.Green -> LightGreenCircle()
+                        ColorVariant.Amber -> AmberCircle()
+                        ColorVariant.Indigo -> IndigoCircle()
+                        ColorVariant.Pink -> PinkCircle()
+                        ColorVariant.Purple -> PurpleCircle()
                     }
                 }
             }
@@ -270,13 +312,13 @@ private fun RadioGroupDictionaries(
 }
 
 @Composable
-private fun GreenCircle() {
+private fun LightGreenCircle() {
     val borderGreen = MaterialTheme.colors.onPrimary
     val colorsCircleGreen = listOf(
-        LightGreen50,
-        LightGreen100,
-        LightGreen200,
-        LightGreenA100
+        Color.GreenA100,
+        Color.LightGreen100,
+        Color.LightGreen200,
+        Color.LightGreenA100
     )
     ColorCircle(
         border = borderGreen,
@@ -285,13 +327,73 @@ private fun GreenCircle() {
 }
 
 @Composable
-private fun BlueCircle() {
+private fun AmberCircle() {
     val borderGreen = MaterialTheme.colors.onPrimary
     val colorsCircleGreen = listOf(
-        Cyan50,
-        Cyan100,
-        Cyan200,
-        CyanA100
+        Color.OrangeA100,
+        Color.Amber100,
+        Color.Amber200,
+        Color.AmberA100
+    )
+    ColorCircle(
+        border = borderGreen,
+        palette = colorsCircleGreen
+    )
+}
+
+@Composable
+private fun IndigoCircle() {
+    val borderGreen = MaterialTheme.colors.onPrimary
+    val colorsCircleGreen = listOf(
+        Color.BlueA100,
+        Color.Indigo100,
+        Color.Indigo200,
+        Color.IndigoA100
+    )
+    ColorCircle(
+        border = borderGreen,
+        palette = colorsCircleGreen
+    )
+}
+
+@Composable
+private fun PinkCircle() {
+    val borderGreen = MaterialTheme.colors.onPrimary
+    val colorsCircleGreen = listOf(
+        Color.RedA100,
+        Color.Pink100,
+        Color.Pink200,
+        Color.PinkA100
+    )
+    ColorCircle(
+        border = borderGreen,
+        palette = colorsCircleGreen
+    )
+}
+
+@Composable
+private fun PurpleCircle() {
+    val borderGreen = MaterialTheme.colors.onPrimary
+    val colorsCircleGreen = listOf(
+        Color.DeepPurpleA100,
+        Color.Pink100,
+        Color.Pink200,
+        Color.PinkA100
+    )
+    ColorCircle(
+        border = borderGreen,
+        palette = colorsCircleGreen
+    )
+}
+
+@Composable
+private fun CyanCircle() {
+    val borderGreen = MaterialTheme.colors.onPrimary
+    val colorsCircleGreen = listOf(
+        Color.LightBlueA100,
+        Color.Cyan100,
+        Color.Cyan200,
+        Color.CyanA100
     )
     ColorCircle(
         border = borderGreen,
