@@ -7,10 +7,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Book
-import androidx.compose.material.icons.filled.DarkMode
-import androidx.compose.material.icons.filled.Launch
-import androidx.compose.material.icons.filled.Palette
+import androidx.compose.material.icons.filled.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
@@ -147,6 +144,29 @@ private fun SettingsContent(
         selected = darkMode,
         onSelectDarkMode = onSelectDarkMode
     )
+    
+    About()
+}
+
+@Composable
+fun About() {
+    FlowRow(
+        crossAxisAlignment = FlowCrossAxisAlignment.Center,
+        mainAxisAlignment = FlowMainAxisAlignment.Center,
+        modifier = Modifier
+            .padding(horizontal = 16.dp)
+            .padding(vertical = 30.dp)
+            .fillMaxWidth()
+    ) {
+        Spacer(modifier = Modifier.size(16.dp))
+        Text(text = "Created with ", style = MaterialTheme.typography.caption)
+        Icon(
+            imageVector = Icons.Filled.Favorite,
+            contentDescription = null,
+            modifier = Modifier.size(22.dp)
+        )
+        Text(text = " by Carlos Lopez.", style = MaterialTheme.typography.caption)
+    }
 }
 
 @Composable
