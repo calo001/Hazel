@@ -52,10 +52,11 @@ fun Router(
     darkMode: DarkMode,
     colorScheme: ColorVariant,
     dictionary: Dictionaries,
+    defaultRoute: String,
 ) {
     NavHost(
         navController = navController,
-        startDestination = Routes.Main.name
+        startDestination = defaultRoute
     ) {
         composable(
             route = "${Routes.Verbs.name}/{type}/{verb}/{form}",

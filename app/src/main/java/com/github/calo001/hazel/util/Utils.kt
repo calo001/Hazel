@@ -25,4 +25,17 @@ class PainterIdentifier(
             painterResource(id = default)
         }
     }
+
+    fun getPainterRes(identifier: String): Int {
+        val resourceId = resources.getIdentifier(
+            identifier, "drawable",
+            packageName
+        )
+
+        return if (resourceId != 0) {
+            resourceId
+        } else {
+            default
+        }
+    }
 }

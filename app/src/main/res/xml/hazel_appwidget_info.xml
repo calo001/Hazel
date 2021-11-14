@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="200dp"
+    android:minHeight="100dp"
+    android:minResizeWidth="100dp"
+    android:minResizeHeight="100dp"
+    android:targetCellWidth="1"
+    android:targetCellHeight="1"
+    android:maxResizeWidth="250dp"
+    android:maxResizeHeight="250dp"
+    android:updatePeriodMillis="0"
+    android:description="@string/hazel_appwidget_description"
+    android:previewLayout="@layout/hazel_appwidget_preview"
+    android:initialLayout="@layout/hazel_loading_appwidget"
+    android:resizeMode="horizontal|vertical"
+    android:widgetCategory="home_screen"
+    android:widgetFeatures="reconfigurable|configuration_optional"
+    android:previewImage="@drawable/widget_preview"
+    >
+</appwidget-provider>

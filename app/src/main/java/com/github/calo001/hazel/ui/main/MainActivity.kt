@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.compose.material.*
 import androidx.compose.runtime.*
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
 import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.ui.theme.HazelTheme
@@ -21,11 +20,11 @@ import com.github.calo001.hazel.util.browse
 import java.util.*
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.isSystemInDarkTheme
 import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.platform.DataStoreProvider
+import com.github.calo001.hazel.routes.Routes
 import com.github.calo001.hazel.ui.settings.Dictionaries
 import kotlinx.coroutines.launch
 
@@ -86,6 +85,7 @@ class MainActivity : ComponentActivity() {
                         colorScheme = colorScheme,
                         dictionary = dictionary,
                         darkMode = darkMode,
+                        defaultRoute = Routes.Main.name,
                         onSelectColorScheme = {
                             scope.launch { dataStore.setColorScheme(it) }
                         },

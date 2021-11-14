@@ -16,6 +16,7 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.Hazel.NoActionBar"
             android:screenOrientation="portrait"
+            android:launchMode="singleInstance"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +24,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver
+            android:name=".ui.widget.HazelWidgetReceiver"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/hazel_appwidget_info" />
+        </receiver>
+
     </application>
 
 </manifest>

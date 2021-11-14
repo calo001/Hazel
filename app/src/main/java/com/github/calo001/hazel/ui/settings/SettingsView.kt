@@ -122,7 +122,7 @@ private fun SettingsContent(
             )
         },
         text = { Text(text = "Dark mode") },
-        secondaryText = { Text(text = "Select dark mode preference for the app.") },
+        secondaryText = { Text(text = "Select dark mode for the app.") },
         modifier = Modifier.fillMaxWidth()
     )
 
