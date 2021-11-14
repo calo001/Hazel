@@ -201,7 +201,7 @@ fun MainMenu(
         SectionMenu(
             title = "Basic vocabulary",
             itemsPerColumns = itemsPerColumns,
-            items = listOf(colors, irregularVerbs, regularVerb, countries, animals),
+            items = listOf(regularVerb, irregularVerbs, colors, animals, countries),
             painterIdentifier = painterIdentifier,
             onClick = { id ->
                 when (id) {
