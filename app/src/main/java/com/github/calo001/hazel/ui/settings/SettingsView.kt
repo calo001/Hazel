@@ -9,6 +9,7 @@ import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Book
 import androidx.compose.material.icons.filled.DarkMode
+import androidx.compose.material.icons.filled.Launch
 import androidx.compose.material.icons.filled.Palette
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -22,6 +23,8 @@ import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.ui.common.HazelToolbarSimple
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.theme.*
+import com.google.accompanist.flowlayout.FlowCrossAxisAlignment
+import com.google.accompanist.flowlayout.FlowMainAxisAlignment
 import com.google.accompanist.flowlayout.FlowRow
 
 @ExperimentalMaterialApi
@@ -86,7 +89,21 @@ private fun SettingsContent(
             )
         },
         text = { Text(text = "Dictionary") },
-        secondaryText = { Text(text = "Select a dictionary to open when click an external link.") },
+        secondaryText = {
+            FlowRow(
+                crossAxisAlignment = FlowCrossAxisAlignment.Center,
+            ) {
+                Text(text = "Select a dictionary when")
+                Icon(
+                    imageVector = Icons.Filled.Launch,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(24.dp)
+                        .padding(horizontal = 4.dp)
+                )
+                Text(text = "is clicked")
+            }
+        },
         modifier = Modifier.fillMaxWidth()
     )
 
