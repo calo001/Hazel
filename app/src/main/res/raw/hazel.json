@@ -253,4605 +253,6 @@
         "The pink sky at night means a clear day will follow.",
         "Have you been in the sun? Your nose is a bit pink."
       ]
-    },
-    {
-      "name": "Night",
-      "code": "#0C090A",
-      "type": "blacks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Charcoal",
-      "code": "#34282C",
-      "type": "blacks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Oil",
-      "code": "#3B3131",
-      "type": "blacks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dark Gray",
-      "code": "#3A3B3C",
-      "type": "blacks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Black Cat",
-      "code": "#413839",
-      "type": "blacks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Iridium",
-      "code": "#3D3C3A",
-      "type": "blacks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Black Eel",
-      "code": "#463E3F",
-      "type": "blacks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Black Cow",
-      "code": "#4C4646",
-      "type": "blacks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Gray Wolf",
-      "code": "#504A4B",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Vampire Gray",
-      "code": "#565051",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Iron Gray",
-      "code": "#52595D",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Gray Dolphin",
-      "code": "#5C5858",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Carbon Gray",
-      "code": "#625D5D",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Ash Gray",
-      "code": "#666362",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Cloudy Gray",
-      "code": "#6D6968",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DimGray or DimGrey",
-      "code": "#696969",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Smokey Gray",
-      "code": "#726E6D",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Alien Gray",
-      "code": "#736F6E",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Sonic Silver",
-      "code": "#757575",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Platinum Gray",
-      "code": "#797979",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Granite",
-      "code": "#837E7C",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Gray or Grey",
-      "code": "#808080",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Battleship Gray",
-      "code": "#848482",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DarkGray or DarkGrey",
-      "code": "#A9A9A9",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Gray Cloud",
-      "code": "#B6B6B4",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Silver",
-      "code": "#C0C0C0",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Pale Silver",
-      "code": "#C9C0BB",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Gray Goose",
-      "code": "#D1D0CE",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Platinum Silver",
-      "code": "#CECECE",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "LightGray or LightGrey",
-      "code": "#D3D3D3",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Gainsboro",
-      "code": "#DCDCDC",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Platinum",
-      "code": "#E5E4E2",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Metallic Silver",
-      "code": "#BCC6CC",
-      "type": "grays",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blue Gray",
-      "code": "#98AFC7",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Roman Silver",
-      "code": "#838996",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "LightSlateGray or LightSlateGrey",
-      "code": "#778899",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "SlateGray or SlateGrey",
-      "code": "#708090",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Rat Gray",
-      "code": "#6D7B8D",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Slate Granite Gray",
-      "code": "#657383",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Jet Gray",
-      "code": "#616D7E",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Mist Blue",
-      "code": "#646D7E",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Marble Blue",
-      "code": "#566D7E",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Slate Blue Grey",
-      "code": "#737CA1",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Light Purple Blue",
-      "code": "#728FCE",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Azure Blue",
-      "code": "#4863A0",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blue Jay",
-      "code": "#2B547E",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dark Blue Grey",
-      "code": "#29465B",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dark Slate",
-      "code": "#2B3856",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Deep Sea Blue",
-      "code": "#123456",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Night Blue",
-      "code": "#151B54",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "MidnightBlue",
-      "code": "#191970",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Navy",
-      "code": "#000080",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Denim Dark Blue",
-      "code": "#151B8D",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DarkBlue",
-      "code": "#00008B",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Lapis Blue",
-      "code": "#15317E",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "New Midnight Blue",
-      "code": "#0000A0",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Earth Blue",
-      "code": "#0000A5",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Cobalt Blue",
-      "code": "#0020C2",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "MediumBlue",
-      "code": "#0000CD",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blueberry Blue",
-      "code": "#0041C2",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Canary Blue",
-      "code": "#2916F5",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blue",
-      "code": "#0000FF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Bright Blue",
-      "code": "#0909FF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blue Orchid",
-      "code": "#1F45FC",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Sapphire Blue",
-      "code": "#2554C7",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blue Eyes",
-      "code": "#1569C7",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Bright Navy Blue",
-      "code": "#1974D2",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Balloon Blue",
-      "code": "#2B60DE",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "RoyalBlue",
-      "code": "#4169E1",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Ocean Blue",
-      "code": "#2B65EC",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blue Ribbon",
-      "code": "#306EFF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blue Dress",
-      "code": "#157DEC",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Neon Blue",
-      "code": "#1589FF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DodgerBlue",
-      "code": "#1E90FF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Glacial Blue Ice",
-      "code": "#368BC1",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "SteelBlue",
-      "code": "#4682B4",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Silk Blue",
-      "code": "#488AC7",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Windows Blue",
-      "code": "#357EC7",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blue Ivy",
-      "code": "#3090C7",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blue Koi",
-      "code": "#659EC7",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Columbia Blue",
-      "code": "#87AFC7",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Baby Blue",
-      "code": "#95B9C7",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "CornflowerBlue",
-      "code": "#6495ED",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Sky Blue Dress",
-      "code": "#6698FF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Iceberg",
-      "code": "#56A5EC",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Butterfly Blue",
-      "code": "#38ACEC",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DeepSkyBlue",
-      "code": "#00BFFF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Midday Blue",
-      "code": "#3BB9FF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Crystal Blue",
-      "code": "#5CB3FF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Denim Blue",
-      "code": "#79BAEC",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Day Sky Blue",
-      "code": "#82CAFF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "LightSkyBlue",
-      "code": "#87CEFA",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "SkyBlue",
-      "code": "#87CEEB",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Jeans Blue",
-      "code": "#A0CFEC",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blue Angel",
-      "code": "#B7CEEC",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Pastel Blue",
-      "code": "#B4CFEC",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Light Day Blue",
-      "code": "#ADDFFF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Sea Blue",
-      "code": "#C2DFFF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Heavenly Blue",
-      "code": "#C6DEFF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Robin Egg Blue",
-      "code": "#BDEDFF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "PowderBlue",
-      "code": "#B0E0E6",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Coral Blue",
-      "code": "#AFDCEC",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "LightBlue",
-      "code": "#ADD8E6",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "LightSteelBlue",
-      "code": "#B0CFDE",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Gulf Blue",
-      "code": "#C9DFEC",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Lavender Blue",
-      "code": "#E3E4FA",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Lavender",
-      "code": "#E6E6FA",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Water",
-      "code": "#EBF4FA",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "AliceBlue",
-      "code": "#F0F8FF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "GhostWhite",
-      "code": "#F8F8FF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Azure",
-      "code": "#F0FFFF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "LightCyan",
-      "code": "#E0FFFF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Light Slate",
-      "code": "#CCFFFF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Electric Blue",
-      "code": "#9AFEFF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Tron Blue",
-      "code": "#7DFDFE",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blue Zircon",
-      "code": "#57FEFF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Aqua or Cyan",
-      "code": "#00FFFF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Bright Cyan",
-      "code": "#0AFFFF",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Celeste",
-      "code": "#50EBEC",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blue Diamond",
-      "code": "#4EE2EC",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Bright Turquoise",
-      "code": "#16E2F5",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blue Lagoon",
-      "code": "#8EEBEC",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "PaleTurquoise",
-      "code": "#AFEEEE",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Pale Blue Lily",
-      "code": "#CFECEC",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Tiffany Blue",
-      "code": "#81D8D0",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blue Hosta",
-      "code": "#77BFC7",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Cyan Opaque",
-      "code": "#92C7C7",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Northern Lights Blue",
-      "code": "#78C7C7",
-      "type": "blues",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blue Green",
-      "code": "#7BCCB5",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "MediumAquaMarine",
-      "code": "#66CDAA",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Aquamarine",
-      "code": "#7FFFD4",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Light Aquamarine",
-      "code": "#93FFE8",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Turquoise",
-      "code": "#40E0D0",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "MediumTurquoise",
-      "code": "#48D1CC",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Deep Turquoise",
-      "code": "#48CCCD",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Jellyfish",
-      "code": "#46C7C7",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blue Turquoise",
-      "code": "#43C6DB",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DarkTurquoise",
-      "code": "#00CED1",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Macaw Blue Green",
-      "code": "#43BFC7",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "LightSeaGreen",
-      "code": "#20B2AA",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Seafoam Green",
-      "code": "#3EA99F",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "CadetBlue",
-      "code": "#5F9EA0",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Deep Sea",
-      "code": "#3B9C9C",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DarkCyan",
-      "code": "#008B8B",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Teal",
-      "code": "#008080",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Medium Teal",
-      "code": "#045F5F",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Deep Teal",
-      "code": "#033E3E",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DarkSlateGray or DarkSlateGrey",
-      "code": "#25383C",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Gunmetal",
-      "code": "#2C3539",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blue Moss Green",
-      "code": "#3C565B",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Beetle Green",
-      "code": "#4C787E",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Grayish Turquoise",
-      "code": "#5E7D7E",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Greenish Blue",
-      "code": "#307D7E",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Aquamarine Stone",
-      "code": "#348781",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Sea Turtle Green",
-      "code": "#438D80",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dull Sea Green",
-      "code": "#4E8975",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Deep Sea Green",
-      "code": "#306754",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "SeaGreen",
-      "code": "#2E8B57",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dark Mint",
-      "code": "#31906E",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Earth Green",
-      "code": "#34A56F",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Emerald",
-      "code": "#50C878",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Mint",
-      "code": "#3EB489",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "MediumSeaGreen",
-      "code": "#3CB371",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Camouflage Green",
-      "code": "#78866B",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Sage Green",
-      "code": "#848B79",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Hazel Green",
-      "code": "#617C58",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Venom Green",
-      "code": "#728C00",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "OliveDrab",
-      "code": "#6B8E23",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Olive",
-      "code": "#808000",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DarkOliveGreen",
-      "code": "#556B2F",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Army Green",
-      "code": "#4B5320",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Fern Green",
-      "code": "#667C26",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Fall Forest Green",
-      "code": "#4E9258",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Pine Green",
-      "code": "#387C44",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Medium Forest Green",
-      "code": "#347235",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Jungle Green",
-      "code": "#347C2C",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "ForestGreen",
-      "code": "#228B22",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Green",
-      "code": "#008000",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DarkGreen",
-      "code": "#006400",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Deep Emerald Green",
-      "code": "#046307",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dark Forest Green",
-      "code": "#254117",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Seaweed Green",
-      "code": "#437C17",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Shamrock Green",
-      "code": "#347C17",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Green Onion",
-      "code": "#6AA121",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Green Pepper",
-      "code": "#4AA02C",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dark Lime Green",
-      "code": "#41A317",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Parrot Green",
-      "code": "#12AD2B",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Clover Green",
-      "code": "#3EA055",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dinosaur Green",
-      "code": "#73A16C",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Green Snake",
-      "code": "#6CBB3C",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Alien Green",
-      "code": "#6CC417",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Green Apple",
-      "code": "#4CC417",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "LimeGreen",
-      "code": "#32CD32",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Pea Green",
-      "code": "#52D017",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Kelly Green",
-      "code": "#4CC552",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Zombie Green",
-      "code": "#54C571",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Frog Green",
-      "code": "#99C68E",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DarkSeaGreen",
-      "code": "#8FBC8F",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Green Peas",
-      "code": "#89C35C",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dollar Bill Green",
-      "code": "#85BB65",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Iguana Green",
-      "code": "#9CB071",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Acid Green",
-      "code": "#B0BF1A",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Avocado Green",
-      "code": "#B2C248",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Pistachio Green",
-      "code": "#9DC209",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Salad Green",
-      "code": "#A1C935",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "YellowGreen",
-      "code": "#9ACD32",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Pastel Green",
-      "code": "#77DD77",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Hummingbird Green",
-      "code": "#7FE817",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Nebula Green",
-      "code": "#59E817",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Stoplight Go Green",
-      "code": "#57E964",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Neon Green",
-      "code": "#16F529",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Jade Green",
-      "code": "#5EFB6E",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Lime Mint Green",
-      "code": "#36F57F",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "SpringGreen",
-      "code": "#00FF7F",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "MediumSpringGreen",
-      "code": "#00FA9A",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Emerald Green",
-      "code": "#5FFB17",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Lime",
-      "code": "#00FF00",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "LawnGreen",
-      "code": "#7CFC00",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Bright Green",
-      "code": "#66FF00",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Chartreuse",
-      "code": "#7FFF00",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Yellow Lawn Green",
-      "code": "#87F717",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Aloe Vera Green",
-      "code": "#98F516",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dull Green Yellow",
-      "code": "#B1FB17",
-      "type": "greens",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "GreenYellow",
-      "code": "#ADFF2F",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Chameleon Green",
-      "code": "#BDF516",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Yellow Green Grosbeak",
-      "code": "#E2F516",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Tea Green",
-      "code": "#CCFB5D",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Slime Green",
-      "code": "#BCE954",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Algae Green",
-      "code": "#64E986",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "LightGreen",
-      "code": "#90EE90",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dragon Green",
-      "code": "#6AFB92",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "PaleGreen",
-      "code": "#98FB98",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Mint Green",
-      "code": "#98FF98",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Green Thumb",
-      "code": "#B5EAAA",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Organic Brown",
-      "code": "#E3F9A6",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Light Jade",
-      "code": "#C3FDB8",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Light Rose Green",
-      "code": "#DBF9DB",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "HoneyDew",
-      "code": "#F0FFF0",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "MintCream",
-      "code": "#F5FFFA",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "LemonChiffon",
-      "code": "#FFFACD",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Parchment",
-      "code": "#FFFFC2",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Cream",
-      "code": "#FFFFCC",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "LightGoldenRodYellow",
-      "code": "#FAFAD2",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "LightYellow",
-      "code": "#FFFFE0",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Beige",
-      "code": "#F5F5DC",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Cornsilk",
-      "code": "#FFF8DC",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blonde",
-      "code": "#FBF6D9",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Champagne",
-      "code": "#F7E7CE",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "AntiqueWhite",
-      "code": "#FAEBD7",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "PapayaWhip",
-      "code": "#FFEFD5",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "BlanchedAlmond",
-      "code": "#FFEBCD",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Bisque",
-      "code": "#FFE4C4",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Wheat",
-      "code": "#F5DEB3",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Moccasin",
-      "code": "#FFE4B5",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Peach",
-      "code": "#FFE5B4",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Light Orange",
-      "code": "#FED8B1",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "PeachPuff",
-      "code": "#FFDAB9",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "NavajoWhite",
-      "code": "#FFDEAD",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Golden Silk",
-      "code": "#F3E3C3",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Vanilla",
-      "code": "#F3E5AB",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Tan Brown",
-      "code": "#ECE5B6",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "PaleGoldenRod",
-      "code": "#EEE8AA",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Khaki",
-      "code": "#F0E68C",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Cardboard Brown",
-      "code": "#EDDA74",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Harvest Gold",
-      "code": "#EDE275",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Sun Yellow",
-      "code": "#FFE87C",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Corn Yellow",
-      "code": "#FFF380",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Yellow",
-      "code": "#FFFF00",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Canary Yellow",
-      "code": "#FFEF00",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Banana Yellow",
-      "code": "#F5E216",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Mustard",
-      "code": "#FFDB58",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Golden Yellow",
-      "code": "#FFDF00",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Bold Yellow",
-      "code": "#F9DB24",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Rubber Ducky Yellow",
-      "code": "#FFD801",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Gold",
-      "code": "#FFD700",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Bright Gold",
-      "code": "#FDD017",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Golden Brown",
-      "code": "#EAC117",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Deep Yellow",
-      "code": "#F6BE00",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Macaroni and Cheese",
-      "code": "#F2BB66",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Saffron",
-      "code": "#FBB917",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Beer",
-      "code": "#FBB117",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Yellow Orange or Orange Yellow",
-      "code": "#FFAE42",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Cantaloupe",
-      "code": "#FFA62F",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Orange",
-      "code": "#FFA500",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Brown Sand",
-      "code": "#EE9A4D",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "SandyBrown",
-      "code": "#F4A460",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Brown Sugar",
-      "code": "#E2A76F",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Camel Brown",
-      "code": "#C19A6B",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Deer Brown",
-      "code": "#E6BF83",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "BurlyWood",
-      "code": "#DEB887",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Tan",
-      "code": "#D2B48C",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Light French Beige",
-      "code": "#C8AD7F",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Sand",
-      "code": "#C2B280",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Sage",
-      "code": "#BCB88A",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Fall Leaf Brown",
-      "code": "#C8B560",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Ginger Brown",
-      "code": "#C9BE62",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DarkKhaki",
-      "code": "#BDB76B",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Olive Green",
-      "code": "#BAB86C",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Brass",
-      "code": "#B5A642",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Cookie Brown",
-      "code": "#C7A317",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Metallic Gold",
-      "code": "#D4AF37",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Bee Yellow",
-      "code": "#E9AB17",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "School Bus Yellow",
-      "code": "#E8A317",
-      "type": "yellows",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "GoldenRod",
-      "code": "#DAA520",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Orange Gold",
-      "code": "#D4A017",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Caramel",
-      "code": "#C68E17",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DarkGoldenRod",
-      "code": "#B8860B",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Cinnamon",
-      "code": "#C58917",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Peru",
-      "code": "#CD853F",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Bronze",
-      "code": "#CD7F32",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Tiger Orange",
-      "code": "#C88141",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Copper",
-      "code": "#B87333",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Wood",
-      "code": "#966F33",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Oak Brown",
-      "code": "#806517",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Antique Bronze",
-      "code": "#665D1E",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Hazel",
-      "code": "#8E7618",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dark Yellow",
-      "code": "#8B8000",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dark Moccasin",
-      "code": "#827839",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Bullet Shell",
-      "code": "#AF9B60",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Army Brown",
-      "code": "#827B60",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Sandstone",
-      "code": "#786D5F",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Taupe",
-      "code": "#483C32",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Mocha",
-      "code": "#493D26",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Milk Chocolate",
-      "code": "#513B1C",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Gray Brown",
-      "code": "#3D3635",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dark Coffee",
-      "code": "#3B2F2F",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Old Burgundy",
-      "code": "#43302E",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Bakers Brown",
-      "code": "#5C3317",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dark Brown",
-      "code": "#654321",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Coffee",
-      "code": "#6F4E37",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Brown Bear",
-      "code": "#835C3B",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Red Dirt",
-      "code": "#7F5217",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Sepia",
-      "code": "#7F462C",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Sienna",
-      "code": "#A0522D",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "SaddleBrown",
-      "code": "#8B4513",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dark Sienna",
-      "code": "#8A4117",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Sangria",
-      "code": "#7E3817",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blood Red",
-      "code": "#7E3517",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Chestnut",
-      "code": "#954535",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Chestnut Red",
-      "code": "#C34A2C",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Mahogany",
-      "code": "#C04000",
-      "type": "browns",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Red Fox",
-      "code": "#C35817",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dark Bisque",
-      "code": "#B86500",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Light Brown",
-      "code": "#B5651D",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Rust",
-      "code": "#C36241",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Copper Red",
-      "code": "#CB6D51",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Orange Salmon",
-      "code": "#C47451",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Chocolate",
-      "code": "#D2691E",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Sedona",
-      "code": "#CC6600",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Papaya Orange",
-      "code": "#E56717",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Halloween Orange",
-      "code": "#E66C2C",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Neon Orange",
-      "code": "#FF6700",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Bright Orange",
-      "code": "#FF5F1F",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Pumpkin Orange",
-      "code": "#F87217",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Carrot Orange",
-      "code": "#F88017",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DarkOrange",
-      "code": "#FF8C00",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Construction Cone Orange",
-      "code": "#F87431",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Sunrise Orange",
-      "code": "#E67451",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Mango Orange",
-      "code": "#FF8040",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Coral",
-      "code": "#FF7F50",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Basket Ball Orange",
-      "code": "#F88158",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Light Salmon Rose",
-      "code": "#F9966B",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "LightSalmon",
-      "code": "#FFA07A",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DarkSalmon",
-      "code": "#E9967A",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Tangerine",
-      "code": "#E78A61",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Light Copper",
-      "code": "#DA8A67",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Salmon",
-      "code": "#FA8072",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "LightCoral",
-      "code": "#F08080",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Pink Coral",
-      "code": "#E77471",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Bean Red",
-      "code": "#F75D59",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Valentine Red",
-      "code": "#E55451",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "IndianRed",
-      "code": "#CD5C5C",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Tomato",
-      "code": "#FF6347",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Shocking Orange",
-      "code": "#E55B3C",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "OrangeRed",
-      "code": "#FF4500",
-      "type": "oranges",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Red",
-      "code": "#FF0000",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Scarlet",
-      "code": "#FF2400",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Ruby Red",
-      "code": "#F62217",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Ferrari Red",
-      "code": "#F70D1A",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Fire Engine Red",
-      "code": "#F62817",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Lava Red",
-      "code": "#E42217",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Love Red",
-      "code": "#E41B17",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Grapefruit",
-      "code": "#DC381F",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Cherry Red",
-      "code": "#C24641",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Chilli Pepper",
-      "code": "#C11B17",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "FireBrick",
-      "code": "#B22222",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Brown",
-      "code": "#A52A2A",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Carbon Red",
-      "code": "#A70D2A",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Cranberry",
-      "code": "#9F000F",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Red Wine or Wine Red",
-      "code": "#990012",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DarkRed",
-      "code": "#8B0000",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Maroon",
-      "code": "#800000",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Burgundy",
-      "code": "#8C001A",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Deep Red",
-      "code": "#800517",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Red Blood",
-      "code": "#660000",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blood Night",
-      "code": "#551606",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Black Bean",
-      "code": "#3D0C02",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Chocolate Brown",
-      "code": "#3F000F",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Midnight",
-      "code": "#2B1B17",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Purple Lily",
-      "code": "#550A35",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Purple Maroon",
-      "code": "#810541",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Plum Pie",
-      "code": "#7D0541",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Plum Velvet",
-      "code": "#7D0552",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Velvet Maroon",
-      "code": "#7E354D",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Rosy Finch",
-      "code": "#7F4E52",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dull Purple",
-      "code": "#7F525D",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Puce",
-      "code": "#7F5A58",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Rose Dust",
-      "code": "#997070",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Rosy Pink",
-      "code": "#B38481",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "RosyBrown",
-      "code": "#BC8F8F",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Khaki Rose",
-      "code": "#C5908E",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Pink Brown",
-      "code": "#C48189",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Lipstick Pink",
-      "code": "#C48793",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Rose",
-      "code": "#E8ADAA",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Silver Pink",
-      "code": "#C4AEAD",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Rose Gold",
-      "code": "#ECC5C0",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Deep Peach",
-      "code": "#FFCBA4",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Desert Sand",
-      "code": "#EDC9AF",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Unbleached Silk",
-      "code": "#FFDDCA",
-      "type": "reds",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Pig Pink",
-      "code": "#FDD7E4",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Pink Bubble Gum",
-      "code": "#FFDFDD",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "MistyRose",
-      "code": "#FFE4E1",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Light Red",
-      "code": "#FFCCCB",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Light Rose",
-      "code": "#FBCFCD",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Deep Rose",
-      "code": "#FBBBB9",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Pink",
-      "code": "#FFC0CB",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "LightPink",
-      "code": "#FFB6C1",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Donut Pink",
-      "code": "#FAAFBE",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Baby Pink",
-      "code": "#FAAFBA",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Flamingo Pink",
-      "code": "#F9A7B0",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Pink Rose",
-      "code": "#E7A1B0",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Pink Daisy",
-      "code": "#E799A3",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Cadillac Pink",
-      "code": "#E38AAE",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Carnation Pink",
-      "code": "#F778A1",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blush Red",
-      "code": "#E56E94",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "PaleVioletRed",
-      "code": "#DB7093",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Purple Pink",
-      "code": "#D16587",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Tulip Pink",
-      "code": "#C25A7C",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Bashful Pink",
-      "code": "#C25283",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dark Pink",
-      "code": "#E75480",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dark Hot Pink",
-      "code": "#F660AB",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "HotPink",
-      "code": "#FF69B4",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Watermelon Pink",
-      "code": "#FC6C85",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Violet Red",
-      "code": "#F6358A",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Hot Deep Pink",
-      "code": "#F52887",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DeepPink",
-      "code": "#FF1493",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Neon Pink",
-      "code": "#F535AA",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Pink Cupcake",
-      "code": "#E45E9D",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dimorphotheca Magenta",
-      "code": "#E3319D",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Pink Lemonade",
-      "code": "#E4287C",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Crimson",
-      "code": "#DC143C",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Bright Maroon",
-      "code": "#C32148",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Rose Red",
-      "code": "#C21E56",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Rogue Pink",
-      "code": "#C12869",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Burnt Pink",
-      "code": "#C12267",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Pink Violet",
-      "code": "#CA226B",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "MediumVioletRed",
-      "code": "#C71585",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dark Carnation Pink",
-      "code": "#C12283",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Pink Plum",
-      "code": "#B93B8F",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Orchid",
-      "code": "#DA70D6",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Deep Mauve",
-      "code": "#DF73D4",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Violet",
-      "code": "#EE82EE",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Bright Neon Pink",
-      "code": "#F433FF",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Fuchsia or Magenta",
-      "code": "#FF00FF",
-      "type": "pinks",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Crimson Purple",
-      "code": "#E238EC",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Heliotrope Purple",
-      "code": "#D462FF",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Tyrian Purple",
-      "code": "#C45AEC",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "MediumOrchid",
-      "code": "#BA55D3",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Purple Flower",
-      "code": "#A74AC7",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Orchid Purple",
-      "code": "#B048B5",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Mauve Taupe",
-      "code": "#915F6D",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Viola Purple",
-      "code": "#7E587E",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Eggplant",
-      "code": "#614051",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Plum Purple",
-      "code": "#583759",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Grape",
-      "code": "#5E5A80",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Purple Navy",
-      "code": "#4E5180",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "SlateBlue",
-      "code": "#6A5ACD",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blue Lotus",
-      "code": "#6960EC",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Light Slate Blue",
-      "code": "#736AFF",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "MediumSlateBlue",
-      "code": "#7B68EE",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Purple Amethyst",
-      "code": "#6C2DC7",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Bright Purple",
-      "code": "#6A0DAD",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DarkSlateBlue",
-      "code": "#483D8B",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Purple Haze",
-      "code": "#4E387E",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Purple Iris",
-      "code": "#571B7E",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Dark Purple",
-      "code": "#4B0150",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Deep Purple",
-      "code": "#36013F",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Purple Monster",
-      "code": "#461B7E",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Indigo",
-      "code": "#4B0082",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Blue Whale",
-      "code": "#342D7E",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "RebeccaPurple",
-      "code": "#663399",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Purple Jam",
-      "code": "#6A287E",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DarkMagenta",
-      "code": "#8B008B",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Purple",
-      "code": "#800080",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "French Lilac",
-      "code": "#86608E",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DarkOrchid",
-      "code": "#9932CC",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "DarkViolet",
-      "code": "#9400D3",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Purple Violet",
-      "code": "#8D38C9",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Jasmine Purple",
-      "code": "#A23BEC",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Purple Daffodil",
-      "code": "#B041FF",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Clemantis Violet",
-      "code": "#842DCE",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "BlueViolet",
-      "code": "#8A2BE2",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Purple Sage Bush",
-      "code": "#7A5DC7",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Lovely Purple",
-      "code": "#7F38EC",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Purple Plum",
-      "code": "#8E35EF",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Aztech Purple",
-      "code": "#893BFF",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Lavender Purple",
-      "code": "#967BB6",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "MediumPurple",
-      "code": "#9370DB",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Light Purple",
-      "code": "#8467D7",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Crocus Purple",
-      "code": "#9172EC",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
-    },
-    {
-      "name": "Purple Mimosa",
-      "code": "#9E7BFF",
-      "type": "purples",
-      "phonetic": "",
-      "examples": [
-
-      ]
     }
   ],
   "irregular_verbs": [
@@ -5595,28 +996,32 @@
         "verb": "make",
         "phonetic": "/meɪk/",
         "examples": [
-
+          "Do you want me to make some coffee?",
+          "She makes all her own clothes."
         ]
       },
       "simplePast": {
         "verb": "made",
         "phonetic": "/meɪd/",
         "examples": [
-
+          "He made a chocolate cake.",
+          "John Huston made some great movies."
         ]
       },
       "pastParticiple": {
         "verb": "made",
         "phonetic": "/meɪd/",
         "examples": [
-
+          "We have made a successful sally.",
+          "Doctors say he has made a slight improvement."
         ]
       },
       "ing": {
         "verb": "making",
         "phonetic": "/ˈmeɪkɪŋ/",
         "examples": [
-
+          "You are making a mistake.",
+          "So we're making progress."
         ]
       },
       "emojiCode": "openmoji_2692"
@@ -5626,28 +1031,32 @@
         "verb": "meet",
         "phonetic": "/miːt/",
         "examples": [
-
+          "Nice to meet you!!",
+          "Can we meet his demands?"
         ]
       },
       "simplePast": {
         "verb": "met",
         "phonetic": "/met/",
         "examples": [
-
+          "Has anyone met his wife?",
+          "I met an old school friend today."
         ]
       },
       "pastParticiple": {
         "verb": "met",
         "phonetic": "/met/",
         "examples": [
-
+          "He has met with some unexpected difficulties.",
+          "The idea has met with widespread support."
         ]
       },
       "ing": {
         "verb": "meeting",
         "phonetic": "/ˈmiːtɪŋ/",
         "examples": [
-
+          "The meeting extended late into the night.",
+          "He's in a meeting right now."
         ]
       },
       "emojiCode": "openmoji_1f91d"
@@ -5657,28 +1066,32 @@
         "verb": "pay",
         "phonetic": "/peɪ/",
         "examples": [
-
+          "Can I pay by installment payment?",
+          "I must pay away the bill tomorrow."
         ]
       },
       "simplePast": {
         "verb": "paid",
         "phonetic": "/peɪd/",
         "examples": [
-
+          "The hotel workers get paid peanuts.",
+          "They paid him a high compliment."
         ]
       },
       "pastParticiple": {
         "verb": "paid",
         "phonetic": "/peɪd/",
         "examples": [
-
+          "I have paid the milkman this month.",
+          "What could I have paid for it?"
         ]
       },
       "ing": {
         "verb": "paying",
         "phonetic": "/ˈpeɪɪŋ/",
         "examples": [
-
+          "Consumers will soon be paying higher airfares.",
+          "I insist on paying for the damage."
         ]
       },
       "emojiCode": "openmoji_1f4b8"
@@ -5688,28 +1101,32 @@
         "verb": "read",
         "phonetic": "/riːd/",
         "examples": [
-
+          "Your writing is hard to read.",
+          "He read a poem in his native language."
         ]
       },
       "simplePast": {
         "verb": "read",
         "phonetic": "/riːd/",
         "examples": [
-
+          "I felt obligated to let him read the letter.",
+          "She read slowly and quietly yesterday."
         ]
       },
       "pastParticiple": {
         "verb": "read",
         "phonetic": "/red/",
         "examples": [
-
+          "Only Tommy and I have read the book.",
+          "We must have read the same report."
         ]
       },
       "ing": {
         "verb": "reading",
         "phonetic": "/ˈriːdɪŋ/",
         "examples": [
-
+          "He must be reading some SMS.",
+          "What are you reading, Tommy?"
         ]
       },
       "emojiCode": "openmoji_1f4da"
@@ -5719,28 +1136,32 @@
         "verb": "ride",
         "phonetic": "/raɪd/",
         "examples": [
-
+          "He doesn't have a car so he rides to work on the bus.",
+          "Tomorrow, I ride to battle."
         ]
       },
       "simplePast": {
         "verb": "rode",
         "phonetic": "/rəʊd/",
         "examples": [
-
+          "He mounted his bicycle and rode off.",
+          "A little boy rode by on a tricycle."
         ]
       },
       "pastParticiple": {
         "verb": "ridden",
         "phonetic": "/ˈrɪdn/",
         "examples": [
-
+          "She was ridden with guilt.",
+          "Lee had never ridden a horse before."
         ]
       },
       "ing": {
         "verb": "riding",
         "phonetic": "/ˈraɪdɪŋ/",
         "examples": [
-
+          "Which jockey will be riding tomorrow?",
+          "He was riding on a large black horse."
         ]
       },
       "emojiCode": "openmoji_1f6b5_200d_2642_fe0f"
@@ -5750,28 +1171,32 @@
         "verb": "see",
         "phonetic": "/siː/",
         "examples": [
-
+          "Turn the light on so I can see.",
+          "Four eyes see more than two."
         ]
       },
       "simplePast": {
         "verb": "saw",
         "phonetic": "/sɔː/",
         "examples": [
-
+          "My parents saw me off at the airport.",
+          "He saw a stranger standing at the doorstep."
         ]
       },
       "pastParticiple": {
         "verb": "seen",
         "phonetic": "/siːn/",
         "examples": [
-
+          "The moon is not seen where the sun shines.",
+          "Children should be seen and not heard."
         ]
       },
       "ing": {
         "verb": "seeing",
         "phonetic": "/ˈsiːɪŋ/",
         "examples": [
-
+          "Are you seeing anyone now?",
+          "I'm looking forward to seeing you."
         ]
       },
       "emojiCode": "openmoji_1f440"
@@ -5781,28 +1206,32 @@
         "verb": "send",
         "phonetic": "/send/",
         "examples": [
-
+          "Please send me to stay in the best time.",
+          "I'll send the original to you by post."
         ]
       },
       "simplePast": {
         "verb": "sent",
         "phonetic": "/sent/",
         "examples": [
-
+          "They sent a deputation to Parliament.",
+          "She sent back her breakfast tray untouched."
         ]
       },
       "pastParticiple": {
         "verb": "sent",
         "phonetic": "/sent/",
         "examples": [
-
+          "The boss has sent for me.",
+          "The bad weather has sent vegetable prices up."
         ]
       },
       "ing": {
         "verb": "sending",
         "phonetic": "/ˈsendɪŋ/",
         "examples": [
-
+          "I'll be sending you the bill for the dry-cleaning!",
+          "The US is sending additional troops to the region."
         ]
       },
       "emojiCode": "openmoji_1f4e8"
@@ -5812,28 +1241,32 @@
         "verb": "sing",
         "phonetic": "/sɪŋ/",
         "examples": [
-
+          "Learn to say before you sing.",
+          "Each bird likes to hear himself sing."
         ]
       },
       "simplePast": {
         "verb": "sang",
         "phonetic": "/sæŋ/",
         "examples": [
-
+          "The bird sang high and clearly in the tree.",
+          "The steam sang as it escaped from the pipe."
         ]
       },
       "pastParticiple": {
         "verb": "sung",
         "phonetic": "/sʌŋ/",
         "examples": [
-
+          "She has sung soprano in many major operas.",
+          "The last verse will be sung in unison."
         ]
       },
       "ing": {
         "verb": "singing",
         "phonetic": "/ˈsɪŋɪŋ/",
         "examples": [
-
+          "Her singing evoked warm acclamations.",
+          "They sat round with guitars, singing folk songs ."
         ]
       },
       "emojiCode": "openmoji_1f469_200d_1f3a4"
@@ -5843,28 +1276,32 @@
         "verb": "teach",
         "phonetic": "/tiːtʃ/",
         "examples": [
-
+          "Mothers teach their children to be kind.",
+          "Life teaches us to be patient."
         ]
       },
       "simplePast": {
         "verb": "taught",
         "phonetic": "/tɔːt/",
         "examples": [
-
+          "Ray taught his dog to open the door.",
+          "My brother taught us self defense movements."
         ]
       },
       "pastParticiple": {
         "verb": "taught",
         "phonetic": "/tɔːt/",
         "examples": [
-
+          "Life have taught me to be strong.",
+          "Lockdowns have taught the world about isolation."
         ]
       },
       "ing": {
         "verb": "teaching",
         "phonetic": "/ˈtiːtʃɪŋ/",
         "examples": [
-
+          "Our teacher never miss an opportunity to keep teaching us the meaning of our lives.",
+          "Government should stop teaching that girls have less opportunities than boys."
         ]
       },
       "emojiCode": "openmoji_1f9d1_200d_1f3eb"
@@ -5874,28 +1311,32 @@
         "verb": "think",
         "phonetic": "/θɪŋk/",
         "examples": [
-
+          "I think we should go to school and ask the teacher.",
+          "Maya thinks of you all the time."
         ]
       },
       "simplePast": {
         "verb": "thought",
         "phonetic": "θɔːt/",
         "examples": [
-
+          "I never thought I'd be able to move out of my parent's house by myself.",
+          "I thought she was with Jack."
         ]
       },
       "pastParticiple": {
         "verb": "thought",
         "phonetic": "/θɔːt/",
         "examples": [
-
+          "I've always thought that my family have issues with communication.",
+          "Who would have thought of that!"
         ]
       },
       "ing": {
         "verb": "thinking",
         "phonetic": "/ˈθɪŋkɪŋ/",
         "examples": [
-
+          "I can't stop thinking about it.",
+          "It's easier to relax when you stop thinking while you focus on your breathing."
         ]
       },
       "emojiCode": "openmoji_1f914"
@@ -5905,28 +1346,32 @@
         "verb": "throw",
         "phonetic": "/θrəʊ/",
         "examples": [
-
+          "The kids like to throw the ball while playing.",
+          "I can throw the key through the window for you."
         ]
       },
       "simplePast": {
         "verb": "threw",
         "phonetic": "/θruː/",
         "examples": [
-
+          "He threw the ball at me but missed.",
+          "Taylor threw herself into the arms of her lover."
         ]
       },
       "pastParticiple": {
         "verb": "thrown",
         "phonetic": "/θrəʊn/",
         "examples": [
-
+          "A successful man is one who can lay a firm foundation with the bricks others have thrown at him.",
+          "Around 40,000 doses of the Astra Zeneca vaccine in Wales have had to be thrown away because they have gone past their expiry date."
         ]
       },
       "ing": {
         "verb": "throwing",
         "phonetic": "/ˈθrəʊɪŋ/",
         "examples": [
-
+          "Holding on to anger is like grasping a hot coal with the intent of throwing it at someone else.",
+          "Nothing gets you to mend your heart quicker than throwing yourself into work."
         ]
       },
       "emojiCode": "openmoji_1f6ae"
@@ -5936,28 +1381,32 @@
         "verb": "wake",
         "phonetic": "/weɪk/",
         "examples": [
-
+          "Wake me up at seven tomorrow.",
+          "Be quiet or you'll wake the whole house!"
         ]
       },
       "simplePast": {
         "verb": "woke",
         "phonetic": "/wəʊk/",
         "examples": [
-
+          "I woke up in the night feeling cold.",
+          "But you just woke up."
         ]
       },
       "pastParticiple": {
         "verb": "woken",
         "phonetic": "/ˈwəʊkən/",
         "examples": [
-
+          "She had woken even earlier than usual.",
+          "She had just woken from a deep sleep."
         ]
       },
       "ing": {
         "verb": "waking",
         "phonetic": "/ˈweɪkɪŋ/",
         "examples": [
-
+          "Sleeping is the best cure for waking troubles.",
+          "I love waking up and seeing text messages on my phone."
         ]
       },
       "emojiCode": "openmoji_23f0"
@@ -5967,28 +1416,32 @@
         "verb": "win",
         "phonetic": "/wɪn/",
         "examples": [
-
+          "Cheaters never win and winners never cheat.",
+          "You win some, you lose some."
         ]
       },
       "simplePast": {
         "verb": "won",
         "phonetic": "/wʌn/",
         "examples": [
-
+          "A good name is earlier lost than won.",
+          "Every dog is valiant at his won door."
         ]
       },
       "pastParticiple": {
         "verb": "won",
         "phonetic": "/wʌn/",
         "examples": [
-
+          "She won first prize in the 100 metres race.",
+          "He smiled in satisfaction when he won the race."
         ]
       },
       "ing": {
         "verb": "winning",
         "phonetic": "/ˈwɪnɪŋ/",
         "examples": [
-
+          "The winning team was showered with confetti.",
+          "I wouldn't bet on them winning the next election."
         ]
       },
       "emojiCode": "openmoji_1f3c6"
@@ -5998,28 +1451,32 @@
         "verb": "write",
         "phonetic": "/raɪt/",
         "examples": [
-
+          "Think much, speak little, and write less.",
+          "By writing you learn to write."
         ]
       },
       "simplePast": {
         "verb": "wrote",
         "phonetic": "/rəʊt/",
         "examples": [
-
+          "He wrote away for some catalogues.",
+          "She wrote an essay on My Family."
         ]
       },
       "pastParticiple": {
         "verb": "written",
         "phonetic": "/ˈrɪtn/",
         "examples": [
-
+          "His book was in parts written in verse.",
+          "The novel is written from personal experience."
         ]
       },
       "ing": {
         "verb": "writing",
         "phonetic": "/ˈraɪtɪŋ/",
         "examples": [
-
+          "By writing you learn to write.",
+          "Your writing is hard to read."
         ]
       },
       "emojiCode": "openmoji_270d"
@@ -6144,21 +1601,24 @@
         "verb": "admired",
         "phonetic": "/ədˈmaɪərd/",
         "examples": [
-
+          "Hindus, are vegetarians and they consider the cow to be a sacred symbol of life that should be protected and admired.",
+          "I admire people who have a positive point of view on life."
         ]
       },
       "pastParticiple": {
         "verb": "admired",
         "phonetic": "/ədˈmaɪərd/",
         "examples": [
-
+          "Tamara has admired Taylor Swift since she was five.",
+          "I've always admired people that can express themselves freely."
         ]
       },
       "ing": {
         "verb": "admiring",
         "phonetic": "/ədˈmaɪərɪŋ/",
         "examples": [
-
+          "Kids keep admiring their parents all their lives because they're the first role model they had.",
+          "I wish I could stop admiring fictional characters."
         ]
       },
       "emojiCode": "openmoji_1f929"
@@ -6176,21 +1636,24 @@
         "verb": "admitted",
         "phonetic": "/ədˈmɪtɪd/",
         "examples": [
-
+          "Kaylee admitted that she told us a lie when we asked about her whereabouts.",
+          "Tom admitted that he was the one that took the money."
         ]
       },
       "pastParticiple": {
         "verb": "admitted",
         "phonetic": "/ədˈmɪtɪd/",
         "examples": [
-
+          "I've never admitted that I was the one that lost the key.",
+          "Tom has admitted to be the thief."
         ]
       },
       "ing": {
         "verb": "admitting",
         "phonetic": "/ədˈmɪtɪŋ/",
         "examples": [
-
+          "He was so scared that he couldn't stop admitting to be the shooter.",
+          "Admitting errors clears the score and proves you wiser than before."
         ]
       },
       "emojiCode": "openmoji_1f613"
@@ -6208,21 +1671,24 @@
         "verb": "adopted",
         "phonetic": "/əˈdɑːptɪd/",
         "examples": [
-
+          "Jenny adopted new habits to build up her confidence and now she's fearless.",
+          "many people adopted dogs from the shelter."
         ]
       },
       "pastParticiple": {
         "verb": "adopted",
         "phonetic": "/əˈdɑːptɪd/",
         "examples": [
-
+          "Carlos love animals but hasn't adopted any yet.",
+          "Tory has adopted every stray dog she has encountered in the past months."
         ]
       },
       "ing": {
         "verb": "adopting",
         "phonetic": "/əˈdɑːptɪŋ/",
         "examples": [
-
+          "Every time I visit a pet store I stop myself from adopting every animal.",
+          "Kyle keeps adopting rescued animals from shelters."
         ]
       },
       "emojiCode": "openmoji_e182"
@@ -6240,21 +1706,24 @@
         "verb": "advised",
         "phonetic": "/ədˈvaɪzd/",
         "examples": [
-
+          "Discretion is advised.",
+          "Tommy advised us not to come alone at night."
         ]
       },
       "pastParticiple": {
         "verb": "advised",
         "phonetic": "/ədˈvaɪzd/",
         "examples": [
-
+          "Our teacher has advised us to do our homework on time.",
+          "I wished my parents would have advised me to take financial classes."
         ]
       },
       "ing": {
         "verb": "advising",
         "phonetic": "/ədˈvaɪzɪŋ/",
         "examples": [
-
+          "Advising others might be dangerous if you don't know what you talking about.",
+          "Good advising may be the single most underestimated characteristic of a successful college experience."
         ]
       },
       "emojiCode": "openmoji_1f481_200d_2640_fe0f"
@@ -6272,21 +1741,24 @@
         "verb": "agreed",
         "phonetic": "/əˈɡriːd/",
         "examples": [
-
+          "Now I feel relieved, Camille agreed to take care of my pet while I'm away.",
+          "All teams agreed to have the next meeting on Tuesday."
         ]
       },
       "pastParticiple": {
         "verb": "agreed",
         "phonetic": "/əˈɡriːd/",
         "examples": [
-
+          "Our parents have agreed to have dinner with us every two weeks.",
+          "Our teachers have agreed to give us one more free day."
         ]
       },
       "ing": {
         "verb": "agreeing",
         "phonetic": "/əˈɡriːɪŋ/",
         "examples": [
-
+          "Not agreeing with you in every single thing doesn't make me your enemy.",
+          "Jamie started agreeing with everything she says since they are a couple."
         ]
       },
       "emojiCode": "openmoji_1f91d"
@@ -6304,21 +1776,24 @@
         "verb": "allowed",
         "phonetic": "/əˈlaʊd/",
         "examples": [
-
+          "My mom allowed my sister to go to the concert.",
+          "my work allowed me to meet new people from different cultures."
         ]
       },
       "pastParticiple": {
         "verb": "allowed",
         "phonetic": "/əˈlaʊd/",
         "examples": [
-
+          "Our mom has allowed us to make a party at our house.",
+          "The family would've allowed you to come if you were mature enough."
         ]
       },
       "ing": {
         "verb": "allowing",
         "phonetic": "/əˈlaʊɪŋ/",
         "examples": [
-
+          "I want to stop allowing my dog to chew my stuff but every time I punish it I feel bad.",
+          "My mom keeps allowing my brother to play all night while I have to sleep early."
         ]
       },
       "emojiCode": "openmoji_e082"
@@ -6336,21 +1811,24 @@
         "verb": "announced",
         "phonetic": "/əˈnaʊnst/",
         "examples": [
-
+          "The prince was announced when he entered the ball.",
+          "The Firm announced that we were going bankrupt."
         ]
       },
       "pastParticiple": {
         "verb": "announced",
         "phonetic": "/əˈnaʊnst/",
         "examples": [
-
+          "The reporter has announced that all week is going to rain.",
+          "Carl has announced that he's going to get married."
         ]
       },
       "ing": {
         "verb": "announcing",
         "phonetic": "/əˈnaʊnsɪŋ/",
         "examples": [
-
+          "Announcing yourself before visiting someone is considered good manners.",
+          "Mary loves announcing horoscopes in her YouTube channel."
         ]
       },
       "emojiCode": "openmoji_1f4f0"
@@ -6368,21 +1846,24 @@
         "verb": "appreciated",
         "phonetic": "/əˈpriːʃieɪtɪd/",
         "examples": [
-
+          "Sometimes when you have a bad day you feel like you aren't appreciated.",
+          "We appreciated your hard work in yesterday's event."
         ]
       },
       "pastParticiple": {
         "verb": "appreciated",
         "phonetic": "/əˈpriːʃieɪtɪd/",
         "examples": [
-
+          "My family has never appreciated my honesty.",
+          "You have appreciated the gift of life by living it."
         ]
       },
       "ing": {
         "verb": "appreciating",
         "phonetic": "/əˈpriːʃieɪtɪŋ/",
         "examples": [
-
+          "No matter the work you do I will never stop appreciating the effort you make.",
+          "In the worst of times all people keeps appreciating the hard work that doctors have done this past two years."
         ]
       },
       "emojiCode": "openmoji_1f914"
@@ -6400,21 +1881,24 @@
         "verb": "approved",
         "phonetic": "/əˈpruːvd/",
         "examples": [
-
+          "The judge approved his disability and now he won't go to jail.",
+          "Government approved legal abortion."
         ]
       },
       "pastParticiple": {
         "verb": "approved",
         "phonetic": "/əˈpruːvd/",
         "examples": [
-
+          "Our lead manager has approved us to have a Christmas party.",
+          "The new report has been approved by the firm."
         ]
       },
       "ing": {
         "verb": "approving",
         "phonetic": "/əˈpruːvɪŋ/",
         "examples": [
-
+          "Approving changes can be more effective than opposing to the future.",
+          "The government urged approving new vaccines to control the disease."
         ]
       },
       "emojiCode": "openmoji_2705"
@@ -6432,21 +1916,24 @@
         "verb": "baked",
         "phonetic": "/beɪkt/",
         "examples": [
-
+          "Karla baked the cake and now I'm going to decorate it.",
+          "Carlos forgot seasoning when he baked the potatoes."
         ]
       },
       "pastParticiple": {
         "verb": "baked",
         "phonetic": "/beɪkt/",
         "examples": [
-
+          "I've never baked anything without burning it.",
+          "Mom has baked lasagna for dinner."
         ]
       },
       "ing": {
         "verb": "baking",
         "phonetic": "/ˈbeɪkɪŋ/",
         "examples": [
-
+          "Baking and cooking for yourself it's a habit of self care that everyone can practice.",
+          "Our granny likes baking cookies for her neighbors."
         ]
       },
       "emojiCode": "openmoji_1f9c1"
@@ -6464,14 +1951,16 @@
         "verb": "begged",
         "phonetic": "/beɡd/",
         "examples": [
-
+          "The superhero not even once begged to the villain and died for the sake of the city.",
+          "in the movie the police man begged him not to shoot her."
         ]
       },
       "pastParticiple": {
         "verb": "begged",
         "phonetic": "/beɡd/",
         "examples": [
-
+          "i have begged you far too many times. but no matter how much you beg, if someone doesn't want you, they won't stay.",
+          "It's my mother who has begged the teacher to take me in."
         ]
       },
       "ing": {
@@ -6497,21 +1986,24 @@
         "verb": "behaved",
         "phonetic": "/bɪˈheɪvd/",
         "examples": [
-
+          "it was easy to groom the dog because it was well behaved.",
+          "last night dinner was uncomfortable. Jamie behaved like a kid."
         ]
       },
       "pastParticiple": {
         "verb": "behaved",
         "phonetic": "/bɪˈheɪvd/",
         "examples": [
-
+          "Others have behaved like despots again this year.",
+          "It is fair to say that in the field of education, it is the teachers who have behaved most admirably."
         ]
       },
       "ing": {
         "verb": "behaving",
         "phonetic": "/bɪˈheɪvɪŋ/",
         "examples": [
-
+          "Finding out that your child is the one who is behaving inappropriately can be upsetting and heartbreaking.",
+          "The man was armed with an axe and behaving aggressively."
         ]
       },
       "emojiCode": "openmoji_1f64b"
@@ -6529,21 +2021,24 @@
         "verb": "boiled",
         "phonetic": "/bɔɪld/",
         "examples": [
-
+          "I boiled the water so you can make us coffee.",
+          "When we were at camp Tasha boiled the water we found so we can drink it safely."
         ]
       },
       "pastParticiple": {
         "verb": "boiled",
         "phonetic": "/bɔɪld/",
         "examples": [
-
+          "Once the milk has boiled, remove it from the heat and add the chocolate with a spatula until it becomes a homogeneous mixture.",
+          "It is left to cook on a very low heat until the stock has boiled down."
         ]
       },
       "ing": {
         "verb": "boiling",
         "phonetic": "/ˈbɔɪlɪŋ/",
         "examples": [
-
+          "The stainless steel concealed element ensures fast boiling and easy cleaning.",
+          "Meanwhile, cook the pasta in the boiling water and cook until al dente."
         ]
       },
       "emojiCode": "openmoji_1f958"
@@ -6561,21 +2056,24 @@
         "verb": "borrowed",
         "phonetic": "/ˈbɔːrəʊd/",
         "examples": [
-
+          "I'm sorry I borrowed your car mine was out of gas.",
+          "Katerine borrowed her boyfriend's hoodie."
         ]
       },
       "pastParticiple": {
         "verb": "borrowed",
         "phonetic": "/ˈbɔːrəʊd/",
         "examples": [
-
+          "Your credit history is the record of how you have borrowed and repaid debts.",
+          "Your sister has borrowed an item of clothing of yours without asking"
         ]
       },
       "ing": {
         "verb": "borrowing",
         "phonetic": "/ˈbɔːrəʊɪŋ/",
         "examples": [
-
+          "Increase California's debt by borrowing more money through bonds.",
+          "Those who cannot walk using their own legs can ride, borrowing the legs of the horse, as it were."
         ]
       },
       "emojiCode": "openmoji_1f4b0"
@@ -6593,21 +2091,24 @@
         "verb": "called",
         "phonetic": "/kɔːld/",
         "examples": [
-
+          "I called you a thousand times and you didn't answer.",
+          "The teacher called for us."
         ]
       },
       "pastParticiple": {
         "verb": "called",
         "phonetic": "/kɔːld/",
         "examples": [
-
+          "Our people have never faltered when the Homeland has called on them.",
+          "One political analyst has called it \"the first universal nation."
         ]
       },
       "ing": {
         "verb": "calling",
         "phonetic": "/ˈkɔːlɪŋ/",
         "examples": [
-
+          "I think the nation should take this up as an urgent calling",
+          "When calling select: option 1 for myGov enquiries."
         ]
       },
       "emojiCode": "openmoji_260e"
@@ -6625,21 +2126,24 @@
         "verb": "changed",
         "phonetic": "/tʃeɪndʒd/",
         "examples": [
-
+          "Now that you changed your clothes we can go out.",
+          "Nobody changed seats since the year started."
         ]
       },
       "pastParticiple": {
         "verb": "changed",
         "phonetic": "/tʃeɪndʒd/",
         "examples": [
-
+          "Life has changed a lot for Antonella and her partner.",
+          "The world has changed significantly since the Conference was established."
         ]
       },
       "ing": {
         "verb": "changing",
         "phonetic": "/ˈtʃeɪndʒɪŋ/",
         "examples": [
-
+          "This will also demand changing the norms that govern school management.",
+          "First, the steps signify changing diet and exercise routines one step at a time."
         ]
       },
       "emojiCode": "openmoji_2b8f"
@@ -6657,21 +2161,24 @@
         "verb": "chased",
         "phonetic": "/tʃeɪst/",
         "examples": [
-
+          "Tom is a tough guy, I heard that he chased the burglar down street.",
+          "My friends were chased by the stalker until they found a cop."
         ]
       },
       "pastParticiple": {
         "verb": "chased",
         "phonetic": "/tʃeɪst/",
         "examples": [
-
+          "My enemies have chased me and caught me like a bird, without cause.",
+          "The mayor of NewYork,may have chased the vagrants off the streets of Manhattan."
         ]
       },
       "ing": {
         "verb": "chasing",
         "phonetic": "/ˈtʃeɪsɪŋ/",
         "examples": [
-
+          "They will enjoy games such as bowling with beanbags, chasing after bubbles, and dancing with colorful scarves.",
+          "Learning the facts about drugs can help you see the risks of chasing this excitement or escape."
         ]
       },
       "emojiCode": "openmoji_1faa4"
@@ -6689,21 +2196,24 @@
         "verb": "cheated",
         "phonetic": "/ˈtʃiːtɪd/",
         "examples": [
-
+          "Mika cheated on her husband and ruined their marriage.",
+          "Almost every kid on the class cheated on the test and the teacher didn't notice."
         ]
       },
       "pastParticiple": {
         "verb": "cheated",
         "phonetic": "/ˈtʃiːtɪd/",
         "examples": [
-
+          "He sets an example and has cheated death by drawing inspiration from the group's values.",
+          "A business has cheated you through fraud or misrepresentatio."
         ]
       },
       "ing": {
         "verb": "cheating",
         "phonetic": "/ˈtʃiːtɪŋ/",
         "examples": [
-
+          "This is the only tool we have to remove the lurking temptations of cheating",
+          "We do not want this sort of cheating in the industry."
         ]
       },
       "emojiCode": "openmoji_1f92b"
@@ -6721,21 +2231,24 @@
         "verb": "damaged",
         "phonetic": "/ˈdæmɪdʒd/",
         "examples": [
-
+          "UPS delivery man damaged my package.",
+          "You damaged the envelope but the letter is still intact."
         ]
       },
       "pastParticiple": {
         "verb": "damaged",
         "phonetic": "/ˈdæmɪdʒd/",
         "examples": [
-
+          "One complaint was from an individual alleging that movement of heavy construction vehicles has damaged buildings.",
+          "Bush Says Russia Has Damaged Its Global Credibility."
         ]
       },
       "ing": {
         "verb": "damaging",
         "phonetic": "/ˈdæmɪdʒɪŋ/",
         "examples": [
-
+          "This blockage is what causes the painful and damaging complications of sickle cell disease.",
+          "This is extremely damaging to the health and safety of those workers."
         ]
       },
       "emojiCode": "openmoji_e2c2"
@@ -6753,21 +2266,24 @@
         "verb": "danced",
         "phonetic": "/dænst/",
         "examples": [
-
+          "They danced together last night in the party.",
+          "He danced with his mom at the weeding."
         ]
       },
       "pastParticiple": {
         "verb": "danced",
         "phonetic": "/dænst/",
         "examples": [
-
+          "Sara Baras is a committed artist who on more than one occasion over her career has danced for charity.",
+          "Iñaki has danced at the most prestigious theatres in the world, including the Covent Garden."
         ]
       },
       "ing": {
         "verb": "dancing",
         "phonetic": "/ˈdænsɪŋ/",
         "examples": [
-
+          "The students enjoy it, because of the games, music, rhymes and dancing.",
+          "It is wonderful that he understands my passion for dancing."
         ]
       },
       "emojiCode": "openmoji_1f483"
@@ -6785,21 +2301,24 @@
         "verb": "delivered",
         "phonetic": "/dɪˈlɪvərd/",
         "examples": [
-
+          "My package was delivered to another house.",
+          "Travis delivered the bad news to everyone in the class."
         ]
       },
       "pastParticiple": {
         "verb": "delivered",
         "phonetic": "/dɪˈlɪvərd/",
         "examples": [
-
+          "Tansa Systems has delivered its Text-Proofing Solution to professional publishers for more than a decade.",
+          "He has delivered speeches at conferences held in different academic forums."
         ]
       },
       "ing": {
         "verb": "delivering",
         "phonetic": "/dɪˈlɪvərɪŋ/",
         "examples": [
-
+          "The Commission is doing what it can and is delivering on it.",
+          "Income was earned by delivering project implementation services and other services, such as loan administration."
         ]
       },
       "emojiCode": "openmoji_1f4e6"
@@ -6817,21 +2336,24 @@
         "verb": "earned",
         "phonetic": "/ɜːrnd/",
         "examples": [
-
+          "I earned this body with tears and sweat.",
+          "we earned enough money to travel the world."
         ]
       },
       "pastParticiple": {
         "verb": "earned",
         "phonetic": "/ɜːrnd/",
         "examples": [
-
+          "They have earned a place in the hearts of discerning customers around the world.",
+          "What if you have earned everything-who gave you strength to earn it?"
         ]
       },
       "ing": {
         "verb": "earning",
         "phonetic": "/ˈɜːrnɪŋ/",
         "examples": [
-
+          "You may be able to train for a position for free or while earning a salary.",
+          "Earning and keeping your trust and respect is of primary importance to us."
         ]
       },
       "emojiCode": "openmoji_1fa99"
@@ -6841,28 +2363,32 @@
         "verb": "employ",
         "phonetic": "/ɪmˈplɔɪ/",
         "examples": [
-
+          "A positive attitude is something everyone can work on, and everyone can learn how to employ it.",
+          "The educator must believe in the potential power of his pupil, and he must employ all his art in seeking to bring his pupil to experience this power."
         ]
       },
       "simplePast": {
         "verb": "employed",
         "phonetic": "/ɪmˈplɔɪd/",
         "examples": [
-
+          "This new company from Canadá employed Carlos.",
+          "Our family employed a new gardener."
         ]
       },
       "pastParticiple": {
         "verb": "employed",
         "phonetic": "/ɪmˈplɔɪd/",
         "examples": [
-
+          "Some have employed external consultants to provide technical expertise and industry knowledge of good practices.",
+          "States  have employed terror to intimidate and repress their opponents."
         ]
       },
       "ing": {
         "verb": "employing",
         "phonetic": "/ɪmˈplɔɪɪŋ/",
         "examples": [
-
+          "Banon is one of the few goat cheeses still employing this technique.",
+          "This achievable, in the first place, employing the strategy."
         ]
       },
       "emojiCode": "openmoji_1f468_200d_1f527"
@@ -6880,21 +2406,24 @@
         "verb": "encouraged",
         "phonetic": "/ɪnˈkɜːrɪdʒd/",
         "examples": [
-
+          "My fitness role model encouraged me to stay active and healthy.",
+          "Your mother encouraged you to pursue your dreams outside this country."
         ]
       },
       "pastParticiple": {
         "verb": "encouraged",
         "phonetic": "/ɪnˈkɜːrɪdʒd/",
         "examples": [
-
+          "Court judgments have encouraged patients to look elsewhere for an answer to their health problems.",
+          "The results of the first Operation Jupiter have encouraged a number of other countries to request the launch of similar operations on their borders."
         ]
       },
       "ing": {
         "verb": "encouraging",
         "phonetic": "/ɪnˈkɜːrɪdʒɪŋ/",
         "examples": [
-
+          "Taylor is always encouraging everyone to try new things and step out of our comfort zone.",
+          "All of this is carried out by encouraging the active participation of its members."
         ]
       },
       "emojiCode": "openmoji_1f917"
@@ -6904,28 +2433,32 @@
         "verb": "fry",
         "phonetic": "/fraɪ/",
         "examples": [
-
+          "The only thing you can do to make catfish edible is fry them.",
+          "if you don't like it raw maybe you should fry it."
         ]
       },
       "simplePast": {
         "verb": "fried",
         "phonetic": "/fraɪd/",
         "examples": [
-
+          "I like refried beans. That's why I wanna try fried beans, because maybe they're just as good and we're just wasting time. You don't have to fry them again after all.",
+          "The chef air fryer fried our food to be healthier."
         ]
       },
       "pastParticiple": {
         "verb": "fried",
         "phonetic": "/fraɪd/",
         "examples": [
-
+          "They would have fried me!",
+          "Once it has been fried lightly, the water and the salt are added, letting them boil during 5 to 10 minutes."
         ]
       },
       "ing": {
         "verb": "frying",
         "phonetic": "/ˈfraɪɪŋ/",
         "examples": [
-
+          "I steam fish I have seasoned with spices instead of frying it.",
+          "Heat the palm oil in a frying pan and add the tomato."
         ]
       },
       "emojiCode": "openmoji_1f35f"
@@ -6951,14 +2484,16 @@
         "verb": "gathered",
         "phonetic": "/ˈɡæðərd/",
         "examples": [
-
+          "Radicalism has acquired a new face; protest has gathered new energies.",
+          "He has been working very closely with the other rapporteurs and has gathered their opinions."
         ]
       },
       "ing": {
         "verb": "gathering",
         "phonetic": "/ˈɡæðərɪŋ/",
         "examples": [
-
+          "I shall give priority to gathering data information.",
+          "Women and children play an important role in tending livestock and gathering feed for them."
         ]
       },
       "emojiCode": "openmoji_1f5c3"
@@ -6976,21 +2511,24 @@
         "verb": "greeted",
         "phonetic": "/ˈɡriːtɪd/",
         "examples": [
-
+          "I greeted him past week at the school party and that's the last time I saw him.",
+          "my son greeted the president in person."
         ]
       },
       "pastParticiple": {
         "verb": "greeted",
         "phonetic": "/ˈɡriːtɪd/",
         "examples": [
-
+          "Students have greeted the kindergarteners.",
+          "She will have greeted all of us."
         ]
       },
       "ing": {
         "verb": "greeting",
         "phonetic": "/ˈɡriːtɪŋ/",
         "examples": [
-
+          "After the greeting, you will be asked if you have a Quick Code.",
+          "I extend to President a very cordial and warm greeting"
         ]
       },
       "emojiCode": "openmoji_1f44b"
@@ -7008,21 +2546,24 @@
         "verb": "hated",
         "phonetic": "/ˈheɪtɪd/",
         "examples": [
-
+          "I thought that Kelsey hated to go out with me but she told me that she was just anxious.",
+          "Dany hated extra lessons when he was little."
         ]
       },
       "pastParticiple": {
         "verb": "hated",
         "phonetic": "/ˈheɪtɪd/",
         "examples": [
-
+          "If the world hates you, you know that it has hated Me before it hated you.",
+          "He has hated his life in this world for love of him."
         ]
       },
       "ing": {
         "verb": "hating",
         "phonetic": "/ˈheɪtɪŋ/",
         "examples": [
-
+          "We can all join together in hating someone.",
+          "In the game of mirrors of hating while loving and of antonyms."
         ]
       },
       "emojiCode": "openmoji_1f92c"
@@ -7040,21 +2581,24 @@
         "verb": "helped",
         "phonetic": "/helpt/",
         "examples": [
-
+          "My best friend helped me to move my stuff to my new apartment.",
+          "My grandmother helped her daughters so they could have a better life."
         ]
       },
       "pastParticiple": {
         "verb": "helped",
         "phonetic": "/helpt/",
         "examples": [
-
+          "The knowledge I acquired on the course has helped me to drive more safely.",
+          "The federal principle has helped India to live peacefully with its marked differences."
         ]
       },
       "ing": {
         "verb": "helping",
         "phonetic": "/ˈhelpɪŋ/",
         "examples": [
-
+          "Helping impoverished children can be part of your legacy.",
+          "It was a lot of work, lots of meetings, and lots of providers helping to make it happen."
         ]
       },
       "emojiCode": "openmoji_e083"
@@ -7072,21 +2616,24 @@
         "verb": "hoped",
         "phonetic": "/həʊpt/",
         "examples": [
-
+          "I hoped the best for him and waved him goodbye.",
+          "Last year I hoped my neighbors didn't bother me anymore but they are still a nuisance."
         ]
       },
       "pastParticiple": {
         "verb": "hoped",
         "phonetic": "/həʊpt/",
         "examples": [
-
+          "The development of the railways in recent decades has not produced what we had hoped.",
+          "As we had hoped, independence has helped to ease tensions."
         ]
       },
       "ing": {
         "verb": "hoping",
         "phonetic": "/ˈhəʊpɪŋ/",
         "examples": [
-
+          "They were hoping that the new administration would correct that criminal and inhuman policy.",
+          "The legislature is hoping to receive this initiative in the near future."
         ]
       },
       "emojiCode": "openmoji_1f305"
@@ -7104,21 +2651,24 @@
         "verb": "identified",
         "phonetic": "/aɪˈdentɪfaɪd/",
         "examples": [
-
+          "She hasn't seen her daughter in ages but identified her right away when she saw her.",
+          "The psychiatrist identified the problem that led her to psychosis."
         ]
       },
       "pastParticiple": {
         "verb": "identified",
         "phonetic": "/aɪˈdentɪfaɪd/",
         "examples": [
-
+          "The government has identified the weird lights in the sky as jets.",
+          "Tommy hasn't identified where the problem was."
         ]
       },
       "ing": {
         "verb": "identifying",
         "phonetic": "/aɪˈdentɪfaɪɪŋ/",
         "examples": [
-
+          "A report/summary of discussions identifying the main themes and conclusions.",
+          "It involves identifying what your objectives are, and how to achieve them."
         ]
       },
       "emojiCode": "openmoji_1f50d"
@@ -7136,21 +2686,24 @@
         "verb": "interrupted",
         "phonetic": "/ˌɪntəˈrʌptɪd/",
         "examples": [
-
+          "We were in class when the alarm interrupted teacher.",
+          "I interrupted her as soon as I hear she was saying a lie."
         ]
       },
       "pastParticiple": {
         "verb": "interrupted",
         "phonetic": "/ˌɪntəˈrʌptɪd/",
         "examples": [
-
+          "The international crisis has interrupted a period of growth.",
+          "It is possible that some program has interrupted the Desktop service."
         ]
       },
       "ing": {
         "verb": "interrupting",
         "phonetic": "/ˌɪntəˈrʌptɪŋ/",
         "examples": [
-
+          "Please would you refrain from interrupting and learn some manners above all.",
+          "They enable end users to comply with security polices without interrupting work routines."
         ]
       },
       "emojiCode": "openmoji_26d4"
@@ -7168,21 +2721,24 @@
         "verb": "joked",
         "phonetic": "/dʒəʊkt/",
         "examples": [
-
+          "Terry joked about her weight but it turns out that she was pregnant.",
+          "I joked about my age and now everyone thinks that I'm older."
         ]
       },
       "pastParticiple": {
         "verb": "joked",
         "phonetic": "/dʒəʊkt/",
         "examples": [
-
+          "He goes on to share that he and his own children have always joked around and enjoyed wordplay and plenty of laughter.",
+          "The Jonas Brothers Have Joked About Their Disney Channel Days."
         ]
       },
       "ing": {
         "verb": "joking",
         "phonetic": "/ˈdʒəʊkɪŋ/",
         "examples": [
-
+          "But joking apart, what can I say to you in just a minute?",
+          "Joking and teasing might seem OK, but it can hurt people's feelings and lead to getting in trouble."
         ]
       },
       "emojiCode": "openmoji_1f61c"
@@ -7200,21 +2756,24 @@
         "verb": "jumped",
         "phonetic": "/dʒʌmpt/",
         "examples": [
-
+          "One of my best memories from this summer was when we jumped from bungee.",
+          "I jumped into the first train to New York."
         ]
       },
       "pastParticiple": {
         "verb": "jumped",
         "phonetic": "/dʒʌmpt/",
         "examples": [
-
+          "Byron Bay prices have jumped more than $655,000 in one year.",
+          "Mental illness-related ED visits have jumped 150% during pandemic."
         ]
       },
       "ing": {
         "verb": "jumping",
         "phonetic": "/ˈdʒʌmpɪŋ/",
         "examples": [
-
+          "And there they are, members of the green tide cheering, jumping and shouting.",
+          "Children aged 6 to 12 were at greatest risk from jumping or diving around a hot tub or inside one."
         ]
       },
       "emojiCode": "openmoji_1f3c2"
@@ -7232,21 +2791,24 @@
         "verb": "kicked",
         "phonetic": "/kɪkt/",
         "examples": [
-
+          "He is now in jail because he kicked a sign while driving.",
+          "George kicked his head against the wall by accident."
         ]
       },
       "pastParticiple": {
         "verb": "kicked",
         "phonetic": "/kɪkt/",
         "examples": [
-
+          "When I realized what I'd done I could have kicked myself.",
+          "I would have kicked off with the waiter, complained loudly to the other table and spent the rest of the meal in a valpolicella-induced huff."
         ]
       },
       "ing": {
         "verb": "kicking",
         "phonetic": "/ˈkɪkɪŋ/",
         "examples": [
-
+          "We are delighted to be kicking of this significant year for the bodega with one of their wines.",
+          "One year-olds are developing skills such as balancing, jumping, kicking, and throwing."
         ]
       },
       "emojiCode": "openmoji_1f9b6"
@@ -7264,21 +2826,24 @@
         "verb": "kissed",
         "phonetic": "/kɪst/",
         "examples": [
-
+          "I kissed a girl and I liked it.",
+          "His wife kissed him as soon as he arrived."
         ]
       },
       "pastParticiple": {
         "verb": "kissed",
         "phonetic": "/kɪst/",
         "examples": [
-
+          "What lips my lips have kissed, and where, and why.",
+          "Sadly, Mary have never kissed anyone."
         ]
       },
       "ing": {
         "verb": "kissing",
         "phonetic": "/ˈkɪsɪŋ/",
         "examples": [
-
+          "Avoid kissing or sharing utensils if you or someone close to you has the flu.",
+          "Avoid hugging and kissing pets if you are allergic."
         ]
       },
       "emojiCode": "openmoji_1f618"
@@ -7296,21 +2861,24 @@
         "verb": "laughed",
         "phonetic": "/læft/",
         "examples": [
-
+          "She laughed out loud so much that everyone just stopped talking and looked at her.",
+          "The Baby laughed when the balloon popped."
         ]
       },
       "pastParticiple": {
         "verb": "laughed",
         "phonetic": "/læft/",
         "examples": [
-
+          "How many times have you laughed today?",
+          "She would have laughed!\" Minnelli said, giggling herself as she predicted her mother's reaction."
         ]
       },
       "ing": {
         "verb": "laughing",
         "phonetic": "/ˈlæfɪŋ/",
         "examples": [
-
+          "The kids were laughing hysterically and saying I looked like a beached whale.",
+          "Imagine children laughing and enjoying a travelling show."
         ]
       },
       "emojiCode": "openmoji_1f606"
@@ -7328,21 +2896,24 @@
         "verb": "liked",
         "phonetic": "/laɪkt/",
         "examples": [
-
+          "I liked meeting your new friends.",
+          "I liked the experience. Thank you for inviting me."
         ]
       },
       "pastParticiple": {
         "verb": "liked",
         "phonetic": "/laɪkt/",
         "examples": [
-
+          "Mr. Krohn said he has liked some of his classes, especially one on the Spanish Civil War.",
+          "She has liked the zoo."
         ]
       },
       "ing": {
         "verb": "liking",
         "phonetic": "/ˈlaɪkɪŋ/",
         "examples": [
-
+          "Not everyone has to find the results to their liking.",
+          "You can hire a boat and plan your cruise to your liking."
         ]
       },
       "emojiCode": "openmoji_1f44d"
@@ -7359,21 +2930,24 @@
         "verb": "married",
         "phonetic": "/ˈmærid/",
         "examples": [
-
+          "Katy married her best friend after years of being a couple.",
+          "In the story the princess married the frog."
         ]
       },
       "pastParticiple": {
         "verb": "married",
         "phonetic": "/ˈmærid/",
         "examples": [
-
+          "Nobel Peace Prize laureate and women's rights campaigner Malala Yousafzai has married at her home in the United Kingdom.",
+          "Reports said he has married Mumbai-based physiotherapist Dr Himani."
         ]
       },
       "ing": {
         "verb": "marrying",
         "phonetic": "/ˈmæriɪŋ/",
         "examples": [
-
+          "The difficulty in marrying together these two traditions, approaches and styles is not to be underestimated.",
+          "A single parent marrying or moving in with a partner may be as disruptive to a child as a divorce,"
         ]
       },
       "emojiCode": "openmoji_1f470_200d_2640_fe0f"
@@ -7391,21 +2965,24 @@
         "verb": "measured",
         "phonetic": "/ˈmeʒərd/",
         "examples": [
-
+          "I already measured my body to know my right size.",
+          "I measured his temperature before taking him to the hospital."
         ]
       },
       "pastParticiple": {
         "verb": "measured",
         "phonetic": "/ˈmeʒərd/",
         "examples": [
-
+          "Scientists Have Measured Earth's Ancient Magnetic Field From Stone Age Artifacts.",
+          "I Have Measured out My Life with Coffee. Spoons."
         ]
       },
       "ing": {
         "verb": "measuring",
         "phonetic": "/ˈmeʒərɪŋ/",
         "examples": [
-
+          "There is a need for further work to identify the data needed for measuring the suggested indicators.",
+          "This book presents a new method for measuring multidimensional poverty."
         ]
       },
       "emojiCode": "openmoji_1f4d0"
@@ -7415,28 +2992,32 @@
         "verb": "move",
         "phonetic": "/muːv/",
         "examples": [
-
+          "She moves her body with extreme confidence.",
+          "You need to pack and move your things out of the house by next weekend."
         ]
       },
       "simplePast": {
         "verb": "moved",
         "phonetic": "/muːvd/",
         "examples": [
-
+          "I moved to a new house. it's bigger than the last one.",
+          "she moved at the speed of light."
         ]
       },
       "pastParticiple": {
         "verb": "moved",
         "phonetic": "/muːvd/",
         "examples": [
-
+          "We have moved to a new office!",
+          "Teeth have moved after braces."
         ]
       },
       "ing": {
         "verb": "moving",
         "phonetic": "/ˈmuːvɪŋ/",
         "examples": [
-
+          "Moving from direct implementation and control to a networked structure may be a difficult adjustment.",
+          "Keep moving in the right direction with the integrated compass."
         ]
       },
       "emojiCode": "openmoji_e103"
@@ -7454,21 +3035,24 @@
         "verb": "offended",
         "phonetic": "/əˈfendɪd/",
         "examples": [
-
+          "You offended Paul by rejecting his gift.",
+          "My neighbor offended me and now I wouldn't dare to talk to him."
         ]
       },
       "pastParticiple": {
         "verb": "offended",
         "phonetic": "/əˈfendɪd/",
         "examples": [
-
+          "The development of specialist support services for young people who have offended and who have also been victims of crime.",
+          "I heard i may have offended some people."
         ]
       },
       "ing": {
         "verb": "offending",
         "phonetic": "/əˈfendɪŋ/",
         "examples": [
-
+          "The offending verse has gone, but poverty has not.",
+          "He will understand that the will can restrain him from offending his neighbor."
         ]
       },
       "emojiCode": "openmoji_e283"
@@ -7486,21 +3070,24 @@
         "verb": "opened",
         "phonetic": "/ˈəʊpənd/",
         "examples": [
-
+          "Last time I opened my mail it was full of spam.",
+          "He opened his eyes slowly after 12 hours of sleep."
         ]
       },
       "pastParticiple": {
         "verb": "opened",
         "phonetic": "/ˈəʊpənd/",
         "examples": [
-
+          "We have opened iNELS Café!",
+          "If you have inadvertently opened an infected email attachment or responded to a spam message there are some steps you should take."
         ]
       },
       "ing": {
         "verb": "opening",
         "phonetic": "/ˈəʊpənɪŋ/",
         "examples": [
-
+          "The user starts the opening and closing action and the slide does the rest.",
+          "The opening paragraph tells the story in a nutshell, and tells the reader: who, what, when and where."
         ]
       },
       "emojiCode": "openmoji_1f4d6"
@@ -7518,21 +3105,24 @@
         "verb": "painted",
         "phonetic": "/ˈpeɪntɪd/",
         "examples": [
-
+          "Last year I painted the house black for Halloween.",
+          "I painted my nails orange."
         ]
       },
       "pastParticiple": {
         "verb": "painted",
         "phonetic": "/ˈpeɪntɪd/",
         "examples": [
-
+          "I must have it painted black Maybe then I'll fade away.",
+          "Artists across generations have painted the Mahatma. One of the most photographed Indians of his time."
         ]
       },
       "ing": {
         "verb": "painting",
         "phonetic": "/ˈpeɪntɪŋ/",
         "examples": [
-
+          "Painting will also prevent the formation of moulds and blue-stain.",
+          "So we must stop being cynical and painting a picture of the Union as some kind of inconvenience."
         ]
       },
       "emojiCode": "openmoji_1f58c"
@@ -7550,21 +3140,24 @@
         "verb": "parked",
         "phonetic": "/pɑːrkt/",
         "examples": [
-
+          "I parked outside the neighbor's house because our garage was closed.",
+          "I parked my car behind yours."
         ]
       },
       "pastParticiple": {
         "verb": "parked",
         "phonetic": "/pɑːrkt/",
         "examples": [
-
+          "Respondents have parked the disputed domain name at Terra, without any intention of making any commercial or misleading use of it.",
+          "Warning You Have Parked In A Private Parking Area."
         ]
       },
       "ing": {
         "verb": "parking",
         "phonetic": "/ˈpɑːrkɪŋ/",
         "examples": [
-
+          "Parking is available at the public underground parking",
+          "Stop parking outsid my house!"
         ]
       },
       "emojiCode": "openmoji_1f697"
@@ -7582,21 +3175,24 @@
         "verb": "played",
         "phonetic": "/pleɪd/",
         "examples": [
-
+          "The band played that new song you like.",
+          "The kids played baseball against the Oregon's team."
         ]
       },
       "pastParticiple": {
         "verb": "played",
         "phonetic": "/pleɪd/",
         "examples": [
-
+          "How would Britney Spears' conservatorship have played out under Scots law?",
+          "We should have played the 1st game on my birthday."
         ]
       },
       "ing": {
         "verb": "playing",
         "phonetic": "/ˈpleɪɪŋ/",
         "examples": [
-
+          "On 59 occasions we heard the spirited notes of the Cuban National Anthem playing.",
+          "In her spare time, you may find her climbing rocks or mountains or playing on the beach."
         ]
       },
       "emojiCode": "openmoji_26bd"
@@ -7614,21 +3210,24 @@
         "verb": "relaxed",
         "phonetic": "/rɪˈlækst/",
         "examples": [
-
+          "She relaxed while doing yoga.",
+          "Teo relaxed by watching Netflix alone all day."
         ]
       },
       "pastParticiple": {
         "verb": "relaxed",
         "phonetic": "/rɪˈlækst/",
         "examples": [
-
+          "Regional Government has relaxed the rules governing bicycle access on the underground.",
+          "Her work has a relaxed, fun quality that is matched by her presence at the wedding!"
         ]
       },
       "ing": {
         "verb": "relaxing",
         "phonetic": "/rɪˈlæksɪŋ/",
         "examples": [
-
+          "More realistic and longer time frames would have had a counter-productive effect by relaxing intentions and the need to take action.",
+          "There is nothing more relaxing and fun than dancing."
         ]
       },
       "emojiCode": "openmoji_263a"
@@ -7646,21 +3245,24 @@
         "verb": "returned",
         "phonetic": "/rɪˈtɜːrnd/",
         "examples": [
-
+          "I returned home last week so I won't be able to go to work.",
+          "Our dog returned three days after going missing."
         ]
       },
       "pastParticiple": {
         "verb": "returned",
         "phonetic": "/rɪˈtɜːrnd/",
         "examples": [
-
+          "This issue has returned with force since then.",
+          "We are now entering a phase in which the sense of identity has returned to forefront."
         ]
       },
       "ing": {
         "verb": "returning",
         "phonetic": "/rɪˈtɜːrnɪŋ/",
         "examples": [
-
+          "The returning signal from the media is too weak.",
+          "Returning to school for many children means riding the school bus."
         ]
       },
       "emojiCode": "openmoji_21a9"
@@ -7678,21 +3280,24 @@
         "verb": "rubbed",
         "phonetic": "/rʌbd/",
         "examples": [
-
+          "My cat rubbed against my leg and now my black pants have cat's hair all over them.",
+          "Kris rubbed his cat with an ice to keep it fresh in the hot days of summer."
         ]
       },
       "pastParticiple": {
         "verb": "rubbed",
         "phonetic": "/rʌbd/",
         "examples": [
-
+          "If the Player has selected to sync your device automatically, click Finish.",
+          "On the item list, the system has selected all items for which an invoice is still to be received."
         ]
       },
       "ing": {
         "verb": "rubbing",
         "phonetic": "/ˈrʌbɪŋ/",
         "examples": [
-
+          "Stop rubbing your feet on the carpet you're going to get shocked.",
+          "The leader starts the exercise by rubbing their palms together."
         ]
       },
       "emojiCode": "openmoji_e0b2"
@@ -7710,21 +3315,24 @@
         "verb": "selected",
         "phonetic": "/sɪˈlektɪd/",
         "examples": [
-
+          "The company selected Carlos to be the representative in the next trade fair.",
+          "Karla selected the furniture to decorate my room."
         ]
       },
       "pastParticiple": {
         "verb": "selected",
         "phonetic": "/sɪˈlektɪd/",
         "examples": [
-
+          "You've been selected as the winner of our giveaway.",
+          "Our senior hasn't selected our new team leader."
         ]
       },
       "ing": {
         "verb": "selecting",
         "phonetic": "/sɪˈlektɪŋ/",
         "examples": [
-
+          "Selecting the materials and equipment that generate fewer amounts of waste and less toxicity.",
+          "See the complete list of prohibited items by selecting the link below."
         ]
       },
       "emojiCode": "openmoji_e10c"
@@ -7742,21 +3350,24 @@
         "verb": "smoked",
         "phonetic": "/sməʊkt/",
         "examples": [
-
+          "Karla was so stressed that she smoked a full package of cigarettes.",
+          "Terry smoked inside the house and now everything stinks."
         ]
       },
       "pastParticiple": {
         "verb": "smoked",
         "phonetic": "/sməʊkt/",
         "examples": [
-
+          "The risk depends upon the number of cigarettes smoked every day and for how long someone has smoked.",
+          "You will be asked if you smoke, and if so, how long you have smoked."
         ]
       },
       "ing": {
         "verb": "smoking",
         "phonetic": "/ˈsməʊkɪŋ/",
         "examples": [
-
+          "Tobacco smoking is an important additional source of cadmium exposure by inhalation.",
+          "Physicians should help patients become motivated to quit smoking."
         ]
       },
       "emojiCode": "openmoji_1f6ac"
@@ -7774,21 +3385,24 @@
         "verb": "snored",
         "phonetic": "/snɔːrd/",
         "examples": [
-
+          "He was so tired that he snored all night.",
+          "I snored and slept like a log last night."
         ]
       },
       "pastParticiple": {
         "verb": "snored",
         "phonetic": "/snɔːrd/",
         "examples": [
-
+          "Many women who have never snored before may begin doing so at some time during their pregnancy.",
+          "While most of us have snored on occasion, about a quarter of all people snore on a nightly basis."
         ]
       },
       "ing": {
         "verb": "snoring",
         "phonetic": "/ˈsnɔːrɪŋ/",
         "examples": [
-
+          "It's hard for me to sleep when there's someone snoring next to me.",
+          "Sleep apnea is not as common as snoring."
         ]
       },
       "emojiCode": "openmoji_1f634"
@@ -7806,21 +3420,24 @@
         "verb": "talked",
         "phonetic": "/tɔːkt/",
         "examples": [
-
+          "We talked about our families and dream jobs.",
+          "My parents talked to me about the new girl in the neighborhood."
         ]
       },
       "pastParticiple": {
         "verb": "talked",
         "phonetic": "/tɔːkt/",
         "examples": [
-
+          "The Commission President has talked a lot about Robin Hood in the last couple of weeks.",
+          "Go around the room until everyone has talked about their object."
         ]
       },
       "ing": {
         "verb": "talking",
         "phonetic": "/ˈtɔːkɪŋ/",
         "examples": [
-
+          "Talking to babies teaches them to use language for communication.",
+          "Before talking, think about why you want your child to know."
         ]
       },
       "emojiCode": "openmoji_1f4ac"
@@ -7838,21 +3455,24 @@
         "verb": "thanked",
         "phonetic": "/θæŋkt/",
         "examples": [
-
+          "Emily thanked her with a gift.",
+          "Regina thanked the doctors for saving her life."
         ]
       },
       "pastParticiple": {
         "verb": "thanked",
         "phonetic": "/θæŋkt/",
         "examples": [
-
+          "Director Claims Genocide Deniers Have Tanked His Movie's IMDb Score.",
+          "The Upsetting Doctor Who Portrayal That Could Have Tanked The Series."
         ]
       },
       "ing": {
         "verb": "thanking",
         "phonetic": "/ˈθæŋkɪŋ/",
         "examples": [
-
+          "Let me begin by thanking all of you for your participation last night.",
+          "Caring for our veterans is more than a way of thanking them for their service."
         ]
       },
       "emojiCode": "openmoji_1f64f"
@@ -7870,21 +3490,24 @@
         "verb": "travelled",
         "phonetic": "/ˈtrævld/",
         "examples": [
-
+          "My sister traveled to Europe when she was 15.",
+          "Our teacher traveled to the jungle to study tropical fungi."
         ]
       },
       "pastParticiple": {
         "verb": "travelled",
         "phonetic": "/ˈtrævld/",
         "examples": [
-
+          "People who have travelled to areas of the world with high rates of antibiotic resistant bacteria such as South Asia and the Middle East are immune.",
+          "Somewhere I Have Never Travelled."
         ]
       },
       "ing": {
         "verb": "traveling",
         "phonetic": "/ˈtrævlɪŋ/",
         "examples": [
-
+          "Entertain children with activities and songs while traveling.",
+          "Make sure that your passport is valid for at least six months before traveling."
         ]
       },
       "emojiCode": "openmoji_1f9ed"
@@ -7902,21 +3525,24 @@
         "verb": "visited",
         "phonetic": "/ˈvɪzɪtɪd/",
         "examples": [
-
+          "Wendy visited Carlos at the hospital when he was sick.",
+          "My mom visited us last weekend."
         ]
       },
       "pastParticiple": {
         "verb": "visited",
         "phonetic": "/ˈvɪzɪtɪd/",
         "examples": [
-
+          "Only three presidents have visited all 50 states in office.",
+          "Some of the Houston families who have visited their University of Houston international students after the students returned to their home country."
         ]
       },
       "ing": {
         "verb": "visiting",
         "phonetic": "/ˈvɪzɪtɪŋ/",
         "examples": [
-
+          "Peter got the habit of visiting churches to spend time in prayer.",
+          "Mark travels through Europe visiting photography festivals in France."
         ]
       },
       "emojiCode": "openmoji_1f392"
@@ -7934,14 +3560,16 @@
         "verb": "walked",
         "phonetic": "/wɔːkt/",
         "examples": [
-
+          "I walked outside the house but it was so windy that I preferred to stay inside.",
+          "The bride walked inside the church after the groom."
         ]
       },
       "pastParticiple": {
         "verb": "walked",
         "phonetic": "/wɔːkt/",
         "examples": [
-
+          "I Should Have Walked Away.",
+          "Researchers built a robot called OroBOT to re-create the way that Orobates pabsti might have walked."
         ]
       },
       "ing": {
@@ -7967,21 +3595,24 @@
         "verb": "wanted",
         "phonetic": "/ˈwɑːntɪd/",
         "examples": [
-
+          "When I was a kid I wanted to be a ballerina.",
+          "Maya wanted to buy a new pair of shoes but she didn't have enough money."
         ]
       },
       "pastParticiple": {
         "verb": "wanted",
         "phonetic": "/ˈwɑːntɪd/",
         "examples": [
-
+          "I wouldn't have wanted the fuss and the bother.",
+          "He would not have wanted to go any other way."
         ]
       },
       "ing": {
         "verb": "wanting",
         "phonetic": "/ˈwɑːntɪŋ/",
         "examples": [
-
+          "I felt like wanting to know more about the life.",
+          "We were curious, wanting to know the status of the five indicted leaders and whether they would be part of the negotiations."
         ]
       },
       "emojiCode": "openmoji_1f97a"
@@ -7999,21 +3630,24 @@
         "verb": "warned",
         "phonetic": "/wɔːrnd/",
         "examples": [
-
+          "I warned you to be careful around my dog but you didn't listen.",
+          "The owner warned us not to use the heater."
         ]
       },
       "pastParticiple": {
         "verb": "warned",
         "phonetic": "/wɔːrnd/",
         "examples": [
-
+          "U.S. intelligence agencies have warned that foreign powers like China could exploit samples to discover the medical history.",
+          "Ministers have warned vaccine refusers are the \"principal threat\" to the final lifting of lockdown restriction."
         ]
       },
       "ing": {
         "verb": "warning",
         "phonetic": "/ˈwɔːrnɪŋ/",
         "examples": [
-
+          "Early warning and early response systems would contribute to the maintenance of international peace and security.",
+          "The dog did not wait for the warning to be repeated."
         ]
       },
       "emojiCode": "openmoji_26a0"
@@ -8031,21 +3665,24 @@
         "verb": "yelled",
         "phonetic": "/jeld/",
         "examples": [
-
+          "Our mother yelled at us for being late.",
+          "They yelled at each other in front of everyone."
         ]
       },
       "pastParticiple": {
         "verb": "yelled",
         "phonetic": "/jeld/",
         "examples": [
-
+          "I thought to myself wow, my own father would have yelled or hit me and told me to quit being a cry baby.",
+          "The suspected gunman, is said to have yelled “All  must die”."
         ]
       },
       "ing": {
         "verb": "yelling",
         "phonetic": "/ˈjelɪŋ/",
         "examples": [
-
+          "But, if you have asthma, crying, yelling, or laughing hard can trigger asthma symptoms.",
+          "Antonio rushed to their car window, yelling, ordering the man to stop."
         ]
       },
       "emojiCode": "openmoji_1f5ef"
@@ -8053,114 +3690,14 @@
   ],
   "countries": [
     {
-      "name": "United Kingdom",
-      "country_phonetic": "/ðə juˌnaɪtɪd ˈkɪŋdəm/",
-      "nationality": "British",
-      "nationality_phonetic": "/ˈbrɪtɪʃ/",
-      "language": "English",
-      "language_phonetic": "/ˈɪŋɡlɪʃ/",
-      "emoji_code": "openmoji_1f1ec_1f1e7",
-      "link_maps": "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj3hPOXpPvzAhUfmGoFHXyFB3oQFnoECAIQAQ&url=https%3A%2F%2Fwww.google.com%2Fmaps%2Fsearch%2F%3Fapi%3D1%26query%3DUnited%2520Kingdom%252C%2520England%26query_place_id%3DChIJn524nBcQdkgR1qhQOpSwVTA&usg=AOvVaw2aisBjlwuh8amecWNHQDH0"
-    },
-    {
-      "name": "Scotland",
-      "country_phonetic": "/ˈskɑːtlənd/",
-      "nationality": "Scottish",
-      "nationality_phonetic": "/ˈskɑːtɪʃ/",
-      "language": "English && Gaelic",
-      "language_phonetic": "/ˈɪŋɡlɪʃ/ && /ˈɡælɪk/",
-      "emoji_code": "openmoji_1f3f4_e0067_e0062_e0073_e0063_e0074_e007f",
-      "link_maps": "https://www.google.com/maps/place/Scotland,+UK/@57.6677015,-9.1705585,6z/data=!4m5!3m4!1s0x4861e2c403f2a19f:0xe7c1fad809c30714!8m2!3d56.4906712!4d-4.2026458"
-    },
-    {
-      "name": "Wales",
-      "country_phonetic": "/weɪlz/",
-      "nationality": "Welsh",
-      "nationality_phonetic": "/welʃ/",
-      "language": "English && Welsh",
-      "language_phonetic": "/ˈɪŋɡlɪʃ/ && /welʃ/",
-      "emoji_code": "openmoji_1f3f4_e0067_e0062_e0077_e006c_e0073_e007f",
-      "link_maps": "https://www.google.com/maps/place/Wales,+UK/@52.3874567,-6.402955,7z/data=!3m1!4b1!4m5!3m4!1s0x486434b66c1c0fed:0x1ebb71bc8aa5e8a2!8m2!3d52.1306607!4d-3.7837117"
-    },
-    {
-      "name": "Denmark",
-      "country_phonetic": "/ˈdenmɑːrk/",
-      "nationality": "Danish",
-      "nationality_phonetic": "/ˈdeɪnɪʃ/",
-      "language": "Danish",
-      "language_phonetic": "/ˈdeɪnɪʃ/",
-      "emoji_code": "openmoji_1f1e9_1f1f0",
-      "link_maps": "https://www.google.com/maps/place/Denmark/@56.1549322,7.0565,6z/data=!3m1!4b1!4m5!3m4!1s0x464b27b6ee945ffb:0x528743d0c3e092cd!8m2!3d56.26392!4d9.501785"
-    },
-    {
-      "name": "Finland",
-      "country_phonetic": "/ˈfɪnlənd/",
-      "nationality": "Finnish",
-      "nationality_phonetic": "/ˈfɪnɪʃ/",
-      "language": "Finnish",
-      "language_phonetic": "/ˈfɪnɪʃ/",
-      "emoji_code": "openmoji_1f1eb_1f1ee",
-      "link_maps": "https://www.google.com/maps/place/Finland/@64.6323618,17.0832381,5z/data=!3m1!4b1!4m5!3m4!1s0x4681cadf4b32f6dd:0x146d63c75a810!8m2!3d61.92411!4d25.7481511"
-    },
-    {
-      "name": "Norway",
-      "country_phonetic": "/ˈnɔːrweɪ/",
-      "nationality": "Norwegian",
-      "nationality_phonetic": "/nɔːrˈwiːdʒən/",
-      "language": "Norwegian",
-      "language_phonetic": "/nɔːrˈwiːdʒən/",
-      "emoji_code": "openmoji_1f1f3_1f1f4",
-      "link_maps": "https://www.google.com/maps/place/Norway/@63.4932818,0.0813433,4z/data=!3m1!4b1!4m5!3m4!1s0x461268458f4de5bf:0xa1b03b9db864d02b!8m2!3d60.472024!4d8.468946"
-    },
-    {
-      "name": "Sweden",
-      "country_phonetic": "/ˈswiːdn/",
-      "nationality": "Swedish",
-      "nationality_phonetic": "/ˈswiːdɪʃ/",
-      "language": "Swedish",
-      "language_phonetic": "/ˈswiːdɪʃ/",
-      "emoji_code": "openmoji_1f1f8_1f1ea",
-      "link_maps": "https://www.google.com/maps/place/Sweden/@60.8926931,-0.2879674,4z/data=!3m1!4b1!4m5!3m4!1s0x465cb2396d35f0f1:0x22b8eba28dad6f62!8m2!3d60.128161!4d18.643501"
-    },
-    {
-      "name": "Switzerland",
-      "country_phonetic": "/ˈswɪtsərlənd/",
-      "nationality": "Swiss",
-      "nationality_phonetic": "/swɪs/",
-      "language": "German && French && Italian",
-      "language_phonetic": "/ˈdʒɜːrmən/ && /frentʃ/ && /ɪˈtæliən/",
-      "emoji_code": "openmoji_1f1e8_1f1ed",
-      "link_maps": "https://www.google.com/maps/place/Switzerland/@46.7950298,5.9807915,7z/data=!3m1!4b1!4m5!3m4!1s0x478c64ef6f596d61:0x5c56b5110fcb7b15!8m2!3d46.818188!4d8.227512"
-    },
-    {
-      "name": "Estonia",
-      "country_phonetic": "/eˈstəʊniə/",
-      "nationality": "Estonian",
-      "nationality_phonetic": "/eˈstəʊniən/",
-      "language": "Estonian",
-      "language_phonetic": "/eˈstəʊniən/",
-      "emoji_code": "openmoji_1f1ea_1f1ea",
-      "link_maps": "https://www.google.com/maps/place/Estonia/@58.6037546,22.6895857,7z/data=!3m1!4b1!4m5!3m4!1s0x4692949c82a04bfd:0x40ea9fba4fb425c3!8m2!3d58.595272!4d25.0136071"
-    },
-    {
-      "name": "Latvia",
-      "country_phonetic": "/ˈlætviə/",
-      "nationality": "Latvian",
-      "nationality_phonetic": "/ˈlætviən/",
-      "language": "Latvian",
-      "language_phonetic": "/ˈlætviən/",
-      "emoji_code": "openmoji_1f1f1_1f1fb",
-      "link_maps": "https://www.google.com/maps/place/Latvia/@56.8630848,22.3013343,7z/data=!3m1!4b1!4m5!3m4!1s0x46e930677b8a9afd:0xcfcd68f2fc10!8m2!3d56.879635!4d24.603189"
-    },
-    {
-      "name": "Lithuania",
-      "country_phonetic": "/ˌlɪθuˈeɪniə/",
-      "nationality": "Lithuanian",
-      "nationality_phonetic": "/ˌlɪθuˈeɪniən/",
-      "language": "Lithuanian",
-      "language_phonetic": "/ˌlɪθuˈeɪniən/",
-      "emoji_code": "openmoji_1f1f1_1f1f9",
-      "link_maps": "https://www.google.com/maps/place/Lithuania/@55.1561128,21.6404642,7z/data=!3m1!4b1!4m5!3m4!1s0x46dd94140f33be13:0xf30a54d3a55dbab9!8m2!3d55.169438!4d23.881275"
+      "name": "Argentina",
+      "country_phonetic": "/ˌɑːrdʒənˈtiːnə/",
+      "nationality": "Argentinian",
+      "nationality_phonetic": "/ˌɑːrdʒənˈtɪniən/",
+      "language": "Spanish",
+      "language_phonetic": "/ˈspænɪʃ/",
+      "emoji_code": "openmoji_1f1e6_1f1f7",
+      "link_maps": "https://www.google.com/maps/place/Argentina/@-37.0560032,-81.6327078,4z/data=!3m1!4b1!4m5!3m4!1s0x95bccaf5f5fdc667:0x3d2f77992af00fa8!8m2!3d-38.416097!4d-63.616672"
     },
     {
       "name": "Austria",
@@ -8173,14 +3710,104 @@
       "link_maps": "https://www.google.com/maps/place/Austria/@47.6783064,11.1024034,7z/data=!3m1!4b1!4m5!3m4!1s0x476d079b259d2a7f:0x1012d47bdde4c1af!8m2!3d47.516231!4d14.550072"
     },
     {
+      "name": "Belarus",
+      "country_phonetic": "/ˌbeləˈruːs/",
+      "nationality": "Belarusian",
+      "nationality_phonetic": "/ˌbeləˈruːsiən/",
+      "language": "Belarusian",
+      "language_phonetic": "/ˌbeləˈruːsiən/",
+      "emoji_code": "openmoji_1f1e7_1f1fe",
+      "link_maps": "https://www.google.com/maps/place/Belarus/@53.6395297,23.4905298,6z/data=!3m1!4b1!4m5!3m4!1s0x46da2584e2ad4881:0xa1d181ec8c10!8m2!3d53.709807!4d27.953389"
+    },
+    {
       "name": "Belgium",
       "country_phonetic": "/ˈbeldʒəm/",
       "nationality": "Belgian",
       "nationality_phonetic": "/ˈbeldʒən/",
-      "language": "French && Flemish",
-      "language_phonetic": "/frentʃ/ && /ˈflemɪʃ/",
+      "language": "French",
+      "language_phonetic": "/frentʃ/",
       "emoji_code": "openmoji_1f1e7_1f1ea",
       "link_maps": "https://www.google.com/maps/place/Belgium/@50.4974212,3.3449663,8z/data=!3m1!4b1!4m5!3m4!1s0x47c17d64edf39797:0x47ebf2b439e60ff2!8m2!3d50.503887!4d4.469936"
+    },
+    {
+      "name": "Brazil",
+      "country_phonetic": "/brəˈzɪl/",
+      "nationality": "Brazilian",
+      "nationality_phonetic": "/brəˈzɪliən/",
+      "language": "Portuguese",
+      "language_phonetic": "/ˌpɔːrtʃʊˈɡiːz/",
+      "emoji_code": "openmoji_1f1e7_1f1f7",
+      "link_maps": "https://www.google.com/maps/place/Brasil/@-13.7019755,-69.6972572,4z/data=!3m1!4b1!4m5!3m4!1s0x9c59c7ebcc28cf:0x295a1506f2293e63!8m2!3d-14.235004!4d-51.92528"
+    },
+    {
+      "name": "Bulgaria",
+      "country_phonetic": "/bʌlˈɡeriə/",
+      "nationality": "Bulgarian",
+      "nationality_phonetic": "/bʌlˈɡeriən/",
+      "language": "Bulgarian",
+      "language_phonetic": "/bʌlˈɡeriən/",
+      "emoji_code": "openmoji_1f1e7_1f1ec",
+      "link_maps": "https://www.google.com/maps/place/Bulgaria/@42.7075162,23.2995661,7z/data=!3m1!4b1!4m5!3m4!1s0x40a8fec1c85bf089:0xa01269bf4c10!8m2!3d42.733883!4d25.48583"
+    },
+    {
+      "name": "Canada",
+      "country_phonetic": "/ˈkænədə/",
+      "nationality": "Canadian",
+      "nationality_phonetic": "/kəˈneɪdiən/",
+      "language": "English",
+      "language_phonetic": "/ˈɪŋɡlɪʃ/",
+      "emoji_code": "openmoji_1f1e8_1f1e6",
+      "link_maps": "https://www.google.com/maps/place/Canada/@50.848028,-130.2303233,3z/data=!3m1!4b1!4m5!3m4!1s0x4b0d03d337cc6ad9:0x9968b72aa2438fa5!8m2!3d56.130366!4d-106.346771"
+    },
+    {
+      "name": "Czech Republic",
+      "country_phonetic": "/ˌtʃek rɪˈpʌblɪk/",
+      "nationality": "Czech",
+      "nationality_phonetic": "/tʃek/",
+      "language": "Czech",
+      "language_phonetic": "/tʃek/",
+      "emoji_code": "openmoji_1f1e8_1f1ff",
+      "link_maps": "https://www.google.com/maps/place/Czechia/@49.7856588,13.2317121,7z/data=!3m1!4b1!4m5!3m4!1s0x470b948fd7dd8243:0xf8661c75d3db586f!8m2!3d49.817492!4d15.472962"
+    },
+    {
+      "name": "Denmark",
+      "country_phonetic": "/ˈdenmɑːrk/",
+      "nationality": "Danish",
+      "nationality_phonetic": "/ˈdeɪnɪʃ/",
+      "language": "Danish",
+      "language_phonetic": "/ˈdeɪnɪʃ/",
+      "emoji_code": "openmoji_1f1e9_1f1f0",
+      "link_maps": "https://www.google.com/maps/place/Denmark/@56.1549322,7.0565,6z/data=!3m1!4b1!4m5!3m4!1s0x464b27b6ee945ffb:0x528743d0c3e092cd!8m2!3d56.26392!4d9.501785"
+    },
+    {
+      "name": "El Salvador ",
+      "country_phonetic": "/ˌel ˈsælvədɔːr/",
+      "nationality": "Salvadorean",
+      "nationality_phonetic": "/ˌsælvəˈdɔːriən/",
+      "language": "Spanish",
+      "language_phonetic": "/ˈspænɪʃ/",
+      "emoji_code": "openmoji_1f1f8_1f1fb",
+      "link_maps": "https://www.google.com/maps/place/El+Salvador/@13.7464449,-90.0516386,8z/data=!3m1!4b1!4m5!3m4!1s0x8f6327a659640657:0x6f9a16eb98854832!8m2!3d13.794185!4d-88.89653"
+    },
+    {
+      "name": "Estonia",
+      "country_phonetic": "/eˈstəʊniə/",
+      "nationality": "Estonian",
+      "nationality_phonetic": "/eˈstəʊniən/",
+      "language": "Estonian",
+      "language_phonetic": "/eˈstəʊniən/",
+      "emoji_code": "openmoji_1f1ea_1f1ea",
+      "link_maps": "https://www.google.com/maps/place/Estonia/@58.6037546,22.6895857,7z/data=!3m1!4b1!4m5!3m4!1s0x4692949c82a04bfd:0x40ea9fba4fb425c3!8m2!3d58.595272!4d25.0136071"
+    },
+    {
+      "name": "Finland",
+      "country_phonetic": "/ˈfɪnlənd/",
+      "nationality": "Finnish",
+      "nationality_phonetic": "/ˈfɪnɪʃ/",
+      "language": "Finnish",
+      "language_phonetic": "/ˈfɪnɪʃ/",
+      "emoji_code": "openmoji_1f1eb_1f1ee",
+      "link_maps": "https://www.google.com/maps/place/Finland/@64.6323618,17.0832381,5z/data=!3m1!4b1!4m5!3m4!1s0x4681cadf4b32f6dd:0x146d63c75a810!8m2!3d61.92411!4d25.7481511"
     },
     {
       "name": "France",
@@ -8203,114 +3830,14 @@
       "link_maps": "https://www.google.com/maps/place/Germany/@51.0967472,5.9660101,6z/data=!3m1!4b1!4m5!3m4!1s0x479a721ec2b1be6b:0x75e85d6b8e91e55b!8m2!3d51.165691!4d10.451526"
     },
     {
-      "name": "Italy",
-      "country_phonetic": "/ˈɪtəli/",
-      "nationality": "Italian",
-      "nationality_phonetic": "/ɪˈtæliən/",
-      "language": "Italian",
-      "language_phonetic": "/ɪˈtæliən/",
-      "emoji_code": "openmoji_1f1ee_1f1f9",
-      "link_maps": "https://www.google.com/maps/place/Italy/@40.9560199,3.7137506,5z/data=!3m1!4b1!4m5!3m4!1s0x12d4fe82448dd203:0xe22cf55c24635e6f!8m2!3d41.87194!4d12.56738"
-    },
-    {
-      "name": "Netherlands",
-      "country_phonetic": "/ˈneðərləndz/",
-      "nationality": "Dutch",
-      "nationality_phonetic": "/dʌtʃ/",
-      "language": "Dutch",
-      "language_phonetic": "/dʌtʃ/",
-      "emoji_code": "openmoji_1f1f3_1f1f1",
-      "link_maps": "https://www.google.com/maps/place/Netherlands/@52.1950947,3.0363492,7z/data=!3m1!4b1!4m5!3m4!1s0x47c609c3db87e4bb:0xb3a175ceffbd0a9f!8m2!3d52.132633!4d5.291266"
-    },
-    {
-      "name": "The United States",
-      "country_phonetic": "/ðə juˌnaɪtɪd steɪts ˈsenət/",
-      "nationality": "American",
-      "nationality_phonetic": "/əˈmerɪkən/",
-      "language": "English",
-      "language_phonetic": "/ˈɪŋɡlɪʃ/",
-      "emoji_code": "openmoji_1f1fa_1f1f8",
-      "link_maps": "https://www.google.com/maps/place/United+States/@36.2409999,-113.7572188,4z/data=!3m1!4b1!4m5!3m4!1s0x54eab584e432360b:0x1c3bb99243deb742!8m2!3d37.09024!4d-95.712891"
-    },
-    {
-      "name": "Canada",
-      "country_phonetic": "/ˈkænədə/",
-      "nationality": "Canadian",
-      "nationality_phonetic": "/kəˈneɪdiən/",
-      "language": "English && French",
-      "language_phonetic": "/ˈɪŋɡlɪʃ/ && /frentʃ/",
-      "emoji_code": "openmoji_1f1e8_1f1e6",
-      "link_maps": "https://www.google.com/maps/place/Canada/@50.848028,-130.2303233,3z/data=!3m1!4b1!4m5!3m4!1s0x4b0d03d337cc6ad9:0x9968b72aa2438fa5!8m2!3d56.130366!4d-106.346771"
-    },
-    {
-      "name": "Mexico",
-      "country_phonetic": "/ˈmeksɪkəʊ/",
-      "nationality": "Mexican",
-      "nationality_phonetic": "/ˈmeksɪkən/",
-      "language": "Spanish",
-      "language_phonetic": "/ˈspænɪʃ/",
-      "emoji_code": "openmoji_1f1f2_1f1fd",
-      "link_maps": "https://www.google.com/maps/place/Mexico/@23.3132808,-111.6583689,5z/data=!3m1!4b1!4m5!3m4!1s0x84043a3b88685353:0xed64b4be6b099811!8m2!3d23.634501!4d-102.552784"
-    },
-    {
-      "name": "Ukraine",
-      "country_phonetic": "/juːˈkreɪn/",
-      "nationality": "Ukrainian",
-      "nationality_phonetic": "/juːˈkreɪniən/",
-      "language": "Ukrainian",
-      "language_phonetic": "/juːˈkreɪniən/",
-      "emoji_code": "openmoji_1f1fa_1f1e6",
-      "link_maps": "https://www.google.com/maps/place/Ukraine/@47.9994777,22.1986152,5z/data=!3m1!4b1!4m5!3m4!1s0x40d1d9c154700e8f:0x1068488f64010!8m2!3d48.379433!4d31.1655799"
-    },
-    {
-      "name": "Russia",
-      "country_phonetic": "/ˈrʌʃə/",
-      "nationality": "Russian",
-      "nationality_phonetic": "/ˈrʌʃn/",
-      "language": "Russian",
-      "language_phonetic": "/ˈrʌʃn/",
-      "emoji_code": "openmoji_1f1f7_1f1fa",
-      "link_maps": "https://www.google.com/maps/place/Russia/@55,103,3z/data=!3m1!4b1!4m5!3m4!1s0x453c569a896724fb:0x1409fdf86611f613!8m2!3d61.52401!4d105.318756"
-    },
-    {
-      "name": "Belarus",
-      "country_phonetic": "/ˌbeləˈruːs/",
-      "nationality": "Belarusian",
-      "nationality_phonetic": "/ˌbeləˈruːsiən/",
-      "language": "Belarusian",
-      "language_phonetic": "/ˌbeləˈruːsiən/",
-      "emoji_code": "openmoji_1f1e7_1f1fe",
-      "link_maps": "https://www.google.com/maps/place/Belarus/@53.6395297,23.4905298,6z/data=!3m1!4b1!4m5!3m4!1s0x46da2584e2ad4881:0xa1d181ec8c10!8m2!3d53.709807!4d27.953389"
-    },
-    {
-      "name": "Poland",
-      "country_phonetic": "/ˈpəʊlənd/",
-      "nationality": "Polish",
-      "nationality_phonetic": "/ˈpɑːlɪʃ/",
-      "language": "Polish",
-      "language_phonetic": "/ˈpɑːlɪʃ/",
-      "emoji_code": "openmoji_1f1f5_1f1f1",
-      "link_maps": "https://www.google.com/maps/place/Poland/@51.8751265,14.6465935,6z/data=!3m1!4b1!4m5!3m4!1s0x47009964a4640bbb:0x97573ca49cc55ea!8m2!3d51.919438!4d19.145136"
-    },
-    {
-      "name": "Czech Republic",
-      "country_phonetic": "/ˌtʃek rɪˈpʌblɪk/",
-      "nationality": "Czech",
-      "nationality_phonetic": "/tʃek/",
-      "language": "Czech",
-      "language_phonetic": "/tʃek/",
-      "emoji_code": "openmoji_1f1e8_1f1ff",
-      "link_maps": "https://www.google.com/maps/place/Czechia/@49.7856588,13.2317121,7z/data=!3m1!4b1!4m5!3m4!1s0x470b948fd7dd8243:0xf8661c75d3db586f!8m2!3d49.817492!4d15.472962"
-    },
-    {
-      "name": "Slovakia",
-      "country_phonetic": "/sləʊˈvɑːkiə/",
-      "nationality": "Slovakian",
-      "nationality_phonetic": "/sləʊˈvɑːkiən/",
-      "language": "Slovakian",
-      "language_phonetic": "/sləʊˈvɑːkiən/",
-      "emoji_code": "openmoji_1f1f8_1f1f0",
-      "link_maps": "https://www.google.com/maps/place/Slovakia/@48.6543307,17.4562375,7z/data=!3m1!4b1!4m5!3m4!1s0x471460b9ae7cc67f:0xcd6b6167b1723a7d!8m2!3d48.669026!4d19.699024"
+      "name": "Greece",
+      "country_phonetic": "/ɡriːs/",
+      "nationality": "Greek",
+      "nationality_phonetic": "/ɡriːk/",
+      "language": "Greek",
+      "language_phonetic": "/ɡriːk/",
+      "emoji_code": "openmoji_1f1ec_1f1f7",
+      "link_maps": "https://www.google.com/maps/place/Greece/@38.0688682,19.9885738,6z/data=!3m1!4b1!4m5!3m4!1s0x135b4ac711716c63:0x363a1775dc9a2d1d!8m2!3d39.074208!4d21.824312"
     },
     {
       "name": "Hungary",
@@ -8323,6 +3850,76 @@
       "link_maps": "https://www.google.com/maps/place/Hungary/@47.1429984,17.2615323,7z/data=!3m1!4b1!4m5!3m4!1s0x4741837bdf37e4c3:0xc4290c1e1010!8m2!3d47.162494!4d19.5033041"
     },
     {
+      "name": "Italy",
+      "country_phonetic": "/ˈɪtəli/",
+      "nationality": "Italian",
+      "nationality_phonetic": "/ɪˈtæliən/",
+      "language": "Italian",
+      "language_phonetic": "/ɪˈtæliən/",
+      "emoji_code": "openmoji_1f1ee_1f1f9",
+      "link_maps": "https://www.google.com/maps/place/Italy/@40.9560199,3.7137506,5z/data=!3m1!4b1!4m5!3m4!1s0x12d4fe82448dd203:0xe22cf55c24635e6f!8m2!3d41.87194!4d12.56738"
+    },
+    {
+      "name": "Latvia",
+      "country_phonetic": "/ˈlætviə/",
+      "nationality": "Latvian",
+      "nationality_phonetic": "/ˈlætviən/",
+      "language": "Latvian",
+      "language_phonetic": "/ˈlætviən/",
+      "emoji_code": "openmoji_1f1f1_1f1fb",
+      "link_maps": "https://www.google.com/maps/place/Latvia/@56.8630848,22.3013343,7z/data=!3m1!4b1!4m5!3m4!1s0x46e930677b8a9afd:0xcfcd68f2fc10!8m2!3d56.879635!4d24.603189"
+    },
+    {
+      "name": "Lithuania",
+      "country_phonetic": "/ˌlɪθuˈeɪniə/",
+      "nationality": "Lithuanian",
+      "nationality_phonetic": "/ˌlɪθuˈeɪniən/",
+      "language": "Lithuanian",
+      "language_phonetic": "/ˌlɪθuˈeɪniən/",
+      "emoji_code": "openmoji_1f1f1_1f1f9",
+      "link_maps": "https://www.google.com/maps/place/Lithuania/@55.1561128,21.6404642,7z/data=!3m1!4b1!4m5!3m4!1s0x46dd94140f33be13:0xf30a54d3a55dbab9!8m2!3d55.169438!4d23.881275"
+    },
+    {
+      "name": "Mexico",
+      "country_phonetic": "/ˈmeksɪkəʊ/",
+      "nationality": "Mexican",
+      "nationality_phonetic": "/ˈmeksɪkən/",
+      "language": "Spanish",
+      "language_phonetic": "/ˈspænɪʃ/",
+      "emoji_code": "openmoji_1f1f2_1f1fd",
+      "link_maps": "https://www.google.com/maps/place/Mexico/@23.3132808,-111.6583689,5z/data=!3m1!4b1!4m5!3m4!1s0x84043a3b88685353:0xed64b4be6b099811!8m2!3d23.634501!4d-102.552784"
+    },
+    {
+      "name": "Netherlands",
+      "country_phonetic": "/ˈneðərləndz/",
+      "nationality": "Dutch",
+      "nationality_phonetic": "/dʌtʃ/",
+      "language": "Dutch",
+      "language_phonetic": "/dʌtʃ/",
+      "emoji_code": "openmoji_1f1f3_1f1f1",
+      "link_maps": "https://www.google.com/maps/place/Netherlands/@52.1950947,3.0363492,7z/data=!3m1!4b1!4m5!3m4!1s0x47c609c3db87e4bb:0xb3a175ceffbd0a9f!8m2!3d52.132633!4d5.291266"
+    },
+    {
+      "name": "Norway",
+      "country_phonetic": "/ˈnɔːrweɪ/",
+      "nationality": "Norwegian",
+      "nationality_phonetic": "/nɔːrˈwiːdʒən/",
+      "language": "Norwegian",
+      "language_phonetic": "/nɔːrˈwiːdʒən/",
+      "emoji_code": "openmoji_1f1f3_1f1f4",
+      "link_maps": "https://www.google.com/maps/place/Norway/@63.4932818,0.0813433,4z/data=!3m1!4b1!4m5!3m4!1s0x461268458f4de5bf:0xa1b03b9db864d02b!8m2!3d60.472024!4d8.468946"
+    },
+    {
+      "name": "Poland",
+      "country_phonetic": "/ˈpəʊlənd/",
+      "nationality": "Polish",
+      "nationality_phonetic": "/ˈpɑːlɪʃ/",
+      "language": "Polish",
+      "language_phonetic": "/ˈpɑːlɪʃ/",
+      "emoji_code": "openmoji_1f1f5_1f1f1",
+      "link_maps": "https://www.google.com/maps/place/Poland/@51.8751265,14.6465935,6z/data=!3m1!4b1!4m5!3m4!1s0x47009964a4640bbb:0x97573ca49cc55ea!8m2!3d51.919438!4d19.145136"
+    },
+    {
       "name": "Romania",
       "country_phonetic": "/ruˈmeɪniə/",
       "nationality": "Romanian",
@@ -8333,24 +3930,34 @@
       "link_maps": "https://www.google.com/maps/place/Romania/@45.8615457,20.5298124,6z/data=!3m1!4b1!4m5!3m4!1s0x40b1ff26958976c3:0x84ef4f92a804b194!8m2!3d45.943161!4d24.96676"
     },
     {
-      "name": "Bulgaria",
-      "country_phonetic": "/bʌlˈɡeriə/",
-      "nationality": "Bulgarian",
-      "nationality_phonetic": "/bʌlˈɡeriən/",
-      "language": "Bulgarian",
-      "language_phonetic": "/bʌlˈɡeriən/",
-      "emoji_code": "openmoji_1f1e7_1f1ec",
-      "link_maps": "https://www.google.com/maps/place/Bulgaria/@42.7075162,23.2995661,7z/data=!3m1!4b1!4m5!3m4!1s0x40a8fec1c85bf089:0xa01269bf4c10!8m2!3d42.733883!4d25.48583"
+      "name": "Russia",
+      "country_phonetic": "/ˈrʌʃə/",
+      "nationality": "Russian",
+      "nationality_phonetic": "/ˈrʌʃn/",
+      "language": "Russian",
+      "language_phonetic": "/ˈrʌʃn/",
+      "emoji_code": "openmoji_1f1f7_1f1fa",
+      "link_maps": "https://www.google.com/maps/place/Russia/@55,103,3z/data=!3m1!4b1!4m5!3m4!1s0x453c569a896724fb:0x1409fdf86611f613!8m2!3d61.52401!4d105.318756"
     },
     {
-      "name": "Greece",
-      "country_phonetic": "/ɡriːs/",
-      "nationality": "Greek",
-      "nationality_phonetic": "/ɡriːk/",
-      "language": "Greek",
-      "language_phonetic": "/ɡriːk/",
-      "emoji_code": "openmoji_1f1ec_1f1f7",
-      "link_maps": "https://www.google.com/maps/place/Greece/@38.0688682,19.9885738,6z/data=!3m1!4b1!4m5!3m4!1s0x135b4ac711716c63:0x363a1775dc9a2d1d!8m2!3d39.074208!4d21.824312"
+      "name": "Scotland",
+      "country_phonetic": "/ˈskɑːtlənd/",
+      "nationality": "Scottish",
+      "nationality_phonetic": "/ˈskɑːtɪʃ/",
+      "language": "Gaelic",
+      "language_phonetic": "/ˈɪŋɡlɪʃ/",
+      "emoji_code": "openmoji_1f3f4_e0067_e0062_e0073_e0063_e0074_e007f",
+      "link_maps": "https://www.google.com/maps/place/Scotland,+UK/@57.6677015,-9.1705585,6z/data=!4m5!3m4!1s0x4861e2c403f2a19f:0xe7c1fad809c30714!8m2!3d56.4906712!4d-4.2026458"
+    },
+    {
+      "name": "Slovakia",
+      "country_phonetic": "/sləʊˈvɑːkiə/",
+      "nationality": "Slovakian",
+      "nationality_phonetic": "/sləʊˈvɑːkiən/",
+      "language": "Slovakian",
+      "language_phonetic": "/sləʊˈvɑːkiən/",
+      "emoji_code": "openmoji_1f1f8_1f1f0",
+      "link_maps": "https://www.google.com/maps/place/Slovakia/@48.6543307,17.4562375,7z/data=!3m1!4b1!4m5!3m4!1s0x471460b9ae7cc67f:0xcd6b6167b1723a7d!8m2!3d48.669026!4d19.699024"
     },
     {
       "name": "Spain",
@@ -8361,73 +3968,73 @@
       "language_phonetic": "/ˈspænɪʃ/",
       "emoji_code": "openmoji_1f1ea_1f1f8",
       "link_maps": "https://www.google.com/maps/place/Spain/@39.8757885,-12.7141406,5z/data=!3m1!4b1!4m5!3m4!1s0xc42e3783261bc8b:0xa6ec2c940768a3ec!8m2!3d40.463667!4d-3.74922"
+    },
+    {
+      "name": "Sweden",
+      "country_phonetic": "/ˈswiːdn/",
+      "nationality": "Swedish",
+      "nationality_phonetic": "/ˈswiːdɪʃ/",
+      "language": "Swedish",
+      "language_phonetic": "/ˈswiːdɪʃ/",
+      "emoji_code": "openmoji_1f1f8_1f1ea",
+      "link_maps": "https://www.google.com/maps/place/Sweden/@60.8926931,-0.2879674,4z/data=!3m1!4b1!4m5!3m4!1s0x465cb2396d35f0f1:0x22b8eba28dad6f62!8m2!3d60.128161!4d18.643501"
+    },
+    {
+      "name": "Switzerland",
+      "country_phonetic": "/ˈswɪtsərlənd/",
+      "nationality": "Swiss",
+      "nationality_phonetic": "/swɪs/",
+      "language": "German",
+      "language_phonetic": "/ˈdʒɜːrmən/",
+      "emoji_code": "openmoji_1f1e8_1f1ed",
+      "link_maps": "https://www.google.com/maps/place/Switzerland/@46.7950298,5.9807915,7z/data=!3m1!4b1!4m5!3m4!1s0x478c64ef6f596d61:0x5c56b5110fcb7b15!8m2!3d46.818188!4d8.227512"
+    },
+    {
+      "name": "The United States",
+      "country_phonetic": "/ðə juˌnaɪtɪd steɪts ˈsenət/",
+      "nationality": "American",
+      "nationality_phonetic": "/əˈmerɪkən/",
+      "language": "English",
+      "language_phonetic": "/ˈɪŋɡlɪʃ/",
+      "emoji_code": "openmoji_1f1fa_1f1f8",
+      "link_maps": "https://www.google.com/maps/place/United+States/@36.2409999,-113.7572188,4z/data=!3m1!4b1!4m5!3m4!1s0x54eab584e432360b:0x1c3bb99243deb742!8m2!3d37.09024!4d-95.712891"
+    },
+    {
+      "name": "Ukraine",
+      "country_phonetic": "/juːˈkreɪn/",
+      "nationality": "Ukrainian",
+      "nationality_phonetic": "/juːˈkreɪniən/",
+      "language": "Ukrainian",
+      "language_phonetic": "/juːˈkreɪniən/",
+      "emoji_code": "openmoji_1f1fa_1f1e6",
+      "link_maps": "https://www.google.com/maps/place/Ukraine/@47.9994777,22.1986152,5z/data=!3m1!4b1!4m5!3m4!1s0x40d1d9c154700e8f:0x1068488f64010!8m2!3d48.379433!4d31.1655799"
+    },
+    {
+      "name": "United Kingdom",
+      "country_phonetic": "/ðə juˌnaɪtɪd ˈkɪŋdəm/",
+      "nationality": "British",
+      "nationality_phonetic": "/ˈbrɪtɪʃ/",
+      "language": "English",
+      "language_phonetic": "/ˈɪŋɡlɪʃ/",
+      "emoji_code": "openmoji_1f1ec_1f1e7",
+      "link_maps": "https://www.google.com/maps/place/United+Kingdom/@54.2311636,-13.4335005,5z/data=!3m1!4b1!4m5!3m4!1s0x25a3b1142c791a9:0xc4f8a0433288257a!8m2!3d55.378051!4d-3.435973"
+    },
+    {
+      "name": "Wales",
+      "country_phonetic": "/weɪlz/",
+      "nationality": "Welsh",
+      "nationality_phonetic": "/welʃ/",
+      "language": "Welsh",
+      "language_phonetic": "/ˈɪŋɡlɪʃ/",
+      "emoji_code": "openmoji_1f3f4_e0067_e0062_e0077_e006c_e0073_e007f",
+      "link_maps": "https://www.google.com/maps/place/Wales,+UK/@52.3874567,-6.402955,7z/data=!3m1!4b1!4m5!3m4!1s0x486434b66c1c0fed:0x1ebb71bc8aa5e8a2!8m2!3d52.1306607!4d-3.7837117"
     }
   ],
   "animals": [
     {
-      "name": "monkey",
-      "phonetic": "/ˈmʌŋki/",
-      "emoji_code": "openmoji_1f412"
-    },
-    {
-      "name": "gorilla",
-      "phonetic": "/ɡəˈrɪlə/",
-      "emoji_code": "openmoji_1f98d"
-    },
-    {
-      "name": "orangutan",
-      "phonetic": "/əˈræŋətæn/",
-      "emoji_code": "openmoji_1f9a7"
-    },
-    {
-      "name": "dog",
-      "phonetic": "/dɔːɡ/",
-      "emoji_code": "openmoji_1f415"
-    },
-    {
-      "name": "wolf",
-      "phonetic": "/wʊlf/",
-      "emoji_code": "openmoji_1f43a"
-    },
-    {
-      "name": "fox",
-      "phonetic": "/fɑːks/",
-      "emoji_code": "openmoji_1f98a"
-    },
-    {
-      "name": "raccoon",
-      "phonetic": "/ræˈkuːn/",
-      "emoji_code": "openmoji_1f99d"
-    },
-    {
-      "name": "lion",
-      "phonetic": "/ˈlaɪən/",
-      "emoji_code": "openmoji_1f981"
-    },
-    {
-      "name": "tiger",
-      "phonetic": "/ˈtaɪɡər/",
-      "emoji_code": "openmoji_1f405"
-    },
-    {
-      "name": "horse",
-      "phonetic": "/hɔːrs/",
-      "emoji_code": "openmoji_1f40e"
-    },
-    {
-      "name": "cow",
-      "phonetic": "/kaʊ/",
-      "emoji_code": "openmoji_1f404"
-    },
-    {
-      "name": "pig",
-      "phonetic": "/pɪɡ/",
-      "emoji_code": "openmoji_1f416"
-    },
-    {
-      "name": "elephant",
-      "phonetic": "/ˈelɪfənt/",
-      "emoji_code": "openmoji_1f418"
+      "name": "cat",
+      "phonetic": "/kæt/",
+      "emoji_code": "openmoji_1f408"
     },
     {
       "name": "chipmunk",
@@ -8435,9 +4042,84 @@
       "emoji_code": "openmoji_1f43f"
     },
     {
+      "name": "cow",
+      "phonetic": "/kaʊ/",
+      "emoji_code": "openmoji_1f404"
+    },
+    {
+      "name": "dog",
+      "phonetic": "/dɔːɡ/",
+      "emoji_code": "openmoji_1f415"
+    },
+    {
+      "name": "elephant",
+      "phonetic": "/ˈelɪfənt/",
+      "emoji_code": "openmoji_1f418"
+    },
+    {
+      "name": "fox",
+      "phonetic": "/fɑːks/",
+      "emoji_code": "openmoji_1f98a"
+    },
+    {
+      "name": "gorilla",
+      "phonetic": "/ɡəˈrɪlə/",
+      "emoji_code": "openmoji_1f98d"
+    },
+    {
+      "name": "hedgehog",
+      "phonetic": "/ˈhedʒhɔːɡ/",
+      "emoji_code": "openmoji_1f994"
+    },
+    {
+      "name": "horse",
+      "phonetic": "/hɔːrs/",
+      "emoji_code": "openmoji_1f40e"
+    },
+    {
+      "name": "lion",
+      "phonetic": "/ˈlaɪən/",
+      "emoji_code": "openmoji_1f981"
+    },
+    {
+      "name": "monkey",
+      "phonetic": "/ˈmʌŋki/",
+      "emoji_code": "openmoji_1f412"
+    },
+    {
+      "name": "orangutan",
+      "phonetic": "/əˈræŋətæn/",
+      "emoji_code": "openmoji_1f9a7"
+    },
+    {
       "name": "otter",
       "phonetic": "/ˈɑːtər/",
       "emoji_code": "openmoji_1f9a6"
+    },
+    {
+      "name": "pig",
+      "phonetic": "/pɪɡ/",
+      "emoji_code": "openmoji_1f416"
+    },
+    {
+      "name": "raccoon",
+      "phonetic": "/ræˈkuːn/",
+      "emoji_code": "openmoji_1f99d"
+    },
+    {
+      "name": "tiger",
+      "phonetic": "/ˈtaɪɡər/",
+      "emoji_code": "openmoji_1f405"
+    },
+    {
+      "name": "turkey",
+      "phonetic": "/ˈtɜːrki/",
+      "emoji_code": "openmoji_1f983"
+    },
+    {
+      "name": "wolf",
+      "phonetic": "/wʊlf/",
+      "emoji_code": "openmoji_1f43a"
     }
   ]
 }
