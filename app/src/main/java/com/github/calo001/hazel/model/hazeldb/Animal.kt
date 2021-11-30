@@ -6,6 +6,8 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class Animal(
+    @SerialName("id")
+    val id: String,
     @SerialName("name")
     val name: String,
     @SerialName("phonetic")

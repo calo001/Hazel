@@ -6,6 +6,8 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class Phrase(
+    @SerialName("id")
+    val id: String,
     @SerialName("expression")
     val expression: String, // Sorry.
     @SerialName("how_to_use")

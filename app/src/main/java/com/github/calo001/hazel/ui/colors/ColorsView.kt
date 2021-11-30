@@ -102,7 +102,14 @@ fun ItemColor(
 fun ItemColorPreview() {
     HazelTheme(colorVariant = ColorVariant.Green) {
         ItemColor(
-            colorHazel = ColorHazel(code = "#FFFFFF", listOf(), "White", "White", "whites")
+            colorHazel = ColorHazel(
+                id = "",
+                code = "#FFFFFF",
+                examples = listOf(),
+                name = "White",
+                phonetic = "White",
+                type = "whites"
+            )
         )
     }
 }

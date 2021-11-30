@@ -6,6 +6,8 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class Country(
+    @SerialName("id")
+    val id: String,
     @SerialName("country_phonetic")
     val countryPhonetic: String, // /ðə juˌnaɪtɪd ˈkɪŋdəm/
     @SerialName("emoji_code")

@@ -232,7 +232,11 @@ fun PhraseToolbar(
 @Composable
 fun PhraseViewPreview() {
     PhraseView(
-        currentPhrase = Phrase(expression = "hello again", "Used any time"),
+        currentPhrase = Phrase(
+            id = "",
+            expression = "hello again",
+            howToUse = "Used any time"
+        ),
         onPreviousClick = {},
         onNextClick = {},
         onListenClick = {},

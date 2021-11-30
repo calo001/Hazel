@@ -6,6 +6,8 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class UsefulPhrase(
+    @SerialName("id")
+    val id: String,
     @SerialName("category")
     val category: String, // Apologising
     @SerialName("emoji_code")
