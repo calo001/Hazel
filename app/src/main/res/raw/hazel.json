@@ -303,3140 +303,3531 @@
     {
       "id": "irregular_verb_1",
       "base": {
-        "verb": "irregular_verb_1",
-        "phonetic": "beat",
+        "verb": "beat",
+        "phonetic": "/biːt/",
         "examples": [
-          "/biːt/"
+          "Her father beat them both.",
+          "You beat me to it."
         ]
       },
       "simplePast": {
-        "verb": "Her father beat them both. && You beat me to it.",
-        "phonetic": "beat",
+        "verb": "beat",
+        "phonetic": "/biːt/",
         "examples": [
-          "/biːt/"
+          "The visitors beat at the door until he answered.",
+          "We beat our opponents at football."
         ]
       },
       "pastParticiple": {
-        "verb": "The visitors beat at the door until he answered. && We beat our opponents at football.",
-        "phonetic": "beaten",
+        "verb": "beaten",
+        "phonetic": "/ˈbētn/",
         "examples": [
-          "/ˈbētn/"
+          "Brazil were beaten, 2-1.",
+          "She was beaten with a metal bar."
         ]
       },
       "ing": {
-        "verb": "Brazil were beaten, 2-1. && She was beaten with a metal bar.",
-        "phonetic": "beating",
+        "verb": "beating",
+        "phonetic": "/ˈbiː.t̬ɪŋ/",
         "examples": [
-          "/ˈbiː.t̬ɪŋ/"
+          "Listen,somebody is beating at the door.",
+          "They were beating about for the missing child."
         ]
       },
-      "emojiCode": "openmoji_listen,somebody is beating at the door. && they were beating about for the missing child."
+      "emojiCode": "openmoji_1f94a"
     },
     {
       "id": "irregular_verb_2",
       "base": {
-        "verb": "irregular_verb_2",
-        "phonetic": "become",
+        "verb": "become",
+        "phonetic": "/bɪˈkʌm/",
         "examples": [
-          "/bɪˈkʌm/"
+          "The boy decided not to become a sailor.",
+          "You must become either a god or else a coupes."
         ]
       },
       "simplePast": {
-        "verb": "The boy decided not to become a sailor. && You must become either a god or else a coupes.",
-        "phonetic": "became",
+        "verb": "became",
+        "phonetic": "/bɪˈkeɪm/",
         "examples": [
-          "/bɪˈkeɪm/"
+          "He became reconciled to the loss of his wife.",
+          "Rex soon became an expert at opening the gate."
         ]
       },
       "pastParticiple": {
-        "verb": "He became reconciled to the loss of his wife. && Rex soon became an expert at opening the gate.",
-        "phonetic": "become",
+        "verb": "become",
+        "phonetic": "/bɪˈkʌm/",
         "examples": [
-          "/bɪˈkʌm/"
+          "He had become fed up with city life.",
+          "Elvis's home has become a shrine for his fans."
         ]
       },
       "ing": {
-        "verb": "He had become fed up with city life. && Elvis's home has become a shrine for his fans.",
-        "phonetic": "becoming",
+        "verb": "becoming",
+        "phonetic": "/bɪˈkʌmɪŋ/",
         "examples": [
-          "/bɪˈkʌmɪŋ/"
+          "She is becoming famous in Australia and elsewhere.",
+          "Her headaches are becoming less frequent."
         ]
       },
-      "emojiCode": "openmoji_she is becoming famous in australia and elsewhere. && her headaches are becoming less frequent."
+      "emojiCode": "openmoji_1f9b8"
     },
     {
       "id": "irregular_verb_3",
       "base": {
-        "verb": "irregular_verb_3",
-        "phonetic": "begin",
+        "verb": "begin",
+        "phonetic": "/bɪˈɡɪn/",
         "examples": [
-          "/bɪˈɡɪn/"
+          "Sir, is it time to begin?",
+          "As everybody's here, let's begin."
         ]
       },
       "simplePast": {
-        "verb": "Sir, is it time to begin? && As everybody's here, let's begin.",
-        "phonetic": "began",
+        "verb": "began",
+        "phonetic": "/bɪˈɡæn/",
         "examples": [
-          "/bɪˈɡæn/"
+          "The whole saga began back in May.",
+          "A light rain began to fall."
         ]
       },
       "pastParticiple": {
-        "verb": "The whole saga began back in May. && A light rain began to fall.",
-        "phonetic": "begun",
+        "verb": "begun",
+        "phonetic": "/bɪˈɡʌn/",
         "examples": [
-          "/bɪˈɡʌn/"
+          "The vegetables have begun to decay.",
+          "The building hasn't even been begun."
         ]
       },
       "ing": {
-        "verb": "The vegetables have begun to decay. && The building hasn't even been begun.",
-        "phonetic": "beginning",
+        "verb": "beginning",
+        "phonetic": "/bɪˈɡɪnɪŋ/",
         "examples": [
-          "/bɪˈɡɪnɪŋ/"
+          "A good beginning is half the battle.",
+          "Everything must have a beginning."
         ]
       },
-      "emojiCode": "openmoji_a good beginning is half the battle. && everything must have a beginning."
+      "emojiCode": "openmoji_1f3c1"
     },
     {
       "id": "irregular_verb_4",
       "base": {
-        "verb": "irregular_verb_4",
-        "phonetic": "bend",
+        "verb": "bend",
+        "phonetic": "/bend/",
         "examples": [
-          "/bend/"
+          "It's hard to bend an iron bar.",
+          "The archer can bend a strong bow."
         ]
       },
       "simplePast": {
-        "verb": "It's hard to bend an iron bar. && The archer can bend a strong bow.",
-        "phonetic": "bent",
+        "verb": "bent",
+        "phonetic": "/bent/",
         "examples": [
-          "/bent/"
+          "A tree must be bent while it is young.",
+          "She bent down to retrieve her earring."
         ]
       },
       "pastParticiple": {
-        "verb": "A tree must be bent while it is young. && She bent down to retrieve her earring.",
-        "phonetic": "bent",
+        "verb": "bent",
+        "phonetic": "/bent/",
         "examples": [
-          "/bent/"
+          "The wheel had been bent out of shape.",
+          "He has been bent on becoming a lawyer for a long time."
         ]
       },
       "ing": {
-        "verb": "The wheel had been bent out of shape.  && He has been bent on becoming a lawyer for a long time.                ",
-        "phonetic": "bending",
+        "verb": "bending",
+        "phonetic": "/ˈbendɪŋ/",
         "examples": [
-          "/ˈbendɪŋ/"
+          "The doctor told me to avoid bending and stretching.",
+          "He was bending over his work at desk."
         ]
       },
-      "emojiCode": "openmoji_the doctor told me to avoid bending and stretching. && he was bending over his work at desk."
+      "emojiCode": "openmoji_2935"
     },
     {
       "id": "irregular_verb_14",
       "base": {
-        "verb": "irregular_verb_14",
-        "phonetic": "catch",
+        "verb": "catch",
+        "phonetic": "/kætʃ/",
         "examples": [
-          "/kætʃ/"
+          "Venture a small fish to catch a great one.",
+          "Eagles catch no flies."
         ]
       },
       "simplePast": {
-        "verb": "Venture a small fish to catch a great one. && Eagles catch no flies.",
-        "phonetic": "caught",
+        "verb": "caught",
+        "phonetic": "/kɔːt/",
         "examples": [
-          "/kɔːt/"
+          "Never fry a fish till it's caught.",
+          "The little boy caught a fish."
         ]
       },
       "pastParticiple": {
-        "verb": "Never fry a fish till it's caught. && The little boy caught a fish.",
-        "phonetic": "caught",
+        "verb": "caught",
+        "phonetic": "/kɔːt/",
         "examples": [
-          "/kɔːt/"
+          "I think I've caught a bug.",
+          "The police have caught the rapist."
         ]
       },
       "ing": {
-        "verb": "I think I've caught a bug. && The police have caught the rapist.                ",
-        "phonetic": "catching",
+        "verb": "catching",
+        "phonetic": "/ˈketʃɪŋ/",
         "examples": [
-          "/ˈketʃɪŋ/"
+          "You are in danger of catching cold.",
+          "Old age is catching up on me."
         ]
       },
-      "emojiCode": "openmoji_you are in danger of catching cold. && old age is catching up on me."
+      "emojiCode": "openmoji_1fa9d"
     },
     {
       "id": "irregular_verb_16",
       "base": {
-        "verb": "irregular_verb_16",
-        "phonetic": "come",
+        "verb": "come",
+        "phonetic": "/kʌm/",
         "examples": [
-          "/kʌm/"
+          "At open doors dogs come in.",
+          "To a boiling pot flies come not."
         ]
       },
       "simplePast": {
-        "verb": "At open doors dogs come in. &&  To a boiling pot flies come not. ",
-        "phonetic": "came",
+        "verb": "came",
+        "phonetic": "/keɪm/",
         "examples": [
-          "/keɪm/"
+          "All good things came to an end.",
+          "A penny soul never came to twopence."
         ]
       },
       "pastParticiple": {
-        "verb": "All good things came to an end. && A penny soul never came to twopence.",
-        "phonetic": "come",
+        "verb": "come",
+        "phonetic": "/kʌm/",
         "examples": [
-          "/kʌm/"
+          "I have come to apologize to you.",
+          "Long skirts have come into fashion again."
         ]
       },
       "ing": {
-        "verb": "I have come to apologize to you. && Long skirts have come into fashion again.                ",
-        "phonetic": "coming",
+        "verb": "coming",
+        "phonetic": "/ˈkʌmɪŋ/",
         "examples": [
-          "/ˈkʌmɪŋ/"
+          "The rain is coming from the west.",
+          "The trees are just coming into leaf."
         ]
       },
-      "emojiCode": "openmoji_the rain is coming from the west. && the trees are just coming into leaf."
+      "emojiCode": "openmoji_1f6b6_200d_2642_fe0f"
     },
     {
       "id": "irregular_verb_17",
       "base": {
-        "verb": "irregular_verb_17",
-        "phonetic": "cost",
+        "verb": "cost",
+        "phonetic": "/kɔːst/",
         "examples": [
-          "/kɔːst/"
+          "The cost was a staggering $10 million.",
+          "How much does it cost to hire videos?"
         ]
       },
       "simplePast": {
-        "verb": "The cost was a staggering $10 million. && How much does it cost to hire videos?",
+        "verb": "cost",
         "phonetic": "cost",
         "examples": [
-          "cost"
+          "They cost the job at about 150 pounds.",
+          "The figures are cost for a single person."
         ]
       },
       "pastParticiple": {
-        "verb": "They cost the job at about 150 pounds. && The figures are cost for a single person.                        ",
-        "phonetic": "cost",
+        "verb": "cost",
+        "phonetic": "/kɔːst/",
         "examples": [
-          "/kɔːst/"
+          "That dress must have cost a bomb!",
+          "Coo! That must have cost a lot!"
         ]
       },
       "ing": {
-        "verb": "That dress must have cost a bomb! && Coo! That must have cost a lot!",
-        "phonetic": "costing",
+        "verb": "costing",
+        "phonetic": "/ˈkɔːstɪŋ/",
         "examples": [
-          "/ˈkɔːstɪŋ/"
+          "It's costing us a fortune in phone bills.",
+          "It's costing them a lot of money to put their children through school."
         ]
       },
-      "emojiCode": "openmoji_it's costing us a fortune in phone bills. && it's costing them a lot of money to put their children through school."
+      "emojiCode": "openmoji_1f4c9"
     },
     {
       "id": "irregular_verb_18",
       "base": {
-        "verb": "irregular_verb_18",
-        "phonetic": "cut",
+        "verb": "cut",
+        "phonetic": "/kʌt/",
         "examples": [
-          "/kʌt/"
+          "Diamond cut diamond.",
+          "She cut the meat into small pieces."
         ]
       },
       "simplePast": {
-        "verb": "Diamond cut diamond. && She cut the meat into small pieces.",
-        "phonetic": "cut",
+        "verb": "cut",
+        "phonetic": "/kʌt/",
         "examples": [
-          "/kʌt/"
+          "I cut myself on a knife yesterday.",
+          "He cut the orange into quarters yesterday."
         ]
       },
       "pastParticiple": {
-        "verb": "I cut myself on a knife yesterday. && He cut the orange into quarters yesterday.",
-        "phonetic": "cut",
+        "verb": "cut",
+        "phonetic": "/kʌt/",
         "examples": [
-          "/kʌt/"
+          "The tailor has cut my coat very well.",
+          "He has cut his leg, and it is bleeding."
         ]
       },
       "ing": {
-        "verb": "The tailor has cut my coat very well. && He has cut his leg, and it is bleeding.                ",
-        "phonetic": "cutting",
+        "verb": "cutting",
+        "phonetic": "/ˈkʌtɪŋ/",
         "examples": [
-          "/ˈkʌtɪŋ/"
+          "She was cutting the meat up into little bits.",
+          "The rope was cutting into her wrists."
         ]
       },
-      "emojiCode": "openmoji_she was cutting the meat up into little bits. && the rope was cutting into her wrists."
+      "emojiCode": "openmoji_2702"
     },
     {
       "id": "irregular_verb_19",
       "base": {
-        "verb": "irregular_verb_19",
-        "phonetic": "dig",
+        "verb": "dig",
+        "phonetic": "/dɪɡ/",
         "examples": [
-          "/dɪɡ/"
+          "A man may dig his grave with his teeth.",
+          "You would have to dig up the plant yourself."
         ]
       },
       "simplePast": {
-        "verb": "A man may dig his grave with his teeth. && You would have to dig up the plant yourself.",
-        "phonetic": "dug",
+        "verb": "dug",
+        "phonetic": "/dʌɡ/",
         "examples": [
-          "/dʌɡ/"
+          "I dug with a spade.",
+          "He dug a deep hole in the garden."
         ]
       },
       "pastParticiple": {
-        "verb": "I dug with a spade. && He dug a deep hole in the garden.",
-        "phonetic": "dug",
+        "verb": "dug",
+        "phonetic": "/dʌɡ/",
         "examples": [
-          "/dʌɡ/"
+          "They have dug away that wall.",
+          "We have dug into the Chinese history."
         ]
       },
       "ing": {
-        "verb": "They have dug away that wall. && We have dug into the Chinese history.                ",
-        "phonetic": "digging",
+        "verb": "digging",
+        "phonetic": "/ˈdɪɡɪŋ/",
         "examples": [
-          "/ˈdɪɡɪŋ/"
+          "He is digging in his garden.",
+          "I think I'll do some digging in the garden."
         ]
       },
-      "emojiCode": "openmoji_he is digging in his garden. && i think i'll do some digging in the garden."
+      "emojiCode": "openmoji_e345"
     },
     {
       "id": "irregular_verb_20",
       "base": {
-        "verb": "irregular_verb_20",
-        "phonetic": "dive",
+        "verb": "dive",
+        "phonetic": "/daɪv/",
         "examples": [
-          "/daɪv/"
+          "I can dive under the water without any facilities.",
+          "Don't dive in. The water's too shallow here."
         ]
       },
       "simplePast": {
-        "verb": "I can dive under the water without any facilities. && Don't dive in. The water's too shallow here.",
-        "phonetic": "dove",
+        "verb": "dove",
+        "phonetic": "/dʌv/",
         "examples": [
-          "/dʌv/"
+          "She dove straight into the pool.",
+          "Little boys dove in to grab the brass shell casings."
         ]
       },
       "pastParticiple": {
-        "verb": "She dove straight into the pool. && Little boys dove in to grab the brass shell casings.",
-        "phonetic": "dived",
+        "verb": "dived",
+        "phonetic": "/daɪv/",
         "examples": [
-          "/daɪv/"
+          "The mercury dived to five below zero.",
+          "He dived below the surface of the water."
         ]
       },
       "ing": {
-        "verb": "The mercury dived to five below zero. && He dived below the surface of the water.",
-        "phonetic": "diving",
+        "verb": "diving",
+        "phonetic": "/ˈdaɪvɪŋ/",
         "examples": [
-          "/ˈdaɪvɪŋ/"
+          "They're diving for sunken treasure.",
+          "The soldiers were diving for cover."
         ]
       },
-      "emojiCode": "openmoji_they're diving for sunken treasure. && the soldiers were diving for cover."
+      "emojiCode": "openmoji_1f3ca_200d_2640_fe0f"
     },
     {
       "id": "irregular_verb_22",
       "base": {
-        "verb": "irregular_verb_22",
-        "phonetic": "draw",
+        "verb": "draw",
+        "phonetic": "/drɔː/",
         "examples": [
-          "/drɔː/"
+          "The two ships draw level.",
+          "I can't draw any conclusions from what she said."
         ]
       },
       "simplePast": {
-        "verb": "The two ships draw level. && I can't draw any conclusions from what she said.",
-        "phonetic": "drew",
+        "verb": "drew",
+        "phonetic": "/druː/",
         "examples": [
-          "/druː/"
+          "The concert drew a large audience.",
+          "He drew the city in silhouette."
         ]
       },
       "pastParticiple": {
-        "verb": "The concert drew a large audience. && He drew the city in silhouette.",
-        "phonetic": "drawn",
+        "verb": "drawn",
+        "phonetic": "/drɔːn/",
         "examples": [
-          "/drɔːn/"
+          "he truth was drawn from her by degrees.",
+          "This flower was drawn on the paper."
         ]
       },
       "ing": {
-        "verb": "he truth was drawn from her by degrees. && This flower was drawn on the paper.",
-        "phonetic": "drawing",
+        "verb": "drawing",
+        "phonetic": "/ˈdrɔːɪŋ/",
         "examples": [
-          "/ˈdrɔːɪŋ/"
+          "The train is just drawing into the station.",
+          "I've never been very good at drawing."
         ]
       },
-      "emojiCode": "openmoji_the train is just drawing into the station. && i've never been very good at drawing."
+      "emojiCode": "openmoji_1f58d"
     },
     {
       "id": "irregular_verb_26",
       "base": {
-        "verb": "irregular_verb_26",
-        "phonetic": "eat",
+        "verb": "eat",
+        "phonetic": "/iːt/",
         "examples": [
-          "/iːt/"
+          "Live not to eat, but eat to live.",
+          "One cannot eat one's cake and have it."
         ]
       },
       "simplePast": {
-        "verb": "Live not to eat, but eat to live. && One cannot eat one's cake and have it. ",
-        "phonetic": "ate",
+        "verb": "ate",
+        "phonetic": "/eɪt/",
         "examples": [
-          "/eɪt/"
+          "He ate every bit of the pudding.",
+          "I ate too quickly and got hiccoughs."
         ]
       },
       "pastParticiple": {
-        "verb": "He ate every bit of the pudding. && I ate too quickly and got hiccoughs.",
-        "phonetic": "eaten",
+        "verb": "eaten",
+        "phonetic": "/iːt/",
         "examples": [
-          "/iːt/"
+          "I haven't eaten since breakfast.",
+          "These fish are often eaten raw."
         ]
       },
       "ing": {
-        "verb": "I haven't eaten since breakfast. && These fish are often eaten raw.",
-        "phonetic": "eating",
+        "verb": "eating",
+        "phonetic": "/ˈiːtɪŋ/",
         "examples": [
-          "/ˈiːtɪŋ/"
+          "I don't feel like eating anything.",
+          "Snails have been eating our lettuces."
         ]
       },
-      "emojiCode": "openmoji_i don't feel like eating anything. && snails have been eating our lettuces."
+      "emojiCode": "openmoji_1f37d"
     },
     {
       "id": "irregular_verb_27",
       "base": {
-        "verb": "irregular_verb_27",
-        "phonetic": "fall",
+        "verb": "fall",
+        "phonetic": "/fɔːl/",
         "examples": [
-          "/fɔːl/"
+          "A light rain began to fall.",
+          "One may sooner fall than rise."
         ]
       },
       "simplePast": {
-        "verb": "A light rain began to fall. && One may sooner fall than rise.",
-        "phonetic": "fell",
+        "verb": "fell",
+        "phonetic": "/fel/",
         "examples": [
-          "/fel/"
+          "The horse fell behind in the race.",
+          "The dish fell to the floor and broke."
         ]
       },
       "pastParticiple": {
-        "verb": "The horse fell behind in the race. && The dish fell to the floor and broke.",
-        "phonetic": "fallen",
+        "verb": "fallen",
+        "phonetic": "/ˈfɔːlən/",
         "examples": [
-          "/ˈfɔːlən/"
+          "She had fallen and cut her head open.",
+          "Our supplies have fallen short."
         ]
       },
       "ing": {
-        "verb": "She had fallen and cut her head open. && Our supplies have fallen short.",
-        "phonetic": "falling",
+        "verb": "falling",
+        "phonetic": "/ˈfɔːlɪŋ/",
         "examples": [
-          "/ˈfɔːlɪŋ/"
+          "Falling out of lovers is the renewing of love.",
+          "By falling we learn to go safely."
         ]
       },
-      "emojiCode": "openmoji_falling out of lovers is the renewing of love. && by falling we learn to go safely."
+      "emojiCode": "openmoji_1f342"
     },
     {
       "id": "irregular_verb_29",
       "base": {
-        "verb": "irregular_verb_29",
-        "phonetic": "fight",
+        "verb": "fight",
+        "phonetic": "/faɪt/",
         "examples": [
-          "/faɪt/"
+          "Councils of war never fight.",
+          "It is better to fight for justice than to rail at the ill."
         ]
       },
       "simplePast": {
-        "verb": "Councils of war never fight. && It is better to fight for justice than to rail at the ill. ",
-        "phonetic": "fought",
+        "verb": "fought",
+        "phonetic": "/fɔːt/",
         "examples": [
-          "/fɔːt/"
+          "We fought for the honour of our country.",
+          "The team fought back to win the game."
         ]
       },
       "pastParticiple": {
-        "verb": "We fought for the honour of our country. && The team fought back to win the game.",
-        "phonetic": "fought",
+        "verb": "fought",
+        "phonetic": "/fɔːt/",
         "examples": [
-          "/fɔːt/"
+          "The boxer has fought many opponents.",
+          "She has fought a constant battle with her weight."
         ]
       },
       "ing": {
-        "verb": "The boxer has fought many opponents. && She has fought a constant battle with her weight.                ",
-        "phonetic": "fighting",
+        "verb": "fighting",
+        "phonetic": "/ˈfaɪtɪŋ/",
         "examples": [
-          "/ˈfaɪtɪŋ/"
+          "The fighting escalated into a full-scale war.",
+          "We all agreed to stop fighting."
         ]
       },
-      "emojiCode": "openmoji_the fighting escalated into a full_scale war. && we all agreed to stop fighting."
+      "emojiCode": "openmoji_1f93c"
     },
     {
       "id": "irregular_verb_36",
       "base": {
-        "verb": "irregular_verb_36",
-        "phonetic": "give",
+        "verb": "give",
+        "phonetic": "/ɡɪv/",
         "examples": [
-          "/ɡɪv/"
+          "Never give a sucker an even break.",
+          "It is more blessed to give than to receive."
         ]
       },
       "simplePast": {
-        "verb": "Never give a sucker an even break. && It is more blessed to give than to receive. ",
-        "phonetic": "gave",
+        "verb": "gave",
+        "phonetic": "/ɡeɪv/",
         "examples": [
-          "/ɡeɪv/"
+          "The thief gave me a boot in my stomach.",
+          "The captain gave the order to abandon ship."
         ]
       },
       "pastParticiple": {
-        "verb": "The thief gave me a boot in my stomach. && The captain gave the order to abandon ship.",
-        "phonetic": "given",
+        "verb": "given",
+        "phonetic": "/ˈɡɪvn/",
         "examples": [
-          "/ˈɡɪvn/"
+          "All that walking has given me an appetite.",
+          "Donald's been given an extension to finish his thesis."
         ]
       },
       "ing": {
-        "verb": "All that walking has given me an appetite. && Donald's been given an extension to finish his thesis.",
-        "phonetic": "giving",
+        "verb": "giving",
+        "phonetic": "/ˈɡɪvɪŋ/",
         "examples": [
-          "/ˈɡɪvɪŋ/"
+          "The land was flat, giving no scope for defence.",
+          "Would you mind giving me a hand?"
         ]
       },
-      "emojiCode": "openmoji_the land was flat, giving no scope for defence. && would you mind giving me a hand?"
+      "emojiCode": "openmoji_1f381"
     },
     {
       "id": "irregular_verb_38",
       "base": {
-        "verb": "irregular_verb_38",
-        "phonetic": "grow",
+        "verb": "grow",
+        "phonetic": "/ɡrəʊ/",
         "examples": [
-          "/ɡrəʊ/"
+          "Money doesn't grow on trees.",
+          "Absence makes the heart grow fonder."
         ]
       },
       "simplePast": {
-        "verb": "Money doesn't grow on trees. && Absence makes the heart grow fonder. ",
-        "phonetic": "grew",
+        "verb": "grew",
+        "phonetic": "/ɡruː/",
         "examples": [
-          "/ɡruː/"
+          "Lilacs grew against the side wall.",
+          "He grew up in a wealthy family."
         ]
       },
       "pastParticiple": {
-        "verb": "Lilacs grew against the side wall. && He grew up in a wealthy family.",
-        "phonetic": "grown",
+        "verb": "grown",
+        "phonetic": "/ɡrəʊn/",
         "examples": [
-          "/ɡrəʊn/"
+          "Evil weed is soon grown.",
+          "Jane has grown on me."
         ]
       },
       "ing": {
-        "verb": "Evil weed is soon grown. && Jane has grown on me.",
-        "phonetic": "growing",
+        "verb": "growing",
+        "phonetic": "/ˈɡrəʊɪŋ/",
         "examples": [
-          "/ˈɡrəʊɪŋ/"
+          "He paused, his eyes growing misty.",
+          "The flames were growing higher and higher."
         ]
       },
-      "emojiCode": "openmoji_he paused, his eyes growing misty. && the flames were growing higher and higher."
+      "emojiCode": "openmoji_1fab4"
     },
     {
       "id": "irregular_verb_41",
       "base": {
-        "verb": "irregular_verb_41",
-        "phonetic": "hear",
+        "verb": "hear",
+        "phonetic": "/hɪr/",
         "examples": [
-          "/hɪr/"
+          "Men love to hear well of themselves.",
+          "See no evil, hear no evil, speak no evil."
         ]
       },
       "simplePast": {
-        "verb": "Men love to hear well of themselves. && See no evil, hear no evil, speak no evil. ",
-        "phonetic": "heard",
+        "verb": "heard",
+        "phonetic": "/hɪr/",
         "examples": [
-          "/hɪr/"
+          "We heard the calling of the bells to prayer.",
+          "I never heard of the Rolling Stones before."
         ]
       },
       "pastParticiple": {
-        "verb": "We heard the calling of the bells to prayer. && I never heard of the Rolling Stones before.",
-        "phonetic": "heard",
+        "verb": "heard",
+        "phonetic": "/hɪr/",
         "examples": [
-          "/hɪr/"
+          "I have heard something of the kind.",
+          "You must have heard about the riots, surely?"
         ]
       },
       "ing": {
-        "verb": "I have heard something of the kind. && You must have heard about the riots, surely?                ",
-        "phonetic": "hearing",
+        "verb": "hearing",
+        "phonetic": "/ˈhɪrɪŋ/",
         "examples": [
-          "/ˈhɪrɪŋ/"
+          "She is hard of hearing.",
+          "His hearing is very bad."
         ]
       },
-      "emojiCode": "openmoji_she is hard of hearing. && his hearing is very bad."
+      "emojiCode": "openmoji_1f442"
     },
     {
       "id": "irregular_verb_43",
       "base": {
-        "verb": "irregular_verb_43",
-        "phonetic": "hit",
+        "verb": "hit",
+        "phonetic": "/hɪt/",
         "examples": [
-          "/hɪt/"
+          "He hit at the bull's-eye in one shot.",
+          "He hit out at me before I did."
         ]
       },
       "simplePast": {
-        "verb": "He hit at the bull's-eye in one shot. && He hit out at me before I did.",
-        "phonetic": "hit",
+        "verb": "hit",
+        "phonetic": "/hɪt/",
         "examples": [
-          "/hɪt/"
+          "I hit my knee on the corner of the table yesterday.",
+          "He hit me yesterday."
         ]
       },
       "pastParticiple": {
-        "verb": "I hit my knee on the corner of the table yesterday. && He hit me yesterday.",
-        "phonetic": "hit",
+        "verb": "hit",
+        "phonetic": "/hɪt/",
         "examples": [
-          "/hɪt/"
+          "Television has hit the cinema industry very hard.",
+          "The band has hit big in the US."
         ]
       },
       "ing": {
-        "verb": "Television has hit the cinema industry very hard. && The band has hit big in the US.                ",
-        "phonetic": "hitting",
+        "verb": "hitting",
+        "phonetic": "/ˈhɪtɪŋ/",
         "examples": [
-          "/ˈhɪtɪŋ/"
+          "One car narrowly missed hitting the other one.",
+          "She narrowly missed hitting him."
         ]
       },
-      "emojiCode": "openmoji_one car narrowly missed hitting the other one. && she narrowly missed hitting him."
+      "emojiCode": "openmoji_1f3cc"
     },
     {
       "id": "irregular_verb_45",
       "base": {
-        "verb": "irregular_verb_45",
-        "phonetic": "hurt",
+        "verb": "hurt",
+        "phonetic": "/hɜːrt/",
         "examples": [
-          "/hɜːrt/"
+          "Sometimes words hurt more than swords.",
+          "He is hurt but still conscious."
         ]
       },
       "simplePast": {
-        "verb": "Sometimes words hurt more than swords. && He is hurt but still conscious.",
-        "phonetic": "hurt",
+        "verb": "hurt",
+        "phonetic": "/hɜːrt/",
         "examples": [
-          "/hɜːrt/"
+          "I hurt my foot, and had to hobble home.",
+          "He hurt his back playing squash."
         ]
       },
       "pastParticiple": {
-        "verb": "I hurt my foot, and had to hobble home. && He hurt his back playing squash.",
-        "phonetic": "hurt",
+        "verb": "hurt",
+        "phonetic": "/hɜːrt/",
         "examples": [
-          "/hɜːrt/"
+          "English has hurt me a thousand times, but I still regard it as my first love.",
+          "My horse has hurt his toe so I can't race him."
         ]
       },
       "ing": {
-        "verb": "English has hurt me a thousand times, but I still regard it as my first love. && My horse has hurt his toe so I can't race him.                ",
-        "phonetic": "hurting",
+        "verb": "hurting",
+        "phonetic": "/ˈhɜːrtɪŋ/",
         "examples": [
-          "/ˈhɜːrtɪŋ/"
+          "Stop it. You're hurting me.",
+          "Her eyes were hurting from the bright lights."
         ]
       },
-      "emojiCode": "openmoji_stop it. you're hurting me. && her eyes were hurting from the bright lights."
+      "emojiCode": "openmoji_1f915"
     },
     {
       "id": "irregular_verb_49",
       "base": {
-        "verb": "irregular_verb_49",
-        "phonetic": "lead",
+        "verb": "lead",
+        "phonetic": "/liːd/",
         "examples": [
-          "/liːd/"
+          "Mexico take the lead.",
+          "An officer not afraid to lead."
         ]
       },
       "simplePast": {
-        "verb": "Mexico take the lead. && An officer not afraid to lead.",
-        "phonetic": "led",
+        "verb": "led",
+        "phonetic": "/led/",
         "examples": [
-          "/led/"
+          "He led a life of virtue.",
+          "He led us out into the grounds."
         ]
       },
       "pastParticiple": {
-        "verb": "He led a life of virtue. && He led us out into the grounds.",
-        "phonetic": "led",
+        "verb": "led",
+        "phonetic": "/led/",
         "examples": [
-          "/led/"
+          "The recent economic crisis has led to massive layoffs.",
+          "The crisis has led to the closure of a number of non-essential government services."
         ]
       },
       "ing": {
-        "verb": "The recent economic crisis has led to massive layoffs. && The crisis has led to the closure of a number of non-essential government services.                ",
-        "phonetic": "leading",
+        "verb": "leading",
+        "phonetic": "/ˈliːdɪŋ/",
         "examples": [
-          "/ˈliːdɪŋ/"
+          "He played a leading role in solving the problem.",
+          "There were two doors leading off the central room."
         ]
       },
-      "emojiCode": "openmoji_he played a leading role in solving the problem. && there were two doors leading off the central room."
+      "emojiCode": "openmoji_1fa96"
     },
     {
       "id": "irregular_verb_50",
       "base": {
-        "verb": "irregular_verb_50",
-        "phonetic": "leave",
+        "verb": "leave",
+        "phonetic": "/liːv/",
         "examples": [
-          "/liːv/"
+          "I have to leave early today.",
+          "I leave not the least food."
         ]
       },
       "simplePast": {
-        "verb": "I have to leave early today. && I leave not the least food.",
-        "phonetic": "left",
+        "verb": "left",
+        "phonetic": "/left/",
         "examples": [
-          "/left/"
+          "I left my bicycle out in the rain.",
+          "She left the convent before taking her final vows."
         ]
       },
       "pastParticiple": {
-        "verb": "I left my bicycle out in the rain. && She left the convent before taking her final vows.",
-        "phonetic": "left",
+        "verb": "left",
+        "phonetic": "/left/",
         "examples": [
-          "/left/"
+          "I have left my bat at home.",
+          "We have left the paint to dry out."
         ]
       },
       "ing": {
-        "verb": "I have left my bat at home. && We have left the paint to dry out.                ",
-        "phonetic": "leaving",
+        "verb": "leaving",
+        "phonetic": "/ˈliːvɪŋ/",
         "examples": [
-          "/ˈliːvɪŋ/"
+          "He mentioned that he might be leaving.",
+          "It's the saddest part of my day, leaving you."
         ]
       },
-      "emojiCode": "openmoji_he mentioned that he might be leaving. && it's the saddest part of my day, leaving you."
+      "emojiCode": "openmoji_e201"
     },
     {
       "id": "irregular_verb_55",
       "base": {
-        "verb": "irregular_verb_55",
-        "phonetic": "make",
+        "verb": "make",
+        "phonetic": "/meɪk/",
         "examples": [
-          "/meɪk/"
+          "Do you want me to make some coffee?",
+          "She makes all her own clothes."
         ]
       },
       "simplePast": {
-        "verb": "Do you want me to make some coffee? && She makes all her own clothes.",
-        "phonetic": "made",
+        "verb": "made",
+        "phonetic": "/meɪd/",
         "examples": [
-          "/meɪd/"
+          "He made a chocolate cake.",
+          "John Huston made some great movies."
         ]
       },
       "pastParticiple": {
-        "verb": "He made a chocolate cake. && John Huston made some great movies.",
-        "phonetic": "made",
+        "verb": "made",
+        "phonetic": "/meɪd/",
         "examples": [
-          "/meɪd/"
+          "We have made a successful sally.",
+          "Doctors say he has made a slight improvement."
         ]
       },
       "ing": {
-        "verb": "We have made a successful sally.  &&  Doctors say he has made a slight improvement.                           ",
-        "phonetic": "making",
+        "verb": "making",
+        "phonetic": "/ˈmeɪkɪŋ/",
         "examples": [
-          "/ˈmeɪkɪŋ/"
+          "You are making a mistake.",
+          "So we're making progress."
         ]
       },
-      "emojiCode": "openmoji_you are making a mistake. && so we're making progress."
+      "emojiCode": "openmoji_2692"
     },
     {
       "id": "irregular_verb_57",
       "base": {
-        "verb": "irregular_verb_57",
-        "phonetic": "meet",
+        "verb": "meet",
+        "phonetic": "/miːt/",
         "examples": [
-          "/miːt/"
+          "Nice to meet you!!",
+          "Can we meet his demands?"
         ]
       },
       "simplePast": {
-        "verb": "Nice to meet you!! && Can we meet his demands?",
-        "phonetic": "met",
+        "verb": "met",
+        "phonetic": "/met/",
         "examples": [
-          "/met/"
+          "Has anyone met his wife?",
+          "I met an old school friend today."
         ]
       },
       "pastParticiple": {
-        "verb": "Has anyone met his wife? &&  I met an old school friend today.",
-        "phonetic": "met",
+        "verb": "met",
+        "phonetic": "/met/",
         "examples": [
-          "/met/"
+          "He has met with some unexpected difficulties.",
+          "The idea has met with widespread support."
         ]
       },
       "ing": {
-        "verb": "He has met with some unexpected difficulties. && The idea has met with widespread support.                ",
-        "phonetic": "meeting",
+        "verb": "meeting",
+        "phonetic": "/ˈmiːtɪŋ/",
         "examples": [
-          "/ˈmiːtɪŋ/"
+          "The meeting extended late into the night.",
+          "He's in a meeting right now."
         ]
       },
-      "emojiCode": "openmoji_the meeting extended late into the night. && he's in a meeting right now."
+      "emojiCode": "openmoji_1f91d"
     },
     {
       "id": "irregular_verb_58",
       "base": {
-        "verb": "irregular_verb_58",
-        "phonetic": "pay",
+        "verb": "pay",
+        "phonetic": "/peɪ/",
         "examples": [
-          "/peɪ/"
+          "Can I pay by installment payment?",
+          "I must pay away the bill tomorrow."
         ]
       },
       "simplePast": {
-        "verb": "Can I pay by installment payment? && I must pay away the bill tomorrow.",
-        "phonetic": "paid",
+        "verb": "paid",
+        "phonetic": "/peɪd/",
         "examples": [
-          "/peɪd/"
+          "The hotel workers get paid peanuts.",
+          "They paid him a high compliment."
         ]
       },
       "pastParticiple": {
-        "verb": "The hotel workers get paid peanuts. && They paid him a high compliment.",
-        "phonetic": "paid",
+        "verb": "paid",
+        "phonetic": "/peɪd/",
         "examples": [
-          "/peɪd/"
+          "I have paid the milkman this month.",
+          "What could I have paid for it?"
         ]
       },
       "ing": {
-        "verb": "I have paid the milkman this month.  && What could I have paid for it?                ",
-        "phonetic": "paying",
+        "verb": "paying",
+        "phonetic": "/ˈpeɪɪŋ/",
         "examples": [
-          "/ˈpeɪɪŋ/"
+          "Consumers will soon be paying higher airfares.",
+          "I insist on paying for the damage."
         ]
       },
-      "emojiCode": "openmoji_consumers will soon be paying higher airfares. && i insist on paying for the damage."
+      "emojiCode": "openmoji_1f4b8"
     },
     {
       "id": "irregular_verb_60",
       "base": {
-        "verb": "irregular_verb_60",
-        "phonetic": "read",
+        "verb": "read",
+        "phonetic": "/riːd/",
         "examples": [
-          "/riːd/"
+          "Your writing is hard to read.",
+          "He read a poem in his native language."
         ]
       },
       "simplePast": {
-        "verb": "Your writing is hard to read. && He read a poem in his native language.",
-        "phonetic": "read",
+        "verb": "read",
+        "phonetic": "/riːd/",
         "examples": [
-          "/riːd/"
+          "I felt obligated to let him read the letter.",
+          "She read slowly and quietly yesterday."
         ]
       },
       "pastParticiple": {
-        "verb": "I felt obligated to let him read the letter. && She read slowly and quietly yesterday.",
-        "phonetic": "read",
+        "verb": "read",
+        "phonetic": "/red/",
         "examples": [
-          "/red/"
+          "Only Tommy and I have read the book.",
+          "We must have read the same report."
         ]
       },
       "ing": {
-        "verb": "Only Tommy and I have read the book.  && We must have read the same report.                              ",
-        "phonetic": "reading",
+        "verb": "reading",
+        "phonetic": "/ˈriːdɪŋ/",
         "examples": [
-          "/ˈriːdɪŋ/"
+          "He must be reading some SMS.",
+          "What are you reading, Tommy?"
         ]
       },
-      "emojiCode": "openmoji_he must be reading some sms. && what are you reading, tommy?"
+      "emojiCode": "openmoji_1f4da"
     },
     {
       "id": "irregular_verb_61",
       "base": {
-        "verb": "irregular_verb_61",
-        "phonetic": "ride",
+        "verb": "ride",
+        "phonetic": "/raɪd/",
         "examples": [
-          "/raɪd/"
+          "He doesn't have a car so he rides to work on the bus.",
+          "Tomorrow, I ride to battle."
         ]
       },
       "simplePast": {
-        "verb": "He doesn't have a car so he rides to work on the bus. && Tomorrow, I ride to battle.",
-        "phonetic": "rode",
+        "verb": "rode",
+        "phonetic": "/rəʊd/",
         "examples": [
-          "/rəʊd/"
+          "He mounted his bicycle and rode off.",
+          "A little boy rode by on a tricycle."
         ]
       },
       "pastParticiple": {
-        "verb": "He mounted his bicycle and rode off. && A little boy rode by on a tricycle.",
-        "phonetic": "ridden",
+        "verb": "ridden",
+        "phonetic": "/ˈrɪdn/",
         "examples": [
-          "/ˈrɪdn/"
+          "She was ridden with guilt.",
+          "Lee had never ridden a horse before."
         ]
       },
       "ing": {
-        "verb": "She was ridden with guilt. && Lee had never ridden a horse before.",
-        "phonetic": "riding",
+        "verb": "riding",
+        "phonetic": "/ˈraɪdɪŋ/",
         "examples": [
-          "/ˈraɪdɪŋ/"
+          "Which jockey will be riding tomorrow?",
+          "He was riding on a large black horse."
         ]
       },
-      "emojiCode": "openmoji_which jockey will be riding tomorrow? && he was riding on a large black horse."
+      "emojiCode": "openmoji_1f6b5_200d_2642_fe0f"
     },
     {
       "id": "irregular_verb_65",
       "base": {
-        "verb": "irregular_verb_65",
-        "phonetic": "see",
+        "verb": "see",
+        "phonetic": "/siː/",
         "examples": [
-          "/siː/"
+          "Turn the light on so I can see.",
+          "Four eyes see more than two."
         ]
       },
       "simplePast": {
-        "verb": "Turn the light on so I can see. && Four eyes see more than two.",
-        "phonetic": "saw",
+        "verb": "saw",
+        "phonetic": "/sɔː/",
         "examples": [
-          "/sɔː/"
+          "My parents saw me off at the airport.",
+          "He saw a stranger standing at the doorstep."
         ]
       },
       "pastParticiple": {
-        "verb": "My parents saw me off at the airport. && He saw a stranger standing at the doorstep.",
-        "phonetic": "seen",
+        "verb": "seen",
+        "phonetic": "/siːn/",
         "examples": [
-          "/siːn/"
+          "The moon is not seen where the sun shines.",
+          "Children should be seen and not heard."
         ]
       },
       "ing": {
-        "verb": "The moon is not seen where the sun shines. && Children should be seen and not heard. ",
-        "phonetic": "seeing",
+        "verb": "seeing",
+        "phonetic": "/ˈsiːɪŋ/",
         "examples": [
-          "/ˈsiːɪŋ/"
+          "Are you seeing anyone now?",
+          "I'm looking forward to seeing you."
         ]
       },
-      "emojiCode": "openmoji_are you seeing anyone now? && i'm looking forward to seeing you."
+      "emojiCode": "openmoji_1f440"
     },
     {
       "id": "irregular_verb_67",
       "base": {
-        "verb": "irregular_verb_67",
-        "phonetic": "send",
+        "verb": "send",
+        "phonetic": "/send/",
         "examples": [
-          "/send/"
+          "Please send me to stay in the best time.",
+          "I'll send the original to you by post."
         ]
       },
       "simplePast": {
-        "verb": "Please send me to stay in the best time. && I'll send the original to you by post.",
-        "phonetic": "sent",
+        "verb": "sent",
+        "phonetic": "/sent/",
         "examples": [
-          "/sent/"
+          "They sent a deputation to Parliament.",
+          "She sent back her breakfast tray untouched."
         ]
       },
       "pastParticiple": {
-        "verb": "They sent a deputation to Parliament. && She sent back her breakfast tray untouched.",
-        "phonetic": "sent",
+        "verb": "sent",
+        "phonetic": "/sent/",
         "examples": [
-          "/sent/"
+          "The boss has sent for me.",
+          "The bad weather has sent vegetable prices up."
         ]
       },
       "ing": {
-        "verb": "The boss has sent for me. && The bad weather has sent vegetable prices up.                ",
-        "phonetic": "sending",
+        "verb": "sending",
+        "phonetic": "/ˈsendɪŋ/",
         "examples": [
-          "/ˈsendɪŋ/"
+          "I'll be sending you the bill for the dry-cleaning!",
+          "The US is sending additional troops to the region."
         ]
       },
-      "emojiCode": "openmoji_i'll be sending you the bill for the dry_cleaning! && the us is sending additional troops to the region."
+      "emojiCode": "openmoji_1f4e8"
     },
     {
       "id": "irregular_verb_70",
       "base": {
-        "verb": "irregular_verb_70",
-        "phonetic": "sing",
+        "verb": "sing",
+        "phonetic": "/sɪŋ/",
         "examples": [
-          "/sɪŋ/"
+          "Learn to say before you sing.",
+          "Each bird likes to hear himself sing."
         ]
       },
       "simplePast": {
-        "verb": "Learn to say before you sing. && Each bird likes to hear himself sing.",
-        "phonetic": "sang",
+        "verb": "sang",
+        "phonetic": "/sæŋ/",
         "examples": [
-          "/sæŋ/"
+          "The bird sang high and clearly in the tree.",
+          "The steam sang as it escaped from the pipe."
         ]
       },
       "pastParticiple": {
-        "verb": "The bird sang high and clearly in the tree. && The steam sang as it escaped from the pipe.",
-        "phonetic": "sung",
+        "verb": "sung",
+        "phonetic": "/sʌŋ/",
         "examples": [
-          "/sʌŋ/"
+          "She has sung soprano in many major operas.",
+          "The last verse will be sung in unison."
         ]
       },
       "ing": {
-        "verb": "She has sung soprano in many major operas. && The last verse will be sung in unison.",
-        "phonetic": "singing",
+        "verb": "singing",
+        "phonetic": "/ˈsɪŋɪŋ/",
         "examples": [
-          "/ˈsɪŋɪŋ/"
+          "Her singing evoked warm acclamations.",
+          "They sat round with guitars, singing folk songs ."
         ]
       },
-      "emojiCode": "openmoji_her singing evoked warm acclamations. && they sat round with guitars, singing folk songs ."
+      "emojiCode": "openmoji_1f469_200d_1f3a4"
     },
     {
       "id": "irregular_verb_78",
       "base": {
-        "verb": "irregular_verb_78",
-        "phonetic": "teach",
+        "verb": "teach",
+        "phonetic": "/tiːtʃ/",
         "examples": [
-          "/tiːtʃ/"
+          "Mothers teach their children to be kind.",
+          "Life teaches us to be patient."
         ]
       },
       "simplePast": {
-        "verb": "Mothers teach their children to be kind. && Life teaches us to be patient.",
-        "phonetic": "taught",
+        "verb": "taught",
+        "phonetic": "/tɔːt/",
         "examples": [
-          "/tɔːt/"
+          "Ray taught his dog to open the door.",
+          "My brother taught us self defense movements."
         ]
       },
       "pastParticiple": {
-        "verb": "Ray taught his dog to open the door. && My brother taught us self defense movements. ",
-        "phonetic": "taught",
+        "verb": "taught",
+        "phonetic": "/tɔːt/",
         "examples": [
-          "/tɔːt/"
+          "Life have taught me to be strong.",
+          "Lockdowns have taught the world about isolation."
         ]
       },
       "ing": {
-        "verb": "Life have taught me to be strong. && Lockdowns have taught the world about isolation.",
-        "phonetic": "teaching",
+        "verb": "teaching",
+        "phonetic": "/ˈtiːtʃɪŋ/",
         "examples": [
-          "/ˈtiːtʃɪŋ/"
+          "Our teacher never miss an opportunity to keep teaching us the meaning of our lives.",
+          "Government should stop teaching that girls have less opportunities than boys."
         ]
       },
-      "emojiCode": "openmoji_our teacher never miss an opportunity to keep teaching us the meaning of our lives. && government should stop teaching that girls have less opportunities than boys."
+      "emojiCode": "openmoji_1f9d1_200d_1f3eb"
     },
     {
       "id": "irregular_verb_81",
       "base": {
-        "verb": "irregular_verb_81",
-        "phonetic": "think",
+        "verb": "think",
+        "phonetic": "/θɪŋk/",
         "examples": [
-          "/θɪŋk/"
+          "I think we should go to school and ask the teacher.",
+          "Maya thinks of you all the time."
         ]
       },
       "simplePast": {
-        "verb": "I think we should go to school and ask the teacher. && Maya thinks of you all the time.",
-        "phonetic": "thought",
+        "verb": "thought",
+        "phonetic": "θɔːt/",
         "examples": [
-          "θɔːt/"
+          "I never thought I'd be able to move out of my parent's house by myself.",
+          "I thought she was with Jack."
         ]
       },
       "pastParticiple": {
-        "verb": "I never thought I'd be able to move out of my parent's house by myself. && I thought she was with Jack.",
-        "phonetic": "thought",
+        "verb": "thought",
+        "phonetic": "/θɔːt/",
         "examples": [
-          "/θɔːt/"
+          "I've always thought that my family have issues with communication.",
+          "Who would have thought of that!"
         ]
       },
       "ing": {
-        "verb": "I've always thought that my family have issues with communication. && Who would have thought of that!",
-        "phonetic": "thinking",
+        "verb": "thinking",
+        "phonetic": "/ˈθɪŋkɪŋ/",
         "examples": [
-          "/ˈθɪŋkɪŋ/"
+          "I can't stop thinking about it.",
+          "It's easier to relax when you stop thinking while you focus on your breathing."
         ]
       },
-      "emojiCode": "openmoji_i can't stop thinking about it. && it's easier to relax when you stop thinking while you focus on your breathing."
+      "emojiCode": "openmoji_1f914"
     },
     {
       "id": "irregular_verb_82",
       "base": {
-        "verb": "irregular_verb_82",
-        "phonetic": "throw",
+        "verb": "throw",
+        "phonetic": "/θrəʊ/",
         "examples": [
-          "/θrəʊ/"
+          "The kids like to throw the ball while playing.",
+          "I can throw the key through the window for you."
         ]
       },
       "simplePast": {
-        "verb": "The kids like to throw the ball while playing. && I can throw the key through the window for you.",
-        "phonetic": "threw",
+        "verb": "threw",
+        "phonetic": "/θruː/",
         "examples": [
-          "/θruː/"
+          "He threw the ball at me but missed.",
+          "Taylor threw herself into the arms of her lover."
         ]
       },
       "pastParticiple": {
-        "verb": "He threw the ball at me but missed. && Taylor threw herself into the arms of her lover.",
-        "phonetic": "thrown",
+        "verb": "thrown",
+        "phonetic": "/θrəʊn/",
         "examples": [
-          "/θrəʊn/"
+          "A successful man is one who can lay a firm foundation with the bricks others have thrown at him.",
+          "Around 40,000 doses of the Astra Zeneca vaccine in Wales have had to be thrown away because they have gone past their expiry date."
         ]
       },
       "ing": {
-        "verb": "A successful man is one who can lay a firm foundation with the bricks others have thrown at him. && Around 40,000 doses of the Astra Zeneca vaccine in Wales have had to be thrown away because they have gone past their expiry date.",
-        "phonetic": "throwing",
+        "verb": "throwing",
+        "phonetic": "/ˈθrəʊɪŋ/",
         "examples": [
-          "/ˈθrəʊɪŋ/"
+          "Holding on to anger is like grasping a hot coal with the intent of throwing it at someone else.",
+          "Nothing gets you to mend your heart quicker than throwing yourself into work."
         ]
       },
-      "emojiCode": "openmoji_holding on to anger is like grasping a hot coal with the intent of throwing it at someone else. && nothing gets you to mend your heart quicker than throwing yourself into work. "
+      "emojiCode": "openmoji_1f6ae"
     },
     {
       "id": "irregular_verb_84",
       "base": {
-        "verb": "irregular_verb_84",
-        "phonetic": "wake",
+        "verb": "wake",
+        "phonetic": "/weɪk/",
         "examples": [
-          "/weɪk/"
+          "Wake me up at seven tomorrow.",
+          "Be quiet or you'll wake the whole house!"
         ]
       },
       "simplePast": {
-        "verb": "Wake me up at seven tomorrow. && Be quiet or you'll wake the whole house!",
-        "phonetic": "woke",
+        "verb": "woke",
+        "phonetic": "/wəʊk/",
         "examples": [
-          "/wəʊk/"
+          "I woke up in the night feeling cold.",
+          "But you just woke up."
         ]
       },
       "pastParticiple": {
-        "verb": "I woke up in the night feeling cold. && But you just woke up.",
-        "phonetic": "woken",
+        "verb": "woken",
+        "phonetic": "/ˈwəʊkən/",
         "examples": [
-          "/ˈwəʊkən/"
+          "She had woken even earlier than usual.",
+          "She had just woken from a deep sleep."
         ]
       },
       "ing": {
-        "verb": "She had woken even earlier than usual. && She had just woken from a deep sleep.",
-        "phonetic": "waking",
+        "verb": "waking",
+        "phonetic": "/ˈweɪkɪŋ/",
         "examples": [
-          "/ˈweɪkɪŋ/"
+          "Sleeping is the best cure for waking troubles.",
+          "I love waking up and seeing text messages on my phone."
         ]
       },
-      "emojiCode": "openmoji_sleeping is the best cure for waking troubles. && i love waking up and seeing text messages on my phone."
+      "emojiCode": "openmoji_23f0"
     },
     {
       "id": "irregular_verb_86",
       "base": {
-        "verb": "irregular_verb_86",
-        "phonetic": "win",
+        "verb": "win",
+        "phonetic": "/wɪn/",
         "examples": [
-          "/wɪn/"
+          "Cheaters never win and winners never cheat.",
+          "You win some, you lose some."
         ]
       },
       "simplePast": {
-        "verb": "Cheaters never win and winners never cheat. && You win some, you lose some. ",
-        "phonetic": "won",
+        "verb": "won",
+        "phonetic": "/wʌn/",
         "examples": [
-          "/wʌn/"
+          "A good name is earlier lost than won.",
+          "Every dog is valiant at his won door."
         ]
       },
       "pastParticiple": {
-        "verb": "A good name is earlier lost than won. && Every dog is valiant at his won door. ",
-        "phonetic": "won",
+        "verb": "won",
+        "phonetic": "/wʌn/",
         "examples": [
-          "/wʌn/"
+          "She won first prize in the 100 metres race.",
+          "He smiled in satisfaction when he won the race."
         ]
       },
       "ing": {
-        "verb": "She won first prize in the 100 metres race. && He smiled in satisfaction when he won the race.",
-        "phonetic": "winning",
+        "verb": "winning",
+        "phonetic": "/ˈwɪnɪŋ/",
         "examples": [
-          "/ˈwɪnɪŋ/"
+          "The winning team was showered with confetti.",
+          "I wouldn't bet on them winning the next election."
         ]
       },
-      "emojiCode": "openmoji_the winning team was showered with confetti. && i wouldn't bet on them winning the next election."
+      "emojiCode": "openmoji_1f3c6"
     },
     {
       "id": "irregular_verb_87",
       "base": {
-        "verb": "irregular_verb_87",
-        "phonetic": "write",
+        "verb": "write",
+        "phonetic": "/raɪt/",
         "examples": [
-          "/raɪt/"
+          "Think much, speak little, and write less.",
+          "By writing you learn to write."
         ]
       },
       "simplePast": {
-        "verb": "Think much, speak little, and write less. && By writing you learn to write. ",
-        "phonetic": "wrote",
+        "verb": "wrote",
+        "phonetic": "/rəʊt/",
         "examples": [
-          "/rəʊt/"
+          "He wrote away for some catalogues.",
+          "She wrote an essay on My Family."
         ]
       },
       "pastParticiple": {
-        "verb": "He wrote away for some catalogues. && She wrote an essay on My Family.",
-        "phonetic": "written",
+        "verb": "written",
+        "phonetic": "/ˈrɪtn/",
         "examples": [
-          "/ˈrɪtn/"
+          "His book was in parts written in verse.",
+          "The novel is written from personal experience."
         ]
       },
       "ing": {
-        "verb": "His book was in parts written in verse. && The novel is written from personal experience.",
-        "phonetic": "writing",
+        "verb": "writing",
+        "phonetic": "/ˈraɪtɪŋ/",
         "examples": [
-          "/ˈraɪtɪŋ/"
+          "By writing you learn to write.",
+          "Your writing is hard to read."
         ]
       },
-      "emojiCode": "openmoji_by writing you learn to write. && your writing is hard to read."
+      "emojiCode": "openmoji_270d"
     }
   ],
   "regular_verbs": [
     {
       "id": "regular_verb_1",
       "base": {
-        "verb": "regular_verb_1",
-        "phonetic": "accept",
+        "verb": "accept",
+        "phonetic": "/əkˈsept/",
         "examples": [
-          "/əkˈsept/"
+          "Please accept our sincere apologies.",
+          "I accept full responsibility for the failure of the plan."
         ]
       },
       "simplePast": {
-        "verb": "Please accept our sincere apologies. && I accept full responsibility for the failure of the plan.",
-        "phonetic": "accepted",
+        "verb": "accepted",
+        "phonetic": "/əkˈseptɪd/",
         "examples": [
-          "/əkˈseptɪd/"
+          "The board of directors accepted our proposal.",
+          "She accepted a present from her friend."
         ]
       },
       "pastParticiple": {
-        "verb": "The board of directors accepted our proposal. &&  She accepted a present from her friend.",
-        "phonetic": "accepted",
+        "verb": "accepted",
+        "phonetic": "/əkˈseptɪd/",
         "examples": [
-          "/əkˈseptɪd/"
+          "He still hasn't accepted the situation",
+          "He wouldn't have accepted such an inglorious outcome."
         ]
       },
       "ing": {
-        "verb": "He still hasn't accepted the situation && He wouldn't have accepted such an inglorious outcome.",
-        "phonetic": "accepting",
+        "verb": "accepting",
+        "phonetic": "/əkˈseptɪŋ/",
         "examples": [
-          "/əkˈseptɪŋ/"
+          "I was on the verge of accepting.",
+          "The club ruled against accepting new members."
         ]
       },
-      "emojiCode": "openmoji_i was on the verge of accepting. && the club ruled against accepting new members."
+      "emojiCode": "openmoji_1f91d"
     },
     {
       "id": "regular_verb_2",
       "base": {
-        "verb": "regular_verb_2",
-        "phonetic": "achieve",
+        "verb": "achieve",
+        "phonetic": "/əˈtʃiːv/",
         "examples": [
-          "/əˈtʃiːv/"
+          "Understand to achieve anything requires faith",
+          "Sometimes the inspiration you need to achieve your dreams can be found in a few simple words of wisdom."
         ]
       },
       "simplePast": {
-        "verb": "Understand to achieve anything requires faith && Sometimes the inspiration you need to achieve your dreams can be found in a few simple words of wisdom.",
-        "phonetic": "achieved",
+        "verb": "achieved",
+        "phonetic": "/əˈtʃiːvd/",
         "examples": [
-          "/əˈtʃiːvd/"
+          "She achived to be the first kid in the olympics.",
+          "Your Mom was so proud when you achived the last course."
         ]
       },
       "pastParticiple": {
-        "verb": "She achived to be the first kid in the olympics. && Your Mom was so proud when you achived the last course.",
-        "phonetic": "achieved",
+        "verb": "achieved",
+        "phonetic": "/əˈtʃiːvd/",
         "examples": [
-          "/əˈtʃiːvd/"
+          "Mike is a hard worker but he hasn't achieved anything yet.",
+          "Everyone thinks that Gloria hasn't achieved her full potential and keep practicing is the key."
         ]
       },
       "ing": {
-        "verb": "Mike is a hard worker but he hasn't achieved anything yet. && Everyone thinks that Gloria hasn't achieved her full potential and keep practicing is the key.",
-        "phonetic": "achieving",
+        "verb": "achieving",
+        "phonetic": "/əˈtʃiːvɪŋ/",
         "examples": [
-          "/əˈtʃiːvɪŋ/"
+          "Never settle for anything less than you deserve or are capable of achieving",
+          "Achieving mutual goals between companies is a must."
         ]
       },
-      "emojiCode": "openmoji_never settle for anything less than you deserve or are capable of achieving && achieving mutual goals between companies is a must."
+      "emojiCode": "openmoji_1f3c6"
     },
     {
       "id": "regular_verb_3",
       "base": {
-        "verb": "regular_verb_3",
-        "phonetic": "add",
+        "verb": "add",
+        "phonetic": "/æd/",
         "examples": [
-          "/æd/"
+          "In this vegan recipe you don't have to add milk.",
+          "it's the perfect time to add everything to your wish list."
         ]
       },
       "simplePast": {
-        "verb": "In this vegan recipe you don't have to add milk. && it's the perfect time to add everything to your wish list.",
-        "phonetic": "added",
+        "verb": "added",
+        "phonetic": "/ˈædɪd/",
         "examples": [
-          "/ˈædɪd/"
+          "The hotcakes weren't fluffy enough because she added the wrong ratio of milk.",
+          "Mikey added the best songs to the playlist."
         ]
       },
       "pastParticiple": {
-        "verb": "The hotcakes weren't fluffy enough because she added the wrong ratio of milk. && Mikey added the best songs to the playlist.",
-        "phonetic": "added",
+        "verb": "added",
+        "phonetic": "/ˈædɪd/",
         "examples": [
-          "/ˈædɪd/"
+          "Trina hasn't added that information to our homework.",
+          "I have added my new personal information to my CV."
         ]
       },
       "ing": {
-        "verb": "Trina hasn't added that information to our homework. && I have added my new personal information to my CV.",
-        "phonetic": "adding",
+        "verb": "adding",
+        "phonetic": "/ˈædɪŋ/",
         "examples": [
-          "/ˈædɪŋ/"
+          "If you keep adding too much sugar to your coffee you're going to get sick.",
+          "Regularly adding vegetables do your diet can improve fiber levels."
         ]
       },
-      "emojiCode": "openmoji_if you keep adding too much sugar to your coffee you're going to get sick. && regularly adding vegetables do your diet can improve fiber levels."
+      "emojiCode": "openmoji_e25f"
     },
     {
       "id": "regular_verb_4",
       "base": {
-        "verb": "regular_verb_4",
-        "phonetic": "admire",
+        "verb": "admire",
+        "phonetic": "/ədˈmaɪər/",
         "examples": [
-          "/ədˈmaɪər/"
+          "Terry wants to be a single mom she admires the commitment of rising a human being.",
+          "Having a role model that you admire can lead you to achieve your goals."
         ]
       },
       "simplePast": {
-        "verb": "Terry wants to be a single mom she admires the commitment of rising a human being. && Having a role model that you admire can lead you to achieve your goals.",
-        "phonetic": "admired",
+        "verb": "admired",
+        "phonetic": "/ədˈmaɪərd/",
         "examples": [
-          "/ədˈmaɪərd/"
+          "Hindus, are vegetarians and they consider the cow to be a sacred symbol of life that should be protected and admired.",
+          "I admire people who have a positive point of view on life."
         ]
       },
       "pastParticiple": {
-        "verb": " Hindus, are vegetarians and they consider the cow to be a sacred symbol of life that should be protected and admired. && I admire people who have a positive point of view on life.",
-        "phonetic": "admired",
+        "verb": "admired",
+        "phonetic": "/ədˈmaɪərd/",
         "examples": [
-          "/ədˈmaɪərd/"
+          "Tamara has admired Taylor Swift since she was five.",
+          "I've always admired people that can express themselves freely."
         ]
       },
       "ing": {
-        "verb": "Tamara has admired Taylor Swift since she was five. && I've always admired people that can express themselves freely.",
-        "phonetic": "admiring",
+        "verb": "admiring",
+        "phonetic": "/ədˈmaɪərɪŋ/",
         "examples": [
-          "/ədˈmaɪərɪŋ/"
+          "Kids keep admiring their parents all their lives because they're the first role model they had.",
+          "I wish I could stop admiring fictional characters."
         ]
       },
-      "emojiCode": "openmoji_kids keep admiring their parents all their lives because they're the first role model they had. && i wish i could stop admiring fictional characters."
+      "emojiCode": "openmoji_1f929"
     },
     {
       "id": "regular_verb_5",
       "base": {
-        "verb": "regular_verb_5",
-        "phonetic": "admit",
+        "verb": "admit",
+        "phonetic": "/ədˈmɪt/",
         "examples": [
-          "/ədˈmɪt/"
+          "The culprit admit his guilt so he was sentenced to two years in prison.",
+          "Just admit that you were wrong and let's move on."
         ]
       },
       "simplePast": {
-        "verb": "The culprit admit his guilt so he was sentenced to two years in prison. && Just admit that you were wrong and let's move on.",
-        "phonetic": "admitted",
+        "verb": "admitted",
+        "phonetic": "/ədˈmɪtɪd/",
         "examples": [
-          "/ədˈmɪtɪd/"
+          "Kaylee admitted that she told us a lie when we asked about her whereabouts.",
+          "Tom admitted that he was the one that took the money."
         ]
       },
       "pastParticiple": {
-        "verb": "Kaylee admitted that she told us a lie when we asked about her whereabouts. && Tom admitted that he was the one that took the money.",
-        "phonetic": "admitted",
+        "verb": "admitted",
+        "phonetic": "/ədˈmɪtɪd/",
         "examples": [
-          "/ədˈmɪtɪd/"
+          "I've never admitted that I was the one that lost the key.",
+          "Tom has admitted to be the thief."
         ]
       },
       "ing": {
-        "verb": "I've never admitted that I was the one that lost the key. && Tom has admitted to be the thief. ",
-        "phonetic": "admitting",
+        "verb": "admitting",
+        "phonetic": "/ədˈmɪtɪŋ/",
         "examples": [
-          "/ədˈmɪtɪŋ/"
+          "He was so scared that he couldn't stop admitting to be the shooter.",
+          "Admitting errors clears the score and proves you wiser than before."
         ]
       },
-      "emojiCode": "openmoji_he was so scared that he couldn't stop admitting to be the shooter. && admitting errors clears the score and proves you wiser than before."
+      "emojiCode": "openmoji_1f613"
     },
     {
       "id": "regular_verb_6",
       "base": {
-        "verb": "regular_verb_6",
-        "phonetic": "adopt",
+        "verb": "adopt",
+        "phonetic": "/əˈdɑːpt/",
         "examples": [
-          "/əˈdɑːpt/"
+          "There are people who believe women must adopt good manners before marrying someone.",
+          "If you want to adopt a reptile you have to know the special cares it needs."
         ]
       },
       "simplePast": {
-        "verb": "There are people who believe women must adopt good manners before marrying someone. && If you want to adopt a reptile you have to know the special cares it needs.",
-        "phonetic": "adopted",
+        "verb": "adopted",
+        "phonetic": "/əˈdɑːptɪd/",
         "examples": [
-          "/əˈdɑːptɪd/"
+          "Jenny adopted new habits to build up her confidence and now she's fearless.",
+          "many people adopted dogs from the shelter."
         ]
       },
       "pastParticiple": {
-        "verb": "Jenny adopted new habits to build up her confidence and now she's fearless. && many people adopted dogs from the shelter.",
-        "phonetic": "adopted",
+        "verb": "adopted",
+        "phonetic": "/əˈdɑːptɪd/",
         "examples": [
-          "/əˈdɑːptɪd/"
+          "Carlos love animals but hasn't adopted any yet.",
+          "Tory has adopted every stray dog she has encountered in the past months."
         ]
       },
       "ing": {
-        "verb": "Carlos love animals but hasn't adopted any yet. && Tory has adopted every stray dog she has encountered in the past months. ",
-        "phonetic": "adopting",
+        "verb": "adopting",
+        "phonetic": "/əˈdɑːptɪŋ/",
         "examples": [
-          "/əˈdɑːptɪŋ/"
+          "Every time I visit a pet store I stop myself from adopting every animal.",
+          "Kyle keeps adopting rescued animals from shelters."
         ]
       },
-      "emojiCode": "openmoji_every time i visit a pet store i stop myself from adopting every animal. && kyle keeps adopting rescued animals from shelters."
+      "emojiCode": "openmoji_e182"
     },
     {
       "id": "regular_verb_7",
       "base": {
-        "verb": "regular_verb_7",
-        "phonetic": "advise",
+        "verb": "advise",
+        "phonetic": "/ədˈvaɪz/",
         "examples": [
-          "/ədˈvaɪz/"
+          "Older people tend to give good advice because they have lived longer.",
+          "Good friends are always there to give you good advice and love you no matter what."
         ]
       },
       "simplePast": {
-        "verb": "Older people tend to give good advice because they have lived longer. && Good friends are always there to give you good advice and love you no matter what.",
-        "phonetic": "advised",
+        "verb": "advised",
+        "phonetic": "/ədˈvaɪzd/",
         "examples": [
-          "/ədˈvaɪzd/"
+          "Discretion is advised.",
+          "Tommy advised us not to come alone at night."
         ]
       },
       "pastParticiple": {
-        "verb": "Discretion is advised. && Tommy advised us not to come alone at night.",
-        "phonetic": "advised",
+        "verb": "advised",
+        "phonetic": "/ədˈvaɪzd/",
         "examples": [
-          "/ədˈvaɪzd/"
+          "Our teacher has advised us to do our homework on time.",
+          "I wished my parents would have advised me to take financial classes."
         ]
       },
       "ing": {
-        "verb": "Our teacher has advised us to do our homework on time. && I wished my parents would have advised me to take financial classes.",
-        "phonetic": "advising",
+        "verb": "advising",
+        "phonetic": "/ədˈvaɪzɪŋ/",
         "examples": [
-          "/ədˈvaɪzɪŋ/"
+          "Advising others might be dangerous if you don't know what you talking about.",
+          "Good advising may be the single most underestimated characteristic of a successful college experience."
         ]
       },
-      "emojiCode": "openmoji_advising others might be dangerous if you don't know what you talking about. && good advising may be the single most underestimated characteristic of a successful college experience."
+      "emojiCode": "openmoji_1f481_200d_2640_fe0f"
     },
     {
       "id": "regular_verb_8",
       "base": {
-        "verb": "regular_verb_8",
-        "phonetic": "agree",
+        "verb": "agree",
+        "phonetic": "/əˈɡriː/",
         "examples": [
-          "/əˈɡriː/"
+          "If you want to travel you have to agree to take a Covid test.",
+          "I don't necessarily agree with everything I say."
         ]
       },
       "simplePast": {
-        "verb": "If you want to travel you have to agree to take a Covid test. && I don't necessarily agree with everything I say.",
-        "phonetic": "agreed",
+        "verb": "agreed",
+        "phonetic": "/əˈɡriːd/",
         "examples": [
-          "/əˈɡriːd/"
+          "Now I feel relieved, Camille agreed to take care of my pet while I'm away.",
+          "All teams agreed to have the next meeting on Tuesday."
         ]
       },
       "pastParticiple": {
-        "verb": "Now I feel relieved, Camille agreed to take care of my pet while I'm away. && All teams agreed to have the next meeting on Tuesday.",
-        "phonetic": "agreed",
+        "verb": "agreed",
+        "phonetic": "/əˈɡriːd/",
         "examples": [
-          "/əˈɡriːd/"
+          "Our parents have agreed to have dinner with us every two weeks.",
+          "Our teachers have agreed to give us one more free day."
         ]
       },
       "ing": {
-        "verb": "Our parents have agreed to have dinner with us every two weeks. && Our teachers have agreed to give us one more free day.",
-        "phonetic": "agreeing",
+        "verb": "agreeing",
+        "phonetic": "/əˈɡriːɪŋ/",
         "examples": [
-          "/əˈɡriːɪŋ/"
+          "Not agreeing with you in every single thing doesn't make me your enemy.",
+          "Jamie started agreeing with everything she says since they are a couple."
         ]
       },
-      "emojiCode": "openmoji_not agreeing with you in every single thing doesn't make me your enemy. && jamie started agreeing with everything she says since they are a couple."
+      "emojiCode": "openmoji_1f91d"
     },
     {
       "id": "regular_verb_9",
       "base": {
-        "verb": "regular_verb_9",
-        "phonetic": "allow",
+        "verb": "allow",
+        "phonetic": "/əˈlaʊ/",
         "examples": [
-          "/əˈlaʊ/"
+          "Carly allow herself to make some changes in her life and now she lives more happy.",
+          "My income doesn't allow me to go on vacations every year."
         ]
       },
       "simplePast": {
-        "verb": "Carly allow herself to make some changes in her life and now she lives more happy. && My income doesn't allow me to go on vacations every year.",
-        "phonetic": "allowed",
+        "verb": "allowed",
+        "phonetic": "/əˈlaʊd/",
         "examples": [
-          "/əˈlaʊd/"
+          "My mom allowed my sister to go to the concert.",
+          "my work allowed me to meet new people from different cultures."
         ]
       },
       "pastParticiple": {
-        "verb": "My mom allowed my sister to go to the concert. && my work allowed me to meet new people from different cultures.",
-        "phonetic": "allowed",
+        "verb": "allowed",
+        "phonetic": "/əˈlaʊd/",
         "examples": [
-          "/əˈlaʊd/"
+          "Our mom has allowed us to make a party at our house.",
+          "The family would've allowed you to come if you were mature enough."
         ]
       },
       "ing": {
-        "verb": "Our mom has allowed us to make a party at our house. && The family would've allowed you to come if you were mature enough.",
-        "phonetic": "allowing",
+        "verb": "allowing",
+        "phonetic": "/əˈlaʊɪŋ/",
         "examples": [
-          "/əˈlaʊɪŋ/"
+          "I want to stop allowing my dog to chew my stuff but every time I punish it I feel bad.",
+          "My mom keeps allowing my brother to play all night while I have to sleep early."
         ]
       },
-      "emojiCode": "openmoji_i want to stop allowing my dog to chew my stuff but every time i punish it i feel bad. && my mom keeps allowing my brother to play all night while i have to sleep early."
+      "emojiCode": "openmoji_e082"
     },
     {
       "id": "regular_verb_10",
       "base": {
-        "verb": "regular_verb_10",
-        "phonetic": "announce",
+        "verb": "announce",
+        "phonetic": "/əˈnaʊns/",
         "examples": [
-          "/əˈnaʊns/"
+          "It's my pleasure to announce the new king of this land.",
+          "The government announce the new vaccination policies."
         ]
       },
       "simplePast": {
-        "verb": "It's my pleasure to announce the new king of this land. &&  The government announce the new vaccination policies.",
-        "phonetic": "announced",
+        "verb": "announced",
+        "phonetic": "/əˈnaʊnst/",
         "examples": [
-          "/əˈnaʊnst/"
+          "The prince was announced when he entered the ball.",
+          "The Firm announced that we were going bankrupt."
         ]
       },
       "pastParticiple": {
-        "verb": "The prince was announced when he entered the ball. && The Firm announced that we were going bankrupt.",
-        "phonetic": "announced",
+        "verb": "announced",
+        "phonetic": "/əˈnaʊnst/",
         "examples": [
-          "/əˈnaʊnst/"
+          "The reporter has announced that all week is going to rain.",
+          "Carl has announced that he's going to get married."
         ]
       },
       "ing": {
-        "verb": "The reporter has announced that all week is going to rain. && Carl has announced that he's going to get married.",
-        "phonetic": "announcing",
+        "verb": "announcing",
+        "phonetic": "/əˈnaʊnsɪŋ/",
         "examples": [
-          "/əˈnaʊnsɪŋ/"
+          "Announcing yourself before visiting someone is considered good manners.",
+          "Mary loves announcing horoscopes in her YouTube channel."
         ]
       },
-      "emojiCode": "openmoji_announcing yourself before visiting someone is considered good manners. && mary loves announcing horoscopes in her youtube channel."
+      "emojiCode": "openmoji_1f4f0"
     },
     {
       "id": "regular_verb_11",
       "base": {
-        "verb": "regular_verb_11",
-        "phonetic": "appreciate",
+        "verb": "appreciate",
+        "phonetic": "/əˈpriːʃieɪt/",
         "examples": [
-          "/əˈpriːʃieɪt/"
+          "I appreciate the gesture of your presence.",
+          "Appreciate the small things that makes you happy in life."
         ]
       },
       "simplePast": {
-        "verb": "I appreciate the gesture of your presence. && Appreciate the small things that makes you happy in life.",
-        "phonetic": "appreciated",
+        "verb": "appreciated",
+        "phonetic": "/əˈpriːʃieɪtɪd/",
         "examples": [
-          "/əˈpriːʃieɪtɪd/"
+          "Sometimes when you have a bad day you feel like you aren't appreciated.",
+          "We appreciated your hard work in yesterday's event."
         ]
       },
       "pastParticiple": {
-        "verb": "Sometimes when you have a bad day you feel like you aren't appreciated. && We appreciated your hard work in yesterday's event.",
-        "phonetic": "appreciated",
+        "verb": "appreciated",
+        "phonetic": "/əˈpriːʃieɪtɪd/",
         "examples": [
-          "/əˈpriːʃieɪtɪd/"
+          "My family has never appreciated my honesty.",
+          "You have appreciated the gift of life by living it."
         ]
       },
       "ing": {
-        "verb": "My family has never appreciated my honesty. && You have appreciated the gift of life by living it.",
-        "phonetic": "appreciating",
+        "verb": "appreciating",
+        "phonetic": "/əˈpriːʃieɪtɪŋ/",
         "examples": [
-          "/əˈpriːʃieɪtɪŋ/"
+          "No matter the work you do I will never stop appreciating the effort you make.",
+          "In the worst of times all people keeps appreciating the hard work that doctors have done this past two years."
         ]
       },
-      "emojiCode": "openmoji_no matter the work you do i will never stop appreciating the effort you make. && in the worst of times all people keeps appreciating the hard work that doctors have done this past two years."
+      "emojiCode": "openmoji_1f914"
     },
     {
       "id": "regular_verb_12",
       "base": {
-        "verb": "regular_verb_12",
-        "phonetic": "approve",
+        "verb": "approve",
+        "phonetic": "/əˈpruːv/",
         "examples": [
-          "/əˈpruːv/"
+          "The islamic law officially approves polygyny.",
+          "The board sets long-term goals and oversees the company. It has the power to fire the CEO and approve a replacement."
         ]
       },
       "simplePast": {
-        "verb": "The islamic law officially approves polygyny. && The board sets long-term goals and oversees the company. It has the power to fire the CEO and approve a replacement.",
-        "phonetic": "approved",
+        "verb": "approved",
+        "phonetic": "/əˈpruːvd/",
         "examples": [
-          "/əˈpruːvd/"
+          "The judge approved his disability and now he won't go to jail.",
+          "Government approved legal abortion."
         ]
       },
       "pastParticiple": {
-        "verb": "The judge approved his disability and now he won't go to jail. && Government approved legal abortion. ",
-        "phonetic": "approved",
+        "verb": "approved",
+        "phonetic": "/əˈpruːvd/",
         "examples": [
-          "/əˈpruːvd/"
+          "Our lead manager has approved us to have a Christmas party.",
+          "The new report has been approved by the firm."
         ]
       },
       "ing": {
-        "verb": "Our lead manager has approved us to have a Christmas party. && The new report has been approved by the firm.",
-        "phonetic": "approving",
+        "verb": "approving",
+        "phonetic": "/əˈpruːvɪŋ/",
         "examples": [
-          "/əˈpruːvɪŋ/"
+          "Approving changes can be more effective than opposing to the future.",
+          "The government urged approving new vaccines to control the disease."
         ]
       },
-      "emojiCode": "openmoji_approving changes can be more effective than opposing to the future. && the government urged approving new vaccines to control the disease."
+      "emojiCode": "openmoji_2705"
     },
     {
       "id": "regular_verb_18",
       "base": {
-        "verb": "regular_verb_18",
-        "phonetic": "bake",
+        "verb": "bake",
+        "phonetic": "/beɪk/",
         "examples": [
-          "/beɪk/"
+          "My grandmother always bake cookies for us on Christmas Eve.",
+          "Jamie has a ceramic workshop where he bakes almost all day."
         ]
       },
       "simplePast": {
-        "verb": "My grandmother always bake cookies for us on Christmas Eve. && Jamie has a ceramic workshop where he bakes almost all day.",
-        "phonetic": "baked",
+        "verb": "baked",
+        "phonetic": "/beɪkt/",
         "examples": [
-          "/beɪkt/"
+          "Karla baked the cake and now I'm going to decorate it.",
+          "Carlos forgot seasoning when he baked the potatoes."
         ]
       },
       "pastParticiple": {
-        "verb": "Karla baked the cake and now I'm going to decorate it. && Carlos forgot seasoning when he baked the potatoes.",
-        "phonetic": "baked",
+        "verb": "baked",
+        "phonetic": "/beɪkt/",
         "examples": [
-          "/beɪkt/"
+          "I've never baked anything without burning it.",
+          "Mom has baked lasagna for dinner."
         ]
       },
       "ing": {
-        "verb": "I've never baked anything without burning it. && Mom has baked lasagna for dinner. ",
-        "phonetic": "baking",
+        "verb": "baking",
+        "phonetic": "/ˈbeɪkɪŋ/",
         "examples": [
-          "/ˈbeɪkɪŋ/"
+          "Baking and cooking for yourself it's a habit of self care that everyone can practice.",
+          "Our granny likes baking cookies for her neighbors."
         ]
       },
-      "emojiCode": "openmoji_baking and cooking for yourself it's a habit of self care that everyone can practice. && our granny likes baking cookies for her neighbors."
+      "emojiCode": "openmoji_1f9c1"
     },
     {
       "id": "regular_verb_19",
       "base": {
-        "verb": "regular_verb_19",
-        "phonetic": "beg",
+        "verb": "beg",
+        "phonetic": "/beɡ/",
         "examples": [
-          "/beɡ/"
+          "I beg the vampire not to go outside in the sun because he could die.",
+          "He begs her not to leave him."
         ]
       },
       "simplePast": {
-        "verb": "I beg the vampire not to go outside in the sun because he could die. && He begs her not to leave him.",
-        "phonetic": "begged",
+        "verb": "begged",
+        "phonetic": "/beɡd/",
         "examples": [
-          "/beɡd/"
+          "The superhero not even once begged to the villain and died for the sake of the city.",
+          "in the movie the police man begged him not to shoot her."
         ]
       },
       "pastParticiple": {
-        "verb": "The superhero not even once begged to the villain and died for the sake of the city. && in the movie the police man begged him not to shoot her.",
-        "phonetic": "begged",
+        "verb": "begged",
+        "phonetic": "/beɡd/",
         "examples": [
-          "/beɡd/"
+          "i have begged you far too many times. but no matter how much you beg, if someone doesn't want you, they won't stay.",
+          "It's my mother who has begged the teacher to take me in."
         ]
       },
       "ing": {
-        "verb": " i have begged you far too many times. but no matter how much you beg, if someone doesn't want you, they won't stay. &&  It's my mother who has begged the teacher to take me in.",
-        "phonetic": "begging",
+        "verb": "begging",
+        "phonetic": "/ˈbeɡɪŋ/",
         "examples": [
-          "/ˈbeɡɪŋ/"
+          "The dog is begging to go outside for a walk.",
+          "i'm begging you to stay away from that boy."
         ]
       },
-      "emojiCode": "openmoji_the dog is begging to go outside for a walk. && i'm begging you to stay away from that boy."
+      "emojiCode": "openmoji_1f97a"
     },
     {
       "id": "regular_verb_20",
       "base": {
-        "verb": "regular_verb_20",
-        "phonetic": "behave",
+        "verb": "behave",
+        "phonetic": "/bɪˈheɪv/",
         "examples": [
-          "/bɪˈheɪv/"
+          "Karla doesn't want to be a mom. She says that kids behave poorly.",
+          "Fredy's dog behaves so well that I've been thinking to adopt one."
         ]
       },
       "simplePast": {
-        "verb": "Karla doesn't want to be a mom. She says that kids behave poorly. && Fredy's dog behaves so well that I've been thinking to adopt one.",
-        "phonetic": "behaved",
+        "verb": "behaved",
+        "phonetic": "/bɪˈheɪvd/",
         "examples": [
-          "/bɪˈheɪvd/"
+          "it was easy to groom the dog because it was well behaved.",
+          "last night dinner was uncomfortable. Jamie behaved like a kid."
         ]
       },
       "pastParticiple": {
-        "verb": "it was easy to groom the dog because it was well behaved. && last night dinner was uncomfortable. Jamie behaved like a kid.",
-        "phonetic": "behaved",
+        "verb": "behaved",
+        "phonetic": "/bɪˈheɪvd/",
         "examples": [
-          "/bɪˈheɪvd/"
+          "Others have behaved like despots again this year.",
+          "It is fair to say that in the field of education, it is the teachers who have behaved most admirably."
         ]
       },
       "ing": {
-        "verb": "Others have behaved like despots again this year. && It is fair to say that in the field of education, it is the teachers who have behaved most admirably.",
-        "phonetic": "behaving",
+        "verb": "behaving",
+        "phonetic": "/bɪˈheɪvɪŋ/",
         "examples": [
-          "/bɪˈheɪvɪŋ/"
+          "Finding out that your child is the one who is behaving inappropriately can be upsetting and heartbreaking.",
+          "The man was armed with an axe and behaving aggressively."
         ]
       },
-      "emojiCode": "openmoji_finding out that your child is the one who is behaving inappropriately can be upsetting and heartbreaking. && the man was armed with an axe and behaving aggressively."
+      "emojiCode": "openmoji_1f64b"
     },
     {
       "id": "regular_verb_21",
       "base": {
-        "verb": "regular_verb_21",
-        "phonetic": "boil",
+        "verb": "boil",
+        "phonetic": "/bɔɪl/",
         "examples": [
-          "/bɔɪl/"
+          "You boil the eggs and I will cook the rice.",
+          "you have to be careful when you boil any liquid and there are kids near the kitchen."
         ]
       },
       "simplePast": {
-        "verb": "You boil the eggs and I will cook the rice. && you have to be careful when you boil any liquid and there are kids near the kitchen.",
-        "phonetic": "boiled",
+        "verb": "boiled",
+        "phonetic": "/bɔɪld/",
         "examples": [
-          "/bɔɪld/"
+          "I boiled the water so you can make us coffee.",
+          "When we were at camp Tasha boiled the water we found so we can drink it safely."
         ]
       },
       "pastParticiple": {
-        "verb": "I boiled the water so you can make us coffee. && When we were at camp Tasha boiled the water we found so we can drink it safely.",
-        "phonetic": "boiled",
+        "verb": "boiled",
+        "phonetic": "/bɔɪld/",
         "examples": [
-          "/bɔɪld/"
+          "Once the milk has boiled, remove it from the heat and add the chocolate with a spatula until it becomes a homogeneous mixture.",
+          "It is left to cook on a very low heat until the stock has boiled down."
         ]
       },
       "ing": {
-        "verb": "Once the milk has boiled, remove it from the heat and add the chocolate with a spatula until it becomes a homogeneous mixture. && It is left to cook on a very low heat until the stock has boiled down.",
-        "phonetic": "boiling",
+        "verb": "boiling",
+        "phonetic": "/ˈbɔɪlɪŋ/",
         "examples": [
-          "/ˈbɔɪlɪŋ/"
+          "The stainless steel concealed element ensures fast boiling and easy cleaning.",
+          "Meanwhile, cook the pasta in the boiling water and cook until al dente."
         ]
       },
-      "emojiCode": "openmoji_the stainless steel concealed element ensures fast boiling and easy cleaning. && meanwhile, cook the pasta in the boiling water and cook until al dente."
+      "emojiCode": "openmoji_1f958"
     },
     {
       "id": "regular_verb_22",
       "base": {
-        "verb": "regular_verb_22",
-        "phonetic": "borrow",
+        "verb": "borrow",
+        "phonetic": "/ˈbɔːrəʊ/",
         "examples": [
-          "/ˈbɔːrəʊ/"
+          "Can I borrow your pen? I think I lost mine.",
+          "You should enjoy life more it's not like we can borrow extra time."
         ]
       },
       "simplePast": {
-        "verb": "Can I borrow your pen? I think I lost mine. && You should enjoy life more it's not like we can borrow extra time.",
-        "phonetic": "borrowed",
+        "verb": "borrowed",
+        "phonetic": "/ˈbɔːrəʊd/",
         "examples": [
-          "/ˈbɔːrəʊd/"
+          "I'm sorry I borrowed your car mine was out of gas.",
+          "Katerine borrowed her boyfriend's hoodie."
         ]
       },
       "pastParticiple": {
-        "verb": "I'm sorry I borrowed your car mine was out of gas. && Katerine borrowed her boyfriend's hoodie.",
-        "phonetic": "borrowed",
+        "verb": "borrowed",
+        "phonetic": "/ˈbɔːrəʊd/",
         "examples": [
-          "/ˈbɔːrəʊd/"
+          "Your credit history is the record of how you have borrowed and repaid debts.",
+          "Your sister has borrowed an item of clothing of yours without asking"
         ]
       },
       "ing": {
-        "verb": "Your credit history is the record of how you have borrowed and repaid debts. && Your sister has borrowed an item of clothing of yours without asking",
-        "phonetic": "borrowing",
+        "verb": "borrowing",
+        "phonetic": "/ˈbɔːrəʊɪŋ/",
         "examples": [
-          "/ˈbɔːrəʊɪŋ/"
+          "Increase California's debt by borrowing more money through bonds.",
+          "Those who cannot walk using their own legs can ride, borrowing the legs of the horse, as it were."
         ]
       },
-      "emojiCode": "openmoji_increase california's debt by borrowing more money through bonds. && those who cannot walk using their own legs can ride, borrowing the legs of the horse, as it were."
+      "emojiCode": "openmoji_1f4b0"
     },
     {
       "id": "regular_verb_25",
       "base": {
-        "verb": "regular_verb_25",
-        "phonetic": "call",
+        "verb": "call",
+        "phonetic": "/kɔːl/",
         "examples": [
-          "/kɔːl/"
+          "I told you to call me when you got home.",
+          "If something bad happens call 911."
         ]
       },
       "simplePast": {
-        "verb": "I told you to call me when you got home. && If something bad happens call 911.",
-        "phonetic": "called",
+        "verb": "called",
+        "phonetic": "/kɔːld/",
         "examples": [
-          "/kɔːld/"
+          "I called you a thousand times and you didn't answer.",
+          "The teacher called for us."
         ]
       },
       "pastParticiple": {
-        "verb": "I called you a thousand times and you didn't answer. && The teacher called for us.",
-        "phonetic": "called",
+        "verb": "called",
+        "phonetic": "/kɔːld/",
         "examples": [
-          "/kɔːld/"
+          "Our people have never faltered when the Homeland has called on them.",
+          "One political analyst has called it \"the first universal nation."
         ]
       },
       "ing": {
-        "verb": "Our people have never faltered when the Homeland has called on them. && One political analyst has called it \"the first universal nation. ",
-        "phonetic": "calling",
+        "verb": "calling",
+        "phonetic": "/ˈkɔːlɪŋ/",
         "examples": [
-          "/ˈkɔːlɪŋ/"
+          "I think the nation should take this up as an urgent calling",
+          "When calling select: option 1 for myGov enquiries."
         ]
       },
-      "emojiCode": "openmoji_i think the nation should take this up as an urgent calling &&  when calling select: option 1 for mygov enquiries."
+      "emojiCode": "openmoji_260e"
     },
     {
       "id": "regular_verb_26",
       "base": {
-        "verb": "regular_verb_26",
-        "phonetic": "change",
+        "verb": "change",
+        "phonetic": "/tʃeɪndʒ/",
         "examples": [
-          "/tʃeɪndʒ/"
+          "You can't change what you did last night.",
+          "The theory of evolution change the way we study biology."
         ]
       },
       "simplePast": {
-        "verb": "You can't change what you did last night. && The theory of evolution change the way we study biology.",
-        "phonetic": "changed",
+        "verb": "changed",
+        "phonetic": "/tʃeɪndʒd/",
         "examples": [
-          "/tʃeɪndʒd/"
+          "Now that you changed your clothes we can go out.",
+          "Nobody changed seats since the year started."
         ]
       },
       "pastParticiple": {
-        "verb": "Now that you changed your clothes we can go out. && Nobody changed seats since the year started. ",
-        "phonetic": "changed",
+        "verb": "changed",
+        "phonetic": "/tʃeɪndʒd/",
         "examples": [
-          "/tʃeɪndʒd/"
+          "Life has changed a lot for Antonella and her partner.",
+          "The world has changed significantly since the Conference was established."
         ]
       },
       "ing": {
-        "verb": "Life has changed a lot for Antonella and her partner. && The world has changed significantly since the Conference was established. ",
-        "phonetic": "changing",
+        "verb": "changing",
+        "phonetic": "/ˈtʃeɪndʒɪŋ/",
         "examples": [
-          "/ˈtʃeɪndʒɪŋ/"
+          "This will also demand changing the norms that govern school management.",
+          "First, the steps signify changing diet and exercise routines one step at a time."
         ]
       },
-      "emojiCode": "openmoji_this will also demand changing the norms that govern school management. && first, the steps signify changing diet and exercise routines one step at a time."
+      "emojiCode": "openmoji_2b8f"
     },
     {
       "id": "regular_verb_27",
       "base": {
-        "verb": "regular_verb_27",
-        "phonetic": "chase",
+        "verb": "chase",
+        "phonetic": "/tʃeɪs/",
         "examples": [
-          "/tʃeɪs/"
+          "Female lions are the ones that chases animals to feed the pack.",
+          "My grandfather always encourage me to chase my dreams."
         ]
       },
       "simplePast": {
-        "verb": "Female lions are the ones that chases animals to feed the pack. && My grandfather always encourage me to chase my dreams.",
-        "phonetic": "chased",
+        "verb": "chased",
+        "phonetic": "/tʃeɪst/",
         "examples": [
-          "/tʃeɪst/"
+          "Tom is a tough guy, I heard that he chased the burglar down street.",
+          "My friends were chased by the stalker until they found a cop."
         ]
       },
       "pastParticiple": {
-        "verb": "Tom is a tough guy, I heard that he chased the burglar down street. && My friends were chased by the stalker until they found a cop.",
-        "phonetic": "chased",
+        "verb": "chased",
+        "phonetic": "/tʃeɪst/",
         "examples": [
-          "/tʃeɪst/"
+          "My enemies have chased me and caught me like a bird, without cause.",
+          "The mayor of NewYork,may have chased the vagrants off the streets of Manhattan."
         ]
       },
       "ing": {
-        "verb": "My enemies have chased me and caught me like a bird, without cause. && The mayor of NewYork,may have chased the vagrants off the streets of Manhattan.",
-        "phonetic": "chasing",
+        "verb": "chasing",
+        "phonetic": "/ˈtʃeɪsɪŋ/",
         "examples": [
-          "/ˈtʃeɪsɪŋ/"
+          "They will enjoy games such as bowling with beanbags, chasing after bubbles, and dancing with colorful scarves.",
+          "Learning the facts about drugs can help you see the risks of chasing this excitement or escape."
         ]
       },
-      "emojiCode": "openmoji_they will enjoy games such as bowling with beanbags, chasing after bubbles, and dancing with colorful scarves. && learning the facts about drugs can help you see the risks of chasing this excitement or escape. "
+      "emojiCode": "openmoji_1faa4"
     },
     {
       "id": "regular_verb_28",
       "base": {
-        "verb": "regular_verb_28",
-        "phonetic": "cheat",
+        "verb": "cheat",
+        "phonetic": "/tʃiːt/",
         "examples": [
-          "/tʃiːt/"
+          "Anybody that cheats on the math test will be suspended.",
+          "A male that cheats on his partner has no right to talk about true love or loyalty."
         ]
       },
       "simplePast": {
-        "verb": "Anybody that cheats on the math test will be suspended. && A male that cheats on his partner has no right to talk about true love or loyalty.",
-        "phonetic": "cheated",
+        "verb": "cheated",
+        "phonetic": "/ˈtʃiːtɪd/",
         "examples": [
-          "/ˈtʃiːtɪd/"
+          "Mika cheated on her husband and ruined their marriage.",
+          "Almost every kid on the class cheated on the test and the teacher didn't notice."
         ]
       },
       "pastParticiple": {
-        "verb": "Mika cheated on her husband and ruined their marriage. && Almost every kid on the class cheated on the test and the teacher didn't notice.",
-        "phonetic": "cheated",
+        "verb": "cheated",
+        "phonetic": "/ˈtʃiːtɪd/",
         "examples": [
-          "/ˈtʃiːtɪd/"
+          "He sets an example and has cheated death by drawing inspiration from the group's values.",
+          "A business has cheated you through fraud or misrepresentatio."
         ]
       },
       "ing": {
-        "verb": "He sets an example and has cheated death by drawing inspiration from the group's values. && A business has cheated you through fraud or misrepresentatio.",
-        "phonetic": "cheating",
+        "verb": "cheating",
+        "phonetic": "/ˈtʃiːtɪŋ/",
         "examples": [
-          "/ˈtʃiːtɪŋ/"
+          "This is the only tool we have to remove the lurking temptations of cheating",
+          "We do not want this sort of cheating in the industry."
         ]
       },
-      "emojiCode": "openmoji_this is the only tool we have to remove the lurking temptations of cheating && we do not want this sort of cheating in the industry. "
+      "emojiCode": "openmoji_1f92b"
     },
     {
       "id": "regular_verb_44",
       "base": {
-        "verb": "regular_verb_44",
-        "phonetic": "damage",
+        "verb": "damage",
+        "phonetic": "/ˈdæmɪdʒ/",
         "examples": [
-          "/ˈdæmɪdʒ/"
+          "Simple slips, twists, and falls can damage ligaments.",
+          "Strong tornadoes can damage weak houses."
         ]
       },
       "simplePast": {
-        "verb": "Simple slips, twists, and falls can damage ligaments. && Strong tornadoes can damage weak houses.",
-        "phonetic": "damaged",
+        "verb": "damaged",
+        "phonetic": "/ˈdæmɪdʒd/",
         "examples": [
-          "/ˈdæmɪdʒd/"
+          "UPS delivery man damaged my package.",
+          "You damaged the envelope but the letter is still intact."
         ]
       },
       "pastParticiple": {
-        "verb": "UPS delivery man damaged my package. && You damaged the envelope but the letter is still intact.",
-        "phonetic": "damaged",
+        "verb": "damaged",
+        "phonetic": "/ˈdæmɪdʒd/",
         "examples": [
-          "/ˈdæmɪdʒd/"
+          "One complaint was from an individual alleging that movement of heavy construction vehicles has damaged buildings.",
+          "Bush Says Russia Has Damaged Its Global Credibility."
         ]
       },
       "ing": {
-        "verb": "One complaint was from an individual alleging that movement of heavy construction vehicles has damaged buildings. && Bush Says Russia Has Damaged Its Global Credibility.",
-        "phonetic": "damaging",
+        "verb": "damaging",
+        "phonetic": "/ˈdæmɪdʒɪŋ/",
         "examples": [
-          "/ˈdæmɪdʒɪŋ/"
+          "This blockage is what causes the painful and damaging complications of sickle cell disease.",
+          "This is extremely damaging to the health and safety of those workers."
         ]
       },
-      "emojiCode": "openmoji_this blockage is what causes the painful and damaging complications of sickle cell disease. && this is extremely damaging to the health and safety of those workers."
+      "emojiCode": "openmoji_e2c2"
     },
     {
       "id": "regular_verb_45",
       "base": {
-        "verb": "regular_verb_45",
-        "phonetic": "dance",
+        "verb": "dance",
+        "phonetic": "/dæns/",
         "examples": [
-          "/dæns/"
+          "When you dance you let your body express art.",
+          "There are a lot of animals that dances to attract their partners."
         ]
       },
       "simplePast": {
-        "verb": "When you dance you let your body express art. && There are a lot of animals that dances to attract their partners.",
-        "phonetic": "danced",
+        "verb": "danced",
+        "phonetic": "/dænst/",
         "examples": [
-          "/dænst/"
+          "They danced together last night in the party.",
+          "He danced with his mom at the weeding."
         ]
       },
       "pastParticiple": {
-        "verb": "They danced together last night in the party. && He danced with his mom at the weeding.",
-        "phonetic": "danced",
+        "verb": "danced",
+        "phonetic": "/dænst/",
         "examples": [
-          "/dænst/"
+          "Sara Baras is a committed artist who on more than one occasion over her career has danced for charity.",
+          "Iñaki has danced at the most prestigious theatres in the world, including the Covent Garden."
         ]
       },
       "ing": {
-        "verb": "Sara Baras is a committed artist who on more than one occasion over her career has danced for charity. && Iñaki has danced at the most prestigious theatres in the world, including the Covent Garden.",
-        "phonetic": "dancing",
+        "verb": "dancing",
+        "phonetic": "/ˈdænsɪŋ/",
         "examples": [
-          "/ˈdænsɪŋ/"
+          "The students enjoy it, because of the games, music, rhymes and dancing.",
+          "It is wonderful that he understands my passion for dancing."
         ]
       },
-      "emojiCode": "openmoji_the students enjoy it, because of the games, music, rhymes and dancing. && it is wonderful that he understands my passion for dancing."
+      "emojiCode": "openmoji_1f483"
     },
     {
       "id": "regular_verb_46",
       "base": {
-        "verb": "regular_verb_46",
-        "phonetic": "deliver",
+        "verb": "deliver",
+        "phonetic": "/dɪˈlɪvər/",
         "examples": [
-          "/dɪˈlɪvər/"
+          "Nowadays communication allows you to deliver anything to anyone.",
+          "He always delivers the wrong message in the conferences, He might be fired."
         ]
       },
       "simplePast": {
-        "verb": "Nowadays communication allows you to deliver anything to anyone. && He always delivers the wrong message in the conferences, He might be fired.",
-        "phonetic": "delivered",
+        "verb": "delivered",
+        "phonetic": "/dɪˈlɪvərd/",
         "examples": [
-          "/dɪˈlɪvərd/"
+          "My package was delivered to another house.",
+          "Travis delivered the bad news to everyone in the class."
         ]
       },
       "pastParticiple": {
-        "verb": "My package was delivered to another house. && Travis delivered the bad news to everyone in the class.",
-        "phonetic": "delivered",
+        "verb": "delivered",
+        "phonetic": "/dɪˈlɪvərd/",
         "examples": [
-          "/dɪˈlɪvərd/"
+          "Tansa Systems has delivered its Text-Proofing Solution to professional publishers for more than a decade.",
+          "He has delivered speeches at conferences held in different academic forums."
         ]
       },
       "ing": {
-        "verb": "Tansa Systems has delivered its Text-Proofing Solution to professional publishers for more than a decade. && He has delivered speeches at conferences held in different academic forums.",
-        "phonetic": "delivering",
+        "verb": "delivering",
+        "phonetic": "/dɪˈlɪvərɪŋ/",
         "examples": [
-          "/dɪˈlɪvərɪŋ/"
+          "The Commission is doing what it can and is delivering on it.",
+          "Income was earned by delivering project implementation services and other services, such as loan administration."
         ]
       },
-      "emojiCode": "openmoji_the commission is doing what it can and is delivering on it. && income was earned by delivering project implementation services and other services, such as loan administration. "
+      "emojiCode": "openmoji_1f4e6"
     },
     {
       "id": "regular_verb_50",
       "base": {
-        "verb": "regular_verb_50",
-        "phonetic": "earn",
+        "verb": "earn",
+        "phonetic": "/ɜːrn/",
         "examples": [
-          "/ɜːrn/"
+          "Many people in the US starts working early to earn money to pay their student loan's.",
+          "Katie's dream is to earn enough money so she can buy herself a house."
         ]
       },
       "simplePast": {
-        "verb": "Many people in the US starts working early to earn money to pay their student loan's. && Katie's dream is to earn enough money so she can buy herself a house.",
-        "phonetic": "earned",
+        "verb": "earned",
+        "phonetic": "/ɜːrnd/",
         "examples": [
-          "/ɜːrnd/"
+          "I earned this body with tears and sweat.",
+          "we earned enough money to travel the world."
         ]
       },
       "pastParticiple": {
-        "verb": "I earned this body with tears and sweat. && we earned enough money to travel the world.",
-        "phonetic": "earned",
+        "verb": "earned",
+        "phonetic": "/ɜːrnd/",
         "examples": [
-          "/ɜːrnd/"
+          "They have earned a place in the hearts of discerning customers around the world.",
+          "What if you have earned everything-who gave you strength to earn it?"
         ]
       },
       "ing": {
-        "verb": "They have earned a place in the hearts of discerning customers around the world. && What if you have earned everything-who gave you strength to earn it?",
-        "phonetic": "earning",
+        "verb": "earning",
+        "phonetic": "/ˈɜːrnɪŋ/",
         "examples": [
-          "/ˈɜːrnɪŋ/"
+          "You may be able to train for a position for free or while earning a salary.",
+          "Earning and keeping your trust and respect is of primary importance to us."
         ]
       },
-      "emojiCode": "openmoji_you may be able to train for a position for free or while earning a salary. && earning and keeping your trust and respect is of primary importance to us."
+      "emojiCode": "openmoji_1fa99"
     },
     {
       "id": "regular_verb_51",
       "base": {
-        "verb": "regular_verb_51",
-        "phonetic": "employ",
+        "verb": "employ",
+        "phonetic": "/ɪmˈplɔɪ/",
         "examples": [
-          "/ɪmˈplɔɪ/"
+          "A positive attitude is something everyone can work on, and everyone can learn how to employ it.",
+          "The educator must believe in the potential power of his pupil, and he must employ all his art in seeking to bring his pupil to experience this power."
         ]
       },
       "simplePast": {
-        "verb": "A positive attitude is something everyone can work on, and everyone can learn how to employ it. && The educator must believe in the potential power of his pupil, and he must employ all his art in seeking to bring his pupil to experience this power.",
-        "phonetic": "employed",
+        "verb": "employed",
+        "phonetic": "/ɪmˈplɔɪd/",
         "examples": [
-          "/ɪmˈplɔɪd/"
+          "This new company from Canadá employed Carlos.",
+          "Our family employed a new gardener."
         ]
       },
       "pastParticiple": {
-        "verb": "This new company from Canadá employed Carlos. && Our family employed a new gardener.",
-        "phonetic": "employed",
+        "verb": "employed",
+        "phonetic": "/ɪmˈplɔɪd/",
         "examples": [
-          "/ɪmˈplɔɪd/"
+          "Some have employed external consultants to provide technical expertise and industry knowledge of good practices.",
+          "States  have employed terror to intimidate and repress their opponents."
         ]
       },
       "ing": {
-        "verb": "Some have employed external consultants to provide technical expertise and industry knowledge of good practices. && States  have employed terror to intimidate and repress their opponents.",
-        "phonetic": "employing",
+        "verb": "employing",
+        "phonetic": "/ɪmˈplɔɪɪŋ/",
         "examples": [
-          "/ɪmˈplɔɪɪŋ/"
+          "Banon is one of the few goat cheeses still employing this technique.",
+          "This achievable, in the first place, employing the strategy."
         ]
       },
-      "emojiCode": "openmoji_banon is one of the few goat cheeses still employing this technique. &&  this achievable, in the first place, employing the strategy. "
+      "emojiCode": "openmoji_1f468_200d_1f527"
     },
     {
       "id": "regular_verb_52",
       "base": {
-        "verb": "regular_verb_52",
-        "phonetic": "encourage",
+        "verb": "encourage",
+        "phonetic": "/ɪnˈkɜːrɪdʒ/",
         "examples": [
-          "/ɪnˈkɜːrɪdʒ/"
+          "Good parents will always encourage you to accomplish your dreams.",
+          "I encouraged you to take the job it might be your best option."
         ]
       },
       "simplePast": {
-        "verb": "Good parents will always encourage you to accomplish your dreams. && I encouraged you to take the job it might be your best option.",
-        "phonetic": "encouraged",
+        "verb": "encouraged",
+        "phonetic": "/ɪnˈkɜːrɪdʒd/",
         "examples": [
-          "/ɪnˈkɜːrɪdʒd/"
+          "My fitness role model encouraged me to stay active and healthy.",
+          "Your mother encouraged you to pursue your dreams outside this country."
         ]
       },
       "pastParticiple": {
-        "verb": "My fitness role model encouraged me to stay active and healthy. && Your mother encouraged you to pursue your dreams outside this country.",
-        "phonetic": "encouraged",
+        "verb": "encouraged",
+        "phonetic": "/ɪnˈkɜːrɪdʒd/",
         "examples": [
-          "/ɪnˈkɜːrɪdʒd/"
+          "Court judgments have encouraged patients to look elsewhere for an answer to their health problems.",
+          "The results of the first Operation Jupiter have encouraged a number of other countries to request the launch of similar operations on their borders."
         ]
       },
       "ing": {
-        "verb": "Court judgments have encouraged patients to look elsewhere for an answer to their health problems. && The results of the first Operation Jupiter have encouraged a number of other countries to request the launch of similar operations on their borders.",
-        "phonetic": "encouraging",
+        "verb": "encouraging",
+        "phonetic": "/ɪnˈkɜːrɪdʒɪŋ/",
         "examples": [
-          "/ɪnˈkɜːrɪdʒɪŋ/"
+          "Taylor is always encouraging everyone to try new things and step out of our comfort zone.",
+          "All of this is carried out by encouraging the active participation of its members."
         ]
       },
-      "emojiCode": "openmoji_taylor is always encouraging everyone to try new things and step out of our comfort zone. && all of this is carried out by encouraging the active participation of its members."
+      "emojiCode": "openmoji_1f917"
     },
     {
       "id": "regular_verb_59",
       "base": {
-        "verb": "regular_verb_59",
-        "phonetic": "fry",
+        "verb": "fry",
+        "phonetic": "/fraɪ/",
         "examples": [
-          "/fraɪ/"
+          "The only thing you can do to make catfish edible is fry them.",
+          "if you don't like it raw maybe you should fry it."
         ]
       },
       "simplePast": {
-        "verb": "The only thing you can do to make catfish edible is fry them. &&  if you don't like it raw maybe you should fry it.",
-        "phonetic": "fried",
+        "verb": "fried",
+        "phonetic": "/fraɪd/",
         "examples": [
-          "/fraɪd/"
+          "I like refried beans. That's why I wanna try fried beans, because maybe they're just as good and we're just wasting time. You don't have to fry them again after all.",
+          "The chef air fryer fried our food to be healthier."
         ]
       },
       "pastParticiple": {
-        "verb": "I like refried beans. That's why I wanna try fried beans, because maybe they're just as good and we're just wasting time. You don't have to fry them again after all. && The chef air fryer fried our food to be healthier.",
-        "phonetic": "fried",
+        "verb": "fried",
+        "phonetic": "/fraɪd/",
         "examples": [
-          "/fraɪd/"
+          "They would have fried me!",
+          "Once it has been fried lightly, the water and the salt are added, letting them boil during 5 to 10 minutes."
         ]
       },
       "ing": {
-        "verb": "They would have fried me! && Once it has been fried lightly, the water and the salt are added, letting them boil during 5 to 10 minutes. ",
-        "phonetic": "frying",
+        "verb": "frying",
+        "phonetic": "/ˈfraɪɪŋ/",
         "examples": [
-          "/ˈfraɪɪŋ/"
+          "I steam fish I have seasoned with spices instead of frying it.",
+          "Heat the palm oil in a frying pan and add the tomato."
         ]
       },
-      "emojiCode": "openmoji_i steam fish i have seasoned with spices instead of frying it.  && heat the palm oil in a frying pan and add the tomato. "
+      "emojiCode": "openmoji_1f35f"
     },
     {
       "id": "regular_verb_60",
       "base": {
-        "verb": "regular_verb_60",
-        "phonetic": "gather",
+        "verb": "gather",
+        "phonetic": "/ˈɡæðər/",
         "examples": [
-          "/ˈɡæðər/"
+          "Teachers gather all kids on the auditorium to give them the news.",
+          "I went to several libraries to gather information about the plans."
         ]
       },
       "simplePast": {
-        "verb": "Teachers gather all kids on the auditorium to give them the news. && I went to several libraries to gather information about the plans.",
-        "phonetic": "gathered",
+        "verb": "gathered",
+        "phonetic": "/ˈɡæðərd/",
         "examples": [
-          "/ˈɡæðərd/"
+          "We gathered blueberries from the bushes.",
+          "She gathered up the newspapers that were scattered around the floor."
         ]
       },
       "pastParticiple": {
-        "verb": "We gathered blueberries from the bushes. && She gathered up the newspapers that were scattered around the floor.",
-        "phonetic": "gathered",
+        "verb": "gathered",
+        "phonetic": "/ˈɡæðərd/",
         "examples": [
-          "/ˈɡæðərd/"
+          "Radicalism has acquired a new face; protest has gathered new energies.",
+          "He has been working very closely with the other rapporteurs and has gathered their opinions."
         ]
       },
       "ing": {
-        "verb": "Radicalism has acquired a new face; protest has gathered new energies. && He has been working very closely with the other rapporteurs and has gathered their opinions.",
-        "phonetic": "gathering",
+        "verb": "gathering",
+        "phonetic": "/ˈɡæðərɪŋ/",
         "examples": [
-          "/ˈɡæðərɪŋ/"
+          "I shall give priority to gathering data information.",
+          "Women and children play an important role in tending livestock and gathering feed for them."
         ]
       },
-      "emojiCode": "openmoji_ i shall give priority to gathering data information. && women and children play an important role in tending livestock and gathering feed for them.  "
+      "emojiCode": "openmoji_1f5c3"
     },
     {
       "id": "regular_verb_61",
       "base": {
-        "verb": "regular_verb_61",
-        "phonetic": "greet",
+        "verb": "greet",
+        "phonetic": "/ɡriːt/",
         "examples": [
-          "/ɡriːt/"
+          "Mrs. green lives on the next floor let's go greet her.",
+          "The true adventurer goes forth aimless and uncalculating to meet and greet unknown fate."
         ]
       },
       "simplePast": {
-        "verb": "Mrs. green lives on the next floor let's go greet her. && The true adventurer goes forth aimless and uncalculating to meet and greet unknown fate.",
-        "phonetic": "greeted",
+        "verb": "greeted",
+        "phonetic": "/ˈɡriːtɪd/",
         "examples": [
-          "/ˈɡriːtɪd/"
+          "I greeted him past week at the school party and that's the last time I saw him.",
+          "my son greeted the president in person."
         ]
       },
       "pastParticiple": {
-        "verb": "I greeted him past week at the school party and that's the last time I saw him. && my son greeted the president in person.",
-        "phonetic": "greeted",
+        "verb": "greeted",
+        "phonetic": "/ˈɡriːtɪd/",
         "examples": [
-          "/ˈɡriːtɪd/"
+          "Students have greeted the kindergarteners.",
+          "She will have greeted all of us."
         ]
       },
       "ing": {
-        "verb": "Students have greeted the kindergarteners. &&  She will have greeted all of us. ",
-        "phonetic": "greeting",
+        "verb": "greeting",
+        "phonetic": "/ˈɡriːtɪŋ/",
         "examples": [
-          "/ˈɡriːtɪŋ/"
+          "After the greeting, you will be asked if you have a Quick Code.",
+          "I extend to President a very cordial and warm greeting"
         ]
       },
-      "emojiCode": "openmoji_after the greeting, you will be asked if you have a quick code. && i extend to president a very cordial and warm greeting"
+      "emojiCode": "openmoji_1f44b"
     },
     {
       "id": "regular_verb_64",
       "base": {
-        "verb": "regular_verb_64",
-        "phonetic": "hate",
+        "verb": "hate",
+        "phonetic": "heɪt/",
         "examples": [
-          "heɪt/"
+          "The grinch is a movie where the main character hates Christmas.",
+          "I hate when you call me in the middle of the night."
         ]
       },
       "simplePast": {
-        "verb": "The grinch is a movie where the main character hates Christmas. && I hate when you call me in the middle of the night.",
-        "phonetic": "hated",
+        "verb": "hated",
+        "phonetic": "/ˈheɪtɪd/",
         "examples": [
-          "/ˈheɪtɪd/"
+          "I thought that Kelsey hated to go out with me but she told me that she was just anxious.",
+          "Dany hated extra lessons when he was little."
         ]
       },
       "pastParticiple": {
-        "verb": "I thought that Kelsey hated to go out with me but she told me that she was just anxious. && Dany hated extra lessons when he was little.",
-        "phonetic": "hated",
+        "verb": "hated",
+        "phonetic": "/ˈheɪtɪd/",
         "examples": [
-          "/ˈheɪtɪd/"
+          "If the world hates you, you know that it has hated Me before it hated you.",
+          "He has hated his life in this world for love of him."
         ]
       },
       "ing": {
-        "verb": "If the world hates you, you know that it has hated Me before it hated you. && He has hated his life in this world for love of him.",
-        "phonetic": "hating",
+        "verb": "hating",
+        "phonetic": "/ˈheɪtɪŋ/",
         "examples": [
-          "/ˈheɪtɪŋ/"
+          "We can all join together in hating someone.",
+          "In the game of mirrors of hating while loving and of antonyms."
         ]
       },
-      "emojiCode": "openmoji_we can all join together in hating someone. && in the game of mirrors of hating while loving and of antonyms."
+      "emojiCode": "openmoji_1f92c"
     },
     {
       "id": "regular_verb_65",
       "base": {
-        "verb": "regular_verb_65",
-        "phonetic": "help",
+        "verb": "help",
+        "phonetic": "/help/",
         "examples": [
-          "/help/"
+          "We can do it together you just have to help me.",
+          "Bella helps her grandmother on Sundays."
         ]
       },
       "simplePast": {
-        "verb": "We can do it together you just have to help me. && Bella helps her grandmother on Sundays. ",
-        "phonetic": "helped",
+        "verb": "helped",
+        "phonetic": "/helpt/",
         "examples": [
-          "/helpt/"
+          "My best friend helped me to move my stuff to my new apartment.",
+          "My grandmother helped her daughters so they could have a better life."
         ]
       },
       "pastParticiple": {
-        "verb": "My best friend helped me to move my stuff to my new apartment. && My grandmother helped her daughters so they could have a better life.",
-        "phonetic": "helped",
+        "verb": "helped",
+        "phonetic": "/helpt/",
         "examples": [
-          "/helpt/"
+          "The knowledge I acquired on the course has helped me to drive more safely.",
+          "The federal principle has helped India to live peacefully with its marked differences."
         ]
       },
       "ing": {
-        "verb": "The knowledge I acquired on the course has helped me to drive more safely. && The federal principle has helped India to live peacefully with its marked differences.",
-        "phonetic": "helping",
+        "verb": "helping",
+        "phonetic": "/ˈhelpɪŋ/",
         "examples": [
-          "/ˈhelpɪŋ/"
+          "Helping impoverished children can be part of your legacy.",
+          "It was a lot of work, lots of meetings, and lots of providers helping to make it happen."
         ]
       },
-      "emojiCode": "openmoji_helping impoverished children can be part of your legacy. && it was a lot of work, lots of meetings, and lots of providers helping to make it happen."
+      "emojiCode": "openmoji_e083"
     },
     {
       "id": "regular_verb_66",
       "base": {
-        "verb": "regular_verb_66",
-        "phonetic": "hope",
+        "verb": "hope",
+        "phonetic": "/həʊp/",
         "examples": [
-          "/həʊp/"
+          "Our only hope is to find a teacher and ask her for permission.",
+          "Don't focus on the bad things and hope for the best."
         ]
       },
       "simplePast": {
-        "verb": "Our only hope is to find a teacher and ask her for permission. && Don't focus on the bad things and hope for the best.",
-        "phonetic": "hoped",
+        "verb": "hoped",
+        "phonetic": "/həʊpt/",
         "examples": [
-          "/həʊpt/"
+          "I hoped the best for him and waved him goodbye.",
+          "Last year I hoped my neighbors didn't bother me anymore but they are still a nuisance."
         ]
       },
       "pastParticiple": {
-        "verb": "I hoped the best for him and waved him goodbye. && Last year I hoped my neighbors didn't bother me anymore but they are still a nuisance.",
-        "phonetic": "hoped",
+        "verb": "hoped",
+        "phonetic": "/həʊpt/",
         "examples": [
-          "/həʊpt/"
+          "The development of the railways in recent decades has not produced what we had hoped.",
+          "As we had hoped, independence has helped to ease tensions."
         ]
       },
       "ing": {
-        "verb": "The development of the railways in recent decades has not produced what we had hoped. && As we had hoped, independence has helped to ease tensions.",
-        "phonetic": "hoping",
+        "verb": "hoping",
+        "phonetic": "/ˈhəʊpɪŋ/",
         "examples": [
-          "/ˈhəʊpɪŋ/"
+          "They were hoping that the new administration would correct that criminal and inhuman policy.",
+          "The legislature is hoping to receive this initiative in the near future."
         ]
       },
-      "emojiCode": "openmoji_they were hoping that the new administration would correct that criminal and inhuman policy. && the legislature is hoping to receive this initiative in the near future. "
+      "emojiCode": "openmoji_1f305"
     },
     {
       "id": "regular_verb_67",
       "base": {
-        "verb": "regular_verb_67",
-        "phonetic": "identify",
+        "verb": "identify",
+        "phonetic": "/aɪˈdentɪfaɪ/",
         "examples": [
-          "/aɪˈdentɪfaɪ/"
+          "You can identify a new specie if you go to the Amazon jungle.",
+          "Cops identify the missing boy as Michael."
         ]
       },
       "simplePast": {
-        "verb": "You can identify a new specie if you go to the Amazon jungle. && Cops identify the missing boy as Michael.",
-        "phonetic": "identified",
+        "verb": "identified",
+        "phonetic": "/aɪˈdentɪfaɪd/",
         "examples": [
-          "/aɪˈdentɪfaɪd/"
+          "She hasn't seen her daughter in ages but identified her right away when she saw her.",
+          "The psychiatrist identified the problem that led her to psychosis."
         ]
       },
       "pastParticiple": {
-        "verb": "She hasn't seen her daughter in ages but identified her right away when she saw her. && The psychiatrist identified the problem that led her to psychosis.",
-        "phonetic": "identified",
+        "verb": "identified",
+        "phonetic": "/aɪˈdentɪfaɪd/",
         "examples": [
-          "/aɪˈdentɪfaɪd/"
+          "The government has identified the weird lights in the sky as jets.",
+          "Tommy hasn't identified where the problem was."
         ]
       },
       "ing": {
-        "verb": "The government has identified the weird lights in the sky as jets. && Tommy hasn't identified where the problem was.",
-        "phonetic": "identifying",
+        "verb": "identifying",
+        "phonetic": "/aɪˈdentɪfaɪɪŋ/",
         "examples": [
-          "/aɪˈdentɪfaɪɪŋ/"
+          "A report/summary of discussions identifying the main themes and conclusions.",
+          "It involves identifying what your objectives are, and how to achieve them."
         ]
       },
-      "emojiCode": "openmoji_a report/summary of discussions identifying the main themes and conclusions.&&  it involves identifying what your objectives are, and how to achieve them."
+      "emojiCode": "openmoji_1f50d"
     },
     {
       "id": "regular_verb_68",
       "base": {
-        "verb": "regular_verb_68",
-        "phonetic": "interrupt",
+        "verb": "interrupt",
+        "phonetic": "/ˌɪntəˈrʌpt/",
         "examples": [
-          "/ˌɪntəˈrʌpt/"
+          "If you arrive late you are going to interrupt class.",
+          "The neighbor's kids always interrupts my calm with their noises."
         ]
       },
       "simplePast": {
-        "verb": "If you arrive late you are going to interrupt class. && The neighbor's kids always interrupts my calm with their noises. ",
-        "phonetic": "interrupted",
+        "verb": "interrupted",
+        "phonetic": "/ˌɪntəˈrʌptɪd/",
         "examples": [
-          "/ˌɪntəˈrʌptɪd/"
+          "We were in class when the alarm interrupted teacher.",
+          "I interrupted her as soon as I hear she was saying a lie."
         ]
       },
       "pastParticiple": {
-        "verb": "We were in class when the alarm interrupted teacher. && I interrupted her as soon as I hear she was saying a lie.",
-        "phonetic": "interrupted",
+        "verb": "interrupted",
+        "phonetic": "/ˌɪntəˈrʌptɪd/",
         "examples": [
-          "/ˌɪntəˈrʌptɪd/"
+          "The international crisis has interrupted a period of growth.",
+          "It is possible that some program has interrupted the Desktop service."
         ]
       },
       "ing": {
-        "verb": "The international crisis has interrupted a period of growth. && It is possible that some program has interrupted the Desktop service.",
-        "phonetic": "interrupting",
+        "verb": "interrupting",
+        "phonetic": "/ˌɪntəˈrʌptɪŋ/",
         "examples": [
-          "/ˌɪntəˈrʌptɪŋ/"
+          "Please would you refrain from interrupting and learn some manners above all.",
+          "They enable end users to comply with security polices without interrupting work routines."
         ]
       },
-      "emojiCode": "openmoji_please would you refrain from interrupting and learn some manners above all. && they enable end users to comply with security polices without interrupting work routines."
+      "emojiCode": "openmoji_26d4"
     },
     {
       "id": "regular_verb_71",
       "base": {
-        "verb": "regular_verb_71",
-        "phonetic": "joke",
+        "verb": "joke",
+        "phonetic": "/dʒəʊk/",
         "examples": [
-          "/dʒəʊk/"
+          "Don't joke around with hurtful things.",
+          "it's hard when a comedian jokes about politics and racism."
         ]
       },
       "simplePast": {
-        "verb": "Don't joke around with hurtful things. && it's hard when a comedian jokes about politics and racism.",
-        "phonetic": "joked",
+        "verb": "joked",
+        "phonetic": "/dʒəʊkt/",
         "examples": [
-          "/dʒəʊkt/"
+          "Terry joked about her weight but it turns out that she was pregnant.",
+          "I joked about my age and now everyone thinks that I'm older."
         ]
       },
       "pastParticiple": {
-        "verb": "Terry joked about her weight but it turns out that she was pregnant. && I joked about my age and now everyone thinks that I'm older.",
-        "phonetic": "joked",
+        "verb": "joked",
+        "phonetic": "/dʒəʊkt/",
         "examples": [
-          "/dʒəʊkt/"
+          "He goes on to share that he and his own children have always joked around and enjoyed wordplay and plenty of laughter.",
+          "The Jonas Brothers Have Joked About Their Disney Channel Days."
         ]
       },
       "ing": {
-        "verb": "He goes on to share that he and his own children have always joked around and enjoyed wordplay and plenty of laughter. && The Jonas Brothers Have Joked About Their Disney Channel Days.",
-        "phonetic": "joking",
+        "verb": "joking",
+        "phonetic": "/ˈdʒəʊkɪŋ/",
         "examples": [
-          "/ˈdʒəʊkɪŋ/"
+          "But joking apart, what can I say to you in just a minute?",
+          "Joking and teasing might seem OK, but it can hurt people's feelings and lead to getting in trouble."
         ]
       },
-      "emojiCode": "openmoji_but joking apart, what can i say to you in just a minute?  && joking and teasing might seem ok, but it can hurt people's feelings and lead to getting in trouble. "
+      "emojiCode": "openmoji_1f61c"
     },
     {
       "id": "regular_verb_72",
       "base": {
-        "verb": "regular_verb_72",
-        "phonetic": "jump",
+        "verb": "jump",
+        "phonetic": "/dʒʌmp/",
         "examples": [
-          "/dʒʌmp/"
+          "I will jump into the fight if you are in danger.",
+          "An NBA athlete can jump more than 45 inches."
         ]
       },
       "simplePast": {
-        "verb": "I will jump into the fight if you are in danger. && An NBA athlete can jump more than 45 inches.",
-        "phonetic": "jumped",
+        "verb": "jumped",
+        "phonetic": "/dʒʌmpt/",
         "examples": [
-          "/dʒʌmpt/"
+          "One of my best memories from this summer was when we jumped from bungee.",
+          "I jumped into the first train to New York."
         ]
       },
       "pastParticiple": {
-        "verb": "One of my best memories from this summer was when we jumped from bungee. && I jumped into the first train to New York.",
-        "phonetic": "jumped",
+        "verb": "jumped",
+        "phonetic": "/dʒʌmpt/",
         "examples": [
-          "/dʒʌmpt/"
+          "Byron Bay prices have jumped more than $655,000 in one year.",
+          "Mental illness-related ED visits have jumped 150% during pandemic."
         ]
       },
       "ing": {
-        "verb": "Byron Bay prices have jumped more than $655,000 in one year. && Mental illness-related ED visits have jumped 150% during pandemic.",
-        "phonetic": "jumping",
+        "verb": "jumping",
+        "phonetic": "/ˈdʒʌmpɪŋ/",
         "examples": [
-          "/ˈdʒʌmpɪŋ/"
+          "And there they are, members of the green tide cheering, jumping and shouting.",
+          "Children aged 6 to 12 were at greatest risk from jumping or diving around a hot tub or inside one."
         ]
       },
-      "emojiCode": "openmoji_and there they are, members of the green tide cheering, jumping and shouting. && children aged 6 to 12 were at greatest risk from jumping or diving around a hot tub or inside one. "
+      "emojiCode": "openmoji_1f3c2"
     },
     {
       "id": "regular_verb_73",
       "base": {
-        "verb": "regular_verb_73",
-        "phonetic": "kick",
+        "verb": "kick",
+        "phonetic": "/kɪk/",
         "examples": [
-          "/kɪk/"
+          "After five minutes of exchanging movements Canelo kick him to knock out.",
+          "You've got to kick fear to the side, because pay off is huge."
         ]
       },
       "simplePast": {
-        "verb": "After five minutes of exchanging movements Canelo kick him to knock out. && You've got to kick fear to the side, because pay off is huge.",
-        "phonetic": "kicked",
+        "verb": "kicked",
+        "phonetic": "/kɪkt/",
         "examples": [
-          "/kɪkt/"
+          "He is now in jail because he kicked a sign while driving.",
+          "George kicked his head against the wall by accident."
         ]
       },
       "pastParticiple": {
-        "verb": "He is now in jail because he kicked a sign while driving. && George kicked his head against the wall by accident.",
-        "phonetic": "kicked",
+        "verb": "kicked",
+        "phonetic": "/kɪkt/",
         "examples": [
-          "/kɪkt/"
+          "When I realized what I'd done I could have kicked myself.",
+          "I would have kicked off with the waiter, complained loudly to the other table and spent the rest of the meal in a valpolicella-induced huff."
         ]
       },
       "ing": {
-        "verb": "When I realized what I'd done I could have kicked myself. && I would have kicked off with the waiter, complained loudly to the other table and spent the rest of the meal in a valpolicella-induced huff. ",
-        "phonetic": "kicking",
+        "verb": "kicking",
+        "phonetic": "/ˈkɪkɪŋ/",
         "examples": [
-          "/ˈkɪkɪŋ/"
+          "We are delighted to be kicking of this significant year for the bodega with one of their wines.",
+          "One year-olds are developing skills such as balancing, jumping, kicking, and throwing."
         ]
       },
-      "emojiCode": "openmoji_we are delighted to be kicking of this significant year for the bodega with one of their wines. && one year_olds are developing skills such as balancing, jumping, kicking, and throwing."
+      "emojiCode": "openmoji_1f9b6"
     },
     {
       "id": "regular_verb_75",
       "base": {
-        "verb": "regular_verb_75",
-        "phonetic": "kiss",
+        "verb": "kiss",
+        "phonetic": "/kɪs/",
         "examples": [
-          "/kɪs/"
+          "Royer comes from a culture where people nose kiss as a friendly gesture.",
+          "You can kiss the bride."
         ]
       },
       "simplePast": {
-        "verb": "Royer comes from a culture where people nose kiss as a friendly gesture. && You can kiss the bride.",
-        "phonetic": "kissed",
+        "verb": "kissed",
+        "phonetic": "/kɪst/",
         "examples": [
-          "/kɪst/"
+          "I kissed a girl and I liked it.",
+          "His wife kissed him as soon as he arrived."
         ]
       },
       "pastParticiple": {
-        "verb": "I kissed a girl and I liked it. && His wife kissed him as soon as he arrived.",
-        "phonetic": "kissed",
+        "verb": "kissed",
+        "phonetic": "/kɪst/",
         "examples": [
-          "/kɪst/"
+          "What lips my lips have kissed, and where, and why.",
+          "Sadly, Mary have never kissed anyone."
         ]
       },
       "ing": {
-        "verb": "What lips my lips have kissed, and where, and why. && Sadly, Mary have never kissed anyone. ",
-        "phonetic": "kissing",
+        "verb": "kissing",
+        "phonetic": "/ˈkɪsɪŋ/",
         "examples": [
-          "/ˈkɪsɪŋ/"
+          "Avoid kissing or sharing utensils if you or someone close to you has the flu.",
+          "Avoid hugging and kissing pets if you are allergic."
         ]
       },
-      "emojiCode": "openmoji_avoid kissing or sharing utensils if you or someone close to you has the flu. && avoid hugging and kissing pets if you are allergic. "
+      "emojiCode": "openmoji_1f618"
     },
     {
       "id": "regular_verb_76",
       "base": {
-        "verb": "regular_verb_76",
-        "phonetic": "laugh",
+        "verb": "laugh",
+        "phonetic": "/læf/",
         "examples": [
-          "/læf/"
+          "When you laugh the world lights up.",
+          "Lauren laughs and stay positive in every argument but in reality she's not okay."
         ]
       },
       "simplePast": {
-        "verb": "When you laugh the world lights up. && Lauren laughs and stay positive in every argument but in reality she's not okay.",
-        "phonetic": "laughed",
+        "verb": "laughed",
+        "phonetic": "/læft/",
         "examples": [
-          "/læft/"
+          "She laughed out loud so much that everyone just stopped talking and looked at her.",
+          "The Baby laughed when the balloon popped."
         ]
       },
       "pastParticiple": {
-        "verb": "She laughed out loud so much that everyone just stopped talking and looked at her. && The Baby laughed when the balloon popped.",
-        "phonetic": "laughed",
+        "verb": "laughed",
+        "phonetic": "/læft/",
         "examples": [
-          "/læft/"
+          "How many times have you laughed today?",
+          "She would have laughed!\" Minnelli said, giggling herself as she predicted her mother's reaction."
         ]
       },
       "ing": {
-        "verb": "How many times have you laughed today? && She would have laughed!\" Minnelli said, giggling herself as she predicted her mother's reaction.",
-        "phonetic": "laughing",
+        "verb": "laughing",
+        "phonetic": "/ˈlæfɪŋ/",
         "examples": [
-          "/ˈlæfɪŋ/"
+          "The kids were laughing hysterically and saying I looked like a beached whale.",
+          "Imagine children laughing and enjoying a travelling show."
         ]
       },
-      "emojiCode": "openmoji_the kids were laughing hysterically and saying i looked like a beached whale. && imagine children laughing and enjoying a travelling show."
+      "emojiCode": "openmoji_1f606"
     },
     {
       "id": "regular_verb_77",
       "base": {
-        "verb": "regular_verb_77",
-        "phonetic": "like",
+        "verb": "like",
+        "phonetic": "/laɪk/",
         "examples": [
-          "/laɪk/"
+          "I like rainy days.",
+          "Paloma likes blue cheese the most."
         ]
       },
       "simplePast": {
-        "verb": "I like rainy days. && Paloma likes blue cheese the most.",
-        "phonetic": "liked",
+        "verb": "liked",
+        "phonetic": "/laɪkt/",
         "examples": [
-          "/laɪkt/"
+          "I liked meeting your new friends.",
+          "I liked the experience. Thank you for inviting me."
         ]
       },
       "pastParticiple": {
-        "verb": "I liked meeting your new friends. && I liked the experience. Thank you for inviting me.",
-        "phonetic": "liked",
+        "verb": "liked",
+        "phonetic": "/laɪkt/",
         "examples": [
-          "/laɪkt/"
+          "Mr. Krohn said he has liked some of his classes, especially one on the Spanish Civil War.",
+          "She has liked the zoo."
         ]
       },
       "ing": {
-        "verb": "Mr. Krohn said he has liked some of his classes, especially one on the Spanish Civil War. && She has liked the zoo.",
-        "phonetic": "liking",
+        "verb": "liking",
+        "phonetic": "/ˈlaɪkɪŋ/",
         "examples": [
-          "/ˈlaɪkɪŋ/"
+          "Not everyone has to find the results to their liking.",
+          "You can hire a boat and plan your cruise to your liking."
         ]
       },
-      "emojiCode": "openmoji_not everyone has to find the results to their liking. &&  you can hire a boat and plan your cruise to your liking."
+      "emojiCode": "openmoji_1f44d"
     },
     {
       "id": "regular_verb_80",
       "base": {
-        "verb": "regular_verb_80",
-        "phonetic": "marry",
+        "verb": "marry",
+        "phonetic": "/ˈmæri/",
         "examples": [
-          "/ˈmæri/"
+
         ]
       },
       "simplePast": {
-        "verb": "Frank marry Katerine today! They have been together for 5 years. && ",
-        "phonetic": "married",
+        "verb": "married",
+        "phonetic": "/ˈmærid/",
         "examples": [
-          "/ˈmærid/"
+          "Katy married her best friend after years of being a couple.",
+          "In the story the princess married the frog."
         ]
       },
       "pastParticiple": {
-        "verb": "Katy married her best friend after years of being a couple. && In the story the princess married the frog.",
-        "phonetic": "married",
+        "verb": "married",
+        "phonetic": "/ˈmærid/",
         "examples": [
-          "/ˈmærid/"
+          "Nobel Peace Prize laureate and women's rights campaigner Malala Yousafzai has married at her home in the United Kingdom.",
+          "Reports said he has married Mumbai-based physiotherapist Dr Himani."
         ]
       },
       "ing": {
-        "verb": "Nobel Peace Prize laureate and women's rights campaigner Malala Yousafzai has married at her home in the United Kingdom. && Reports said he has married Mumbai-based physiotherapist Dr Himani.",
-        "phonetic": "marrying",
+        "verb": "marrying",
+        "phonetic": "/ˈmæriɪŋ/",
         "examples": [
-          "/ˈmæriɪŋ/"
+          "The difficulty in marrying together these two traditions, approaches and styles is not to be underestimated.",
+          "A single parent marrying or moving in with a partner may be as disruptive to a child as a divorce,"
         ]
       },
-      "emojiCode": "openmoji_the difficulty in marrying together these two traditions, approaches and styles is not to be underestimated. &&  a single parent marrying or moving in with a partner may be as disruptive to a child as a divorce,"
+      "emojiCode": "openmoji_1f470_200d_2640_fe0f"
     },
     {
       "id": "regular_verb_81",
       "base": {
-        "verb": "regular_verb_81",
-        "phonetic": "measure",
+        "verb": "measure",
+        "phonetic": "/ˈmeʒər/",
         "examples": [
-          "/ˈmeʒər/"
+          "You need to measure the space before buying furniture.",
+          "Doctors always measure kids height."
         ]
       },
       "simplePast": {
-        "verb": "You need to measure the space before buying furniture. && Doctors always measure kids height.",
-        "phonetic": "measured",
+        "verb": "measured",
+        "phonetic": "/ˈmeʒərd/",
         "examples": [
-          "/ˈmeʒərd/"
+          "I already measured my body to know my right size.",
+          "I measured his temperature before taking him to the hospital."
         ]
       },
       "pastParticiple": {
-        "verb": "I already measured my body to know my right size. && I measured his temperature before taking him to the hospital.",
-        "phonetic": "measured",
+        "verb": "measured",
+        "phonetic": "/ˈmeʒərd/",
         "examples": [
-          "/ˈmeʒərd/"
+          "Scientists Have Measured Earth's Ancient Magnetic Field From Stone Age Artifacts.",
+          "I Have Measured out My Life with Coffee. Spoons."
         ]
       },
       "ing": {
-        "verb": "Scientists Have Measured Earth's Ancient Magnetic Field From Stone Age Artifacts. && I Have Measured out My Life with Coffee. Spoons.",
-        "phonetic": "measuring",
+        "verb": "measuring",
+        "phonetic": "/ˈmeʒərɪŋ/",
         "examples": [
-          "/ˈmeʒərɪŋ/"
+          "There is a need for further work to identify the data needed for measuring the suggested indicators.",
+          "This book presents a new method for measuring multidimensional poverty."
         ]
       },
-      "emojiCode": "openmoji_there is a need for further work to identify the data needed for measuring the suggested indicators. && this book presents a new method for measuring multidimensional poverty."
+      "emojiCode": "openmoji_1f4d0"
     },
     {
       "id": "regular_verb_82",
       "base": {
-        "verb": "regular_verb_82",
-        "phonetic": "move",
+        "verb": "move",
+        "phonetic": "/muːv/",
         "examples": [
-          "/muːv/"
+          "She moves her body with extreme confidence.",
+          "You need to pack and move your things out of the house by next weekend."
         ]
       },
       "simplePast": {
-        "verb": "She moves her body with extreme confidence. && You need to pack and move your things out of the house by next weekend.",
-        "phonetic": "moved",
+        "verb": "moved",
+        "phonetic": "/muːvd/",
         "examples": [
-          "/muːvd/"
+          "I moved to a new house. it's bigger than the last one.",
+          "she moved at the speed of light."
         ]
       },
       "pastParticiple": {
-        "verb": "I moved to a new house. it's bigger than the last one. && she moved at the speed of light.",
-        "phonetic": "moved",
+        "verb": "moved",
+        "phonetic": "/muːvd/",
         "examples": [
-          "/muːvd/"
+          "We have moved to a new office!",
+          "Teeth have moved after braces."
         ]
       },
       "ing": {
-        "verb": "We have moved to a new office! && Teeth have moved after braces. ",
-        "phonetic": "moving",
+        "verb": "moving",
+        "phonetic": "/ˈmuːvɪŋ/",
         "examples": [
-          "/ˈmuːvɪŋ/"
+          "Moving from direct implementation and control to a networked structure may be a difficult adjustment.",
+          "Keep moving in the right direction with the integrated compass."
         ]
       },
-      "emojiCode": "openmoji_moving from direct implementation and control to a networked structure may be a difficult adjustment. && keep moving in the right direction with the integrated compass.   "
+      "emojiCode": "openmoji_e103"
     },
     {
       "id": "regular_verb_86",
       "base": {
-        "verb": "regular_verb_86",
-        "phonetic": "offend",
+        "verb": "offend",
+        "phonetic": "/əˈfend/",
         "examples": [
-          "/əˈfend/"
+          "When you travel abroad you have to be careful not to offend people with different cultures.",
+          "You can offend the priest with your noises if you don't shut off your phone."
         ]
       },
       "simplePast": {
-        "verb": "When you travel abroad you have to be careful not to offend people with different cultures. && You can offend the priest with your noises if you don't shut off your phone.",
-        "phonetic": "offended",
+        "verb": "offended",
+        "phonetic": "/əˈfendɪd/",
         "examples": [
-          "/əˈfendɪd/"
+          "You offended Paul by rejecting his gift.",
+          "My neighbor offended me and now I wouldn't dare to talk to him."
         ]
       },
       "pastParticiple": {
-        "verb": "You offended Paul by rejecting his gift. && My neighbor offended me and now I wouldn't dare to talk to him.",
-        "phonetic": "offended",
+        "verb": "offended",
+        "phonetic": "/əˈfendɪd/",
         "examples": [
-          "/əˈfendɪd/"
+          "The development of specialist support services for young people who have offended and who have also been victims of crime.",
+          "I heard i may have offended some people."
         ]
       },
       "ing": {
-        "verb": "The development of specialist support services for young people who have offended and who have also been victims of crime. &&   I heard i may have offended some people.",
-        "phonetic": "offending",
+        "verb": "offending",
+        "phonetic": "/əˈfendɪŋ/",
         "examples": [
-          "/əˈfendɪŋ/"
+          "The offending verse has gone, but poverty has not.",
+          "He will understand that the will can restrain him from offending his neighbor."
         ]
       },
-      "emojiCode": "openmoji_the offending verse has gone, but poverty has not.  && he will understand that the will can restrain him from offending his neighbor."
+      "emojiCode": "openmoji_e283"
     },
     {
       "id": "regular_verb_88",
       "base": {
-        "verb": "regular_verb_88",
-        "phonetic": "open",
+        "verb": "open",
+        "phonetic": "/ˈəʊpən/",
         "examples": [
-          "/ˈəʊpən/"
+          "Charlie doesn't open the door to strangers.",
+          "How do you open a new account?"
         ]
       },
       "simplePast": {
-        "verb": "Charlie doesn't open the door to strangers. && How do you open a new account?",
-        "phonetic": "opened",
+        "verb": "opened",
+        "phonetic": "/ˈəʊpənd/",
         "examples": [
-          "/ˈəʊpənd/"
+          "Last time I opened my mail it was full of spam.",
+          "He opened his eyes slowly after 12 hours of sleep."
         ]
       },
       "pastParticiple": {
-        "verb": "Last time I opened my mail it was full of spam. && He opened his eyes slowly after 12 hours of sleep.",
-        "phonetic": "opened",
+        "verb": "opened",
+        "phonetic": "/ˈəʊpənd/",
         "examples": [
-          "/ˈəʊpənd/"
+          "We have opened iNELS Café!",
+          "If you have inadvertently opened an infected email attachment or responded to a spam message there are some steps you should take."
         ]
       },
       "ing": {
-        "verb": "We have opened iNELS Café! && If you have inadvertently opened an infected email attachment or responded to a spam message there are some steps you should take. ",
-        "phonetic": "opening",
+        "verb": "opening",
+        "phonetic": "/ˈəʊpənɪŋ/",
         "examples": [
-          "/ˈəʊpənɪŋ/"
+          "The user starts the opening and closing action and the slide does the rest.",
+          "The opening paragraph tells the story in a nutshell, and tells the reader: who, what, when and where."
         ]
       },
-      "emojiCode": "openmoji_the user starts the opening and closing action and the slide does the rest. && the opening paragraph tells the story in a nutshell, and tells the reader: who, what, when and where. "
+      "emojiCode": "openmoji_1f4d6"
     },
     {
       "id": "regular_verb_89",
       "base": {
-        "verb": "regular_verb_89",
-        "phonetic": "paint",
+        "verb": "paint",
+        "phonetic": "/peɪnt/",
         "examples": [
-          "/peɪnt/"
+          "Karen paints her nails according to the color of her outfit.",
+          "My mother paints her hair every month."
         ]
       },
       "simplePast": {
-        "verb": "Karen paints her nails according to the color of her outfit. && My mother paints her hair every month.",
-        "phonetic": "painted",
+        "verb": "painted",
+        "phonetic": "/ˈpeɪntɪd/",
         "examples": [
-          "/ˈpeɪntɪd/"
+          "Last year I painted the house black for Halloween.",
+          "I painted my nails orange."
         ]
       },
       "pastParticiple": {
-        "verb": "Last year I painted the house black for Halloween. && I painted my nails orange. ",
-        "phonetic": "painted",
+        "verb": "painted",
+        "phonetic": "/ˈpeɪntɪd/",
         "examples": [
-          "/ˈpeɪntɪd/"
+          "I must have it painted black Maybe then I'll fade away.",
+          "Artists across generations have painted the Mahatma. One of the most photographed Indians of his time."
         ]
       },
       "ing": {
-        "verb": " I must have it painted black Maybe then I'll fade away. && Artists across generations have painted the Mahatma. One of the most photographed Indians of his time.",
-        "phonetic": "painting",
+        "verb": "painting",
+        "phonetic": "/ˈpeɪntɪŋ/",
         "examples": [
-          "/ˈpeɪntɪŋ/"
+          "Painting will also prevent the formation of moulds and blue-stain.",
+          "So we must stop being cynical and painting a picture of the Union as some kind of inconvenience."
         ]
       },
-      "emojiCode": "openmoji_painting will also prevent the formation of moulds and blue_stain. && so we must stop being cynical and painting a picture of the union as some kind of inconvenience. "
+      "emojiCode": "openmoji_1f58c"
     },
     {
       "id": "regular_verb_90",
       "base": {
-        "verb": "regular_verb_90",
-        "phonetic": "park",
+        "verb": "park",
+        "phonetic": "/pɑːrk/",
         "examples": [
-          "/pɑːrk/"
+          "You can park your car in the next block.",
+          "we can ask the schedule for the next trip when the bus parks."
         ]
       },
       "simplePast": {
-        "verb": "You can park your car in the next block. && we can ask the schedule for the next trip when the bus parks.",
-        "phonetic": "parked",
+        "verb": "parked",
+        "phonetic": "/pɑːrkt/",
         "examples": [
-          "/pɑːrkt/"
+          "I parked outside the neighbor's house because our garage was closed.",
+          "I parked my car behind yours."
         ]
       },
       "pastParticiple": {
-        "verb": "I parked outside the neighbor's house because our garage was closed. && I parked my car behind yours. ",
-        "phonetic": "parked",
+        "verb": "parked",
+        "phonetic": "/pɑːrkt/",
         "examples": [
-          "/pɑːrkt/"
+          "Respondents have parked the disputed domain name at Terra, without any intention of making any commercial or misleading use of it.",
+          "Warning You Have Parked In A Private Parking Area."
         ]
       },
       "ing": {
-        "verb": "Respondents have parked the disputed domain name at Terra, without any intention of making any commercial or misleading use of it. && Warning You Have Parked In A Private Parking Area.",
-        "phonetic": "parking",
+        "verb": "parking",
+        "phonetic": "/ˈpɑːrkɪŋ/",
         "examples": [
-          "/ˈpɑːrkɪŋ/"
+          "Parking is available at the public underground parking",
+          "Stop parking outsid my house!"
         ]
       },
-      "emojiCode": "openmoji_parking is available at the public underground parking && stop parking outsid my house!"
+      "emojiCode": "openmoji_1f697"
     },
     {
       "id": "regular_verb_93",
       "base": {
-        "verb": "regular_verb_93",
-        "phonetic": "play",
+        "verb": "play",
+        "phonetic": "/pleɪ/",
         "examples": [
-          "/pleɪ/"
+          "Camille likes to play volleyball since she was a kid.",
+          "Dolphins like to play with puffers."
         ]
       },
       "simplePast": {
-        "verb": "Camille likes to play volleyball since she was a kid. && Dolphins like to play with puffers.",
-        "phonetic": "played",
+        "verb": "played",
+        "phonetic": "/pleɪd/",
         "examples": [
-          "/pleɪd/"
+          "The band played that new song you like.",
+          "The kids played baseball against the Oregon's team."
         ]
       },
       "pastParticiple": {
-        "verb": "The band played that new song you like. && The kids played baseball against the Oregon's team.",
-        "phonetic": "played",
+        "verb": "played",
+        "phonetic": "/pleɪd/",
         "examples": [
-          "/pleɪd/"
+          "How would Britney Spears' conservatorship have played out under Scots law?",
+          "We should have played the 1st game on my birthday."
         ]
       },
       "ing": {
-        "verb": "How would Britney Spears' conservatorship have played out under Scots law? && We should have played the 1st game on my birthday. ",
-        "phonetic": "playing",
+        "verb": "playing",
+        "phonetic": "/ˈpleɪɪŋ/",
         "examples": [
-          "/ˈpleɪɪŋ/"
+          "On 59 occasions we heard the spirited notes of the Cuban National Anthem playing.",
+          "In her spare time, you may find her climbing rocks or mountains or playing on the beach."
         ]
       },
-      "emojiCode": "openmoji_on 59 occasions we heard the spirited notes of the cuban national anthem playing. && in her spare time, you may find her climbing rocks or mountains or playing on the beach."
+      "emojiCode": "openmoji_26bd"
     },
     {
       "id": "regular_verb_103",
       "base": {
-        "verb": "regular_verb_103",
-        "phonetic": "relax",
+        "verb": "relax",
+        "phonetic": "/rɪˈlæks/",
         "examples": [
-          "/rɪˈlæks/"
+          "I will babysit your daughter so you can relax and take it easy.",
+          "Some people can slow down their heart rate while they relax."
         ]
       },
       "simplePast": {
-        "verb": "I will babysit your daughter so you can relax and take it easy. && Some people can slow down their heart rate while they relax. ",
-        "phonetic": "relaxed",
+        "verb": "relaxed",
+        "phonetic": "/rɪˈlækst/",
         "examples": [
-          "/rɪˈlækst/"
+          "She relaxed while doing yoga.",
+          "Teo relaxed by watching Netflix alone all day."
         ]
       },
       "pastParticiple": {
-        "verb": "She relaxed while doing yoga. && Teo relaxed by watching Netflix alone all day.",
-        "phonetic": "relaxed",
+        "verb": "relaxed",
+        "phonetic": "/rɪˈlækst/",
         "examples": [
-          "/rɪˈlækst/"
+          "Regional Government has relaxed the rules governing bicycle access on the underground.",
+          "Her work has a relaxed, fun quality that is matched by her presence at the wedding!"
         ]
       },
       "ing": {
-        "verb": "Regional Government has relaxed the rules governing bicycle access on the underground. && Her work has a relaxed, fun quality that is matched by her presence at the wedding!",
-        "phonetic": "relaxing",
+        "verb": "relaxing",
+        "phonetic": "/rɪˈlæksɪŋ/",
         "examples": [
-          "/rɪˈlæksɪŋ/"
+          "More realistic and longer time frames would have had a counter-productive effect by relaxing intentions and the need to take action.",
+          "There is nothing more relaxing and fun than dancing."
         ]
       },
-      "emojiCode": "openmoji_more realistic and longer time frames would have had a counter_productive effect by relaxing intentions and the need to take action. && there is nothing more relaxing and fun than dancing."
+      "emojiCode": "openmoji_263a"
     },
     {
       "id": "regular_verb_107",
       "base": {
-        "verb": "regular_verb_107",
-        "phonetic": "return",
+        "verb": "return",
+        "phonetic": "/rɪˈtɜːrn/",
         "examples": [
-          "/rɪˈtɜːrn/"
+          "School is empty because everyone return home for the holidays.",
+          "Can you return my call I'm worried for you."
         ]
       },
       "simplePast": {
-        "verb": "School is empty because everyone return home for the holidays. && Can you return my call I'm worried for you.",
-        "phonetic": "returned",
+        "verb": "returned",
+        "phonetic": "/rɪˈtɜːrnd/",
         "examples": [
-          "/rɪˈtɜːrnd/"
+          "I returned home last week so I won't be able to go to work.",
+          "Our dog returned three days after going missing."
         ]
       },
       "pastParticiple": {
-        "verb": "I returned home last week so I won't be able to go to work. && Our dog returned three days after going missing.",
-        "phonetic": "returned",
+        "verb": "returned",
+        "phonetic": "/rɪˈtɜːrnd/",
         "examples": [
-          "/rɪˈtɜːrnd/"
+          "This issue has returned with force since then.",
+          "We are now entering a phase in which the sense of identity has returned to forefront."
         ]
       },
       "ing": {
-        "verb": "This issue has returned with force since then. && We are now entering a phase in which the sense of identity has returned to forefront.",
-        "phonetic": "returning",
+        "verb": "returning",
+        "phonetic": "/rɪˈtɜːrnɪŋ/",
         "examples": [
-          "/rɪˈtɜːrnɪŋ/"
+          "The returning signal from the media is too weak.",
+          "Returning to school for many children means riding the school bus."
         ]
       },
-      "emojiCode": "openmoji_the returning signal from the media is too weak. &&  returning to school for many children means riding the school bus."
+      "emojiCode": "openmoji_21a9"
     },
     {
       "id": "regular_verb_108",
       "base": {
-        "verb": "regular_verb_108",
-        "phonetic": "rub",
+        "verb": "rub",
+        "phonetic": "/rʌb/",
         "examples": [
-          "/rʌb/"
+          "Hedgehogs rub themselves around to hide their smell and protect themselves from predators.",
+          "A nose kiss is when two people rub their noses together."
         ]
       },
       "simplePast": {
-        "verb": "Hedgehogs rub themselves around to hide their smell and protect themselves from predators. && A nose kiss is when two people rub their noses together.",
-        "phonetic": "rubbed",
+        "verb": "rubbed",
+        "phonetic": "/rʌbd/",
         "examples": [
-          "/rʌbd/"
+          "My cat rubbed against my leg and now my black pants have cat's hair all over them.",
+          "Kris rubbed his cat with an ice to keep it fresh in the hot days of summer."
         ]
       },
       "pastParticiple": {
-        "verb": "My cat rubbed against my leg and now my black pants have cat's hair all over them. && Kris rubbed his cat with an ice to keep it fresh in the hot days of summer.",
-        "phonetic": "rubbed",
+        "verb": "rubbed",
+        "phonetic": "/rʌbd/",
         "examples": [
-          "/rʌbd/"
+          "If the Player has selected to sync your device automatically, click Finish.",
+          "On the item list, the system has selected all items for which an invoice is still to be received."
         ]
       },
       "ing": {
-        "verb": "If the Player has selected to sync your device automatically, click Finish. && On the item list, the system has selected all items for which an invoice is still to be received. ",
-        "phonetic": "rubbing",
+        "verb": "rubbing",
+        "phonetic": "/ˈrʌbɪŋ/",
         "examples": [
-          "/ˈrʌbɪŋ/"
+          "Stop rubbing your feet on the carpet you're going to get shocked.",
+          "The leader starts the exercise by rubbing their palms together."
         ]
       },
-      "emojiCode": "openmoji_stop rubbing your feet on the carpet you're going to get shocked. && the leader starts the exercise by rubbing their palms together. "
+      "emojiCode": "openmoji_e0b2"
     },
     {
       "id": "regular_verb_110",
       "base": {
-        "verb": "regular_verb_110",
-        "phonetic": "select",
+        "verb": "select",
+        "phonetic": "/sɪˈlekt/",
         "examples": [
-          "/sɪˈlekt/"
+          "Select the topic you want to talk about in the next meeting.",
+          "if you are ready to continue please select the next page."
         ]
       },
       "simplePast": {
-        "verb": "Select the topic you want to talk about in the next meeting. && if you are ready to continue please select the next page.",
-        "phonetic": "selected",
+        "verb": "selected",
+        "phonetic": "/sɪˈlektɪd/",
         "examples": [
-          "/sɪˈlektɪd/"
+          "The company selected Carlos to be the representative in the next trade fair.",
+          "Karla selected the furniture to decorate my room."
         ]
       },
       "pastParticiple": {
-        "verb": "The company selected Carlos to be the representative in the next trade fair. && Karla selected the furniture to decorate my room.",
-        "phonetic": "selected",
+        "verb": "selected",
+        "phonetic": "/sɪˈlektɪd/",
         "examples": [
-          "/sɪˈlektɪd/"
+          "You've been selected as the winner of our giveaway.",
+          "Our senior hasn't selected our new team leader."
         ]
       },
       "ing": {
-        "verb": "You've been selected as the winner of our giveaway. && Our senior hasn't selected our new team leader.",
-        "phonetic": "selecting",
+        "verb": "selecting",
+        "phonetic": "/sɪˈlektɪŋ/",
         "examples": [
-          "/sɪˈlektɪŋ/"
+          "Selecting the materials and equipment that generate fewer amounts of waste and less toxicity.",
+          "See the complete list of prohibited items by selecting the link below."
         ]
       },
-      "emojiCode": "openmoji_selecting the materials and equipment that generate fewer amounts of waste and less toxicity. && see the complete list of prohibited items by selecting the link below. "
+      "emojiCode": "openmoji_e10c"
     },
     {
       "id": "regular_verb_111",
       "base": {
-        "verb": "regular_verb_111",
-        "phonetic": "smoke",
+        "verb": "smoke",
+        "phonetic": "/sməʊk/",
         "examples": [
-          "/sməʊk/"
+          "It is considered rude if you smoke around non-smokers.",
+          "There are places where you aren't allowed to smoke."
         ]
       },
       "simplePast": {
-        "verb": "It is considered rude if you smoke around non-smokers. && There are places where you aren't allowed to smoke.",
-        "phonetic": "smoked",
+        "verb": "smoked",
+        "phonetic": "/sməʊkt/",
         "examples": [
-          "/sməʊkt/"
+          "Karla was so stressed that she smoked a full package of cigarettes.",
+          "Terry smoked inside the house and now everything stinks."
         ]
       },
       "pastParticiple": {
-        "verb": "Karla was so stressed that she smoked a full package of cigarettes. && Terry smoked inside the house and now everything stinks.",
-        "phonetic": "smoked",
+        "verb": "smoked",
+        "phonetic": "/sməʊkt/",
         "examples": [
-          "/sməʊkt/"
+          "The risk depends upon the number of cigarettes smoked every day and for how long someone has smoked.",
+          "You will be asked if you smoke, and if so, how long you have smoked."
         ]
       },
       "ing": {
-        "verb": "The risk depends upon the number of cigarettes smoked every day and for how long someone has smoked. && You will be asked if you smoke, and if so, how long you have smoked.",
-        "phonetic": "smoking",
+        "verb": "smoking",
+        "phonetic": "/ˈsməʊkɪŋ/",
         "examples": [
-          "/ˈsməʊkɪŋ/"
+          "Tobacco smoking is an important additional source of cadmium exposure by inhalation.",
+          "Physicians should help patients become motivated to quit smoking."
         ]
       },
-      "emojiCode": "openmoji_tobacco smoking is an important additional source of cadmium exposure by inhalation. && physicians should help patients become motivated to quit smoking."
+      "emojiCode": "openmoji_1f6ac"
     },
     {
       "id": "regular_verb_112",
       "base": {
-        "verb": "regular_verb_112",
-        "phonetic": "snore",
+        "verb": "snore",
+        "phonetic": "/snɔːr/",
         "examples": [
-          "/snɔːr/"
+          "Even a mouse can snore like a human.",
+          "People say that when you snore is due to bad posture."
         ]
       },
       "simplePast": {
-        "verb": "Even a mouse can snore like a human. && People say that when you snore is due to bad posture.",
-        "phonetic": "snored",
+        "verb": "snored",
+        "phonetic": "/snɔːrd/",
         "examples": [
-          "/snɔːrd/"
+          "He was so tired that he snored all night.",
+          "I snored and slept like a log last night."
         ]
       },
       "pastParticiple": {
-        "verb": "He was so tired that he snored all night. && I snored and slept like a log last night.",
-        "phonetic": "snored",
+        "verb": "snored",
+        "phonetic": "/snɔːrd/",
         "examples": [
-          "/snɔːrd/"
+          "Many women who have never snored before may begin doing so at some time during their pregnancy.",
+          "While most of us have snored on occasion, about a quarter of all people snore on a nightly basis."
         ]
       },
       "ing": {
-        "verb": "Many women who have never snored before may begin doing so at some time during their pregnancy. && While most of us have snored on occasion, about a quarter of all people snore on a nightly basis.",
-        "phonetic": "snoring",
+        "verb": "snoring",
+        "phonetic": "/ˈsnɔːrɪŋ/",
         "examples": [
-          "/ˈsnɔːrɪŋ/"
+          "It's hard for me to sleep when there's someone snoring next to me.",
+          "Sleep apnea is not as common as snoring."
         ]
       },
-      "emojiCode": "openmoji_it's hard for me to sleep when there's someone snoring next to me. && sleep apnea is not as common as snoring."
+      "emojiCode": "openmoji_1f634"
     },
     {
       "id": "regular_verb_116",
       "base": {
-        "verb": "regular_verb_116",
-        "phonetic": "talk",
+        "verb": "talk",
+        "phonetic": "/tɔːk/",
         "examples": [
-          "/tɔːk/"
+          "Let's talk about our problems and find solutions.",
+          "This new generation prefers to chat than talk in person."
         ]
       },
       "simplePast": {
-        "verb": "Let's talk about our problems and find solutions. && This new generation prefers to chat than talk in person.",
-        "phonetic": "talked",
+        "verb": "talked",
+        "phonetic": "/tɔːkt/",
         "examples": [
-          "/tɔːkt/"
+          "We talked about our families and dream jobs.",
+          "My parents talked to me about the new girl in the neighborhood."
         ]
       },
       "pastParticiple": {
-        "verb": "We talked about our families and dream jobs. && My parents talked to me about the new girl in the neighborhood.",
-        "phonetic": "talked",
+        "verb": "talked",
+        "phonetic": "/tɔːkt/",
         "examples": [
-          "/tɔːkt/"
+          "The Commission President has talked a lot about Robin Hood in the last couple of weeks.",
+          "Go around the room until everyone has talked about their object."
         ]
       },
       "ing": {
-        "verb": "The Commission President has talked a lot about Robin Hood in the last couple of weeks. && Go around the room until everyone has talked about their object. ",
-        "phonetic": "talking",
+        "verb": "talking",
+        "phonetic": "/ˈtɔːkɪŋ/",
         "examples": [
-          "/ˈtɔːkɪŋ/"
+          "Talking to babies teaches them to use language for communication.",
+          "Before talking, think about why you want your child to know."
         ]
       },
-      "emojiCode": "openmoji_talking to babies teaches them to use language for communication. && before talking, think about why you want your child to know. "
+      "emojiCode": "openmoji_1f4ac"
     },
     {
       "id": "regular_verb_117",
       "base": {
-        "verb": "regular_verb_117",
-        "phonetic": "thank",
+        "verb": "thank",
+        "phonetic": "/θæŋk/",
         "examples": [
-          "/θæŋk/"
+          "Maria wants to thank them for their hospitality with a cake.",
+          "I will forever thank you for saving my life."
         ]
       },
       "simplePast": {
-        "verb": "Maria wants to thank them for their hospitality with a cake. && I will forever thank you for saving my life.",
-        "phonetic": "thanked",
+        "verb": "thanked",
+        "phonetic": "/θæŋkt/",
         "examples": [
-          "/θæŋkt/"
+          "Emily thanked her with a gift.",
+          "Regina thanked the doctors for saving her life."
         ]
       },
       "pastParticiple": {
-        "verb": "Emily thanked her with a gift. && Regina thanked the doctors for saving her life.",
-        "phonetic": "thanked",
+        "verb": "thanked",
+        "phonetic": "/θæŋkt/",
         "examples": [
-          "/θæŋkt/"
+          "Director Claims Genocide Deniers Have Tanked His Movie's IMDb Score.",
+          "The Upsetting Doctor Who Portrayal That Could Have Tanked The Series."
         ]
       },
       "ing": {
-        "verb": " Director Claims Genocide Deniers Have Tanked His Movie's IMDb Score. &&  The Upsetting Doctor Who Portrayal That Could Have Tanked The Series.",
-        "phonetic": "thanking",
+        "verb": "thanking",
+        "phonetic": "/ˈθæŋkɪŋ/",
         "examples": [
-          "/ˈθæŋkɪŋ/"
+          "Let me begin by thanking all of you for your participation last night.",
+          "Caring for our veterans is more than a way of thanking them for their service."
         ]
       },
-      "emojiCode": "openmoji_let me begin by thanking all of you for your participation last night. && caring for our veterans is more than a way of thanking them for their service."
+      "emojiCode": "openmoji_1f64f"
     },
     {
       "id": "regular_verb_118",
       "base": {
-        "verb": "regular_verb_118",
-        "phonetic": "travel",
+        "verb": "travel",
+        "phonetic": "/ˈtrævl/",
         "examples": [
-          "/ˈtrævl/"
+          "One of Michelle dreams is to travel the world.",
+          "For this biology practice we must travel abroad to a tropical island."
         ]
       },
       "simplePast": {
-        "verb": "One of Michelle dreams is to travel the world. && For this biology practice we must travel abroad to a tropical island.",
-        "phonetic": "travelled",
+        "verb": "travelled",
+        "phonetic": "/ˈtrævld/",
         "examples": [
-          "/ˈtrævld/"
+          "My sister traveled to Europe when she was 15.",
+          "Our teacher traveled to the jungle to study tropical fungi."
         ]
       },
       "pastParticiple": {
-        "verb": "My sister traveled to Europe when she was 15. && Our teacher traveled to the jungle to study tropical fungi.",
-        "phonetic": "travelled",
+        "verb": "travelled",
+        "phonetic": "/ˈtrævld/",
         "examples": [
-          "/ˈtrævld/"
+          "People who have travelled to areas of the world with high rates of antibiotic resistant bacteria such as South Asia and the Middle East are immune.",
+          "Somewhere I Have Never Travelled."
         ]
       },
       "ing": {
-        "verb": "People who have travelled to areas of the world with high rates of antibiotic resistant bacteria such as South Asia and the Middle East are immune. && Somewhere I Have Never Travelled.",
-        "phonetic": "traveling",
+        "verb": "traveling",
+        "phonetic": "/ˈtrævlɪŋ/",
         "examples": [
-          "/ˈtrævlɪŋ/"
+          "Entertain children with activities and songs while traveling.",
+          "Make sure that your passport is valid for at least six months before traveling."
         ]
       },
-      "emojiCode": "openmoji_entertain children with activities and songs while traveling. && make sure that your passport is valid for at least six months before traveling."
+      "emojiCode": "openmoji_1f9ed"
     },
     {
       "id": "regular_verb_122",
       "base": {
-        "verb": "regular_verb_122",
-        "phonetic": "visit",
+        "verb": "visit",
+        "phonetic": "/ˈvɪzɪt/",
         "examples": [
-          "/ˈvɪzɪt/"
+          "Let's try to visit granny every Wednesday, that's the day she have appointments with the doctor.",
+          "Now that we live in the same city we can visit together the museum."
         ]
       },
       "simplePast": {
-        "verb": "Let's try to visit granny every Wednesday, that's the day she have appointments with the doctor. && Now that we live in the same city we can visit together the museum.",
-        "phonetic": "visited",
+        "verb": "visited",
+        "phonetic": "/ˈvɪzɪtɪd/",
         "examples": [
-          "/ˈvɪzɪtɪd/"
+          "Wendy visited Carlos at the hospital when he was sick.",
+          "My mom visited us last weekend."
         ]
       },
       "pastParticiple": {
-        "verb": "Wendy visited Carlos at the hospital when he was sick. && My mom visited us last weekend. ",
-        "phonetic": "visited",
+        "verb": "visited",
+        "phonetic": "/ˈvɪzɪtɪd/",
         "examples": [
-          "/ˈvɪzɪtɪd/"
+          "Only three presidents have visited all 50 states in office.",
+          "Some of the Houston families who have visited their University of Houston international students after the students returned to their home country."
         ]
       },
       "ing": {
-        "verb": "Only three presidents have visited all 50 states in office.  &&  Some of the Houston families who have visited their University of Houston international students after the students returned to their home country.",
-        "phonetic": "visiting",
+        "verb": "visiting",
+        "phonetic": "/ˈvɪzɪtɪŋ/",
         "examples": [
-          "/ˈvɪzɪtɪŋ/"
+          "Peter got the habit of visiting churches to spend time in prayer.",
+          "Mark travels through Europe visiting photography festivals in France."
         ]
       },
-      "emojiCode": "openmoji_peter got the habit of visiting churches to spend time in prayer. && mark travels through europe visiting photography festivals in france."
+      "emojiCode": "openmoji_1f392"
     },
     {
       "id": "regular_verb_124",
       "base": {
-        "verb": "regular_verb_124",
-        "phonetic": "walk",
+        "verb": "walk",
+        "phonetic": "/wɔːk/",
         "examples": [
-          "/wɔːk/"
+          "Let's walk down the hill to town.",
+          "Katie is so energetic, every morning she walks 1 mile."
         ]
       },
       "simplePast": {
-        "verb": "Let's walk down the hill to town. && Katie is so energetic, every morning she walks 1 mile.",
-        "phonetic": "walked",
+        "verb": "walked",
+        "phonetic": "/wɔːkt/",
         "examples": [
-          "/wɔːkt/"
+          "I walked outside the house but it was so windy that I preferred to stay inside.",
+          "The bride walked inside the church after the groom."
         ]
       },
       "pastParticiple": {
-        "verb": "I walked outside the house but it was so windy that I preferred to stay inside. && The bride walked inside the church after the groom.",
-        "phonetic": "walked",
+        "verb": "walked",
+        "phonetic": "/wɔːkt/",
         "examples": [
-          "/wɔːkt/"
+          "I Should Have Walked Away.",
+          "Researchers built a robot called OroBOT to re-create the way that Orobates pabsti might have walked."
         ]
       },
       "ing": {
-        "verb": "I Should Have Walked Away. && Researchers built a robot called OroBOT to re-create the way that Orobates pabsti might have walked.",
-        "phonetic": "walking",
+        "verb": "walking",
+        "phonetic": "/ˈwɔːkɪŋ/",
         "examples": [
-          "/ˈwɔːkɪŋ/"
+          "Johnny keep walking until his feet gave up.",
+          "John was so afraid of The Walking Dead that he build a bunker."
         ]
       },
-      "emojiCode": "openmoji_johnny keep walking until his feet gave up. && john was so afraid of the walking dead that he build a bunker."
+      "emojiCode": "openmoji_1f6b6_200d_2640_fe0f"
     },
     {
       "id": "regular_verb_125",
       "base": {
-        "verb": "regular_verb_125",
-        "phonetic": "want",
+        "verb": "want",
+        "phonetic": "/wɑːnt/",
         "examples": [
-          "/wɑːnt/"
+          "I want you to become the best version of yourself.",
+          "Everyone wants to be an astronaut."
         ]
       },
       "simplePast": {
-        "verb": "I want you to become the best version of yourself. && Everyone wants to be an astronaut.",
-        "phonetic": "wanted",
+        "verb": "wanted",
+        "phonetic": "/ˈwɑːntɪd/",
         "examples": [
-          "/ˈwɑːntɪd/"
+          "When I was a kid I wanted to be a ballerina.",
+          "Maya wanted to buy a new pair of shoes but she didn't have enough money."
         ]
       },
       "pastParticiple": {
-        "verb": "When I was a kid I wanted to be a ballerina. && Maya wanted to buy a new pair of shoes but she didn't have enough money.",
-        "phonetic": "wanted",
+        "verb": "wanted",
+        "phonetic": "/ˈwɑːntɪd/",
         "examples": [
-          "/ˈwɑːntɪd/"
+          "I wouldn't have wanted the fuss and the bother.",
+          "He would not have wanted to go any other way."
         ]
       },
       "ing": {
-        "verb": "I wouldn't have wanted the fuss and the bother. && He would not have wanted to go any other way.",
-        "phonetic": "wanting",
+        "verb": "wanting",
+        "phonetic": "/ˈwɑːntɪŋ/",
         "examples": [
-          "/ˈwɑːntɪŋ/"
+          "I felt like wanting to know more about the life.",
+          "We were curious, wanting to know the status of the five indicted leaders and whether they would be part of the negotiations."
         ]
       },
-      "emojiCode": "openmoji_i felt like wanting to know more about the life. &&  we were curious, wanting to know the status of the five indicted leaders and whether they would be part of the negotiations."
+      "emojiCode": "openmoji_1f97a"
     },
     {
       "id": "regular_verb_126",
       "base": {
-        "verb": "regular_verb_126",
-        "phonetic": "warn",
+        "verb": "warn",
+        "phonetic": "/wɔːrn/",
         "examples": [
-          "/wɔːrn/"
+          "Penguins stay together so that they can warm them selves .",
+          "Taylor is late for dinner now I have to warm his food"
         ]
       },
       "simplePast": {
-        "verb": "Penguins stay together so that they can warm them selves . && Taylor is late for dinner now I have to warm his food",
-        "phonetic": "warned",
+        "verb": "warned",
+        "phonetic": "/wɔːrnd/",
         "examples": [
-          "/wɔːrnd/"
+          "I warned you to be careful around my dog but you didn't listen.",
+          "The owner warned us not to use the heater."
         ]
       },
       "pastParticiple": {
-        "verb": "I warned you to be careful around my dog but you didn't listen. && The owner warned us not to use the heater.",
-        "phonetic": "warned",
+        "verb": "warned",
+        "phonetic": "/wɔːrnd/",
         "examples": [
-          "/wɔːrnd/"
+          "U.S. intelligence agencies have warned that foreign powers like China could exploit samples to discover the medical history.",
+          "Ministers have warned vaccine refusers are the \"principal threat\" to the final lifting of lockdown restriction."
         ]
       },
       "ing": {
-        "verb": "U.S. intelligence agencies have warned that foreign powers like China could exploit samples to discover the medical history. && Ministers have warned vaccine refusers are the \"principal threat\" to the final lifting of lockdown restriction.",
-        "phonetic": "warning",
+        "verb": "warning",
+        "phonetic": "/ˈwɔːrnɪŋ/",
         "examples": [
-          "/ˈwɔːrnɪŋ/"
+          "Early warning and early response systems would contribute to the maintenance of international peace and security.",
+          "The dog did not wait for the warning to be repeated."
         ]
       },
-      "emojiCode": "openmoji_early warning and early response systems would contribute to the maintenance of international peace and security. && the dog did not wait for the warning to be repeated. "
+      "emojiCode": "openmoji_26a0"
     },
     {
       "id": "regular_verb_129",
       "base": {
-        "verb": "regular_verb_129",
-        "phonetic": "yell",
+        "verb": "yell",
+        "phonetic": "/jel/",
         "examples": [
-          "/jel/"
+          "She yell as loud as she can but nobody listened.",
+          "My soul yells into the deep abyss."
         ]
       },
       "simplePast": {
-        "verb": "She yell as loud as she can but nobody listened. && My soul yells into the deep abyss.",
-        "phonetic": "yelled",
+        "verb": "yelled",
+        "phonetic": "/jeld/",
         "examples": [
-          "/jeld/"
+          "Our mother yelled at us for being late.",
+          "They yelled at each other in front of everyone."
         ]
       },
       "pastParticiple": {
-        "verb": "Our mother yelled at us for being late. && They yelled at each other in front of everyone.",
-        "phonetic": "yelled",
+        "verb": "yelled",
+        "phonetic": "/jeld/",
         "examples": [
-          "/jeld/"
+          "I thought to myself wow, my own father would have yelled or hit me and told me to quit being a cry baby.",
+          "The suspected gunman, is said to have yelled “All  must die”."
         ]
       },
       "ing": {
-        "verb": "I thought to myself wow, my own father would have yelled or hit me and told me to quit being a cry baby. && The suspected gunman, is said to have yelled “All  must die”.",
-        "phonetic": "yelling",
+        "verb": "yelling",
+        "phonetic": "/ˈjelɪŋ/",
         "examples": [
-          "/ˈjelɪŋ/"
+          "But, if you have asthma, crying, yelling, or laughing hard can trigger asthma symptoms.",
+          "Antonio rushed to their car window, yelling, ordering the man to stop."
         ]
       },
-      "emojiCode": "openmoji_but, if you have asthma, crying, yelling, or laughing hard can trigger asthma symptoms. && antonio rushed to their car window, yelling, ordering the man to stop."
+      "emojiCode": "openmoji_1f5ef"
     }
   ],
   "countries": [
