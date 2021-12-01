@@ -59,15 +59,15 @@ fun Router(
         startDestination = defaultRoute
     ) {
         composable(
-            route = "${Routes.Verbs.name}/{type}/{verb}/{form}",
+            route = "${Routes.Verbs.name}/{type}/{verb_id}/{form}",
             arguments = listOf(
                 navArgument("type") { type = NavType.StringType },
-                navArgument("verb") { type = NavType.StringType },
+                navArgument("verb_id") { type = NavType.StringType },
                 navArgument("form") { type = NavType.StringType },
             )
         ) { navBackStackEntry ->
-            var verbBaseFormArg by rememberSaveable {
-                mutableStateOf(navBackStackEntry.arguments?.getString("verb") ?: "")
+            var verbIdArg by rememberSaveable {
+                mutableStateOf(navBackStackEntry.arguments?.getString("verb_id") ?: "")
             }
 
             val type = navBackStackEntry.arguments?.getString("type") ?: ""
@@ -79,18 +79,18 @@ fun Router(
                 else -> Pair("Verbs", listOf())
             }
 
-            val currentVerb = verbs.second.firstOrNull { it.base.verb == verbBaseFormArg }
+            val currentVerb = verbs.second.firstOrNull { it.id == verbIdArg }
 
             if (currentVerb != null) {
-                val indexCurrent = verbs.second.indexOfFirst { it.base.verb == verbBaseFormArg }
+                val indexCurrent = verbs.second.indexOfFirst { it.id == verbIdArg }
                 VerbContentView(
                     verb = currentVerb,
                     selectedForm = form,
                     onNext = {
-                        verbBaseFormArg = verbs.second.getOrElse(indexCurrent + 1) { verbs.second[indexCurrent] }.base.verb
+                        verbIdArg = verbs.second.getOrElse(indexCurrent + 1) { verbs.second[indexCurrent] }.id
                     },
                     onPrevious = {
-                        verbBaseFormArg = verbs.second.getOrElse(indexCurrent - 1) { verbs.second[indexCurrent] }.base.verb
+                        verbIdArg = verbs.second.getOrElse(indexCurrent - 1) { verbs.second[indexCurrent] }.id
                     },
                     onOpenLink = { term ->
                         onOpenLink(term)
@@ -100,15 +100,7 @@ fun Router(
                                 "regular" -> Routes.VerbsRegular.name
                                 "irregular" -> Routes.VerbsIrregular.name
                                 else -> Routes.VerbsRegular.name }
-                            }/example/${form}/${
-                                when(form) {
-                                    VerbData.BaseForm.name -> currentVerb.base.verb
-                                    VerbData.PastForm.name -> currentVerb.simplePast.verb
-                                    VerbData.PastParticipleForm.name -> currentVerb.pastParticiple.verb
-                                    VerbData.IngForm.name -> currentVerb.ing.verb
-                                    else -> currentVerb.base.verb
-                                }
-                            }"
+                            }/example/${form}/${currentVerb.id}"
                         )
                     },
                     onListen = { onListenClick(it) },
@@ -138,10 +130,10 @@ fun Router(
                 onClickVerb = { verb ->
                     when (navBackStackEntry.arguments?.getString("type") ?: "") {
                         "regular" -> navController.navigate(
-                            "${Routes.VerbsRegular.name}/${verb.base.verb}/${VerbData.BaseForm.name}"
+                            "${Routes.VerbsRegular.name}/${verb.id}/${VerbData.BaseForm.name}"
                         )
                         "irregular" -> navController.navigate(
-                            "${Routes.VerbsIrregular.name}/${verb.base.verb}/${VerbData.BaseForm.name}"
+                            "${Routes.VerbsIrregular.name}/${verb.id}/${VerbData.BaseForm.name}"
                         )
                         else -> Unit
                     }
@@ -151,15 +143,15 @@ fun Router(
         }
 
         composable(
-            route = "${Routes.Verbs.name}/{type}/example/{form}/{verb}",
+            route = "${Routes.Verbs.name}/{type}/example/{form}/{verb_id}",
             arguments = listOf(
                 navArgument("type") { type = NavType.StringType },
                 navArgument("form") { type = NavType.StringType },
-                navArgument("verb") { type = NavType.StringType }
+                navArgument("verb_id") { type = NavType.StringType }
             )
         ) { navBackStackEntry ->
             val verbType = navBackStackEntry.arguments?.getString("type") ?: ""
-            val verbArg = navBackStackEntry.arguments?.getString("verb") ?: ""
+            val verbIdArg = navBackStackEntry.arguments?.getString("verb_id") ?: ""
             val form = navBackStackEntry.arguments?.getString("form") ?: ""
 
             var verbIndex by rememberSaveable { mutableStateOf(0) }
@@ -171,13 +163,7 @@ fun Router(
             }
 
             val verbByForm = verbs.firstOrNull() {
-                when(form) {
-                    VerbData.BaseForm.name -> it.base.verb == verbArg
-                    VerbData.PastForm.name -> it.simplePast.verb == verbArg
-                    VerbData.PastParticipleForm.name -> it.pastParticiple.verb == verbArg
-                    VerbData.IngForm.name -> it.ing.verb == verbArg
-                    else -> it.base.verb == verbArg
-                }
+                it.id == verbIdArg
             }
 
             val examplesByForm = when(form) {
@@ -188,11 +174,19 @@ fun Router(
                 else -> verbByForm?.base?.examples
             } ?: listOf()
 
+            val verbNameByForm = when(form) {
+                VerbData.BaseForm.name -> verbByForm?.base?.verb
+                VerbData.PastForm.name -> verbByForm?.simplePast?.verb
+                VerbData.PastParticipleForm.name -> verbByForm?.pastParticiple?.verb
+                VerbData.IngForm.name -> verbByForm?.ing?.verb
+                else -> verbByForm?.base?.verb
+            } ?: ""
+
             if (examplesByForm.isNotEmpty()) {
                 val hideNext = verbIndex >= examplesByForm.lastIndex
                 val hidePrevious = verbIndex == 0
                 SimpleExamplesView(
-                    title = verbArg,
+                    title = verbNameByForm,
                     example = examplesByForm[verbIndex],
                     onBackClick = { navController.navigateUp() },
                     hideNext = hideNext,
