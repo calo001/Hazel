@@ -1,5 +1,6 @@
 package com.github.calo001.hazel.ui.colors
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -26,6 +27,7 @@ import com.github.calo001.hazel.ui.common.safeSpacer
 import com.github.calo001.hazel.ui.theme.HazelTheme
 import com.github.calo001.hazel.util.parse
 
+@ExperimentalFoundationApi
 @ExperimentalComposeUiApi
 @Composable
 fun ColorsView(
@@ -50,7 +52,10 @@ fun ColorsView(
             } else {
                 colorHazels
             }
-            items(items.size) { index ->
+            items(
+                count = items.size,
+                key = { index -> items[index].id }
+            ) { index ->
                 ItemColor(
                     colorHazel = items[index],
                     modifier = Modifier
@@ -58,6 +63,7 @@ fun ColorsView(
                         .padding(vertical = 24.dp)
                         .padding(horizontal = 16.dp)
                         .fillMaxWidth()
+                        .animateItemPlacement()
                 )
             }
         }

@@ -1,5 +1,6 @@
 package com.github.calo001.hazel.ui.verbs
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -21,6 +22,7 @@ import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.common.safeSpacer
 import com.github.calo001.hazel.util.PainterIdentifier
 
+@ExperimentalFoundationApi
 @ExperimentalComposeUiApi
 @Composable
 fun VerbsView(
@@ -44,7 +46,10 @@ fun VerbsView(
             } else {
                 verbs
             }
-            items(items.size) { index ->
+            items(
+                count = items.size,
+                key = { index -> items[index].id }
+            ) { index ->
                 val painter = painterIdentifier.getPainter(identifier = items[index].emojiCode)
                 TextImageRow(
                     text = items[index].base.verb,
@@ -54,6 +59,7 @@ fun VerbsView(
                         .padding(vertical = 18.dp)
                         .padding(horizontal = 16.dp)
                         .fillMaxWidth()
+                        .animateItemPlacement()
                 )
             }
         }

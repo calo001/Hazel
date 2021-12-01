@@ -1,6 +1,7 @@
 package com.github.calo001.hazel.ui.main
 
 import androidx.compose.animation.*
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -33,6 +34,7 @@ import com.github.calo001.hazel.ui.common.*
 import com.github.calo001.hazel.util.PainterIdentifier
 import com.github.calo001.hazel.ui.theme.Lato
 
+@ExperimentalFoundationApi
 @ExperimentalAnimationApi
 @ExperimentalComposeUiApi
 @ExperimentalMaterialApi
@@ -156,7 +158,7 @@ fun MainMenu(
             itemsPerColumns = itemsPerColumns,
             items = usefulPhraseCategory.map { usefulPhrases ->
                 ItemMenuData(
-                    id = usefulPhrases.category,
+                    id = usefulPhrases.id,
                     name = usefulPhrases.category,
                     iconName = usefulPhrases.emojiCode
                 ) },
@@ -216,6 +218,7 @@ fun MainMenu(
     }
 }
 
+@ExperimentalFoundationApi
 @Composable
 fun SearchResults(
     querySearch: String,
@@ -256,7 +259,10 @@ fun SearchResults(
         is SearchStatus.Success -> {
             LazyColumn{
                 item { Spacer(modifier = Modifier.height(180.dp)) }
-                items(searchStatus.result.size) { index ->
+                items(
+                    count = searchStatus.result.size,
+                    key = { index -> searchStatus.result[index].route }
+                ) { index ->
                     Surface(
                         shape = MaterialTheme.shapes.medium,
                         color = MaterialTheme.colors.background.copy(alpha = 0.8f),
@@ -264,6 +270,7 @@ fun SearchResults(
                             .fillMaxWidth()
                             .padding(horizontal = 24.dp)
                             .padding(vertical = 2.dp)
+                            .animateItemPlacement()
                     ) {
                         SearchItem(
                             searchResult = searchStatus.result[index],

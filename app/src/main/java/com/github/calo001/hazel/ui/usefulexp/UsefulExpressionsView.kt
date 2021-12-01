@@ -1,5 +1,6 @@
 package com.github.calo001.hazel.ui.usefulexp
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -19,6 +20,7 @@ import com.github.calo001.hazel.ui.common.HazelToolbarContent
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.common.safeSpacer
 
+@ExperimentalFoundationApi
 @ExperimentalComposeUiApi
 @Composable
 fun UsefulExpressionsView(
@@ -28,7 +30,9 @@ fun UsefulExpressionsView(
 ) {
     var querySearch by rememberSaveable { mutableStateOf("") }
     Box {
-        LazyColumn {
+        LazyColumn(
+            modifier = Modifier
+        ) {
             safeSpacer(extraSpace = 100.dp)
 
             val items = if (querySearch.isNotEmpty()) {
@@ -38,7 +42,12 @@ fun UsefulExpressionsView(
             } else {
                 usefulPhrase.phrases
             }
-            items(items.size) { index ->
+            items(
+                count = items.size,
+                key = { index ->
+                    items[index].id
+                }
+            ) { index ->
                 Text(
                     text = items[index].expression,
                     style = MaterialTheme.typography.h6,
@@ -47,6 +56,7 @@ fun UsefulExpressionsView(
                         .padding(vertical = 24.dp)
                         .padding(horizontal = 16.dp)
                         .fillMaxWidth()
+                        .animateItemPlacement()
                 )
             }
         }

@@ -1,5 +1,6 @@
 package com.github.calo001.hazel.ui.animals
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -24,6 +25,7 @@ import com.github.calo001.hazel.ui.common.safeSpacer
 import com.github.calo001.hazel.ui.theme.Lato
 import com.github.calo001.hazel.util.PainterIdentifier
 
+@ExperimentalFoundationApi
 @ExperimentalComposeUiApi
 @Composable
 fun AnimalsView(
@@ -46,7 +48,10 @@ fun AnimalsView(
             } else {
                 animals
             }
-            items(items.size) { index ->
+            items(
+                count = items.size,
+                key = { index -> items[index] }
+                ) { index ->
                 val painter = painterIdentifier.getPainter(identifier = items[index].emojiCode)
                 TextImageRow(
                     text = items[index].name,
@@ -56,6 +61,7 @@ fun AnimalsView(
                         .padding(vertical = 18.dp)
                         .padding(horizontal = 16.dp)
                         .fillMaxWidth()
+                        .animateItemPlacement()
                 )
             }
         }

@@ -1,6 +1,7 @@
 package com.github.calo001.hazel.ui.main
 
 import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
@@ -16,6 +17,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.config.DarkMode
+import com.github.calo001.hazel.model.hazeldb.Phrase
 import com.github.calo001.hazel.routes.Routes
 import com.github.calo001.hazel.ui.animals.AnimalContentView
 import com.github.calo001.hazel.ui.animals.AnimalsView
@@ -34,6 +36,7 @@ import com.github.calo001.hazel.ui.verbs.VerbData
 import com.github.calo001.hazel.ui.verbs.VerbsView
 import com.github.calo001.hazel.util.PainterIdentifier
 
+@ExperimentalFoundationApi
 @ExperimentalAnimationApi
 @ExperimentalComposeUiApi
 @ExperimentalMaterialApi
@@ -452,18 +455,18 @@ fun Router(
         }
 
         composable(
-            route = "useful_expressions/{category}",
-            arguments = listOf(navArgument("category") {
+            route = "${Routes.UsefulExpressions.name}/{category_id}",
+            arguments = listOf(navArgument("category_id") {
                 type = NavType.StringType
             })
         ) { navBackStackEntry ->
-            val typeOfUsefulExp = navBackStackEntry.arguments?.getString("category") ?: ""
+            val categoryId = navBackStackEntry.arguments?.getString("category_id") ?: ""
 
             Surface(
                 color = MaterialTheme.colors.background,
                 modifier = Modifier.fillMaxSize()
             ) {
-                viewModel.getUsefulExpressionCategory(typeOfUsefulExp)?.let { phrases ->
+                viewModel.getUsefulExpressionCategoryId(categoryId)?.let { phrases ->
                     UsefulExpressionsView(
                         usefulPhrase = phrases,
                         onBackClick = {
@@ -471,7 +474,7 @@ fun Router(
                         },
                         onClickPhrase = { phrase ->
                             navController.navigate(
-                                "${Routes.UsefulExpressionsPhrase.name}/${phrases.category}/${phrase.expression}"
+                                "${Routes.UsefulExpressionsPhrase.name}/${categoryId}/${phrase.id}"
                             )
                         }
                     )
@@ -480,46 +483,44 @@ fun Router(
         }
 
         composable(
-            route = "${Routes.UsefulExpressionsPhrase.name}/{category}/{phrase}",
+            route = "${Routes.UsefulExpressionsPhrase.name}/{category_id}/{phrase_id}",
             arguments = listOf(
-                navArgument("category") { type = NavType.StringType },
-                navArgument("phrase") { type = NavType.StringType }
+                navArgument("category_id") { type = NavType.StringType },
+                navArgument("phrase_id") { type = NavType.StringType }
             )
         ) { navBackStackEntry ->
-            var phraseArg by rememberSaveable {
-                mutableStateOf(navBackStackEntry.arguments?.getString("phrase") ?: "")
+            var phraseIdArg by rememberSaveable {
+                mutableStateOf(navBackStackEntry.arguments?.getString("phrase_id") ?: "")
             }
-            val categoryArg = navBackStackEntry.arguments?.getString("category") ?: ""
+            val categoryIdArg = navBackStackEntry.arguments?.getString("category_id") ?: ""
 
-            if (phraseArg.isNotEmpty()) {
-                viewModel.getUsefulExpressionCategory(categoryArg)?.let { usefulPhrases ->
-                    val currentIndex = usefulPhrases.phrases.indexOfFirst { it.expression .contains(phraseArg) }
+            if (phraseIdArg.isNotEmpty()) {
+                viewModel.getUsefulExpressionCategoryId(categoryIdArg)?.let { usefulPhrases ->
+                    val currentIndex = usefulPhrases.phrases.indexOfFirst { it.id == phraseIdArg }
                     val hideNext = usefulPhrases.phrases.lastIndex <= currentIndex
                     val hidePrevious = currentIndex == 0
-                    val currentPhrase = usefulPhrases.phrases.find { it.expression.contains(phraseArg) }
+                    val currentPhrase = usefulPhrases.phrases.getOrElse(currentIndex) { Phrase.empty }
 
                     PhraseView(
                         currentPhrase = currentPhrase,
                         hideNext = hideNext,
                         hidePrevious = hidePrevious,
                         onNextClick = {
-                            val index = usefulPhrases.phrases.indexOfFirst { it.expression .contains(phraseArg) }
-                            if (index != -1) {
-                                phraseArg = usefulPhrases.phrases.getOrElse(index + 1) {
-                                    usefulPhrases.phrases[index]
-                                }.expression
+                            if (currentIndex != -1) {
+                                phraseIdArg = usefulPhrases.phrases.getOrElse(currentIndex + 1) {
+                                    usefulPhrases.phrases[currentIndex]
+                                }.id
                             }
                         },
                         onPreviousClick = {
-                            val index = usefulPhrases.phrases.indexOfFirst { it.expression.contains(phraseArg) }
-                            if (index != -1) {
-                                phraseArg = usefulPhrases.phrases.getOrElse(index - 1) {
-                                    usefulPhrases.phrases[index]
-                                }.expression
+                            if (currentIndex != -1) {
+                                phraseIdArg = usefulPhrases.phrases.getOrElse(currentIndex - 1) {
+                                    usefulPhrases.phrases[currentIndex]
+                                }.id
                             }
                         },
                         onListenClick = {
-                            onListenClick(currentPhrase?.expression ?: "")
+                            onListenClick(currentPhrase.expression)
                         },
                         onNavigate = {
                             navController.navigateUp()

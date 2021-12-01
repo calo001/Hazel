@@ -56,12 +56,12 @@ class MainViewModel : ViewModel() {
         }
     }
 
-    fun getUsefulExpressionCategory(typeOfUsefulExp: String): UsefulPhrase? {
+    fun getUsefulExpressionCategoryId(categoryId: String): UsefulPhrase? {
         return (hazelContent.value as? HazelContentStatus.Success)
             ?.content
             ?.usefulPhrases
             ?.find { ufContent ->
-                ufContent.category == typeOfUsefulExp
+                ufContent.id == categoryId
             }
     }
 
