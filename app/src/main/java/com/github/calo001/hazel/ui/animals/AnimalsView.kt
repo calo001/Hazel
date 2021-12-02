@@ -50,7 +50,7 @@ fun AnimalsView(
             }
             items(
                 count = items.size,
-                key = { index -> items[index] }
+                key = { index -> items[index].id }
                 ) { index ->
                 val painter = painterIdentifier.getPainter(identifier = items[index].emojiCode)
                 TextImageRow(

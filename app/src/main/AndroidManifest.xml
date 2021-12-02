@@ -15,7 +15,7 @@
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Hazel.NoActionBar"
-            android:screenOrientation="portrait"
+
             android:launchMode="singleInstance"
             >
             <intent-filter>

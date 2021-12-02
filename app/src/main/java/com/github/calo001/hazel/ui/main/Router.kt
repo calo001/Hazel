@@ -275,7 +275,7 @@ fun Router(
                 painterIdentifier = painterIdentifier,
                 onClickAnimal = { animal ->
                     navController.navigate(
-                    "${Routes.Animals.name}/${animal.name}"
+                    "${Routes.Animals.name}/${animal.id}"
                     )
                 },
                 onBackClick = {

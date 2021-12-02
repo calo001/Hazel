@@ -1,21 +1,21 @@
 package com.github.calo001.hazel.ui.main
 
 import androidx.compose.animation.*
-import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.AnnotatedString
@@ -23,14 +23,19 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
+import androidx.constraintlayout.compose.ConstraintLayout
 import com.github.calo001.hazel.R
+import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.model.hazeldb.HazelContent
 import com.github.calo001.hazel.model.view.ItemMenuData
 import com.github.calo001.hazel.routes.Routes
 import com.github.calo001.hazel.ui.common.*
+import com.github.calo001.hazel.ui.theme.HazelTheme
 import com.github.calo001.hazel.util.PainterIdentifier
 import com.github.calo001.hazel.ui.theme.Lato
 
@@ -152,8 +157,18 @@ fun MainMenu(
     ) {
         safeSpacer(20.dp)
 
+        headerSection(
+            onClickTime = {}
+        )
+
+        bigSection(
+            title = "The weather",
+            shapeLabel = "10º",
+            onClick = {}
+        )
+
         val usefulPhraseCategory = hazelContent.usefulPhrases
-        SectionMenu(
+        sectionMenu(
             title = "Useful phrases",
             itemsPerColumns = itemsPerColumns,
             items = usefulPhraseCategory.map { usefulPhrases ->
@@ -200,10 +215,16 @@ fun MainMenu(
                 iconName = "openmoji_1f638"
             )
 
-        SectionMenu(
+        val seasons = ItemMenuData(
+                id = Routes.Seasons.name,
+                name = Routes.Seasons.label,
+                iconName = "openmoji_1f638"
+            )
+
+        sectionMenu(
             title = "Basic vocabulary",
             itemsPerColumns = itemsPerColumns,
-            items = listOf(regularVerb, irregularVerbs, colors, animals, countries),
+            items = listOf(regularVerb, irregularVerbs, colors, animals, countries, seasons),
             painterIdentifier = painterIdentifier,
             onClick = { id ->
                 when (id) {
@@ -212,9 +233,70 @@ fun MainMenu(
                     Routes.VerbsRegular.name -> onNavigate(Routes.VerbsRegular.name)
                     Routes.VerbsIrregular.name -> onNavigate(Routes.VerbsIrregular.name)
                     Routes.Animals.name -> onNavigate(Routes.Animals.name)
+                    Routes.Seasons.name -> onNavigate(Routes.Seasons.name)
                 }
             }
         )
+    }
+}
+
+@ExperimentalMaterialApi
+fun LazyListScope.bigSection(
+    title: String,
+    shapeLabel: String,
+    onClick: () -> Unit,
+) {
+    item {
+        Spacer(modifier = Modifier.size(16.dp))
+    }
+    item {
+        BigCard(
+            title = title,
+            shapeLabel = shapeLabel,
+            image = painterResource(R.drawable.openmoji_1f9ed),
+            onClick = onClick
+        )
+    }
+    item {
+        Spacer(modifier = Modifier.size(16.dp))
+    }
+}
+
+@ExperimentalMaterialApi
+fun LazyListScope.headerSection(
+    onClickTime: () -> Unit
+) {
+    item {
+        Row(
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Column(
+                verticalArrangement = Arrangement.Center,
+            ) {
+                Text(
+                    text = "Good morning",
+                    style = MaterialTheme.typography.h6.copy(
+                        fontFamily = Lato
+                    ),
+                    modifier = Modifier
+                )
+                Text(
+                    text = "Your name",
+                    style = MaterialTheme.typography.h4,
+                    modifier = Modifier
+                )
+            }
+            ItemMenu(
+                title = " 12:12 PM ",
+                titleStyle = MaterialTheme.typography.h5,
+                spaceText = "",
+                image = painterResource(id = R.drawable.openmoji_1f9ed),
+                onClick = onClickTime,
+                modifier = Modifier
+            )
+        }
     }
 }
 
@@ -338,7 +420,7 @@ private fun SearchItem(
 }
 
 @ExperimentalMaterialApi
-fun LazyListScope.SectionMenu(
+fun LazyListScope.sectionMenu(
     title: String,
     items: List<ItemMenuData>,
     itemsPerColumns: Int,

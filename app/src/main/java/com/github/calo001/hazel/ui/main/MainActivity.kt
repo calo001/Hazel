@@ -14,6 +14,7 @@ import com.github.calo001.hazel.util.PainterIdentifier
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.isSystemInDarkTheme
 import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.platform.DataStoreProvider
@@ -29,6 +30,7 @@ import kotlinx.coroutines.launch
 class MainActivity : ComponentActivity() {
     private val viewModel: MainViewModel by viewModels()
 
+    @ExperimentalFoundationApi
     @ExperimentalAnimationApi
     @ExperimentalComposeUiApi
     @ExperimentalMaterialApi
