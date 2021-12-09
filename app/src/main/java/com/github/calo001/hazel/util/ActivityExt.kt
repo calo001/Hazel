@@ -1,10 +1,15 @@
 package com.github.calo001.hazel.util
 
+import android.Manifest
 import android.app.Activity
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
+import android.os.Build
 import android.speech.tts.TextToSpeech
 import android.util.Log
+import androidx.core.app.ActivityCompat
+import com.orhanobut.logger.Logger
 import java.util.*
 
 fun Activity.openMaps(link: String) {
@@ -40,4 +45,8 @@ fun Activity.speak(text: String) {
 fun Activity.speakOut(text: String, textToSpeech: TextToSpeech) {
     val utteranceId = this.hashCode().toString() + ""
     textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, utteranceId)
+}
+
+fun Activity.checkPermission(permissionName: String): Boolean {
+    return ActivityCompat.checkSelfPermission(this, permissionName) == PackageManager.PERMISSION_GRANTED
 }

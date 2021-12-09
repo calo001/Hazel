@@ -30,3 +30,11 @@ fun Context.browse(url: String, newTask: Boolean = false) {
         e.printStackTrace()
     }
 }
+
+fun String?.isNullOrEmptyElse(value: String): String {
+    return if (this == null) value else if (this.isEmpty()) value else this
+}
+
+fun Boolean.isTrue(run: () -> Unit) {
+    if (this) run()
+}

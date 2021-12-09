@@ -6,8 +6,10 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.LocationDisabled
+import androidx.compose.material.icons.filled.LocationOff
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
@@ -15,7 +17,6 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.AnnotatedString
@@ -23,21 +24,20 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
-import androidx.constraintlayout.compose.ConstraintLayout
 import com.github.calo001.hazel.R
-import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.model.hazeldb.HazelContent
 import com.github.calo001.hazel.model.view.ItemMenuData
 import com.github.calo001.hazel.routes.Routes
+import com.github.calo001.hazel.huawei.WeatherStatus
+import com.github.calo001.hazel.huawei.WeatherType
 import com.github.calo001.hazel.ui.common.*
-import com.github.calo001.hazel.ui.theme.HazelTheme
 import com.github.calo001.hazel.util.PainterIdentifier
 import com.github.calo001.hazel.ui.theme.Lato
+import com.google.accompanist.permissions.*
+
 
 @ExperimentalFoundationApi
 @ExperimentalAnimationApi
@@ -53,6 +53,8 @@ fun MainScreen(
     onSearchQuery: (String) -> Unit,
     darkMode: DarkMode,
     onDarkModeChange: (DarkMode) -> Unit,
+    temperature: WeatherStatus,
+    onCheckWeather: () -> Unit,
 ) {
     var querySearch by rememberSaveable { mutableStateOf("") }
 
@@ -75,8 +77,10 @@ fun MainScreen(
             is HazelContentStatus.Success -> {
                 MainMenu(
                     hazelContent = status.content,
+                    temperature = temperature,
                     painterIdentifier = painterIdentifier,
                     onNavigate = onNavigate,
+                    onCheckWeather = onCheckWeather,
                 )
             }
         }
@@ -138,12 +142,16 @@ fun MainScreen(
 
 }
 
+
+@OptIn(ExperimentalPermissionsApi::class)
 @ExperimentalMaterialApi
 @Composable
 fun MainMenu(
     hazelContent: HazelContent,
     painterIdentifier: PainterIdentifier,
     onNavigate: (String) -> Unit,
+    temperature: WeatherStatus,
+    onCheckWeather: () -> Unit,
 ) {
     val itemsPerColumns = calculateItemsPerColumn(
         LocalConfiguration.current.screenWidthDp.dp
@@ -163,8 +171,9 @@ fun MainMenu(
 
         bigSection(
             title = "The weather",
-            shapeLabel = "10º",
-            onClick = {}
+            temperature = temperature,
+            onCheckWeather = onCheckWeather,
+            onClick = {  },
         )
 
         val usefulPhraseCategory = hazelContent.usefulPhrases
@@ -240,25 +249,114 @@ fun MainMenu(
     }
 }
 
+
+@ExperimentalPermissionsApi
 @ExperimentalMaterialApi
 fun LazyListScope.bigSection(
     title: String,
-    shapeLabel: String,
+    temperature: WeatherStatus,
     onClick: () -> Unit,
+    onCheckWeather: () -> Unit,
 ) {
     item {
         Spacer(modifier = Modifier.size(16.dp))
     }
     item {
+        val imageLogoIds = getLogosId(temperature)
         BigCard(
             title = title,
-            shapeLabel = shapeLabel,
-            image = painterResource(R.drawable.openmoji_1f9ed),
+            shapeLabel = {
+                WeatherLogo(
+                    temperature = temperature,
+                    onCheckWeather = onCheckWeather
+                )
+            },
+            imageContent = {
+                Box(modifier = Modifier
+                    .size(60.dp)
+                    .rotate(45f)) {
+                    imageLogoIds.forEachIndexed { index, id ->
+                        Image(
+                            painter = painterResource(id = imageLogoIds[index]),
+                            contentDescription = null,
+                            modifier = Modifier
+                                .size(if(imageLogoIds.size == 1) 60.dp else 50.dp)
+                                .align(if (index % 2 == 0) Alignment.TopStart else Alignment.BottomEnd)
+                        )
+                    }
+                }
+            },
             onClick = onClick
         )
     }
     item {
         Spacer(modifier = Modifier.size(16.dp))
+    }
+}
+
+fun getLogosId(temperature: WeatherStatus): List<Int> = when(temperature) {
+    WeatherStatus.Error -> listOf(R.drawable.openmoji_1f325)
+    WeatherStatus.Loading -> listOf(R.drawable.openmoji_1f325)
+    WeatherStatus.LocationFailure -> listOf(R.drawable.openmoji_1f325)
+    WeatherStatus.LocationNotGranted -> listOf(R.drawable.openmoji_1f325)
+    is WeatherStatus.Success -> WeatherType.getIdRes(temperature.typeWeather)
+}
+
+@Composable
+private fun WeatherLogo(
+    temperature: WeatherStatus,
+    onCheckWeather: () -> Unit
+) {
+    AnimatedVisibility(visible = temperature is WeatherStatus.LocationFailure) {
+        HazelToolbarButton(
+            icon = Icons.Filled.LocationOff,
+            onClick = onCheckWeather,
+            background = MaterialTheme.colors.primary,
+            modifier = Modifier
+                .size(52.dp)
+                .rotate(22f)
+        )
+    }
+    AnimatedVisibility(visible = temperature is WeatherStatus.LocationNotGranted) {
+        HazelToolbarButton(
+            icon = Icons.Filled.LocationOff,
+            onClick = onCheckWeather,
+            background = MaterialTheme.colors.primary,
+            modifier = Modifier
+                .size(52.dp)
+                .rotate(22f)
+        )
+    }
+    AnimatedVisibility(visible = temperature is WeatherStatus.Error) {
+        HazelToolbarButton(
+            icon = Icons.Filled.LocationDisabled,
+            onClick = onCheckWeather,
+            background = MaterialTheme.colors.primary,
+            modifier = Modifier
+                .size(52.dp)
+                .rotate(22f)
+        )
+    }
+    AnimatedVisibility(visible = temperature is WeatherStatus.Loading) {
+        CircularProgressIndicator(
+            color = MaterialTheme.colors.onBackground,
+            modifier = Modifier
+                .size(52.dp)
+                .padding(8.dp)
+        )
+    }
+    AnimatedVisibility(visible = temperature is WeatherStatus.Success) {
+        Text(
+            text = "${
+                (temperature as? WeatherStatus.Success)
+                    ?.temperature
+                    ?: ""
+            }º",
+            color = MaterialTheme.colors.onBackground,
+            style = MaterialTheme.typography.h4,
+            modifier = Modifier
+                .rotate(45f)
+        )
     }
 }
 

@@ -7,6 +7,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 
@@ -17,6 +18,7 @@ fun HazelToolbarButton(
     icon: ImageVector,
     onClick: () -> Unit,
     enabled: Boolean = true,
+    background: Color = MaterialTheme.colors.primaryVariant
 ) {
     Box(modifier = modifier) {
         IconButton(
@@ -24,7 +26,7 @@ fun HazelToolbarButton(
             enabled = enabled,
             modifier = modifier
                 .background(
-                    color = MaterialTheme.colors.primaryVariant,
+                    color = background,
                     shape = CircleShape
                 )
                 .size(48.dp)

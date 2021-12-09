@@ -1,9 +1,12 @@
 package com.github.calo001.hazel.ui.widget
 
 import android.content.Context
-import android.graphics.Bitmap
 import android.util.Log
+import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.*
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.TextUnit
@@ -26,6 +29,7 @@ import com.github.calo001.hazel.model.widget.HazelSimpleItem
 import com.github.calo001.hazel.model.widget.getSimpleItemList
 import com.github.calo001.hazel.routes.Routes
 import com.github.calo001.hazel.util.*
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import java.io.ByteArrayOutputStream
@@ -33,10 +37,20 @@ import java.io.IOException
 
 const val WIDGET_ACTION_SECTION = "widget_type"
 
+
+@ExperimentalMaterialApi
+@ExperimentalComposeUiApi
+@ExperimentalAnimationApi
+@ExperimentalFoundationApi
 class HazelWidgetReceiver : GlanceAppWidgetReceiver() {
     override val glanceAppWidget: GlanceAppWidget = HazelWidget()
 }
 
+
+@ExperimentalFoundationApi
+@ExperimentalAnimationApi
+@ExperimentalComposeUiApi
+@ExperimentalMaterialApi
 class HazelWidget: GlanceAppWidget() {
     companion object {
         private val SMALL_SQUARE = DpSize(100.dp, 100.dp)
@@ -162,16 +176,14 @@ class HazelWidget: GlanceAppWidget() {
                     )
                 }
             }
-
-//            Button(text = "Change", onClick = actionRunCallback<MyCallback>(
-//                    actionParametersOf(
-//                        ActionParameters.Key<Int>(WIDGET_ACTION_SECTION) to WIDGET_ANIMALS_SECTION
-//                    )
-//                )
-//            )
         }
     }
 
+
+    @ExperimentalMaterialApi
+    @ExperimentalComposeUiApi
+    @ExperimentalAnimationApi
+    @ExperimentalFoundationApi
     @Composable
     private fun HeaderHazelWidget() {
         Box {
@@ -209,6 +221,11 @@ class HazelWidget: GlanceAppWidget() {
                         .fillMaxWidth()
                         .padding(vertical = 4.dp)
                         .padding(horizontal = 16.dp)
+                        .clickable(actionLaunchActivity<MainActivity>(
+                            actionParametersOf(
+                                ActionParameters.Key<String>(WIDGET_ACTION_SECTION) to hazelContent[index].route
+                            )
+                        ))
                 ) {
                     Image(
                         provider = ImageProvider(R.drawable.widget_item_background),
@@ -289,6 +306,11 @@ class HazelWidget: GlanceAppWidget() {
 
 }
 
+
+@ExperimentalMaterialApi
+@ExperimentalComposeUiApi
+@ExperimentalAnimationApi
+@ExperimentalFoundationApi
 class ChangeSectionCallback : ActionCallback {
     override suspend fun onRun(context: Context, glanceId: GlanceId, parameters: ActionParameters) {
         val preferences = context.hazelAppPreferences

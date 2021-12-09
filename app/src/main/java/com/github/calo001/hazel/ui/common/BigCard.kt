@@ -23,8 +23,8 @@ import com.github.calo001.hazel.ui.theme.HazelTheme
 @Composable
 fun BigCard(
     title: String,
-    shapeLabel: String,
-    image: Painter,
+    shapeLabel: @Composable () -> Unit,
+    imageContent: @Composable () -> Unit,
     onClick: () -> Unit,
 ) {
     Card(
@@ -53,7 +53,7 @@ fun BigCard(
             )
             RoundedRotated(
                 shapeLabel = shapeLabel,
-                image = image,
+                imageContent = imageContent,
                 modifier = Modifier
                     .fillMaxHeight(0.7f)
                     .offset {
@@ -76,8 +76,8 @@ fun BigCardPreview() {
     HazelTheme(colorVariant = ColorVariant.Green) {
         BigCard(
             "The weather",
-            "10º",
-            painterResource(id = R.drawable.openmoji_e103)
+            { Text(text = "10º") },
+            {},
         ) {}
     }
 }

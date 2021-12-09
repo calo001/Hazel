@@ -1,5 +1,6 @@
 package com.github.calo001.hazel.ui.main
 
+import android.annotation.SuppressLint
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.fillMaxSize
@@ -19,6 +20,8 @@ import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.model.hazeldb.Phrase
 import com.github.calo001.hazel.routes.Routes
+import com.github.calo001.hazel.huawei.WeatherHelper
+import com.github.calo001.hazel.huawei.WeatherStatus
 import com.github.calo001.hazel.ui.animals.AnimalContentView
 import com.github.calo001.hazel.ui.animals.AnimalsView
 import com.github.calo001.hazel.ui.colors.SimpleExamplesView
@@ -35,6 +38,8 @@ import com.github.calo001.hazel.ui.verbs.VerbContentView
 import com.github.calo001.hazel.ui.verbs.VerbData
 import com.github.calo001.hazel.ui.verbs.VerbsView
 import com.github.calo001.hazel.util.PainterIdentifier
+
+@SuppressLint("MissingPermission")
 
 @ExperimentalFoundationApi
 @ExperimentalAnimationApi
@@ -56,6 +61,8 @@ fun Router(
     colorScheme: ColorVariant,
     dictionary: Dictionaries,
     defaultRoute: String,
+    weatherStatus: WeatherStatus,
+    onRequestWeather: () -> Unit,
 ) {
     NavHost(
         navController = navController,
@@ -77,23 +84,23 @@ fun Router(
             val form = navBackStackEntry.arguments?.getString("form") ?: VerbData.BaseForm.name
 
             val verbs = when (type) {
-                "regular" -> Pair("Regular verbs", viewModel.getRegularVerbs())
-                "irregular" -> Pair("Irregular verbs", viewModel.getIrregularVerbs())
-                else -> Pair("Verbs", listOf())
+                "regular" -> viewModel.getRegularVerbs()
+                "irregular" -> viewModel.getIrregularVerbs()
+                else -> listOf()
             }
 
-            val currentVerb = verbs.second.firstOrNull { it.id == verbIdArg }
+            val currentVerb = verbs.firstOrNull { it.id == verbIdArg }
 
             if (currentVerb != null) {
-                val indexCurrent = verbs.second.indexOfFirst { it.id == verbIdArg }
+                val indexCurrent = verbs.indexOfFirst { it.id == verbIdArg }
                 VerbContentView(
                     verb = currentVerb,
                     selectedForm = form,
                     onNext = {
-                        verbIdArg = verbs.second.getOrElse(indexCurrent + 1) { verbs.second[indexCurrent] }.id
+                        verbIdArg = verbs.getOrElse(indexCurrent + 1) { verbs[indexCurrent] }.id
                     },
                     onPrevious = {
-                        verbIdArg = verbs.second.getOrElse(indexCurrent - 1) { verbs.second[indexCurrent] }.id
+                        verbIdArg = verbs.getOrElse(indexCurrent - 1) { verbs[indexCurrent] }.id
                     },
                     onOpenLink = { term ->
                         onOpenLink(term)
@@ -108,7 +115,7 @@ fun Router(
                     },
                     onListen = { onListenClick(it) },
                     onNavBack = { navController.navigateUp() },
-                    hasNext = indexCurrent < verbs.second.lastIndex,
+                    hasNext = indexCurrent < verbs.lastIndex,
                     hasPrevious = indexCurrent != 0,
                     painterIdentifier = painterIdentifier,
                 )
@@ -326,7 +333,7 @@ fun Router(
                 onBackClick = { navController.navigateUp() },
                 onClickColor = { color ->
                     navController.navigate(
-                    "${Routes.Colors.name}/${color.code}"
+                    "${Routes.Colors.name}/${color.id}"
                 ) }
             )
         }
@@ -390,16 +397,16 @@ fun Router(
         }
 
         composable(
-            route = "${Routes.Colors.name}/{color}",
+            route = "${Routes.Colors.name}/{color_id}",
             arguments = listOf(
-                navArgument("color") { type = NavType.StringType }
+                navArgument("color_id") { type = NavType.StringType }
             )
         ) { navBackStackEntry ->
             val colors = viewModel.getColors()
-            var colorArg by rememberSaveable {
-                mutableStateOf(navBackStackEntry.arguments?.getString("color") ?: "")
+            var colorIdArg by rememberSaveable {
+                mutableStateOf(navBackStackEntry.arguments?.getString("color_id") ?: "")
             }
-            val currentColor = viewModel.getColorByCode(colorArg)
+            val currentColor = viewModel.getColorById(colorIdArg)
 
             currentColor?.let { color ->
                 val currentIndex = colors.indexOfFirst {
@@ -425,10 +432,10 @@ fun Router(
                     hasNext = hasNext,
                     hasPrevious = hasPrevious,
                     onNextClick = {
-                        colorArg = colors.getOrElse(currentIndex + 1) { color }.code
+                        colorIdArg = colors.getOrElse(currentIndex + 1) { color }.code
                     },
                     onPreviousClick = {
-                        colorArg = colors.getOrElse(currentIndex - 1) { color }.code
+                        colorIdArg = colors.getOrElse(currentIndex - 1) { color }.code
                     },
                 )
             }
@@ -440,6 +447,7 @@ fun Router(
                 darkMode = darkMode,
                 status = hazelContentStatus,
                 painterIdentifier = painterIdentifier,
+                temperature = weatherStatus,
                 onSettingsClick = { navController.navigate(Routes.Settings.name) },
                 searchStatus = searchResult,
                 onSearchQuery = { query ->
@@ -450,7 +458,8 @@ fun Router(
                 },
                 onDarkModeChange = { darkMode ->
                     onSelectDarkMode(darkMode)
-                }
+                },
+                onCheckWeather = onRequestWeather,
             )
         }
 

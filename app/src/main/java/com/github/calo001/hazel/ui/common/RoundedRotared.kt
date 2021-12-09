@@ -20,12 +20,12 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun RoundedRotated(
     modifier: Modifier = Modifier,
-    shapeLabel: String,
-    image: Painter
+    shapeLabel: @Composable () -> Unit,
+    imageContent: @Composable () -> Unit,
 ) {
     Surface(
         shape = RoundedCornerShape(80.dp),
-        color = MaterialTheme.colors.secondary,
+        color = MaterialTheme.colors.background.copy(alpha = 0.8f),
         modifier = modifier
             .rotate(-45f)
     ) {
@@ -34,18 +34,8 @@ fun RoundedRotated(
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Spacer(modifier = Modifier.size(16.dp))
-            Image(
-                painter = image,
-                contentDescription = null,
-                modifier = Modifier
-                    .rotate(45f)
-            )
-            Text(
-                text = shapeLabel,
-                style = MaterialTheme.typography.h4,
-                modifier = Modifier
-                    .rotate(45f)
-            )
+            imageContent()
+            shapeLabel()
             Spacer(modifier = Modifier.size(16.dp))
         }
     }
