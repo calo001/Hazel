@@ -2,6 +2,7 @@ package com.github.calo001.hazel.ui.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.github.calo001.hazel.huawei.WeatherStatus
 import com.github.calo001.hazel.model.hazeldb.*
 import com.github.calo001.hazel.model.unsplash.UnsplashResult
 import com.github.calo001.hazel.network.UnsplashServiceProvider
@@ -10,6 +11,7 @@ import com.github.calo001.hazel.repository.UnsplashRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
@@ -19,7 +21,15 @@ import java.io.InputStream
 
 class MainViewModel : ViewModel() {
     private val _hazelContent = MutableStateFlow<HazelContentStatus>(HazelContentStatus.Loading)
-    val hazelContent: StateFlow<HazelContentStatus> get() = _hazelContent
+    val hazelContent = _hazelContent.asStateFlow()
+
+    private val _weatherStatus = MutableStateFlow<WeatherStatus>(WeatherStatus.Loading)
+    val weatherStatus = _weatherStatus.asStateFlow()
+
+    fun updateWeatherStatus(status: WeatherStatus) {
+        _weatherStatus.tryEmit(status)
+    }
+
     private val unsplashService = UnsplashServiceProvider.service
     private val unsplashRepository by lazy { UnsplashRepository(unsplashService) }
     private val searchHelper by lazy {
@@ -56,12 +66,12 @@ class MainViewModel : ViewModel() {
         }
     }
 
-    fun getUsefulExpressionCategory(typeOfUsefulExp: String): UsefulPhrase? {
+    fun getUsefulExpressionCategoryId(categoryId: String): UsefulPhrase? {
         return (hazelContent.value as? HazelContentStatus.Success)
             ?.content
             ?.usefulPhrases
             ?.find { ufContent ->
-                ufContent.category == typeOfUsefulExp
+                ufContent.id == categoryId
             }
     }
 
@@ -72,9 +82,9 @@ class MainViewModel : ViewModel() {
             ?: listOf()
     }
 
-    fun getColorByCode(colorCode: String): ColorHazel? {
+    fun getColorById(colorCode: String): ColorHazel? {
         return getColors().firstOrNull {
-            it.code == colorCode
+            it.id == colorCode
         }
     }
 

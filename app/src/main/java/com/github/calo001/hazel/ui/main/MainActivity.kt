@@ -1,8 +1,12 @@
 package com.github.calo001.hazel.ui.main
 
+import android.Manifest
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.compose.material.*
 import androidx.compose.runtime.*
@@ -10,37 +14,98 @@ import androidx.navigation.compose.rememberNavController
 import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.ui.theme.HazelTheme
 import com.github.calo001.hazel.R
-import com.github.calo001.hazel.util.PainterIdentifier
-import com.google.accompanist.systemuicontroller.SystemUiController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
-import android.speech.tts.TextToSpeech
-import android.util.Log
 import androidx.compose.ui.ExperimentalComposeUiApi
-import com.github.calo001.hazel.util.browse
-import java.util.*
-import android.content.Intent
-import android.net.Uri
 import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.isSystemInDarkTheme
 import com.github.calo001.hazel.config.DarkMode
+import com.github.calo001.hazel.huawei.LocationHelper
 import com.github.calo001.hazel.platform.DataStoreProvider
 import com.github.calo001.hazel.routes.Routes
+import com.github.calo001.hazel.huawei.WeatherHelper
+import com.github.calo001.hazel.huawei.WeatherStatus
+import com.github.calo001.hazel.ui.common.SystemBars
 import com.github.calo001.hazel.ui.settings.Dictionaries
+import com.github.calo001.hazel.util.*
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-
+@ExperimentalFoundationApi
+@ExperimentalAnimationApi
+@ExperimentalComposeUiApi
+@ExperimentalMaterialApi
 class MainActivity : ComponentActivity() {
     private val viewModel: MainViewModel by viewModels()
+    //private val weatherHelper by lazy { WeatherHelper(this) }
+    //private val locationHelper by lazy { LocationHelper(this) }
+    //private val locationHelperResult by lazy { LocationHelper(this) }
 
-    @ExperimentalAnimationApi
-    @ExperimentalComposeUiApi
-    @ExperimentalMaterialApi
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        val weatherHelper = WeatherHelper(this) { status ->
+            viewModel.updateWeatherStatus(status)
+        }
+        weatherHelper.checkWeatherFromResult(requestCode = requestCode)
+    }
+
+    @SuppressLint("MissingPermission")
+    val requestPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions()
+    ) { results ->
+        val weatherHelper = WeatherHelper(this) { status ->
+            viewModel.updateWeatherStatus(status)
+        }
+        if (results.all { it.value }) {
+            if (checkPermission(Manifest.permission.ACCESS_FINE_LOCATION) and
+                checkPermission(Manifest.permission.ACCESS_COARSE_LOCATION)
+            ) {
+                LocationHelper(this).checkLocationSettings(
+                    onLocationAvailable = {
+                        weatherHelper.initWhetherListener()
+                    },
+                    onFailureLocationAvailable = {
+                        viewModel.updateWeatherStatus(WeatherStatus.LocationFailure)
+                    },
+                    onSearchingLocation = {
+                        viewModel.updateWeatherStatus(WeatherStatus.Loading)
+                    }
+                )
+            }
+        } else {
+            viewModel.updateWeatherStatus(WeatherStatus.LocationNotGranted)
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         val dataStore = DataStoreProvider(applicationContext)
         val hazelDb = resources.openRawResource(R.raw.hazel)
+        val locationHelper = LocationHelper(this)
+        val weatherHelper = WeatherHelper(this) { status ->
+            viewModel.updateWeatherStatus(status)
+        }
         viewModel.loadHazelContent(hazelDb)
+
+        locationHelper.checkLocationSettings(
+            onLocationAvailable = {
+                if (checkPermission(Manifest.permission.ACCESS_FINE_LOCATION) and
+                    checkPermission(Manifest.permission.ACCESS_COARSE_LOCATION)
+                ) {
+                    weatherHelper.initWhetherListener()
+                } else {
+                    viewModel.updateWeatherStatus(WeatherStatus.LocationFailure)
+                }
+            },
+            onFailureLocationAvailable = {
+                viewModel.updateWeatherStatus(WeatherStatus.LocationFailure)
+            },
+            onSearchingLocation = {
+                viewModel.updateWeatherStatus(WeatherStatus.Loading)
+            },
+            tryToGetPermissions = false
+        )
 
         setContent {
             val colorScheme by dataStore.colorScheme.collectAsState(initial = ColorVariant.Green)
@@ -52,6 +117,7 @@ class MainActivity : ComponentActivity() {
                 DarkMode.FollowSystem -> !isSystemInDarkTheme()
             }
             val systemUiController = rememberSystemUiController()
+            val scope = rememberCoroutineScope()
 
             HazelTheme(
                 darkTheme = when(darkMode) {
@@ -62,7 +128,6 @@ class MainActivity : ComponentActivity() {
                 colorVariant = colorScheme
             ) {
                 SystemBars(systemUiController, useDarkIcons)
-                val scope = rememberCoroutineScope()
                 val navController = rememberNavController()
                 val painterIdentifier = PainterIdentifier(
                     resources = resources,
@@ -70,12 +135,14 @@ class MainActivity : ComponentActivity() {
                     default = R.drawable.ic_launcher_foreground
                 )
                 val hazelContentStatus by viewModel.hazelContent.collectAsState()
+                val weatherStatus by viewModel.weatherStatus.collectAsState()
 
                 Surface(
                     color = MaterialTheme.colors.background,
                 ) {
                     Router(
                         viewModel = viewModel,
+                        weatherStatus = weatherStatus,
                         navController = navController,
                         hazelContentStatus = hazelContentStatus,
                         painterIdentifier = painterIdentifier,
@@ -94,74 +161,18 @@ class MainActivity : ComponentActivity() {
                         },
                         onSelectDarkMode = {
                             scope.launch { dataStore.setDarkMode(it) }
+                        },
+                        onRequestWeather = {
+                            requestPermissionLauncher.launch(
+                                arrayOf(
+                                    Manifest.permission.ACCESS_FINE_LOCATION,
+                                    Manifest.permission.ACCESS_COARSE_LOCATION
+                                )
+                            )
                         }
                     )
                 }
             }
-        }
-    }
-
-    private fun openMaps(link: String) {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
-        intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity")
-        try {
-            startActivity(intent)
-        } catch (e: Exception) {
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(link)))
-        }
-    }
-
-    private fun openInBrowser(term: String, dictionaries: Dictionaries) {
-        val url = "${dictionaries.url}$term"
-        browse(url)
-    }
-
-    private fun speak(text: String) {
-        var tts: TextToSpeech? = null
-        tts = TextToSpeech(this) { status ->
-            if (status == TextToSpeech.SUCCESS) {
-                val result: Int? = tts?.setLanguage(Locale.US)
-                if (result == TextToSpeech.LANG_MISSING_DATA
-                    || result == TextToSpeech.LANG_NOT_SUPPORTED
-                ) {
-                    Log.e("TTS", "This Language is not supported")
-                } else {
-                    tts?.let {
-                        speakOut(text, it)
-                    }
-                }
-            } else {
-                Log.e("TTS", "Initilization Failed!")
-            }
-        }
-    }
-
-    private fun speakOut(text: String, textToSpeech: TextToSpeech) {
-        val utteranceId = this.hashCode().toString() + ""
-        textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, utteranceId)
-    }
-
-    @Composable
-    private fun SystemBars(
-        systemUiController: SystemUiController,
-        useDarkIcons: Boolean
-    ) {
-        val color = MaterialTheme.colors.background
-        SideEffect {
-            systemUiController.setSystemBarsColor(
-                color = color,
-                darkIcons = useDarkIcons
-            )
-
-            systemUiController.setStatusBarColor(
-                color = color,
-                darkIcons = useDarkIcons
-            )
-
-            systemUiController.setNavigationBarColor(
-                color = color,
-                darkIcons = useDarkIcons
-            )
         }
     }
 }

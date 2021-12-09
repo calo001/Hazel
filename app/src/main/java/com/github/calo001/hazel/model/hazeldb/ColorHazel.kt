@@ -6,6 +6,8 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class ColorHazel(
+    @SerialName("id")
+    val id: String,
     @SerialName("code")
     val code: String, // #FFFFFF
     @SerialName("examples")

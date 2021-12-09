@@ -6,6 +6,8 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class Verb(
+    @SerialName("id")
+    val id: String,
     @SerialName("base")
     val base: VerbForm,
     @SerialName("emojiCode")

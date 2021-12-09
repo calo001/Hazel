@@ -2,6 +2,7 @@ package com.github.calo001.hazel.model.widget
 
 import com.github.calo001.hazel.model.hazeldb.HazelContent
 import com.github.calo001.hazel.routes.Routes
+import com.github.calo001.hazel.ui.verbs.VerbData
 import com.github.calo001.hazel.ui.widget.*
 
 data class HazelSimpleItem(
@@ -27,7 +28,8 @@ fun HazelContent.getSimpleItemList(typeContent: String): List<HazelSimpleItem> {
                 result.add(HazelSimpleItem(
                     name = colorHazel.name,
                     color = colorHazel.code,
-                    type = COLOR
+                    type = COLOR,
+                    route = "${Routes.Colors.name}/${colorHazel.id}"
                 ))
             }
         }
@@ -36,7 +38,8 @@ fun HazelContent.getSimpleItemList(typeContent: String): List<HazelSimpleItem> {
                 result.add(HazelSimpleItem(
                     name = verb.base.verb,
                     image = verb.emojiCode,
-                    type = REGULAR_VERBS
+                    type = REGULAR_VERBS,
+                    route = "${Routes.VerbsRegular.name}/${verb.id}/${VerbData.BaseForm.name}"
                 ))
             }
         }
@@ -45,7 +48,8 @@ fun HazelContent.getSimpleItemList(typeContent: String): List<HazelSimpleItem> {
                 result.add(HazelSimpleItem(
                     name = verb.base.verb,
                     image = verb.emojiCode,
-                    type = IRREGULAR_VERBS
+                    type = IRREGULAR_VERBS,
+                    route = "${Routes.VerbsIrregular.name}/${verb.id}/${VerbData.BaseForm.name}"
                 ))
             }
         }
@@ -55,6 +59,7 @@ fun HazelContent.getSimpleItemList(typeContent: String): List<HazelSimpleItem> {
                     name = country.name,
                     image = country.emojiCode,
                     type = COUNTRY,
+                    route = "${Routes.Countries.name}/${country.id}"
                 ))
             }
         }
@@ -63,7 +68,8 @@ fun HazelContent.getSimpleItemList(typeContent: String): List<HazelSimpleItem> {
                 result.add(HazelSimpleItem(
                     name = animal.name,
                     image = animal.emojiCode,
-                    type = ANIMALS
+                    type = ANIMALS,
+                    route = "${Routes.Animals.name}/${animal.id}"
                 ))
             }
         }

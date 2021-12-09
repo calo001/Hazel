@@ -117,6 +117,7 @@ private fun OneColorContent(
 fun OneColorPreview() {
     OneColorView(
         colorHazel = ColorHazel(
+            id = "",
             code = "#000000",
             name = "white",
             phonetic = "white",

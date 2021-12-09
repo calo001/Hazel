@@ -1,33 +1,41 @@
 {
   "useful_phrases": [
     {
+      "id": "category_1",
       "category": "Apologising",
       "phrases": [
         {
+          "id": "phase_1",
           "expression": "Sorry.",
           "how_to_use": "\"Sorry\" is a general short apology. We use this when we bump into people on the street. At other times, it sounds too weak."
         },
         {
+          "id": "phase_2",
           "expression": "I'm so sorry.",
           "how_to_use": "We use 'so', 'very' and 'terribly' to make the meaning stronger. 'Terribly' is the strongest. If we use one of the words in brackets, it is stressed."
         },
         {
+          "id": "phase_3",
           "expression": "I'm very sorry.",
           "how_to_use": "We use 'so', 'very' and 'terribly' to make the meaning stronger. 'Terribly' is the strongest. If we use one of the words in brackets, it is stressed."
         },
         {
+          "id": "phase_4",
           "expression": "I'm terribly sorry.",
           "how_to_use": "We use 'so', 'very' and 'terribly' to make the meaning stronger. 'Terribly' is the strongest. If we use one of the words in brackets, it is stressed."
         },
         {
+          "id": "phase_5",
           "expression": "Ever so sorry.",
           "how_to_use": "It's quite formal but it's a stronger apology than just 'sorry'."
         },
         {
+          "id": "phase_6",
           "expression": "How stupid of me.",
           "how_to_use": "We use this phrase to criticise ourselves and the mistake that we have just made."
         },
         {
+          "id": "phase_7",
           "expression": "Please don't be mad at me.",
           "how_to_use": "It's asking the other person not to get angry. The tone is quite informal."
         }
@@ -35,25 +43,31 @@
       "emoji_code": "openmoji_1f647"
     },
     {
+      "id": "category_2",
       "category": "Asking about health or life",
       "phrases": [
         {
+          "id": "phase_8",
           "expression": "How are you?",
           "how_to_use": "This phrase is the best known phrase but English people don't use it every time."
         },
         {
+          "id": "phase_9",
           "expression": "How are things?",
           "how_to_use": "It's a general inquiry about the other person's health and life. Your answer could be about your health, your work or your personal life."
         },
         {
+          "id": "phase_10",
           "expression": "How's things?",
           "how_to_use": "It's a general inquiry about the other person's health and life but the 'incorrect' grammar makes it much more informal."
         },
         {
+          "id": "phase_11",
           "expression": "How's it going?",
           "how_to_use": "It's asking about the other person's life (work or personal life)."
         },
         {
+          "id": "phase_12",
           "expression": "How are you getting on?",
           "how_to_use": "It's asking about the other person's life (work or personal life)."
         }
@@ -61,25 +75,31 @@
       "emoji_code": "openmoji_2764_fe0f_200d_1fa79"
     },
     {
+      "id": "category_3",
       "category": "Asking for information",
       "phrases": [
         {
+          "id": "phase_13",
           "expression": "Can you tell me...?",
           "how_to_use": "It's followed by indirect questions. So 'What's the time?' becomes 'Can you tell me what the time is?'."
         },
         {
+          "id": "phase_14",
           "expression": "Could you tell me...?",
           "how_to_use": "It's followed by indirect questions. So 'What's the time?' becomes 'Could you tell me what the time is?'."
         },
         {
+          "id": "phase_15",
           "expression": "I'd like to know...",
           "how_to_use": "It's good to use if you are asking a stranger or you are asking at a public information desk."
         },
         {
+          "id": "phase_16",
           "expression": "D'you know...",
           "how_to_use": "This phrase is more informal."
         },
         {
+          "id": "phase_17",
           "expression": "I wonder if someone could tell me...?",
           "how_to_use": "It's very formal and in an informal situation some people may react strangely if they think that you are being sarcastic."
         }
@@ -87,25 +107,31 @@
       "emoji_code": "openmoji_2753"
     },
     {
+      "id": "category_4",
       "category": "On the Phone",
       "phrases": [
         {
+          "id": "phase_18",
           "expression": "I'll call you later.",
           "how_to_use": "It's used to say we will phone someone at some time in the future. We can also say 'I'll get back to you' if someone has asked us for specific \ninformation that we don't have now."
         },
         {
+          "id": "phase_19",
           "expression": "Leave a message.",
           "how_to_use": "You hear it on an answerphone, asking people to say why they were calling."
         },
         {
+          "id": "phase_20",
           "expression": "Hi Simon, it's Anna.",
           "how_to_use": "You use this phrase to say who you are at the beginning of a call."
         },
         {
+          "id": "phase_21",
           "expression": "Did you get my message?",
           "how_to_use": "We use this phrase to check someone knows that we called and left a message before."
         },
         {
+          "id": "phase_22",
           "expression": "Can I speak to Rob, please?",
           "how_to_use": "It's a common question if the person you want to talk to is not the person who answers the phone."
         }
@@ -113,29 +139,36 @@
       "emoji_code": "openmoji_1f919"
     },
     {
+      "id": "category_5",
       "category": "Saying goodbye",
       "phrases": [
         {
+          "id": "phase_23",
           "expression": "Bye!",
           "how_to_use": "It's the most common phrase that people say."
         },
         {
+          "id": "phase_24",
           "expression": "Goodbye!",
           "how_to_use": "It's a little more formal way to say goodbye."
         },
         {
+          "id": "phase_25",
           "expression": "Bye for now!",
           "how_to_use": "It's a quite informal and friendly way to say goodbye."
         },
         {
+          "id": "phase_26",
           "expression": "See you!",
           "how_to_use": "It's a quite informal and friendly way to say goodbye."
         },
         {
+          "id": "phase_27",
           "expression": "See ya!",
           "how_to_use": "It's a quite informal and friendly way to say goodbye."
         },
         {
+          "id": "phase_28",
           "expression": "Be seeing you!",
           "how_to_use": "It's a quite informal and friendly way to say goodbye."
         }
@@ -145,6 +178,7 @@
   ],
   "colors": [
     {
+      "id": "color_1",
       "name": "white",
       "code": "#FFFFFF",
       "type": "common",
@@ -155,6 +189,7 @@
       ]
     },
     {
+      "id": "color_2",
       "name": "gray",
       "code": "#808080",
       "type": "common",
@@ -165,6 +200,7 @@
       ]
     },
     {
+      "id": "color_3",
       "name": "black",
       "code": "#000000",
       "type": "common",
@@ -175,6 +211,7 @@
       ]
     },
     {
+      "id": "color_4",
       "name": "orange",
       "code": "#FFA500",
       "type": "common",
@@ -185,6 +222,7 @@
       ]
     },
     {
+      "id": "color_5",
       "name": "brown",
       "code": "#A52A2A",
       "type": "common",
@@ -195,6 +233,7 @@
       ]
     },
     {
+      "id": "color_6",
       "name": "green",
       "code": "#008000",
       "type": "common",
@@ -205,6 +244,7 @@
       ]
     },
     {
+      "id": "color_7",
       "name": "red",
       "code": "#FF0000",
       "type": "common",
@@ -215,6 +255,7 @@
       ]
     },
     {
+      "id": "color_8",
       "name": "blue",
       "code": "#0000FF",
       "type": "common",
@@ -225,6 +266,7 @@
       ]
     },
     {
+      "id": "color_9",
       "name": "purple",
       "code": "#800080",
       "type": "common",
@@ -235,6 +277,7 @@
       ]
     },
     {
+      "id": "color_10",
       "name": "yellow",
       "code": "#FFFF00",
       "type": "common",
@@ -245,6 +288,7 @@
       ]
     },
     {
+      "id": "color_11",
       "name": "pink",
       "code": "#E56E94",
       "type": "common",
@@ -257,6 +301,7 @@
   ],
   "irregular_verbs": [
     {
+      "id": "irregular_verb_1",
       "base": {
         "verb": "beat",
         "phonetic": "/biːt/",
@@ -292,6 +337,7 @@
       "emojiCode": "openmoji_1f94a"
     },
     {
+      "id": "irregular_verb_2",
       "base": {
         "verb": "become",
         "phonetic": "/bɪˈkʌm/",
@@ -327,6 +373,7 @@
       "emojiCode": "openmoji_1f9b8"
     },
     {
+      "id": "irregular_verb_3",
       "base": {
         "verb": "begin",
         "phonetic": "/bɪˈɡɪn/",
@@ -362,6 +409,7 @@
       "emojiCode": "openmoji_1f3c1"
     },
     {
+      "id": "irregular_verb_4",
       "base": {
         "verb": "bend",
         "phonetic": "/bend/",
@@ -397,6 +445,7 @@
       "emojiCode": "openmoji_2935"
     },
     {
+      "id": "irregular_verb_14",
       "base": {
         "verb": "catch",
         "phonetic": "/kætʃ/",
@@ -432,6 +481,7 @@
       "emojiCode": "openmoji_1fa9d"
     },
     {
+      "id": "irregular_verb_16",
       "base": {
         "verb": "come",
         "phonetic": "/kʌm/",
@@ -467,6 +517,7 @@
       "emojiCode": "openmoji_1f6b6_200d_2642_fe0f"
     },
     {
+      "id": "irregular_verb_17",
       "base": {
         "verb": "cost",
         "phonetic": "/kɔːst/",
@@ -502,6 +553,7 @@
       "emojiCode": "openmoji_1f4c9"
     },
     {
+      "id": "irregular_verb_18",
       "base": {
         "verb": "cut",
         "phonetic": "/kʌt/",
@@ -537,6 +589,7 @@
       "emojiCode": "openmoji_2702"
     },
     {
+      "id": "irregular_verb_19",
       "base": {
         "verb": "dig",
         "phonetic": "/dɪɡ/",
@@ -572,6 +625,7 @@
       "emojiCode": "openmoji_e345"
     },
     {
+      "id": "irregular_verb_20",
       "base": {
         "verb": "dive",
         "phonetic": "/daɪv/",
@@ -607,6 +661,7 @@
       "emojiCode": "openmoji_1f3ca_200d_2640_fe0f"
     },
     {
+      "id": "irregular_verb_22",
       "base": {
         "verb": "draw",
         "phonetic": "/drɔː/",
@@ -642,6 +697,7 @@
       "emojiCode": "openmoji_1f58d"
     },
     {
+      "id": "irregular_verb_26",
       "base": {
         "verb": "eat",
         "phonetic": "/iːt/",
@@ -677,6 +733,7 @@
       "emojiCode": "openmoji_1f37d"
     },
     {
+      "id": "irregular_verb_27",
       "base": {
         "verb": "fall",
         "phonetic": "/fɔːl/",
@@ -712,6 +769,7 @@
       "emojiCode": "openmoji_1f342"
     },
     {
+      "id": "irregular_verb_29",
       "base": {
         "verb": "fight",
         "phonetic": "/faɪt/",
@@ -747,6 +805,7 @@
       "emojiCode": "openmoji_1f93c"
     },
     {
+      "id": "irregular_verb_36",
       "base": {
         "verb": "give",
         "phonetic": "/ɡɪv/",
@@ -782,6 +841,7 @@
       "emojiCode": "openmoji_1f381"
     },
     {
+      "id": "irregular_verb_38",
       "base": {
         "verb": "grow",
         "phonetic": "/ɡrəʊ/",
@@ -817,6 +877,7 @@
       "emojiCode": "openmoji_1fab4"
     },
     {
+      "id": "irregular_verb_41",
       "base": {
         "verb": "hear",
         "phonetic": "/hɪr/",
@@ -852,6 +913,7 @@
       "emojiCode": "openmoji_1f442"
     },
     {
+      "id": "irregular_verb_43",
       "base": {
         "verb": "hit",
         "phonetic": "/hɪt/",
@@ -887,6 +949,7 @@
       "emojiCode": "openmoji_1f3cc"
     },
     {
+      "id": "irregular_verb_45",
       "base": {
         "verb": "hurt",
         "phonetic": "/hɜːrt/",
@@ -922,6 +985,7 @@
       "emojiCode": "openmoji_1f915"
     },
     {
+      "id": "irregular_verb_49",
       "base": {
         "verb": "lead",
         "phonetic": "/liːd/",
@@ -957,6 +1021,7 @@
       "emojiCode": "openmoji_1fa96"
     },
     {
+      "id": "irregular_verb_50",
       "base": {
         "verb": "leave",
         "phonetic": "/liːv/",
@@ -992,6 +1057,7 @@
       "emojiCode": "openmoji_e201"
     },
     {
+      "id": "irregular_verb_55",
       "base": {
         "verb": "make",
         "phonetic": "/meɪk/",
@@ -1027,6 +1093,7 @@
       "emojiCode": "openmoji_2692"
     },
     {
+      "id": "irregular_verb_57",
       "base": {
         "verb": "meet",
         "phonetic": "/miːt/",
@@ -1062,6 +1129,7 @@
       "emojiCode": "openmoji_1f91d"
     },
     {
+      "id": "irregular_verb_58",
       "base": {
         "verb": "pay",
         "phonetic": "/peɪ/",
@@ -1097,6 +1165,7 @@
       "emojiCode": "openmoji_1f4b8"
     },
     {
+      "id": "irregular_verb_60",
       "base": {
         "verb": "read",
         "phonetic": "/riːd/",
@@ -1132,6 +1201,7 @@
       "emojiCode": "openmoji_1f4da"
     },
     {
+      "id": "irregular_verb_61",
       "base": {
         "verb": "ride",
         "phonetic": "/raɪd/",
@@ -1167,6 +1237,7 @@
       "emojiCode": "openmoji_1f6b5_200d_2642_fe0f"
     },
     {
+      "id": "irregular_verb_65",
       "base": {
         "verb": "see",
         "phonetic": "/siː/",
@@ -1202,6 +1273,7 @@
       "emojiCode": "openmoji_1f440"
     },
     {
+      "id": "irregular_verb_67",
       "base": {
         "verb": "send",
         "phonetic": "/send/",
@@ -1237,6 +1309,7 @@
       "emojiCode": "openmoji_1f4e8"
     },
     {
+      "id": "irregular_verb_70",
       "base": {
         "verb": "sing",
         "phonetic": "/sɪŋ/",
@@ -1272,6 +1345,7 @@
       "emojiCode": "openmoji_1f469_200d_1f3a4"
     },
     {
+      "id": "irregular_verb_78",
       "base": {
         "verb": "teach",
         "phonetic": "/tiːtʃ/",
@@ -1307,6 +1381,7 @@
       "emojiCode": "openmoji_1f9d1_200d_1f3eb"
     },
     {
+      "id": "irregular_verb_81",
       "base": {
         "verb": "think",
         "phonetic": "/θɪŋk/",
@@ -1342,6 +1417,7 @@
       "emojiCode": "openmoji_1f914"
     },
     {
+      "id": "irregular_verb_82",
       "base": {
         "verb": "throw",
         "phonetic": "/θrəʊ/",
@@ -1377,6 +1453,7 @@
       "emojiCode": "openmoji_1f6ae"
     },
     {
+      "id": "irregular_verb_84",
       "base": {
         "verb": "wake",
         "phonetic": "/weɪk/",
@@ -1412,6 +1489,7 @@
       "emojiCode": "openmoji_23f0"
     },
     {
+      "id": "irregular_verb_86",
       "base": {
         "verb": "win",
         "phonetic": "/wɪn/",
@@ -1447,6 +1525,7 @@
       "emojiCode": "openmoji_1f3c6"
     },
     {
+      "id": "irregular_verb_87",
       "base": {
         "verb": "write",
         "phonetic": "/raɪt/",
@@ -1484,6 +1563,7 @@
   ],
   "regular_verbs": [
     {
+      "id": "regular_verb_1",
       "base": {
         "verb": "accept",
         "phonetic": "/əkˈsept/",
@@ -1519,6 +1599,7 @@
       "emojiCode": "openmoji_1f91d"
     },
     {
+      "id": "regular_verb_2",
       "base": {
         "verb": "achieve",
         "phonetic": "/əˈtʃiːv/",
@@ -1554,6 +1635,7 @@
       "emojiCode": "openmoji_1f3c6"
     },
     {
+      "id": "regular_verb_3",
       "base": {
         "verb": "add",
         "phonetic": "/æd/",
@@ -1589,6 +1671,7 @@
       "emojiCode": "openmoji_e25f"
     },
     {
+      "id": "regular_verb_4",
       "base": {
         "verb": "admire",
         "phonetic": "/ədˈmaɪər/",
@@ -1624,6 +1707,7 @@
       "emojiCode": "openmoji_1f929"
     },
     {
+      "id": "regular_verb_5",
       "base": {
         "verb": "admit",
         "phonetic": "/ədˈmɪt/",
@@ -1659,6 +1743,7 @@
       "emojiCode": "openmoji_1f613"
     },
     {
+      "id": "regular_verb_6",
       "base": {
         "verb": "adopt",
         "phonetic": "/əˈdɑːpt/",
@@ -1694,6 +1779,7 @@
       "emojiCode": "openmoji_e182"
     },
     {
+      "id": "regular_verb_7",
       "base": {
         "verb": "advise",
         "phonetic": "/ədˈvaɪz/",
@@ -1729,6 +1815,7 @@
       "emojiCode": "openmoji_1f481_200d_2640_fe0f"
     },
     {
+      "id": "regular_verb_8",
       "base": {
         "verb": "agree",
         "phonetic": "/əˈɡriː/",
@@ -1764,6 +1851,7 @@
       "emojiCode": "openmoji_1f91d"
     },
     {
+      "id": "regular_verb_9",
       "base": {
         "verb": "allow",
         "phonetic": "/əˈlaʊ/",
@@ -1799,6 +1887,7 @@
       "emojiCode": "openmoji_e082"
     },
     {
+      "id": "regular_verb_10",
       "base": {
         "verb": "announce",
         "phonetic": "/əˈnaʊns/",
@@ -1834,6 +1923,7 @@
       "emojiCode": "openmoji_1f4f0"
     },
     {
+      "id": "regular_verb_11",
       "base": {
         "verb": "appreciate",
         "phonetic": "/əˈpriːʃieɪt/",
@@ -1869,6 +1959,7 @@
       "emojiCode": "openmoji_1f914"
     },
     {
+      "id": "regular_verb_12",
       "base": {
         "verb": "approve",
         "phonetic": "/əˈpruːv/",
@@ -1904,6 +1995,7 @@
       "emojiCode": "openmoji_2705"
     },
     {
+      "id": "regular_verb_18",
       "base": {
         "verb": "bake",
         "phonetic": "/beɪk/",
@@ -1939,6 +2031,7 @@
       "emojiCode": "openmoji_1f9c1"
     },
     {
+      "id": "regular_verb_19",
       "base": {
         "verb": "beg",
         "phonetic": "/beɡ/",
@@ -1974,6 +2067,7 @@
       "emojiCode": "openmoji_1f97a"
     },
     {
+      "id": "regular_verb_20",
       "base": {
         "verb": "behave",
         "phonetic": "/bɪˈheɪv/",
@@ -2009,6 +2103,7 @@
       "emojiCode": "openmoji_1f64b"
     },
     {
+      "id": "regular_verb_21",
       "base": {
         "verb": "boil",
         "phonetic": "/bɔɪl/",
@@ -2044,6 +2139,7 @@
       "emojiCode": "openmoji_1f958"
     },
     {
+      "id": "regular_verb_22",
       "base": {
         "verb": "borrow",
         "phonetic": "/ˈbɔːrəʊ/",
@@ -2079,6 +2175,7 @@
       "emojiCode": "openmoji_1f4b0"
     },
     {
+      "id": "regular_verb_25",
       "base": {
         "verb": "call",
         "phonetic": "/kɔːl/",
@@ -2114,6 +2211,7 @@
       "emojiCode": "openmoji_260e"
     },
     {
+      "id": "regular_verb_26",
       "base": {
         "verb": "change",
         "phonetic": "/tʃeɪndʒ/",
@@ -2149,6 +2247,7 @@
       "emojiCode": "openmoji_2b8f"
     },
     {
+      "id": "regular_verb_27",
       "base": {
         "verb": "chase",
         "phonetic": "/tʃeɪs/",
@@ -2184,6 +2283,7 @@
       "emojiCode": "openmoji_1faa4"
     },
     {
+      "id": "regular_verb_28",
       "base": {
         "verb": "cheat",
         "phonetic": "/tʃiːt/",
@@ -2219,6 +2319,7 @@
       "emojiCode": "openmoji_1f92b"
     },
     {
+      "id": "regular_verb_44",
       "base": {
         "verb": "damage",
         "phonetic": "/ˈdæmɪdʒ/",
@@ -2254,6 +2355,7 @@
       "emojiCode": "openmoji_e2c2"
     },
     {
+      "id": "regular_verb_45",
       "base": {
         "verb": "dance",
         "phonetic": "/dæns/",
@@ -2289,6 +2391,7 @@
       "emojiCode": "openmoji_1f483"
     },
     {
+      "id": "regular_verb_46",
       "base": {
         "verb": "deliver",
         "phonetic": "/dɪˈlɪvər/",
@@ -2324,6 +2427,7 @@
       "emojiCode": "openmoji_1f4e6"
     },
     {
+      "id": "regular_verb_50",
       "base": {
         "verb": "earn",
         "phonetic": "/ɜːrn/",
@@ -2359,6 +2463,7 @@
       "emojiCode": "openmoji_1fa99"
     },
     {
+      "id": "regular_verb_51",
       "base": {
         "verb": "employ",
         "phonetic": "/ɪmˈplɔɪ/",
@@ -2394,6 +2499,7 @@
       "emojiCode": "openmoji_1f468_200d_1f527"
     },
     {
+      "id": "regular_verb_52",
       "base": {
         "verb": "encourage",
         "phonetic": "/ɪnˈkɜːrɪdʒ/",
@@ -2429,6 +2535,7 @@
       "emojiCode": "openmoji_1f917"
     },
     {
+      "id": "regular_verb_59",
       "base": {
         "verb": "fry",
         "phonetic": "/fraɪ/",
@@ -2464,6 +2571,7 @@
       "emojiCode": "openmoji_1f35f"
     },
     {
+      "id": "regular_verb_60",
       "base": {
         "verb": "gather",
         "phonetic": "/ˈɡæðər/",
@@ -2499,6 +2607,7 @@
       "emojiCode": "openmoji_1f5c3"
     },
     {
+      "id": "regular_verb_61",
       "base": {
         "verb": "greet",
         "phonetic": "/ɡriːt/",
@@ -2534,6 +2643,7 @@
       "emojiCode": "openmoji_1f44b"
     },
     {
+      "id": "regular_verb_64",
       "base": {
         "verb": "hate",
         "phonetic": "heɪt/",
@@ -2569,6 +2679,7 @@
       "emojiCode": "openmoji_1f92c"
     },
     {
+      "id": "regular_verb_65",
       "base": {
         "verb": "help",
         "phonetic": "/help/",
@@ -2604,6 +2715,7 @@
       "emojiCode": "openmoji_e083"
     },
     {
+      "id": "regular_verb_66",
       "base": {
         "verb": "hope",
         "phonetic": "/həʊp/",
@@ -2639,6 +2751,7 @@
       "emojiCode": "openmoji_1f305"
     },
     {
+      "id": "regular_verb_67",
       "base": {
         "verb": "identify",
         "phonetic": "/aɪˈdentɪfaɪ/",
@@ -2674,6 +2787,7 @@
       "emojiCode": "openmoji_1f50d"
     },
     {
+      "id": "regular_verb_68",
       "base": {
         "verb": "interrupt",
         "phonetic": "/ˌɪntəˈrʌpt/",
@@ -2709,6 +2823,7 @@
       "emojiCode": "openmoji_26d4"
     },
     {
+      "id": "regular_verb_71",
       "base": {
         "verb": "joke",
         "phonetic": "/dʒəʊk/",
@@ -2744,6 +2859,7 @@
       "emojiCode": "openmoji_1f61c"
     },
     {
+      "id": "regular_verb_72",
       "base": {
         "verb": "jump",
         "phonetic": "/dʒʌmp/",
@@ -2779,6 +2895,7 @@
       "emojiCode": "openmoji_1f3c2"
     },
     {
+      "id": "regular_verb_73",
       "base": {
         "verb": "kick",
         "phonetic": "/kɪk/",
@@ -2814,6 +2931,7 @@
       "emojiCode": "openmoji_1f9b6"
     },
     {
+      "id": "regular_verb_75",
       "base": {
         "verb": "kiss",
         "phonetic": "/kɪs/",
@@ -2849,6 +2967,7 @@
       "emojiCode": "openmoji_1f618"
     },
     {
+      "id": "regular_verb_76",
       "base": {
         "verb": "laugh",
         "phonetic": "/læf/",
@@ -2884,6 +3003,7 @@
       "emojiCode": "openmoji_1f606"
     },
     {
+      "id": "regular_verb_77",
       "base": {
         "verb": "like",
         "phonetic": "/laɪk/",
@@ -2919,6 +3039,7 @@
       "emojiCode": "openmoji_1f44d"
     },
     {
+      "id": "regular_verb_80",
       "base": {
         "verb": "marry",
         "phonetic": "/ˈmæri/",
@@ -2953,6 +3074,7 @@
       "emojiCode": "openmoji_1f470_200d_2640_fe0f"
     },
     {
+      "id": "regular_verb_81",
       "base": {
         "verb": "measure",
         "phonetic": "/ˈmeʒər/",
@@ -2988,6 +3110,7 @@
       "emojiCode": "openmoji_1f4d0"
     },
     {
+      "id": "regular_verb_82",
       "base": {
         "verb": "move",
         "phonetic": "/muːv/",
@@ -3023,6 +3146,7 @@
       "emojiCode": "openmoji_e103"
     },
     {
+      "id": "regular_verb_86",
       "base": {
         "verb": "offend",
         "phonetic": "/əˈfend/",
@@ -3058,6 +3182,7 @@
       "emojiCode": "openmoji_e283"
     },
     {
+      "id": "regular_verb_88",
       "base": {
         "verb": "open",
         "phonetic": "/ˈəʊpən/",
@@ -3093,6 +3218,7 @@
       "emojiCode": "openmoji_1f4d6"
     },
     {
+      "id": "regular_verb_89",
       "base": {
         "verb": "paint",
         "phonetic": "/peɪnt/",
@@ -3128,6 +3254,7 @@
       "emojiCode": "openmoji_1f58c"
     },
     {
+      "id": "regular_verb_90",
       "base": {
         "verb": "park",
         "phonetic": "/pɑːrk/",
@@ -3163,6 +3290,7 @@
       "emojiCode": "openmoji_1f697"
     },
     {
+      "id": "regular_verb_93",
       "base": {
         "verb": "play",
         "phonetic": "/pleɪ/",
@@ -3198,6 +3326,7 @@
       "emojiCode": "openmoji_26bd"
     },
     {
+      "id": "regular_verb_103",
       "base": {
         "verb": "relax",
         "phonetic": "/rɪˈlæks/",
@@ -3233,6 +3362,7 @@
       "emojiCode": "openmoji_263a"
     },
     {
+      "id": "regular_verb_107",
       "base": {
         "verb": "return",
         "phonetic": "/rɪˈtɜːrn/",
@@ -3268,6 +3398,7 @@
       "emojiCode": "openmoji_21a9"
     },
     {
+      "id": "regular_verb_108",
       "base": {
         "verb": "rub",
         "phonetic": "/rʌb/",
@@ -3303,6 +3434,7 @@
       "emojiCode": "openmoji_e0b2"
     },
     {
+      "id": "regular_verb_110",
       "base": {
         "verb": "select",
         "phonetic": "/sɪˈlekt/",
@@ -3338,6 +3470,7 @@
       "emojiCode": "openmoji_e10c"
     },
     {
+      "id": "regular_verb_111",
       "base": {
         "verb": "smoke",
         "phonetic": "/sməʊk/",
@@ -3373,6 +3506,7 @@
       "emojiCode": "openmoji_1f6ac"
     },
     {
+      "id": "regular_verb_112",
       "base": {
         "verb": "snore",
         "phonetic": "/snɔːr/",
@@ -3408,6 +3542,7 @@
       "emojiCode": "openmoji_1f634"
     },
     {
+      "id": "regular_verb_116",
       "base": {
         "verb": "talk",
         "phonetic": "/tɔːk/",
@@ -3443,6 +3578,7 @@
       "emojiCode": "openmoji_1f4ac"
     },
     {
+      "id": "regular_verb_117",
       "base": {
         "verb": "thank",
         "phonetic": "/θæŋk/",
@@ -3478,6 +3614,7 @@
       "emojiCode": "openmoji_1f64f"
     },
     {
+      "id": "regular_verb_118",
       "base": {
         "verb": "travel",
         "phonetic": "/ˈtrævl/",
@@ -3513,6 +3650,7 @@
       "emojiCode": "openmoji_1f9ed"
     },
     {
+      "id": "regular_verb_122",
       "base": {
         "verb": "visit",
         "phonetic": "/ˈvɪzɪt/",
@@ -3548,6 +3686,7 @@
       "emojiCode": "openmoji_1f392"
     },
     {
+      "id": "regular_verb_124",
       "base": {
         "verb": "walk",
         "phonetic": "/wɔːk/",
@@ -3583,6 +3722,7 @@
       "emojiCode": "openmoji_1f6b6_200d_2640_fe0f"
     },
     {
+      "id": "regular_verb_125",
       "base": {
         "verb": "want",
         "phonetic": "/wɑːnt/",
@@ -3618,6 +3758,7 @@
       "emojiCode": "openmoji_1f97a"
     },
     {
+      "id": "regular_verb_126",
       "base": {
         "verb": "warn",
         "phonetic": "/wɔːrn/",
@@ -3653,6 +3794,7 @@
       "emojiCode": "openmoji_26a0"
     },
     {
+      "id": "regular_verb_129",
       "base": {
         "verb": "yell",
         "phonetic": "/jel/",
@@ -3690,6 +3832,7 @@
   ],
   "countries": [
     {
+      "id": "countries_1",
       "name": "Argentina",
       "country_phonetic": "/ˌɑːrdʒənˈtiːnə/",
       "nationality": "Argentinian",
@@ -3700,6 +3843,7 @@
       "link_maps": "https://www.google.com/maps/place/Argentina/@-37.0560032,-81.6327078,4z/data=!3m1!4b1!4m5!3m4!1s0x95bccaf5f5fdc667:0x3d2f77992af00fa8!8m2!3d-38.416097!4d-63.616672"
     },
     {
+      "id": "countries_2",
       "name": "Austria",
       "country_phonetic": "/ˈɔːstriə/",
       "nationality": "Austrian",
@@ -3710,6 +3854,7 @@
       "link_maps": "https://www.google.com/maps/place/Austria/@47.6783064,11.1024034,7z/data=!3m1!4b1!4m5!3m4!1s0x476d079b259d2a7f:0x1012d47bdde4c1af!8m2!3d47.516231!4d14.550072"
     },
     {
+      "id": "countries_3",
       "name": "Belarus",
       "country_phonetic": "/ˌbeləˈruːs/",
       "nationality": "Belarusian",
@@ -3720,6 +3865,7 @@
       "link_maps": "https://www.google.com/maps/place/Belarus/@53.6395297,23.4905298,6z/data=!3m1!4b1!4m5!3m4!1s0x46da2584e2ad4881:0xa1d181ec8c10!8m2!3d53.709807!4d27.953389"
     },
     {
+      "id": "countries_4",
       "name": "Belgium",
       "country_phonetic": "/ˈbeldʒəm/",
       "nationality": "Belgian",
@@ -3730,6 +3876,7 @@
       "link_maps": "https://www.google.com/maps/place/Belgium/@50.4974212,3.3449663,8z/data=!3m1!4b1!4m5!3m4!1s0x47c17d64edf39797:0x47ebf2b439e60ff2!8m2!3d50.503887!4d4.469936"
     },
     {
+      "id": "countries_5",
       "name": "Brazil",
       "country_phonetic": "/brəˈzɪl/",
       "nationality": "Brazilian",
@@ -3740,6 +3887,7 @@
       "link_maps": "https://www.google.com/maps/place/Brasil/@-13.7019755,-69.6972572,4z/data=!3m1!4b1!4m5!3m4!1s0x9c59c7ebcc28cf:0x295a1506f2293e63!8m2!3d-14.235004!4d-51.92528"
     },
     {
+      "id": "countries_6",
       "name": "Bulgaria",
       "country_phonetic": "/bʌlˈɡeriə/",
       "nationality": "Bulgarian",
@@ -3750,6 +3898,7 @@
       "link_maps": "https://www.google.com/maps/place/Bulgaria/@42.7075162,23.2995661,7z/data=!3m1!4b1!4m5!3m4!1s0x40a8fec1c85bf089:0xa01269bf4c10!8m2!3d42.733883!4d25.48583"
     },
     {
+      "id": "countries_7",
       "name": "Canada",
       "country_phonetic": "/ˈkænədə/",
       "nationality": "Canadian",
@@ -3760,6 +3909,7 @@
       "link_maps": "https://www.google.com/maps/place/Canada/@50.848028,-130.2303233,3z/data=!3m1!4b1!4m5!3m4!1s0x4b0d03d337cc6ad9:0x9968b72aa2438fa5!8m2!3d56.130366!4d-106.346771"
     },
     {
+      "id": "countries_8",
       "name": "Czech Republic",
       "country_phonetic": "/ˌtʃek rɪˈpʌblɪk/",
       "nationality": "Czech",
@@ -3770,6 +3920,7 @@
       "link_maps": "https://www.google.com/maps/place/Czechia/@49.7856588,13.2317121,7z/data=!3m1!4b1!4m5!3m4!1s0x470b948fd7dd8243:0xf8661c75d3db586f!8m2!3d49.817492!4d15.472962"
     },
     {
+      "id": "countries_9",
       "name": "Denmark",
       "country_phonetic": "/ˈdenmɑːrk/",
       "nationality": "Danish",
@@ -3780,6 +3931,7 @@
       "link_maps": "https://www.google.com/maps/place/Denmark/@56.1549322,7.0565,6z/data=!3m1!4b1!4m5!3m4!1s0x464b27b6ee945ffb:0x528743d0c3e092cd!8m2!3d56.26392!4d9.501785"
     },
     {
+      "id": "countries_10",
       "name": "El Salvador ",
       "country_phonetic": "/ˌel ˈsælvədɔːr/",
       "nationality": "Salvadorean",
@@ -3790,6 +3942,7 @@
       "link_maps": "https://www.google.com/maps/place/El+Salvador/@13.7464449,-90.0516386,8z/data=!3m1!4b1!4m5!3m4!1s0x8f6327a659640657:0x6f9a16eb98854832!8m2!3d13.794185!4d-88.89653"
     },
     {
+      "id": "countries_11",
       "name": "Estonia",
       "country_phonetic": "/eˈstəʊniə/",
       "nationality": "Estonian",
@@ -3800,6 +3953,7 @@
       "link_maps": "https://www.google.com/maps/place/Estonia/@58.6037546,22.6895857,7z/data=!3m1!4b1!4m5!3m4!1s0x4692949c82a04bfd:0x40ea9fba4fb425c3!8m2!3d58.595272!4d25.0136071"
     },
     {
+      "id": "countries_12",
       "name": "Finland",
       "country_phonetic": "/ˈfɪnlənd/",
       "nationality": "Finnish",
@@ -3810,6 +3964,7 @@
       "link_maps": "https://www.google.com/maps/place/Finland/@64.6323618,17.0832381,5z/data=!3m1!4b1!4m5!3m4!1s0x4681cadf4b32f6dd:0x146d63c75a810!8m2!3d61.92411!4d25.7481511"
     },
     {
+      "id": "countries_13",
       "name": "France",
       "country_phonetic": "/fræns/",
       "nationality": "French",
@@ -3820,6 +3975,7 @@
       "link_maps": "https://www.google.com/maps/place/France/@45.8811059,-6.9340248,5z/data=!3m1!4b1!4m5!3m4!1s0xd54a02933785731:0x6bfd3f96c747d9f7!8m2!3d46.227638!4d2.213749"
     },
     {
+      "id": "countries_14",
       "name": "Germany",
       "country_phonetic": "/ˈdʒɜːrməni/",
       "nationality": "German",
@@ -3830,6 +3986,7 @@
       "link_maps": "https://www.google.com/maps/place/Germany/@51.0967472,5.9660101,6z/data=!3m1!4b1!4m5!3m4!1s0x479a721ec2b1be6b:0x75e85d6b8e91e55b!8m2!3d51.165691!4d10.451526"
     },
     {
+      "id": "countries_15",
       "name": "Greece",
       "country_phonetic": "/ɡriːs/",
       "nationality": "Greek",
@@ -3840,6 +3997,7 @@
       "link_maps": "https://www.google.com/maps/place/Greece/@38.0688682,19.9885738,6z/data=!3m1!4b1!4m5!3m4!1s0x135b4ac711716c63:0x363a1775dc9a2d1d!8m2!3d39.074208!4d21.824312"
     },
     {
+      "id": "countries_16",
       "name": "Hungary",
       "country_phonetic": "/ˈhʌŋɡəri/",
       "nationality": "Hungarian",
@@ -3850,6 +4008,7 @@
       "link_maps": "https://www.google.com/maps/place/Hungary/@47.1429984,17.2615323,7z/data=!3m1!4b1!4m5!3m4!1s0x4741837bdf37e4c3:0xc4290c1e1010!8m2!3d47.162494!4d19.5033041"
     },
     {
+      "id": "countries_17",
       "name": "Italy",
       "country_phonetic": "/ˈɪtəli/",
       "nationality": "Italian",
@@ -3860,6 +4019,7 @@
       "link_maps": "https://www.google.com/maps/place/Italy/@40.9560199,3.7137506,5z/data=!3m1!4b1!4m5!3m4!1s0x12d4fe82448dd203:0xe22cf55c24635e6f!8m2!3d41.87194!4d12.56738"
     },
     {
+      "id": "countries_18",
       "name": "Latvia",
       "country_phonetic": "/ˈlætviə/",
       "nationality": "Latvian",
@@ -3870,6 +4030,7 @@
       "link_maps": "https://www.google.com/maps/place/Latvia/@56.8630848,22.3013343,7z/data=!3m1!4b1!4m5!3m4!1s0x46e930677b8a9afd:0xcfcd68f2fc10!8m2!3d56.879635!4d24.603189"
     },
     {
+      "id": "countries_19",
       "name": "Lithuania",
       "country_phonetic": "/ˌlɪθuˈeɪniə/",
       "nationality": "Lithuanian",
@@ -3880,6 +4041,7 @@
       "link_maps": "https://www.google.com/maps/place/Lithuania/@55.1561128,21.6404642,7z/data=!3m1!4b1!4m5!3m4!1s0x46dd94140f33be13:0xf30a54d3a55dbab9!8m2!3d55.169438!4d23.881275"
     },
     {
+      "id": "countries_20",
       "name": "Mexico",
       "country_phonetic": "/ˈmeksɪkəʊ/",
       "nationality": "Mexican",
@@ -3890,6 +4052,7 @@
       "link_maps": "https://www.google.com/maps/place/Mexico/@23.3132808,-111.6583689,5z/data=!3m1!4b1!4m5!3m4!1s0x84043a3b88685353:0xed64b4be6b099811!8m2!3d23.634501!4d-102.552784"
     },
     {
+      "id": "countries_21",
       "name": "Netherlands",
       "country_phonetic": "/ˈneðərləndz/",
       "nationality": "Dutch",
@@ -3900,6 +4063,7 @@
       "link_maps": "https://www.google.com/maps/place/Netherlands/@52.1950947,3.0363492,7z/data=!3m1!4b1!4m5!3m4!1s0x47c609c3db87e4bb:0xb3a175ceffbd0a9f!8m2!3d52.132633!4d5.291266"
     },
     {
+      "id": "countries_22",
       "name": "Norway",
       "country_phonetic": "/ˈnɔːrweɪ/",
       "nationality": "Norwegian",
@@ -3910,6 +4074,7 @@
       "link_maps": "https://www.google.com/maps/place/Norway/@63.4932818,0.0813433,4z/data=!3m1!4b1!4m5!3m4!1s0x461268458f4de5bf:0xa1b03b9db864d02b!8m2!3d60.472024!4d8.468946"
     },
     {
+      "id": "countries_23",
       "name": "Poland",
       "country_phonetic": "/ˈpəʊlənd/",
       "nationality": "Polish",
@@ -3920,6 +4085,7 @@
       "link_maps": "https://www.google.com/maps/place/Poland/@51.8751265,14.6465935,6z/data=!3m1!4b1!4m5!3m4!1s0x47009964a4640bbb:0x97573ca49cc55ea!8m2!3d51.919438!4d19.145136"
     },
     {
+      "id": "countries_24",
       "name": "Romania",
       "country_phonetic": "/ruˈmeɪniə/",
       "nationality": "Romanian",
@@ -3930,6 +4096,7 @@
       "link_maps": "https://www.google.com/maps/place/Romania/@45.8615457,20.5298124,6z/data=!3m1!4b1!4m5!3m4!1s0x40b1ff26958976c3:0x84ef4f92a804b194!8m2!3d45.943161!4d24.96676"
     },
     {
+      "id": "countries_25",
       "name": "Russia",
       "country_phonetic": "/ˈrʌʃə/",
       "nationality": "Russian",
@@ -3940,6 +4107,7 @@
       "link_maps": "https://www.google.com/maps/place/Russia/@55,103,3z/data=!3m1!4b1!4m5!3m4!1s0x453c569a896724fb:0x1409fdf86611f613!8m2!3d61.52401!4d105.318756"
     },
     {
+      "id": "countries_26",
       "name": "Scotland",
       "country_phonetic": "/ˈskɑːtlənd/",
       "nationality": "Scottish",
@@ -3950,6 +4118,7 @@
       "link_maps": "https://www.google.com/maps/place/Scotland,+UK/@57.6677015,-9.1705585,6z/data=!4m5!3m4!1s0x4861e2c403f2a19f:0xe7c1fad809c30714!8m2!3d56.4906712!4d-4.2026458"
     },
     {
+      "id": "countries_27",
       "name": "Slovakia",
       "country_phonetic": "/sləʊˈvɑːkiə/",
       "nationality": "Slovakian",
@@ -3960,6 +4129,7 @@
       "link_maps": "https://www.google.com/maps/place/Slovakia/@48.6543307,17.4562375,7z/data=!3m1!4b1!4m5!3m4!1s0x471460b9ae7cc67f:0xcd6b6167b1723a7d!8m2!3d48.669026!4d19.699024"
     },
     {
+      "id": "countries_28",
       "name": "Spain",
       "country_phonetic": "/speɪn/",
       "nationality": "Spanish",
@@ -3970,6 +4140,7 @@
       "link_maps": "https://www.google.com/maps/place/Spain/@39.8757885,-12.7141406,5z/data=!3m1!4b1!4m5!3m4!1s0xc42e3783261bc8b:0xa6ec2c940768a3ec!8m2!3d40.463667!4d-3.74922"
     },
     {
+      "id": "countries_29",
       "name": "Sweden",
       "country_phonetic": "/ˈswiːdn/",
       "nationality": "Swedish",
@@ -3980,6 +4151,7 @@
       "link_maps": "https://www.google.com/maps/place/Sweden/@60.8926931,-0.2879674,4z/data=!3m1!4b1!4m5!3m4!1s0x465cb2396d35f0f1:0x22b8eba28dad6f62!8m2!3d60.128161!4d18.643501"
     },
     {
+      "id": "countries_30",
       "name": "Switzerland",
       "country_phonetic": "/ˈswɪtsərlənd/",
       "nationality": "Swiss",
@@ -3990,6 +4162,7 @@
       "link_maps": "https://www.google.com/maps/place/Switzerland/@46.7950298,5.9807915,7z/data=!3m1!4b1!4m5!3m4!1s0x478c64ef6f596d61:0x5c56b5110fcb7b15!8m2!3d46.818188!4d8.227512"
     },
     {
+      "id": "countries_31",
       "name": "The United States",
       "country_phonetic": "/ðə juˌnaɪtɪd steɪts ˈsenət/",
       "nationality": "American",
@@ -4000,6 +4173,7 @@
       "link_maps": "https://www.google.com/maps/place/United+States/@36.2409999,-113.7572188,4z/data=!3m1!4b1!4m5!3m4!1s0x54eab584e432360b:0x1c3bb99243deb742!8m2!3d37.09024!4d-95.712891"
     },
     {
+      "id": "countries_32",
       "name": "Ukraine",
       "country_phonetic": "/juːˈkreɪn/",
       "nationality": "Ukrainian",
@@ -4010,6 +4184,7 @@
       "link_maps": "https://www.google.com/maps/place/Ukraine/@47.9994777,22.1986152,5z/data=!3m1!4b1!4m5!3m4!1s0x40d1d9c154700e8f:0x1068488f64010!8m2!3d48.379433!4d31.1655799"
     },
     {
+      "id": "countries_33",
       "name": "United Kingdom",
       "country_phonetic": "/ðə juˌnaɪtɪd ˈkɪŋdəm/",
       "nationality": "British",
@@ -4020,6 +4195,7 @@
       "link_maps": "https://www.google.com/maps/place/United+Kingdom/@54.2311636,-13.4335005,5z/data=!3m1!4b1!4m5!3m4!1s0x25a3b1142c791a9:0xc4f8a0433288257a!8m2!3d55.378051!4d-3.435973"
     },
     {
+      "id": "countries_34",
       "name": "Wales",
       "country_phonetic": "/weɪlz/",
       "nationality": "Welsh",
@@ -4032,91 +4208,109 @@
   ],
   "animals": [
     {
+      "id": "animals_1",
       "name": "cat",
       "phonetic": "/kæt/",
       "emoji_code": "openmoji_1f408"
     },
     {
+      "id": "animals_2",
       "name": "chipmunk",
       "phonetic": "/ˈtʃɪpmʌŋk/",
       "emoji_code": "openmoji_1f43f"
     },
     {
+      "id": "animals_3",
       "name": "cow",
       "phonetic": "/kaʊ/",
       "emoji_code": "openmoji_1f404"
     },
     {
+      "id": "animals_4",
       "name": "dog",
       "phonetic": "/dɔːɡ/",
       "emoji_code": "openmoji_1f415"
     },
     {
+      "id": "animals_5",
       "name": "elephant",
       "phonetic": "/ˈelɪfənt/",
       "emoji_code": "openmoji_1f418"
     },
     {
+      "id": "animals_6",
       "name": "fox",
       "phonetic": "/fɑːks/",
       "emoji_code": "openmoji_1f98a"
     },
     {
+      "id": "animals_7",
       "name": "gorilla",
       "phonetic": "/ɡəˈrɪlə/",
       "emoji_code": "openmoji_1f98d"
     },
     {
+      "id": "animals_8",
       "name": "hedgehog",
       "phonetic": "/ˈhedʒhɔːɡ/",
       "emoji_code": "openmoji_1f994"
     },
     {
+      "id": "animals_9",
       "name": "horse",
       "phonetic": "/hɔːrs/",
       "emoji_code": "openmoji_1f40e"
     },
     {
+      "id": "animals_10",
       "name": "lion",
       "phonetic": "/ˈlaɪən/",
       "emoji_code": "openmoji_1f981"
     },
     {
+      "id": "animals_11",
       "name": "monkey",
       "phonetic": "/ˈmʌŋki/",
       "emoji_code": "openmoji_1f412"
     },
     {
+      "id": "animals_12",
       "name": "orangutan",
       "phonetic": "/əˈræŋətæn/",
       "emoji_code": "openmoji_1f9a7"
     },
     {
+      "id": "animals_13",
       "name": "otter",
       "phonetic": "/ˈɑːtər/",
       "emoji_code": "openmoji_1f9a6"
     },
     {
+      "id": "animals_14",
       "name": "pig",
       "phonetic": "/pɪɡ/",
       "emoji_code": "openmoji_1f416"
     },
     {
+      "id": "animals_15",
       "name": "raccoon",
       "phonetic": "/ræˈkuːn/",
       "emoji_code": "openmoji_1f99d"
     },
     {
+      "id": "animals_16",
       "name": "tiger",
       "phonetic": "/ˈtaɪɡər/",
       "emoji_code": "openmoji_1f405"
     },
     {
+      "id": "animals_17",
       "name": "turkey",
       "phonetic": "/ˈtɜːrki/",
       "emoji_code": "openmoji_1f983"
     },
     {
+      "id": "animals_18",
       "name": "wolf",
       "phonetic": "/wʊlf/",
       "emoji_code": "openmoji_1f43a"

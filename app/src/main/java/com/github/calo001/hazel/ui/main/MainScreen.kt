@@ -1,19 +1,21 @@
 package com.github.calo001.hazel.ui.main
 
 import androidx.compose.animation.*
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.LocationDisabled
+import androidx.compose.material.icons.filled.LocationOff
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
@@ -29,10 +31,15 @@ import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.model.hazeldb.HazelContent
 import com.github.calo001.hazel.model.view.ItemMenuData
 import com.github.calo001.hazel.routes.Routes
+import com.github.calo001.hazel.huawei.WeatherStatus
+import com.github.calo001.hazel.huawei.WeatherType
 import com.github.calo001.hazel.ui.common.*
 import com.github.calo001.hazel.util.PainterIdentifier
 import com.github.calo001.hazel.ui.theme.Lato
+import com.google.accompanist.permissions.*
 
+
+@ExperimentalFoundationApi
 @ExperimentalAnimationApi
 @ExperimentalComposeUiApi
 @ExperimentalMaterialApi
@@ -46,6 +53,8 @@ fun MainScreen(
     onSearchQuery: (String) -> Unit,
     darkMode: DarkMode,
     onDarkModeChange: (DarkMode) -> Unit,
+    temperature: WeatherStatus,
+    onCheckWeather: () -> Unit,
 ) {
     var querySearch by rememberSaveable { mutableStateOf("") }
 
@@ -68,8 +77,10 @@ fun MainScreen(
             is HazelContentStatus.Success -> {
                 MainMenu(
                     hazelContent = status.content,
+                    temperature = temperature,
                     painterIdentifier = painterIdentifier,
                     onNavigate = onNavigate,
+                    onCheckWeather = onCheckWeather,
                 )
             }
         }
@@ -131,12 +142,16 @@ fun MainScreen(
 
 }
 
+
+@OptIn(ExperimentalPermissionsApi::class)
 @ExperimentalMaterialApi
 @Composable
 fun MainMenu(
     hazelContent: HazelContent,
     painterIdentifier: PainterIdentifier,
     onNavigate: (String) -> Unit,
+    temperature: WeatherStatus,
+    onCheckWeather: () -> Unit,
 ) {
     val itemsPerColumns = calculateItemsPerColumn(
         LocalConfiguration.current.screenWidthDp.dp
@@ -150,13 +165,24 @@ fun MainMenu(
     ) {
         safeSpacer(20.dp)
 
+        headerSection(
+            onClickTime = {}
+        )
+
+        bigSection(
+            title = "The weather",
+            temperature = temperature,
+            onCheckWeather = onCheckWeather,
+            onClick = {  },
+        )
+
         val usefulPhraseCategory = hazelContent.usefulPhrases
-        SectionMenu(
+        sectionMenu(
             title = "Useful phrases",
             itemsPerColumns = itemsPerColumns,
             items = usefulPhraseCategory.map { usefulPhrases ->
                 ItemMenuData(
-                    id = usefulPhrases.category,
+                    id = usefulPhrases.id,
                     name = usefulPhrases.category,
                     iconName = usefulPhrases.emojiCode
                 ) },
@@ -198,10 +224,16 @@ fun MainMenu(
                 iconName = "openmoji_1f638"
             )
 
-        SectionMenu(
+        val seasons = ItemMenuData(
+                id = Routes.Seasons.name,
+                name = Routes.Seasons.label,
+                iconName = "openmoji_1f638"
+            )
+
+        sectionMenu(
             title = "Basic vocabulary",
             itemsPerColumns = itemsPerColumns,
-            items = listOf(regularVerb, irregularVerbs, colors, animals, countries),
+            items = listOf(regularVerb, irregularVerbs, colors, animals, countries, seasons),
             painterIdentifier = painterIdentifier,
             onClick = { id ->
                 when (id) {
@@ -210,12 +242,163 @@ fun MainMenu(
                     Routes.VerbsRegular.name -> onNavigate(Routes.VerbsRegular.name)
                     Routes.VerbsIrregular.name -> onNavigate(Routes.VerbsIrregular.name)
                     Routes.Animals.name -> onNavigate(Routes.Animals.name)
+                    Routes.Seasons.name -> onNavigate(Routes.Seasons.name)
                 }
             }
         )
     }
 }
 
+
+@ExperimentalPermissionsApi
+@ExperimentalMaterialApi
+fun LazyListScope.bigSection(
+    title: String,
+    temperature: WeatherStatus,
+    onClick: () -> Unit,
+    onCheckWeather: () -> Unit,
+) {
+    item {
+        Spacer(modifier = Modifier.size(16.dp))
+    }
+    item {
+        val imageLogoIds = getLogosId(temperature)
+        BigCard(
+            title = title,
+            shapeLabel = {
+                WeatherLogo(
+                    temperature = temperature,
+                    onCheckWeather = onCheckWeather
+                )
+            },
+            imageContent = {
+                Box(modifier = Modifier
+                    .size(60.dp)
+                    .rotate(45f)) {
+                    imageLogoIds.forEachIndexed { index, id ->
+                        Image(
+                            painter = painterResource(id = imageLogoIds[index]),
+                            contentDescription = null,
+                            modifier = Modifier
+                                .size(if(imageLogoIds.size == 1) 60.dp else 50.dp)
+                                .align(if (index % 2 == 0) Alignment.TopStart else Alignment.BottomEnd)
+                        )
+                    }
+                }
+            },
+            onClick = onClick
+        )
+    }
+    item {
+        Spacer(modifier = Modifier.size(16.dp))
+    }
+}
+
+fun getLogosId(temperature: WeatherStatus): List<Int> = when(temperature) {
+    WeatherStatus.Error -> listOf(R.drawable.openmoji_1f325)
+    WeatherStatus.Loading -> listOf(R.drawable.openmoji_1f325)
+    WeatherStatus.LocationFailure -> listOf(R.drawable.openmoji_1f325)
+    WeatherStatus.LocationNotGranted -> listOf(R.drawable.openmoji_1f325)
+    is WeatherStatus.Success -> WeatherType.getIdRes(temperature.typeWeather)
+}
+
+@Composable
+private fun WeatherLogo(
+    temperature: WeatherStatus,
+    onCheckWeather: () -> Unit
+) {
+    AnimatedVisibility(visible = temperature is WeatherStatus.LocationFailure) {
+        HazelToolbarButton(
+            icon = Icons.Filled.LocationOff,
+            onClick = onCheckWeather,
+            background = MaterialTheme.colors.primary,
+            modifier = Modifier
+                .size(52.dp)
+                .rotate(22f)
+        )
+    }
+    AnimatedVisibility(visible = temperature is WeatherStatus.LocationNotGranted) {
+        HazelToolbarButton(
+            icon = Icons.Filled.LocationOff,
+            onClick = onCheckWeather,
+            background = MaterialTheme.colors.primary,
+            modifier = Modifier
+                .size(52.dp)
+                .rotate(22f)
+        )
+    }
+    AnimatedVisibility(visible = temperature is WeatherStatus.Error) {
+        HazelToolbarButton(
+            icon = Icons.Filled.LocationDisabled,
+            onClick = onCheckWeather,
+            background = MaterialTheme.colors.primary,
+            modifier = Modifier
+                .size(52.dp)
+                .rotate(22f)
+        )
+    }
+    AnimatedVisibility(visible = temperature is WeatherStatus.Loading) {
+        CircularProgressIndicator(
+            color = MaterialTheme.colors.onBackground,
+            modifier = Modifier
+                .size(52.dp)
+                .padding(8.dp)
+        )
+    }
+    AnimatedVisibility(visible = temperature is WeatherStatus.Success) {
+        Text(
+            text = "${
+                (temperature as? WeatherStatus.Success)
+                    ?.temperature
+                    ?: ""
+            }º",
+            color = MaterialTheme.colors.onBackground,
+            style = MaterialTheme.typography.h4,
+            modifier = Modifier
+                .rotate(45f)
+        )
+    }
+}
+
+@ExperimentalMaterialApi
+fun LazyListScope.headerSection(
+    onClickTime: () -> Unit
+) {
+    item {
+        Row(
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Column(
+                verticalArrangement = Arrangement.Center,
+            ) {
+                Text(
+                    text = "Good morning",
+                    style = MaterialTheme.typography.h6.copy(
+                        fontFamily = Lato
+                    ),
+                    modifier = Modifier
+                )
+                Text(
+                    text = "Your name",
+                    style = MaterialTheme.typography.h4,
+                    modifier = Modifier
+                )
+            }
+            ItemMenu(
+                title = " 12:12 PM ",
+                titleStyle = MaterialTheme.typography.h5,
+                spaceText = "",
+                image = painterResource(id = R.drawable.openmoji_1f9ed),
+                onClick = onClickTime,
+                modifier = Modifier
+            )
+        }
+    }
+}
+
+@ExperimentalFoundationApi
 @Composable
 fun SearchResults(
     querySearch: String,
@@ -256,7 +439,10 @@ fun SearchResults(
         is SearchStatus.Success -> {
             LazyColumn{
                 item { Spacer(modifier = Modifier.height(180.dp)) }
-                items(searchStatus.result.size) { index ->
+                items(
+                    count = searchStatus.result.size,
+                    key = { index -> searchStatus.result[index].route }
+                ) { index ->
                     Surface(
                         shape = MaterialTheme.shapes.medium,
                         color = MaterialTheme.colors.background.copy(alpha = 0.8f),
@@ -264,6 +450,7 @@ fun SearchResults(
                             .fillMaxWidth()
                             .padding(horizontal = 24.dp)
                             .padding(vertical = 2.dp)
+                            .animateItemPlacement()
                     ) {
                         SearchItem(
                             searchResult = searchStatus.result[index],
@@ -331,7 +518,7 @@ private fun SearchItem(
 }
 
 @ExperimentalMaterialApi
-fun LazyListScope.SectionMenu(
+fun LazyListScope.sectionMenu(
     title: String,
     items: List<ItemMenuData>,
     itemsPerColumns: Int,

@@ -1,5 +1,6 @@
 package com.github.calo001.hazel.ui.countries
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -21,6 +22,7 @@ import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.common.safeSpacer
 import com.github.calo001.hazel.util.PainterIdentifier
 
+@ExperimentalFoundationApi
 @ExperimentalComposeUiApi
 @Composable
 fun CountryView(
@@ -43,7 +45,10 @@ fun CountryView(
             } else {
                 countries
             }
-            items(items.size) { index ->
+            items(
+                count = items.size,
+                key = { index -> items[index].id }
+            ) { index ->
                 val painter = painterIdentifier.getPainter(identifier = items[index].emojiCode)
                 TextImageRow(
                     text = items[index].name,
@@ -53,6 +58,7 @@ fun CountryView(
                         .padding(vertical = 18.dp)
                         .padding(horizontal = 16.dp)
                         .fillMaxWidth()
+                        .animateItemPlacement()
                 )
             }
         }

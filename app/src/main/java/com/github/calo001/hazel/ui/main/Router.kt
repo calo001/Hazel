@@ -1,6 +1,8 @@
 package com.github.calo001.hazel.ui.main
 
+import android.annotation.SuppressLint
 import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
@@ -16,7 +18,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.config.DarkMode
+import com.github.calo001.hazel.model.hazeldb.Phrase
 import com.github.calo001.hazel.routes.Routes
+import com.github.calo001.hazel.huawei.WeatherHelper
+import com.github.calo001.hazel.huawei.WeatherStatus
 import com.github.calo001.hazel.ui.animals.AnimalContentView
 import com.github.calo001.hazel.ui.animals.AnimalsView
 import com.github.calo001.hazel.ui.colors.SimpleExamplesView
@@ -34,6 +39,9 @@ import com.github.calo001.hazel.ui.verbs.VerbData
 import com.github.calo001.hazel.ui.verbs.VerbsView
 import com.github.calo001.hazel.util.PainterIdentifier
 
+@SuppressLint("MissingPermission")
+
+@ExperimentalFoundationApi
 @ExperimentalAnimationApi
 @ExperimentalComposeUiApi
 @ExperimentalMaterialApi
@@ -53,44 +61,46 @@ fun Router(
     colorScheme: ColorVariant,
     dictionary: Dictionaries,
     defaultRoute: String,
+    weatherStatus: WeatherStatus,
+    onRequestWeather: () -> Unit,
 ) {
     NavHost(
         navController = navController,
         startDestination = defaultRoute
     ) {
         composable(
-            route = "${Routes.Verbs.name}/{type}/{verb}/{form}",
+            route = "${Routes.Verbs.name}/{type}/{verb_id}/{form}",
             arguments = listOf(
                 navArgument("type") { type = NavType.StringType },
-                navArgument("verb") { type = NavType.StringType },
+                navArgument("verb_id") { type = NavType.StringType },
                 navArgument("form") { type = NavType.StringType },
             )
         ) { navBackStackEntry ->
-            var verbBaseFormArg by rememberSaveable {
-                mutableStateOf(navBackStackEntry.arguments?.getString("verb") ?: "")
+            var verbIdArg by rememberSaveable {
+                mutableStateOf(navBackStackEntry.arguments?.getString("verb_id") ?: "")
             }
 
             val type = navBackStackEntry.arguments?.getString("type") ?: ""
             val form = navBackStackEntry.arguments?.getString("form") ?: VerbData.BaseForm.name
 
             val verbs = when (type) {
-                "regular" -> Pair("Regular verbs", viewModel.getRegularVerbs())
-                "irregular" -> Pair("Irregular verbs", viewModel.getIrregularVerbs())
-                else -> Pair("Verbs", listOf())
+                "regular" -> viewModel.getRegularVerbs()
+                "irregular" -> viewModel.getIrregularVerbs()
+                else -> listOf()
             }
 
-            val currentVerb = verbs.second.firstOrNull { it.base.verb == verbBaseFormArg }
+            val currentVerb = verbs.firstOrNull { it.id == verbIdArg }
 
             if (currentVerb != null) {
-                val indexCurrent = verbs.second.indexOfFirst { it.base.verb == verbBaseFormArg }
+                val indexCurrent = verbs.indexOfFirst { it.id == verbIdArg }
                 VerbContentView(
                     verb = currentVerb,
                     selectedForm = form,
                     onNext = {
-                        verbBaseFormArg = verbs.second.getOrElse(indexCurrent + 1) { verbs.second[indexCurrent] }.base.verb
+                        verbIdArg = verbs.getOrElse(indexCurrent + 1) { verbs[indexCurrent] }.id
                     },
                     onPrevious = {
-                        verbBaseFormArg = verbs.second.getOrElse(indexCurrent - 1) { verbs.second[indexCurrent] }.base.verb
+                        verbIdArg = verbs.getOrElse(indexCurrent - 1) { verbs[indexCurrent] }.id
                     },
                     onOpenLink = { term ->
                         onOpenLink(term)
@@ -100,20 +110,12 @@ fun Router(
                                 "regular" -> Routes.VerbsRegular.name
                                 "irregular" -> Routes.VerbsIrregular.name
                                 else -> Routes.VerbsRegular.name }
-                            }/example/${form}/${
-                                when(form) {
-                                    VerbData.BaseForm.name -> currentVerb.base.verb
-                                    VerbData.PastForm.name -> currentVerb.simplePast.verb
-                                    VerbData.PastParticipleForm.name -> currentVerb.pastParticiple.verb
-                                    VerbData.IngForm.name -> currentVerb.ing.verb
-                                    else -> currentVerb.base.verb
-                                }
-                            }"
+                            }/example/${form}/${currentVerb.id}"
                         )
                     },
                     onListen = { onListenClick(it) },
                     onNavBack = { navController.navigateUp() },
-                    hasNext = indexCurrent < verbs.second.lastIndex,
+                    hasNext = indexCurrent < verbs.lastIndex,
                     hasPrevious = indexCurrent != 0,
                     painterIdentifier = painterIdentifier,
                 )
@@ -138,10 +140,10 @@ fun Router(
                 onClickVerb = { verb ->
                     when (navBackStackEntry.arguments?.getString("type") ?: "") {
                         "regular" -> navController.navigate(
-                            "${Routes.VerbsRegular.name}/${verb.base.verb}/${VerbData.BaseForm.name}"
+                            "${Routes.VerbsRegular.name}/${verb.id}/${VerbData.BaseForm.name}"
                         )
                         "irregular" -> navController.navigate(
-                            "${Routes.VerbsIrregular.name}/${verb.base.verb}/${VerbData.BaseForm.name}"
+                            "${Routes.VerbsIrregular.name}/${verb.id}/${VerbData.BaseForm.name}"
                         )
                         else -> Unit
                     }
@@ -151,15 +153,15 @@ fun Router(
         }
 
         composable(
-            route = "${Routes.Verbs.name}/{type}/example/{form}/{verb}",
+            route = "${Routes.Verbs.name}/{type}/example/{form}/{verb_id}",
             arguments = listOf(
                 navArgument("type") { type = NavType.StringType },
                 navArgument("form") { type = NavType.StringType },
-                navArgument("verb") { type = NavType.StringType }
+                navArgument("verb_id") { type = NavType.StringType }
             )
         ) { navBackStackEntry ->
             val verbType = navBackStackEntry.arguments?.getString("type") ?: ""
-            val verbArg = navBackStackEntry.arguments?.getString("verb") ?: ""
+            val verbIdArg = navBackStackEntry.arguments?.getString("verb_id") ?: ""
             val form = navBackStackEntry.arguments?.getString("form") ?: ""
 
             var verbIndex by rememberSaveable { mutableStateOf(0) }
@@ -171,13 +173,7 @@ fun Router(
             }
 
             val verbByForm = verbs.firstOrNull() {
-                when(form) {
-                    VerbData.BaseForm.name -> it.base.verb == verbArg
-                    VerbData.PastForm.name -> it.simplePast.verb == verbArg
-                    VerbData.PastParticipleForm.name -> it.pastParticiple.verb == verbArg
-                    VerbData.IngForm.name -> it.ing.verb == verbArg
-                    else -> it.base.verb == verbArg
-                }
+                it.id == verbIdArg
             }
 
             val examplesByForm = when(form) {
@@ -188,11 +184,19 @@ fun Router(
                 else -> verbByForm?.base?.examples
             } ?: listOf()
 
+            val verbNameByForm = when(form) {
+                VerbData.BaseForm.name -> verbByForm?.base?.verb
+                VerbData.PastForm.name -> verbByForm?.simplePast?.verb
+                VerbData.PastParticipleForm.name -> verbByForm?.pastParticiple?.verb
+                VerbData.IngForm.name -> verbByForm?.ing?.verb
+                else -> verbByForm?.base?.verb
+            } ?: ""
+
             if (examplesByForm.isNotEmpty()) {
                 val hideNext = verbIndex >= examplesByForm.lastIndex
                 val hidePrevious = verbIndex == 0
                 SimpleExamplesView(
-                    title = verbArg,
+                    title = verbNameByForm,
                     example = examplesByForm[verbIndex],
                     onBackClick = { navController.navigateUp() },
                     hideNext = hideNext,
@@ -278,7 +282,7 @@ fun Router(
                 painterIdentifier = painterIdentifier,
                 onClickAnimal = { animal ->
                     navController.navigate(
-                    "${Routes.Animals.name}/${animal.name}"
+                    "${Routes.Animals.name}/${animal.id}"
                     )
                 },
                 onBackClick = {
@@ -329,7 +333,7 @@ fun Router(
                 onBackClick = { navController.navigateUp() },
                 onClickColor = { color ->
                     navController.navigate(
-                    "${Routes.Colors.name}/${color.code}"
+                    "${Routes.Colors.name}/${color.id}"
                 ) }
             )
         }
@@ -393,16 +397,16 @@ fun Router(
         }
 
         composable(
-            route = "${Routes.Colors.name}/{color}",
+            route = "${Routes.Colors.name}/{color_id}",
             arguments = listOf(
-                navArgument("color") { type = NavType.StringType }
+                navArgument("color_id") { type = NavType.StringType }
             )
         ) { navBackStackEntry ->
             val colors = viewModel.getColors()
-            var colorArg by rememberSaveable {
-                mutableStateOf(navBackStackEntry.arguments?.getString("color") ?: "")
+            var colorIdArg by rememberSaveable {
+                mutableStateOf(navBackStackEntry.arguments?.getString("color_id") ?: "")
             }
-            val currentColor = viewModel.getColorByCode(colorArg)
+            val currentColor = viewModel.getColorById(colorIdArg)
 
             currentColor?.let { color ->
                 val currentIndex = colors.indexOfFirst {
@@ -428,10 +432,10 @@ fun Router(
                     hasNext = hasNext,
                     hasPrevious = hasPrevious,
                     onNextClick = {
-                        colorArg = colors.getOrElse(currentIndex + 1) { color }.code
+                        colorIdArg = colors.getOrElse(currentIndex + 1) { color }.code
                     },
                     onPreviousClick = {
-                        colorArg = colors.getOrElse(currentIndex - 1) { color }.code
+                        colorIdArg = colors.getOrElse(currentIndex - 1) { color }.code
                     },
                 )
             }
@@ -443,6 +447,7 @@ fun Router(
                 darkMode = darkMode,
                 status = hazelContentStatus,
                 painterIdentifier = painterIdentifier,
+                temperature = weatherStatus,
                 onSettingsClick = { navController.navigate(Routes.Settings.name) },
                 searchStatus = searchResult,
                 onSearchQuery = { query ->
@@ -453,23 +458,24 @@ fun Router(
                 },
                 onDarkModeChange = { darkMode ->
                     onSelectDarkMode(darkMode)
-                }
+                },
+                onCheckWeather = onRequestWeather,
             )
         }
 
         composable(
-            route = "useful_expressions/{category}",
-            arguments = listOf(navArgument("category") {
+            route = "${Routes.UsefulExpressions.name}/{category_id}",
+            arguments = listOf(navArgument("category_id") {
                 type = NavType.StringType
             })
         ) { navBackStackEntry ->
-            val typeOfUsefulExp = navBackStackEntry.arguments?.getString("category") ?: ""
+            val categoryId = navBackStackEntry.arguments?.getString("category_id") ?: ""
 
             Surface(
                 color = MaterialTheme.colors.background,
                 modifier = Modifier.fillMaxSize()
             ) {
-                viewModel.getUsefulExpressionCategory(typeOfUsefulExp)?.let { phrases ->
+                viewModel.getUsefulExpressionCategoryId(categoryId)?.let { phrases ->
                     UsefulExpressionsView(
                         usefulPhrase = phrases,
                         onBackClick = {
@@ -477,7 +483,7 @@ fun Router(
                         },
                         onClickPhrase = { phrase ->
                             navController.navigate(
-                                "${Routes.UsefulExpressionsPhrase.name}/${phrases.category}/${phrase.expression}"
+                                "${Routes.UsefulExpressionsPhrase.name}/${categoryId}/${phrase.id}"
                             )
                         }
                     )
@@ -486,46 +492,44 @@ fun Router(
         }
 
         composable(
-            route = "${Routes.UsefulExpressionsPhrase.name}/{category}/{phrase}",
+            route = "${Routes.UsefulExpressionsPhrase.name}/{category_id}/{phrase_id}",
             arguments = listOf(
-                navArgument("category") { type = NavType.StringType },
-                navArgument("phrase") { type = NavType.StringType }
+                navArgument("category_id") { type = NavType.StringType },
+                navArgument("phrase_id") { type = NavType.StringType }
             )
         ) { navBackStackEntry ->
-            var phraseArg by rememberSaveable {
-                mutableStateOf(navBackStackEntry.arguments?.getString("phrase") ?: "")
+            var phraseIdArg by rememberSaveable {
+                mutableStateOf(navBackStackEntry.arguments?.getString("phrase_id") ?: "")
             }
-            val categoryArg = navBackStackEntry.arguments?.getString("category") ?: ""
+            val categoryIdArg = navBackStackEntry.arguments?.getString("category_id") ?: ""
 
-            if (phraseArg.isNotEmpty()) {
-                viewModel.getUsefulExpressionCategory(categoryArg)?.let { usefulPhrases ->
-                    val currentIndex = usefulPhrases.phrases.indexOfFirst { it.expression .contains(phraseArg) }
+            if (phraseIdArg.isNotEmpty()) {
+                viewModel.getUsefulExpressionCategoryId(categoryIdArg)?.let { usefulPhrases ->
+                    val currentIndex = usefulPhrases.phrases.indexOfFirst { it.id == phraseIdArg }
                     val hideNext = usefulPhrases.phrases.lastIndex <= currentIndex
                     val hidePrevious = currentIndex == 0
-                    val currentPhrase = usefulPhrases.phrases.find { it.expression.contains(phraseArg) }
+                    val currentPhrase = usefulPhrases.phrases.getOrElse(currentIndex) { Phrase.empty }
 
                     PhraseView(
                         currentPhrase = currentPhrase,
                         hideNext = hideNext,
                         hidePrevious = hidePrevious,
                         onNextClick = {
-                            val index = usefulPhrases.phrases.indexOfFirst { it.expression .contains(phraseArg) }
-                            if (index != -1) {
-                                phraseArg = usefulPhrases.phrases.getOrElse(index + 1) {
-                                    usefulPhrases.phrases[index]
-                                }.expression
+                            if (currentIndex != -1) {
+                                phraseIdArg = usefulPhrases.phrases.getOrElse(currentIndex + 1) {
+                                    usefulPhrases.phrases[currentIndex]
+                                }.id
                             }
                         },
                         onPreviousClick = {
-                            val index = usefulPhrases.phrases.indexOfFirst { it.expression.contains(phraseArg) }
-                            if (index != -1) {
-                                phraseArg = usefulPhrases.phrases.getOrElse(index - 1) {
-                                    usefulPhrases.phrases[index]
-                                }.expression
+                            if (currentIndex != -1) {
+                                phraseIdArg = usefulPhrases.phrases.getOrElse(currentIndex - 1) {
+                                    usefulPhrases.phrases[currentIndex]
+                                }.id
                             }
                         },
                         onListenClick = {
-                            onListenClick(currentPhrase?.expression ?: "")
+                            onListenClick(currentPhrase.expression)
                         },
                         onNavigate = {
                             navController.navigateUp()

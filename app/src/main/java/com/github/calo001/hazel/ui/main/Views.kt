@@ -12,6 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -24,6 +25,8 @@ import com.github.calo001.hazel.ui.theme.HazelTheme
 fun ItemMenu(
     modifier: Modifier = Modifier,
     title: String,
+    titleStyle: TextStyle =  MaterialTheme.typography.h6,
+    spaceText: String = "\n",
     image: Painter,
     onClick: () -> Unit,
 ) {
@@ -40,8 +43,8 @@ fun ItemMenu(
                 contentDescription = title
             )
             Text(
-                text = title + "\n",
-                style = MaterialTheme.typography.h6,
+                text = title + spaceText,
+                style = titleStyle,
                 maxLines = 2,
                 textAlign= TextAlign.Center,
                 modifier = Modifier.padding(top = 8.dp)
