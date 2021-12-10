@@ -3,6 +3,7 @@ package com.github.calo001.hazel.ui.theme
 import androidx.compose.ui.graphics.Color
 
 val Color.Companion.Gray900 get() = Color(0xFF_212121)
+val Color.Companion.Red500 get() = Color(0xFF_F44336)
 
 val Color.Companion.GreenA100 get() = Color(0xFF_B9F6CA)
 val Color.Companion.LightGreen50 get() = Color(0xFF_F1F8E9)

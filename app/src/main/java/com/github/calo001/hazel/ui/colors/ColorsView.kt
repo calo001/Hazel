@@ -19,6 +19,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.github.calo001.hazel.config.ColorVariant
+import com.github.calo001.hazel.huawei.SpeechStatus
 import com.github.calo001.hazel.model.hazeldb.ColorHazel
 import com.github.calo001.hazel.ui.common.CircleColor
 import com.github.calo001.hazel.ui.common.HazelToolbarContent
@@ -35,8 +36,19 @@ fun ColorsView(
     colorHazels: List<ColorHazel>,
     onClickColor: (ColorHazel) -> Unit,
     onBackClick: () -> Unit,
+    speechStatus: SpeechStatus,
+    onSpeechClick: () -> Unit,
+    onTextChangeSpeech: (String) -> Unit,
 ) {
     var querySearch by rememberSaveable { mutableStateOf("") }
+    if (speechStatus is SpeechStatus.Result) {
+        val inputSpeech = speechStatus.text.trim()
+        if (inputSpeech.isNotEmpty()) {
+            onTextChangeSpeech(inputSpeech)
+            querySearch = inputSpeech
+        }
+    }
+
     Box(
         modifier = modifier
             .background(MaterialTheme.colors.background)
@@ -75,7 +87,10 @@ fun ColorsView(
                 onBackClick = onBackClick,
                 onTextChange = {
                     querySearch = it
-                }
+                },
+                speechStatus = speechStatus,
+                onSpeechClick = onSpeechClick,
+                onTextChangeSpeech = onTextChangeSpeech,
             )
         }
     }

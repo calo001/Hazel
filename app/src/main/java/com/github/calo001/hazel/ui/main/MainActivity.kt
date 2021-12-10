@@ -20,11 +20,9 @@ import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.isSystemInDarkTheme
 import com.github.calo001.hazel.config.DarkMode
-import com.github.calo001.hazel.huawei.LocationHelper
+import com.github.calo001.hazel.huawei.*
 import com.github.calo001.hazel.platform.DataStoreProvider
 import com.github.calo001.hazel.routes.Routes
-import com.github.calo001.hazel.huawei.WeatherHelper
-import com.github.calo001.hazel.huawei.WeatherStatus
 import com.github.calo001.hazel.ui.common.SystemBars
 import com.github.calo001.hazel.ui.settings.Dictionaries
 import com.github.calo001.hazel.util.*
@@ -47,6 +45,26 @@ class MainActivity : ComponentActivity() {
             viewModel.updateWeatherStatus(status)
         }
         weatherHelper.checkWeatherFromResult(requestCode = requestCode)
+    }
+
+    private val requestPermissionRecordAudio = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { result ->
+        if (result) {
+            val asrHelper = ASRHelper(this) { status ->
+                viewModel.updateSpeechStatus(status)
+            }
+            asrHelper.startRecognizing()
+        }
+    }
+
+    private val speechResult = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        val asrHelper = ASRHelper2(this) {
+            viewModel.updateSpeechStatus(it)
+        }
+        asrHelper.manageResponse(result.resultCode, result.data)
     }
 
     @SuppressLint("MissingPermission")
@@ -85,6 +103,9 @@ class MainActivity : ComponentActivity() {
         val locationHelper = LocationHelper(this)
         val weatherHelper = WeatherHelper(this) { status ->
             viewModel.updateWeatherStatus(status)
+        }
+        val asrHelper = ASRHelper2(this) { status ->
+            viewModel.updateSpeechStatus(status)
         }
         viewModel.loadHazelContent(hazelDb)
 
@@ -136,6 +157,7 @@ class MainActivity : ComponentActivity() {
                 )
                 val hazelContentStatus by viewModel.hazelContent.collectAsState()
                 val weatherStatus by viewModel.weatherStatus.collectAsState()
+                val speechStatus by viewModel.speechStatus.collectAsState()
 
                 Surface(
                     color = MaterialTheme.colors.background,
@@ -153,6 +175,19 @@ class MainActivity : ComponentActivity() {
                         dictionary = dictionary,
                         darkMode = darkMode,
                         defaultRoute = Routes.Main.name,
+                        speechStatus = speechStatus,
+                        onSpeechClick = {
+                            if (speechStatus is SpeechStatus.NoSpeech ||
+                                speechStatus is SpeechStatus.Result) {
+                                if (checkPermission(Manifest.permission.RECORD_AUDIO)) {
+                                    asrHelper.startRecognizing(speechResult)
+                                } else {
+                                    requestPermissionRecordAudio.launch(Manifest.permission.RECORD_AUDIO)
+                                }
+                            } else {
+                                //asrHelper.release()
+                            }
+                        },
                         onSelectColorScheme = {
                             scope.launch { dataStore.setColorScheme(it) }
                         },

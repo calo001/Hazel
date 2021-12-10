@@ -13,6 +13,7 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.github.calo001.hazel.huawei.SpeechStatus
 
 @ExperimentalComposeUiApi
 @Composable
@@ -21,6 +22,9 @@ fun HazelToolbarContent(
     subtitle: String,
     onBackClick: () -> Unit,
     onTextChange: (String) -> Unit,
+    speechStatus: SpeechStatus,
+    onSpeechClick: () -> Unit,
+    onTextChangeSpeech: (String) -> Unit,
 ) {
     Column {
         HazelToolbarButton(
@@ -44,6 +48,9 @@ fun HazelToolbarContent(
             placeholder = "Search in $title",
             onTextChange = onTextChange,
             modifier = Modifier.padding(horizontal = 16.dp),
+            speechStatus = speechStatus,
+            onSpeechClick = onSpeechClick,
+            onTextChangeSpeech = onTextChangeSpeech,
         )
     }
 }
@@ -56,6 +63,9 @@ fun HazelToolbarContentPreview() {
         title = "Apologizing",
         subtitle = "Useful expressions",
         onBackClick = {},
-        onTextChange = {}
+        onTextChange = {},
+        onSpeechClick = {},
+        speechStatus = SpeechStatus.NoSpeech,
+        onTextChangeSpeech = {},
     )
 }

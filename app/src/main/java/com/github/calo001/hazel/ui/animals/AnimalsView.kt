@@ -18,6 +18,7 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.unit.dp
+import com.github.calo001.hazel.huawei.SpeechStatus
 import com.github.calo001.hazel.model.hazeldb.Animal
 import com.github.calo001.hazel.ui.common.HazelToolbarContent
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
@@ -33,8 +34,19 @@ fun AnimalsView(
     onClickAnimal: (Animal) -> Unit,
     onBackClick: () -> Unit,
     painterIdentifier: PainterIdentifier,
+    speechStatus: SpeechStatus,
+    onSpeechClick: () -> Unit,
+    onTextChangeSpeech: (String) -> Unit,
 ) {
     var querySearch by rememberSaveable { mutableStateOf("") }
+    if (speechStatus is SpeechStatus.Result) {
+        val inputSpeech = speechStatus.text.trim()
+        if (inputSpeech.isNotEmpty()) {
+            onTextChangeSpeech(inputSpeech)
+            querySearch = inputSpeech
+        }
+    }
+
     Box(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -73,7 +85,10 @@ fun AnimalsView(
                 onBackClick = onBackClick,
                 onTextChange = {
                     querySearch = it
-                }
+                },
+                speechStatus = speechStatus,
+                onSpeechClick = onSpeechClick,
+                onTextChangeSpeech = onTextChangeSpeech
             )
         }
     }

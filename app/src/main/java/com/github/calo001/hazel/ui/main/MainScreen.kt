@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.github.calo001.hazel.R
 import com.github.calo001.hazel.config.DarkMode
+import com.github.calo001.hazel.huawei.SpeechStatus
 import com.github.calo001.hazel.model.hazeldb.HazelContent
 import com.github.calo001.hazel.model.view.ItemMenuData
 import com.github.calo001.hazel.routes.Routes
@@ -55,6 +56,9 @@ fun MainScreen(
     onDarkModeChange: (DarkMode) -> Unit,
     temperature: WeatherStatus,
     onCheckWeather: () -> Unit,
+    speechStatus: SpeechStatus,
+    onSpeechClick: () -> Unit,
+    clearSpeechResult: () -> Unit,
 ) {
     var querySearch by rememberSaveable { mutableStateOf("") }
 
@@ -127,6 +131,15 @@ fun MainScreen(
                     SearchBar(
                         modifier = Modifier.padding(horizontal = 16.dp),
                         placeholder = "Search what you need",
+                        speechStatus = speechStatus,
+                        onSpeechClick = onSpeechClick,
+                        onTextChangeSpeech = { result ->
+                            querySearch = result
+                            if (querySearch.isNotEmpty()) {
+                                onSearchQuery(result)
+                            }
+                            clearSpeechResult()
+                        },
                         onTextChange = { query ->
                             querySearch = query
                             if (querySearch.isNotEmpty()) {
