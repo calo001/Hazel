@@ -2,6 +2,7 @@ package com.github.calo001.hazel.ui.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.github.calo001.hazel.huawei.SpeechStatus
 import com.github.calo001.hazel.huawei.WeatherStatus
 import com.github.calo001.hazel.model.hazeldb.*
 import com.github.calo001.hazel.model.unsplash.UnsplashResult
@@ -26,8 +27,15 @@ class MainViewModel : ViewModel() {
     private val _weatherStatus = MutableStateFlow<WeatherStatus>(WeatherStatus.Loading)
     val weatherStatus = _weatherStatus.asStateFlow()
 
+    private val _speechStatus = MutableStateFlow<SpeechStatus>(SpeechStatus.NoSpeech)
+    val speechStatus = _speechStatus.asStateFlow()
+
     fun updateWeatherStatus(status: WeatherStatus) {
         _weatherStatus.tryEmit(status)
+    }
+
+    fun updateSpeechStatus(status: SpeechStatus) {
+        _speechStatus.tryEmit(status)
     }
 
     private val unsplashService = UnsplashServiceProvider.service

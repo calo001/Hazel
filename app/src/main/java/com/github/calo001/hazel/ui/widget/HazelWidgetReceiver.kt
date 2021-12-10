@@ -29,7 +29,6 @@ import com.github.calo001.hazel.model.widget.HazelSimpleItem
 import com.github.calo001.hazel.model.widget.getSimpleItemList
 import com.github.calo001.hazel.routes.Routes
 import com.github.calo001.hazel.util.*
-import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import java.io.ByteArrayOutputStream
@@ -198,7 +197,7 @@ class HazelWidget: GlanceAppWidget() {
                 provider = ImageProvider(R.drawable.ic_hazel_logo_ext_dark),
                 contentDescription = null,
                 modifier = GlanceModifier
-                    .clickable(actionLaunchActivity<MainActivity>())
+                    //.clickable(actionLaunchActivity<MainActivity>())
                     .padding(8.dp)
                     .height(52.dp)
             )
@@ -221,11 +220,11 @@ class HazelWidget: GlanceAppWidget() {
                         .fillMaxWidth()
                         .padding(vertical = 4.dp)
                         .padding(horizontal = 16.dp)
-                        .clickable(actionLaunchActivity<MainActivity>(
-                            actionParametersOf(
-                                ActionParameters.Key<String>(WIDGET_ACTION_SECTION) to hazelContent[index].route
-                            )
-                        ))
+//                        .clickable(actionLaunchActivity<MainActivity>(
+//                            actionParametersOf(
+//                                ActionParameters.Key<String>(WIDGET_ACTION_SECTION) to hazelContent[index].route
+//                            )
+//                        ))
                 ) {
                     Image(
                         provider = ImageProvider(R.drawable.widget_item_background),

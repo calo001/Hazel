@@ -19,6 +19,7 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
+        buildConfigField("String", "HMS_API_KEY", '"CwEAAAAAGe1/5d80kE8jsEHbFBFhKDtVNhxJKCXhcQmjbSwov9XUX8Eonrq2LaSdjht8WvK+YkWYCs0ooDat0OJgEInSbZyc+Q0="')
     }
 
     signingConfigs {
@@ -118,6 +119,8 @@ dependencies {
     implementation 'com.huawei.hms:hianalytics:6.3.0.301'
     implementation 'com.huawei.hms:maps:6.0.0.301'
     implementation "com.huawei.hms:location:6.2.0.300"
+    implementation 'com.huawei.hms:ml-computer-voice-asr-plugin:3.2.0.300'
+    //implementation 'com.huawei.hms:ml-computer-voice-asr:3.2.0.300'
 }
 
 apply plugin: 'com.huawei.agconnect'

@@ -18,6 +18,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.config.DarkMode
+import com.github.calo001.hazel.huawei.SpeechStatus
 import com.github.calo001.hazel.model.hazeldb.Phrase
 import com.github.calo001.hazel.routes.Routes
 import com.github.calo001.hazel.huawei.WeatherHelper
@@ -63,6 +64,8 @@ fun Router(
     defaultRoute: String,
     weatherStatus: WeatherStatus,
     onRequestWeather: () -> Unit,
+    onSpeechClick: () -> Unit,
+    speechStatus: SpeechStatus,
 ) {
     NavHost(
         navController = navController,
@@ -148,7 +151,12 @@ fun Router(
                         else -> Unit
                     }
                 },
-                painterIdentifier = painterIdentifier
+                painterIdentifier = painterIdentifier,
+                speechStatus = speechStatus,
+                onSpeechClick = onSpeechClick,
+                onTextChangeSpeech = {
+                    viewModel.updateSpeechStatus(SpeechStatus.NoSpeech)
+                },
             )
         }
 
@@ -172,7 +180,7 @@ fun Router(
                 else -> listOf()
             }
 
-            val verbByForm = verbs.firstOrNull() {
+            val verbByForm = verbs.firstOrNull {
                 it.id == verbIdArg
             }
 
@@ -230,33 +238,38 @@ fun Router(
                 painterIdentifier = painterIdentifier,
                 onClickCountry = { country ->
                     navController.navigate(
-                    "${Routes.Countries.name}/${country.name}"
+                    "${Routes.Countries.name}/${country.id}"
                 ) },
-                onBackClick = { navController.navigateUp() }
+                onBackClick = { navController.navigateUp() },
+                speechStatus = speechStatus,
+                onSpeechClick = onSpeechClick,
+                onTextChangeSpeech = {
+                    viewModel.updateSpeechStatus(SpeechStatus.NoSpeech)
+                }
             )
         }
 
         composable(
-            route = "${Routes.Countries.name}/{country}",
+            route = "${Routes.Countries.name}/{country_id}",
             arguments = listOf(
-                navArgument("country") { type = NavType.StringType }
+                navArgument("country_id") { type = NavType.StringType }
             )
         ) { navBackStackEntry ->
             var countryArg by rememberSaveable {
-                mutableStateOf(navBackStackEntry.arguments?.getString("country") ?: "")
+                mutableStateOf(navBackStackEntry.arguments?.getString("country_id") ?: "")
             }
             val countries = viewModel.getCountries()
-            val currentCountry = countries.firstOrNull { it.name == countryArg }
+            val currentCountry = countries.firstOrNull { it.id == countryArg }
 
             if (currentCountry != null) {
-                val indexCurrent = countries.indexOfFirst { it.name == countryArg }
+                val indexCurrent = countries.indexOfFirst { it.id == countryArg }
                 CountryContentView(
                     country = currentCountry,
                     onNext = {
-                        countryArg = countries.getOrElse(indexCurrent + 1) { countries[indexCurrent] }.name
+                        countryArg = countries.getOrElse(indexCurrent + 1) { countries[indexCurrent] }.id
                     },
                     onPrevious = {
-                        countryArg = countries.getOrElse(indexCurrent - 1) { countries[indexCurrent] }.name
+                        countryArg = countries.getOrElse(indexCurrent - 1) { countries[indexCurrent] }.id
                     },
                     onListen = { onListenClick(it) },
                     onNavBack = { navController.navigateUp() },
@@ -287,31 +300,36 @@ fun Router(
                 },
                 onBackClick = {
                     navController.navigateUp()
+                },
+                speechStatus = speechStatus,
+                onSpeechClick = onSpeechClick,
+                onTextChangeSpeech = {
+                    viewModel.updateSpeechStatus(SpeechStatus.NoSpeech)
                 }
             )
         }
 
         composable(
-            route = "${Routes.Animals.name}/{animal}",
+            route = "${Routes.Animals.name}/{animal_id}",
             arguments = listOf(
-                navArgument("animal") { type = NavType.StringType }
+                navArgument("animal_id") { type = NavType.StringType }
             )
         ) { navBackStackEntry ->
             var animalArg by rememberSaveable {
-                mutableStateOf(navBackStackEntry.arguments?.getString("animal") ?: "")
+                mutableStateOf(navBackStackEntry.arguments?.getString("animal_id") ?: "")
             }
             val animals = viewModel.getAnimals()
-            val currentAnimal = animals.firstOrNull { it.name == animalArg }
+            val currentAnimal = animals.firstOrNull { it.id == animalArg }
 
             if (currentAnimal != null) {
-                val indexCurrent = animals.indexOfFirst { it.name == animalArg }
+                val indexCurrent = animals.indexOfFirst { it.id == animalArg }
                 AnimalContentView(
                     animal = currentAnimal,
                     onNext = {
-                        animalArg = animals.getOrElse(indexCurrent + 1) { animals[indexCurrent] }.name
+                        animalArg = animals.getOrElse(indexCurrent + 1) { animals[indexCurrent] }.id
                     },
                     onPrevious = {
-                        animalArg = animals.getOrElse(indexCurrent - 1) { animals[indexCurrent] }.name
+                        animalArg = animals.getOrElse(indexCurrent - 1) { animals[indexCurrent] }.id
                     },
                     onListen = { onListenClick(currentAnimal.name) },
                     onNavBack = { navController.navigateUp() },
@@ -334,7 +352,12 @@ fun Router(
                 onClickColor = { color ->
                     navController.navigate(
                     "${Routes.Colors.name}/${color.id}"
-                ) }
+                ) },
+                speechStatus = speechStatus,
+                onSpeechClick = onSpeechClick,
+                onTextChangeSpeech = {
+                    viewModel.updateSpeechStatus(SpeechStatus.NoSpeech)
+                },
             )
         }
 
@@ -369,7 +392,7 @@ fun Router(
         ) { navBackStackEntry ->
             val colorArg =navBackStackEntry.arguments?.getString("color") ?: ""
             val colors = viewModel.getColors()
-            val colorByCode = colors.firstOrNull() { it.code == colorArg }
+            val colorByCode = colors.firstOrNull { it.code == colorArg }
             var colorExample by rememberSaveable { mutableStateOf(colorByCode?.examples?.firstOrNull() ?: "") }
 
             if (colorExample.isNotEmpty() && colorByCode != null) {
@@ -460,6 +483,11 @@ fun Router(
                     onSelectDarkMode(darkMode)
                 },
                 onCheckWeather = onRequestWeather,
+                onSpeechClick = onSpeechClick,
+                speechStatus = speechStatus,
+                clearSpeechResult = {
+                    viewModel.updateSpeechStatus(SpeechStatus.NoSpeech)
+                }
             )
         }
 
@@ -485,6 +513,11 @@ fun Router(
                             navController.navigate(
                                 "${Routes.UsefulExpressionsPhrase.name}/${categoryId}/${phrase.id}"
                             )
+                        },
+                        speechStatus = speechStatus,
+                        onSpeechClick = onSpeechClick,
+                        onTextChangeSpeech = {
+                            viewModel.updateSpeechStatus(SpeechStatus.NoSpeech)
                         }
                     )
                 }

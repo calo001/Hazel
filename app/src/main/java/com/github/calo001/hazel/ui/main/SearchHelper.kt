@@ -39,7 +39,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                     imageCode = usefulPhrase.emojiCode,
                     path = "Useful phrases",
                     itemName = usefulPhrase.category,
-                    route = "${Routes.UsefulExpressions.name}/${usefulPhrase.category}"
+                    route = "${Routes.UsefulExpressions.name}/${usefulPhrase.id}"
                 ))
             }
             usefulPhrase.phrases.forEach { phrase ->
@@ -48,7 +48,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                         imageCode = usefulPhrase.emojiCode,
                         path = "Useful phrases / ${usefulPhrase.category}",
                         itemName = phrase.expression,
-                        route = "${Routes.UsefulExpressionsPhrase.name}/${usefulPhrase.category}/${phrase.expression}"
+                        route = "${Routes.UsefulExpressionsPhrase.name}/${usefulPhrase.id}/${phrase.id}"
                     ))
                 }
             }
@@ -63,7 +63,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                     imageCode = usefulPhrase.emojiCode,
                     path = "Useful phrases",
                     itemName = usefulPhrase.category,
-                    route = "${Routes.UsefulExpressions.name}/${usefulPhrase.category}"
+                    route = "${Routes.UsefulExpressions.name}/${usefulPhrase.id}"
                 ))
             }
         }
@@ -89,7 +89,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                     imageCode = animal.emojiCode,
                     path = "Animals",
                     itemName = animal.name,
-                    route = "${Routes.Animals.name}/${animal.name}"
+                    route = "${Routes.Animals.name}/${animal.id}"
                 ))
             }
         }
@@ -122,7 +122,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                     imageCode = verb.emojiCode,
                     path = "Irregular verbs / Base form",
                     itemName = verb.base.verb,
-                    route = "${Routes.VerbsIrregular.name}/${verb.base.verb}/${VerbData.BaseForm.name}"
+                    route = "${Routes.VerbsIrregular.name}/${verb.id}/${VerbData.BaseForm.name}"
                 ))
             }
 
@@ -131,7 +131,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                     imageCode = verb.emojiCode,
                     path = "Irregular verbs / Simple past form",
                     itemName = verb.simplePast.verb,
-                    route = "${Routes.VerbsIrregular.name}/${verb.base.verb}/${VerbData.PastForm.name}"
+                    route = "${Routes.VerbsIrregular.name}/${verb.id}/${VerbData.PastForm.name}"
                 ))
             }
 
@@ -140,7 +140,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                     imageCode = verb.emojiCode,
                     path = "Irregular verbs / Past participle form",
                     itemName = verb.pastParticiple.verb,
-                    route = "${Routes.VerbsIrregular.name}/${verb.base.verb}/${VerbData.PastParticipleForm.name}"
+                    route = "${Routes.VerbsIrregular.name}/${verb.id}/${VerbData.PastParticipleForm.name}"
                 ))
             }
 
@@ -149,7 +149,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                     imageCode = verb.emojiCode,
                     path = "Irregular verbs / Ing form",
                     itemName = verb.ing.verb,
-                    route = "${Routes.VerbsIrregular.name}/${verb.base.verb}/${VerbData.IngForm.name}"
+                    route = "${Routes.VerbsIrregular.name}/${verb.id}/${VerbData.IngForm.name}"
                 ))
             }
         }
@@ -182,7 +182,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                     imageCode = verb.emojiCode,
                     path = "Regular verbs / Base form",
                     itemName = verb.base.verb,
-                    route = "${Routes.VerbsRegular.name}/${verb.base.verb}/${VerbData.BaseForm.name}"
+                    route = "${Routes.VerbsRegular.name}/${verb.id}/${VerbData.BaseForm.name}"
                 ))
             }
 
@@ -191,7 +191,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                     imageCode = verb.emojiCode,
                     path = "Regular verbs / Simple past form",
                     itemName = verb.simplePast.verb,
-                    route = "${Routes.VerbsRegular.name}/${verb.base.verb}/${VerbData.PastForm.name}"
+                    route = "${Routes.VerbsRegular.name}/${verb.id}/${VerbData.PastForm.name}"
                 ))
             }
 
@@ -200,7 +200,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                     imageCode = verb.emojiCode,
                     path = "Regular verbs / Past participle form",
                     itemName = verb.pastParticiple.verb,
-                    route = "${Routes.VerbsRegular.name}/${verb.base.verb}/${VerbData.PastParticipleForm.name}"
+                    route = "${Routes.VerbsRegular.name}/${verb.id}/${VerbData.PastParticipleForm.name}"
                 ))
             }
 
@@ -209,7 +209,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                     imageCode = verb.emojiCode,
                     path = "Regular verbs / Ing form",
                     itemName = verb.ing.verb,
-                    route = "${Routes.VerbsRegular.name}/${verb.base.verb}/${VerbData.IngForm.name}"
+                    route = "${Routes.VerbsRegular.name}/${verb.id}/${VerbData.IngForm.name}"
                 ))
             }
         }
@@ -235,7 +235,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                     imageCode = country.emojiCode,
                     path = "Countries",
                     itemName = country.name,
-                    route = "${Routes.Countries.name}/${country.name}"
+                    route = "${Routes.Countries.name}/${country.id}"
                 ))
             }
         }
@@ -261,7 +261,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                     color = Color.parse(color.code),
                     path = "Colors",
                     itemName = color.name,
-                    route = "${Routes.Colors.name}/${color.code}"
+                    route = "${Routes.Colors.name}/${color.id}"
                 ))
             }
         }

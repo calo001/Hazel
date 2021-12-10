@@ -15,6 +15,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.github.calo001.hazel.huawei.SpeechStatus
 import com.github.calo001.hazel.model.hazeldb.Country
 import com.github.calo001.hazel.ui.animals.TextImageRow
 import com.github.calo001.hazel.ui.common.HazelToolbarContent
@@ -30,8 +31,19 @@ fun CountryView(
     painterIdentifier: PainterIdentifier,
     onClickCountry: (Country) -> Unit,
     onBackClick: () -> Unit,
+    speechStatus: SpeechStatus,
+    onSpeechClick: () -> Unit,
+    onTextChangeSpeech: (String) -> Unit,
 ) {
     var querySearch by rememberSaveable { mutableStateOf("") }
+    if (speechStatus is SpeechStatus.Result) {
+        val inputSpeech = speechStatus.text.trim()
+        if (inputSpeech.isNotEmpty()) {
+            onTextChangeSpeech(inputSpeech)
+            querySearch = inputSpeech
+        }
+    }
+
     Box(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -70,7 +82,10 @@ fun CountryView(
                 onBackClick = onBackClick,
                 onTextChange = {
                     querySearch = it
-                }
+                },
+                onSpeechClick = onSpeechClick,
+                speechStatus = speechStatus,
+                onTextChangeSpeech = onTextChangeSpeech,
             )
         }
     }
