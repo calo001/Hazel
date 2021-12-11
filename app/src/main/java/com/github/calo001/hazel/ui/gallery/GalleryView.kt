@@ -20,7 +20,6 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
 import com.github.calo001.hazel.model.unsplash.Result
-import com.github.calo001.hazel.model.unsplash.UnsplashResult
 import com.github.calo001.hazel.ui.common.HazelToolbarSimple
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.common.safeSpacer
@@ -34,9 +33,9 @@ fun GalleryView(
     title: String,
     onBackClick: () -> Unit,
     painterIdentifier: PainterIdentifier,
-    unsplashResult: GalleryStatus
+    galleryStatus: GalleryStatus
 ) {
-    when (unsplashResult) {
+    when (galleryStatus) {
         is GalleryStatus.Error -> {
             Column(
                 verticalArrangement = Arrangement.Center,
@@ -102,7 +101,7 @@ fun GalleryView(
                 modifier = Modifier.fillMaxSize()
             ) {
                 PhotosContent(
-                    unsplashResult = unsplashResult.content.results,
+                    galleryStatus = galleryStatus.content, //unsplashResult.content.results,
                     itemsPerColumns = itemsPerColumns,
                     modifier = Modifier
                 )
@@ -122,7 +121,7 @@ fun GalleryView(
 
 @Composable
 private fun PhotosContent(
-    unsplashResult: List<Result>,
+    galleryStatus: List<String>,
     itemsPerColumns: Int,
     modifier: Modifier = Modifier
 ) {
@@ -130,7 +129,7 @@ private fun PhotosContent(
         contentPadding = PaddingValues(16.dp),
         modifier = modifier,
     ) {
-        val itemRows = unsplashResult.chunked(itemsPerColumns)
+        val itemRows = galleryStatus.chunked(itemsPerColumns)
         safeSpacer(20.dp)
         items(itemRows.size) { indexRow ->
             val width = LocalConfiguration.current.screenWidthDp.div(itemsPerColumns).dp - 24.dp
@@ -147,7 +146,7 @@ private fun PhotosContent(
                             Image(
                                 contentScale = ContentScale.Crop,
                                 painter = rememberImagePainter(
-                                    data = result.urls.small,
+                                    data = result,
                                 ),
                                 contentDescription = null,
                                 modifier = Modifier

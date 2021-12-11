@@ -35,9 +35,6 @@ import kotlinx.coroutines.launch
 @ExperimentalMaterialApi
 class MainActivity : ComponentActivity() {
     private val viewModel: MainViewModel by viewModels()
-    //private val weatherHelper by lazy { WeatherHelper(this) }
-    //private val locationHelper by lazy { LocationHelper(this) }
-    //private val locationHelperResult by lazy { LocationHelper(this) }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -184,8 +181,6 @@ class MainActivity : ComponentActivity() {
                                 } else {
                                     requestPermissionRecordAudio.launch(Manifest.permission.RECORD_AUDIO)
                                 }
-                            } else {
-                                //asrHelper.release()
                             }
                         },
                         onSelectColorScheme = {

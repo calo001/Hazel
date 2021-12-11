@@ -15,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hazel"
         android:name=".Hazel"
+        android:usesCleartextTraffic="true"
         >
         <activity
             android:name=".ui.main.MainActivity"

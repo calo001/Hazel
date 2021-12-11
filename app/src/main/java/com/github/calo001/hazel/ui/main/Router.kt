@@ -11,6 +11,7 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -18,10 +19,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.config.DarkMode
+import com.github.calo001.hazel.huawei.SearchKitHelper
 import com.github.calo001.hazel.huawei.SpeechStatus
 import com.github.calo001.hazel.model.hazeldb.Phrase
 import com.github.calo001.hazel.routes.Routes
-import com.github.calo001.hazel.huawei.WeatherHelper
 import com.github.calo001.hazel.huawei.WeatherStatus
 import com.github.calo001.hazel.ui.animals.AnimalContentView
 import com.github.calo001.hazel.ui.animals.AnimalsView
@@ -369,16 +370,24 @@ fun Router(
         ) { navBackStackEntry ->
             val queryArg = navBackStackEntry.arguments?.getString("query") ?: ""
             val result by viewModel.galleryStatus.collectAsState()
+            val context = LocalContext.current
             DisposableEffect(queryArg) {
                 if (queryArg.isNotEmpty()) {
-                    viewModel.searchUnsplash(queryArg)
+                    viewModel.updateGalleryStatus(GalleryStatus.Loading)
+                    viewModel.getToken { token ->
+                        val searchHelper = SearchKitHelper(context)
+                        val images = searchHelper.searchImage(token, queryArg)
+                        viewModel.updateGalleryStatus(GalleryStatus.Success(images.mapNotNull {
+                            it.sourceImage.imageContentUrl
+                        }))
+                    }
                 }
                 onDispose {  }
             }
 
             GalleryView(
                 title = queryArg,
-                unsplashResult = result,
+                galleryStatus = result,
                 painterIdentifier = painterIdentifier,
                 onBackClick = { navController.navigateUp() }
             )

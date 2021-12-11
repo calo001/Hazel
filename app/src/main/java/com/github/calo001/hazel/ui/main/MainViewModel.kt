@@ -2,11 +2,13 @@ package com.github.calo001.hazel.ui.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.github.calo001.hazel.huawei.NetworkHelper
 import com.github.calo001.hazel.huawei.SpeechStatus
 import com.github.calo001.hazel.huawei.WeatherStatus
 import com.github.calo001.hazel.model.hazeldb.*
 import com.github.calo001.hazel.model.unsplash.UnsplashResult
 import com.github.calo001.hazel.network.UnsplashServiceProvider
+import com.github.calo001.hazel.repository.GalleryRepository
 import com.github.calo001.hazel.repository.NetworkResult
 import com.github.calo001.hazel.repository.UnsplashRepository
 import kotlinx.coroutines.Dispatchers
@@ -19,6 +21,7 @@ import kotlinx.serialization.json.Json
 import java.io.ByteArrayOutputStream
 import java.io.IOException
 import java.io.InputStream
+import java.lang.NullPointerException
 
 class MainViewModel : ViewModel() {
     private val _hazelContent = MutableStateFlow<HazelContentStatus>(HazelContentStatus.Loading)
@@ -45,6 +48,9 @@ class MainViewModel : ViewModel() {
             SearchHelper(it)
         }
     }
+
+    private val networkHelper = NetworkHelper()
+    private val galleryRepository = GalleryRepository(networkHelper)
 
     private val _galleryStatus = MutableStateFlow<GalleryStatus>(GalleryStatus.Loading)
     val galleryStatus: StateFlow<GalleryStatus> get() = _galleryStatus
@@ -101,7 +107,29 @@ class MainViewModel : ViewModel() {
         when (val result = unsplashRepository.search(query)) {
             is NetworkResult.Error -> _galleryStatus.tryEmit(GalleryStatus.Error(result.error))
             NetworkResult.Loading -> _galleryStatus.tryEmit(GalleryStatus.Loading)
-            is NetworkResult.Success -> _galleryStatus.tryEmit(GalleryStatus.Success(result.unsplashResult))
+            is NetworkResult.Success<*> -> {
+                val unsplashResult = (result.content as? UnsplashResult)
+                if (unsplashResult != null) {
+                    _galleryStatus.tryEmit(GalleryStatus.Success(listOf()))
+                } else {
+                    _galleryStatus.tryEmit(GalleryStatus.Error(NullPointerException()))
+                }
+            }
+        }
+    }
+
+    fun getToken(onTokenSuccess: (String) -> Unit) = viewModelScope.launch(Dispatchers.IO) {
+        when(val result = galleryRepository.getToken()) {
+            is NetworkResult.Error -> _galleryStatus.tryEmit(GalleryStatus.Error(result.error))
+            NetworkResult.Loading -> _galleryStatus.tryEmit(GalleryStatus.Loading)
+            is NetworkResult.Success<*> -> {
+                val token = (result.content as? String)
+                if (!token.isNullOrEmpty()) {
+                    onTokenSuccess(token)
+                } else {
+                    _galleryStatus.tryEmit(GalleryStatus.Error(NullPointerException()))
+                }
+            }
         }
     }
 
@@ -143,6 +171,10 @@ class MainViewModel : ViewModel() {
             }
         }
     }
+
+    fun updateGalleryStatus(status: GalleryStatus) {
+        _galleryStatus.tryEmit(status)
+    }
 }
 
 sealed interface HazelContentStatus {
@@ -153,7 +185,7 @@ sealed interface HazelContentStatus {
 
 sealed interface GalleryStatus {
     object Loading: GalleryStatus
-    class Success(val content: UnsplashResult): GalleryStatus
+    class Success(val content: List<String>): GalleryStatus
     class Error(val error: Exception): GalleryStatus
 }
 

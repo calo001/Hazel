@@ -17,6 +17,6 @@ class UnsplashRepository(private val unsplashService: UnsplashService) {
 
 sealed interface NetworkResult {
     object Loading: NetworkResult
-    class Success(val unsplashResult: UnsplashResult): NetworkResult
+    class Success<out T> (val content: T): NetworkResult
     class Error(val error: Exception): NetworkResult
 }
