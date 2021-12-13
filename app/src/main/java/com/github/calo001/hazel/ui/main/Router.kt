@@ -24,6 +24,7 @@ import com.github.calo001.hazel.huawei.SpeechStatus
 import com.github.calo001.hazel.model.hazeldb.Phrase
 import com.github.calo001.hazel.routes.Routes
 import com.github.calo001.hazel.huawei.WeatherStatus
+import com.github.calo001.hazel.model.hazeldb.Country
 import com.github.calo001.hazel.ui.animals.AnimalContentView
 import com.github.calo001.hazel.ui.animals.AnimalsView
 import com.github.calo001.hazel.ui.colors.SimpleExamplesView
@@ -55,7 +56,7 @@ fun Router(
     onListenClick: (String) -> Unit,
     viewModel: MainViewModel,
     onOpenLink: (String) -> Unit,
-    onOpenMaps: (String) -> Unit,
+    onOpenMaps: (Country) -> Unit,
     onSelectColorScheme: (ColorVariant) -> Unit,
     onSelectDictionary: (Dictionaries) -> Unit,
     onSelectDarkMode: (DarkMode) -> Unit,
@@ -246,7 +247,7 @@ fun Router(
                 onSpeechClick = onSpeechClick,
                 onTextChangeSpeech = {
                     viewModel.updateSpeechStatus(SpeechStatus.NoSpeech)
-                }
+                },
             )
         }
 
@@ -275,7 +276,7 @@ fun Router(
                     onListen = { onListenClick(it) },
                     onNavBack = { navController.navigateUp() },
                     onOpenMap = {
-                        onOpenMaps(countries[indexCurrent].linkMaps)
+                        onOpenMaps(countries[indexCurrent])
                     },
                     onGallery = {
                         navController.navigate(

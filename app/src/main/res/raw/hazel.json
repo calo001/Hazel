@@ -3840,6 +3840,8 @@
       "language": "Spanish",
       "language_phonetic": "/ˈspænɪʃ/",
       "emoji_code": "openmoji_1f1e6_1f1f7",
+      "latitude": "-37.0560032",
+      "longitude": "-81.6327078",
       "link_maps": "https://www.google.com/maps/place/Argentina/@-37.0560032,-81.6327078,4z/data=!3m1!4b1!4m5!3m4!1s0x95bccaf5f5fdc667:0x3d2f77992af00fa8!8m2!3d-38.416097!4d-63.616672"
     },
     {
@@ -3851,6 +3853,8 @@
       "language": "German",
       "language_phonetic": "/ˈdʒɜːrmən/",
       "emoji_code": "openmoji_1f1e6_1f1f9",
+      "latitude": "47.6783064",
+      "longitude": "11.1024034",
       "link_maps": "https://www.google.com/maps/place/Austria/@47.6783064,11.1024034,7z/data=!3m1!4b1!4m5!3m4!1s0x476d079b259d2a7f:0x1012d47bdde4c1af!8m2!3d47.516231!4d14.550072"
     },
     {
@@ -3862,6 +3866,8 @@
       "language": "Belarusian",
       "language_phonetic": "/ˌbeləˈruːsiən/",
       "emoji_code": "openmoji_1f1e7_1f1fe",
+      "latitude": "53.6395297",
+      "longitude": "23.4905298",
       "link_maps": "https://www.google.com/maps/place/Belarus/@53.6395297,23.4905298,6z/data=!3m1!4b1!4m5!3m4!1s0x46da2584e2ad4881:0xa1d181ec8c10!8m2!3d53.709807!4d27.953389"
     },
     {
@@ -3873,6 +3879,8 @@
       "language": "French",
       "language_phonetic": "/frentʃ/",
       "emoji_code": "openmoji_1f1e7_1f1ea",
+      "latitude": "50.4974212",
+      "longitude": "3.3449663",
       "link_maps": "https://www.google.com/maps/place/Belgium/@50.4974212,3.3449663,8z/data=!3m1!4b1!4m5!3m4!1s0x47c17d64edf39797:0x47ebf2b439e60ff2!8m2!3d50.503887!4d4.469936"
     },
     {
@@ -3884,6 +3892,8 @@
       "language": "Portuguese",
       "language_phonetic": "/ˌpɔːrtʃʊˈɡiːz/",
       "emoji_code": "openmoji_1f1e7_1f1f7",
+      "latitude": "13.7019755",
+      "longitude": "-69.6972572",
       "link_maps": "https://www.google.com/maps/place/Brasil/@-13.7019755,-69.6972572,4z/data=!3m1!4b1!4m5!3m4!1s0x9c59c7ebcc28cf:0x295a1506f2293e63!8m2!3d-14.235004!4d-51.92528"
     },
     {
@@ -3895,6 +3905,8 @@
       "language": "Bulgarian",
       "language_phonetic": "/bʌlˈɡeriən/",
       "emoji_code": "openmoji_1f1e7_1f1ec",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Bulgaria/@42.7075162,23.2995661,7z/data=!3m1!4b1!4m5!3m4!1s0x40a8fec1c85bf089:0xa01269bf4c10!8m2!3d42.733883!4d25.48583"
     },
     {
@@ -3906,6 +3918,8 @@
       "language": "English",
       "language_phonetic": "/ˈɪŋɡlɪʃ/",
       "emoji_code": "openmoji_1f1e8_1f1e6",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Canada/@50.848028,-130.2303233,3z/data=!3m1!4b1!4m5!3m4!1s0x4b0d03d337cc6ad9:0x9968b72aa2438fa5!8m2!3d56.130366!4d-106.346771"
     },
     {
@@ -3917,6 +3931,8 @@
       "language": "Czech",
       "language_phonetic": "/tʃek/",
       "emoji_code": "openmoji_1f1e8_1f1ff",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Czechia/@49.7856588,13.2317121,7z/data=!3m1!4b1!4m5!3m4!1s0x470b948fd7dd8243:0xf8661c75d3db586f!8m2!3d49.817492!4d15.472962"
     },
     {
@@ -3928,6 +3944,8 @@
       "language": "Danish",
       "language_phonetic": "/ˈdeɪnɪʃ/",
       "emoji_code": "openmoji_1f1e9_1f1f0",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Denmark/@56.1549322,7.0565,6z/data=!3m1!4b1!4m5!3m4!1s0x464b27b6ee945ffb:0x528743d0c3e092cd!8m2!3d56.26392!4d9.501785"
     },
     {
@@ -3939,6 +3957,8 @@
       "language": "Spanish",
       "language_phonetic": "/ˈspænɪʃ/",
       "emoji_code": "openmoji_1f1f8_1f1fb",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/El+Salvador/@13.7464449,-90.0516386,8z/data=!3m1!4b1!4m5!3m4!1s0x8f6327a659640657:0x6f9a16eb98854832!8m2!3d13.794185!4d-88.89653"
     },
     {
@@ -3950,6 +3970,8 @@
       "language": "Estonian",
       "language_phonetic": "/eˈstəʊniən/",
       "emoji_code": "openmoji_1f1ea_1f1ea",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Estonia/@58.6037546,22.6895857,7z/data=!3m1!4b1!4m5!3m4!1s0x4692949c82a04bfd:0x40ea9fba4fb425c3!8m2!3d58.595272!4d25.0136071"
     },
     {
@@ -3961,6 +3983,8 @@
       "language": "Finnish",
       "language_phonetic": "/ˈfɪnɪʃ/",
       "emoji_code": "openmoji_1f1eb_1f1ee",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Finland/@64.6323618,17.0832381,5z/data=!3m1!4b1!4m5!3m4!1s0x4681cadf4b32f6dd:0x146d63c75a810!8m2!3d61.92411!4d25.7481511"
     },
     {
@@ -3972,6 +3996,8 @@
       "language": "French",
       "language_phonetic": "/frentʃ/",
       "emoji_code": "openmoji_1f1eb_1f1f7",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/France/@45.8811059,-6.9340248,5z/data=!3m1!4b1!4m5!3m4!1s0xd54a02933785731:0x6bfd3f96c747d9f7!8m2!3d46.227638!4d2.213749"
     },
     {
@@ -3983,6 +4009,8 @@
       "language": "German",
       "language_phonetic": "/ˈdʒɜːrmən/",
       "emoji_code": "openmoji_1f1e9_1f1ea",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Germany/@51.0967472,5.9660101,6z/data=!3m1!4b1!4m5!3m4!1s0x479a721ec2b1be6b:0x75e85d6b8e91e55b!8m2!3d51.165691!4d10.451526"
     },
     {
@@ -3994,6 +4022,8 @@
       "language": "Greek",
       "language_phonetic": "/ɡriːk/",
       "emoji_code": "openmoji_1f1ec_1f1f7",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Greece/@38.0688682,19.9885738,6z/data=!3m1!4b1!4m5!3m4!1s0x135b4ac711716c63:0x363a1775dc9a2d1d!8m2!3d39.074208!4d21.824312"
     },
     {
@@ -4005,6 +4035,8 @@
       "language": "Hungarian",
       "language_phonetic": "/hʌŋˈɡeriən/",
       "emoji_code": "openmoji_1f1ed_1f1fa",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Hungary/@47.1429984,17.2615323,7z/data=!3m1!4b1!4m5!3m4!1s0x4741837bdf37e4c3:0xc4290c1e1010!8m2!3d47.162494!4d19.5033041"
     },
     {
@@ -4016,6 +4048,8 @@
       "language": "Italian",
       "language_phonetic": "/ɪˈtæliən/",
       "emoji_code": "openmoji_1f1ee_1f1f9",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Italy/@40.9560199,3.7137506,5z/data=!3m1!4b1!4m5!3m4!1s0x12d4fe82448dd203:0xe22cf55c24635e6f!8m2!3d41.87194!4d12.56738"
     },
     {
@@ -4027,6 +4061,8 @@
       "language": "Latvian",
       "language_phonetic": "/ˈlætviən/",
       "emoji_code": "openmoji_1f1f1_1f1fb",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Latvia/@56.8630848,22.3013343,7z/data=!3m1!4b1!4m5!3m4!1s0x46e930677b8a9afd:0xcfcd68f2fc10!8m2!3d56.879635!4d24.603189"
     },
     {
@@ -4038,6 +4074,8 @@
       "language": "Lithuanian",
       "language_phonetic": "/ˌlɪθuˈeɪniən/",
       "emoji_code": "openmoji_1f1f1_1f1f9",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Lithuania/@55.1561128,21.6404642,7z/data=!3m1!4b1!4m5!3m4!1s0x46dd94140f33be13:0xf30a54d3a55dbab9!8m2!3d55.169438!4d23.881275"
     },
     {
@@ -4049,6 +4087,8 @@
       "language": "Spanish",
       "language_phonetic": "/ˈspænɪʃ/",
       "emoji_code": "openmoji_1f1f2_1f1fd",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Mexico/@23.3132808,-111.6583689,5z/data=!3m1!4b1!4m5!3m4!1s0x84043a3b88685353:0xed64b4be6b099811!8m2!3d23.634501!4d-102.552784"
     },
     {
@@ -4060,6 +4100,8 @@
       "language": "Dutch",
       "language_phonetic": "/dʌtʃ/",
       "emoji_code": "openmoji_1f1f3_1f1f1",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Netherlands/@52.1950947,3.0363492,7z/data=!3m1!4b1!4m5!3m4!1s0x47c609c3db87e4bb:0xb3a175ceffbd0a9f!8m2!3d52.132633!4d5.291266"
     },
     {
@@ -4071,6 +4113,8 @@
       "language": "Norwegian",
       "language_phonetic": "/nɔːrˈwiːdʒən/",
       "emoji_code": "openmoji_1f1f3_1f1f4",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Norway/@63.4932818,0.0813433,4z/data=!3m1!4b1!4m5!3m4!1s0x461268458f4de5bf:0xa1b03b9db864d02b!8m2!3d60.472024!4d8.468946"
     },
     {
@@ -4082,6 +4126,8 @@
       "language": "Polish",
       "language_phonetic": "/ˈpɑːlɪʃ/",
       "emoji_code": "openmoji_1f1f5_1f1f1",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Poland/@51.8751265,14.6465935,6z/data=!3m1!4b1!4m5!3m4!1s0x47009964a4640bbb:0x97573ca49cc55ea!8m2!3d51.919438!4d19.145136"
     },
     {
@@ -4093,6 +4139,8 @@
       "language": "Romanian",
       "language_phonetic": "/ruˈmeɪniən/",
       "emoji_code": "openmoji_1f1f7_1f1f4",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Romania/@45.8615457,20.5298124,6z/data=!3m1!4b1!4m5!3m4!1s0x40b1ff26958976c3:0x84ef4f92a804b194!8m2!3d45.943161!4d24.96676"
     },
     {
@@ -4104,6 +4152,8 @@
       "language": "Russian",
       "language_phonetic": "/ˈrʌʃn/",
       "emoji_code": "openmoji_1f1f7_1f1fa",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Russia/@55,103,3z/data=!3m1!4b1!4m5!3m4!1s0x453c569a896724fb:0x1409fdf86611f613!8m2!3d61.52401!4d105.318756"
     },
     {
@@ -4115,6 +4165,8 @@
       "language": "Gaelic",
       "language_phonetic": "/ˈɪŋɡlɪʃ/",
       "emoji_code": "openmoji_1f3f4_e0067_e0062_e0073_e0063_e0074_e007f",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Scotland,+UK/@57.6677015,-9.1705585,6z/data=!4m5!3m4!1s0x4861e2c403f2a19f:0xe7c1fad809c30714!8m2!3d56.4906712!4d-4.2026458"
     },
     {
@@ -4126,6 +4178,8 @@
       "language": "Slovakian",
       "language_phonetic": "/sləʊˈvɑːkiən/",
       "emoji_code": "openmoji_1f1f8_1f1f0",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Slovakia/@48.6543307,17.4562375,7z/data=!3m1!4b1!4m5!3m4!1s0x471460b9ae7cc67f:0xcd6b6167b1723a7d!8m2!3d48.669026!4d19.699024"
     },
     {
@@ -4137,6 +4191,8 @@
       "language": "Spanish",
       "language_phonetic": "/ˈspænɪʃ/",
       "emoji_code": "openmoji_1f1ea_1f1f8",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Spain/@39.8757885,-12.7141406,5z/data=!3m1!4b1!4m5!3m4!1s0xc42e3783261bc8b:0xa6ec2c940768a3ec!8m2!3d40.463667!4d-3.74922"
     },
     {
@@ -4148,6 +4204,8 @@
       "language": "Swedish",
       "language_phonetic": "/ˈswiːdɪʃ/",
       "emoji_code": "openmoji_1f1f8_1f1ea",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Sweden/@60.8926931,-0.2879674,4z/data=!3m1!4b1!4m5!3m4!1s0x465cb2396d35f0f1:0x22b8eba28dad6f62!8m2!3d60.128161!4d18.643501"
     },
     {
@@ -4159,6 +4217,8 @@
       "language": "German",
       "language_phonetic": "/ˈdʒɜːrmən/",
       "emoji_code": "openmoji_1f1e8_1f1ed",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Switzerland/@46.7950298,5.9807915,7z/data=!3m1!4b1!4m5!3m4!1s0x478c64ef6f596d61:0x5c56b5110fcb7b15!8m2!3d46.818188!4d8.227512"
     },
     {
@@ -4170,6 +4230,8 @@
       "language": "English",
       "language_phonetic": "/ˈɪŋɡlɪʃ/",
       "emoji_code": "openmoji_1f1fa_1f1f8",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/United+States/@36.2409999,-113.7572188,4z/data=!3m1!4b1!4m5!3m4!1s0x54eab584e432360b:0x1c3bb99243deb742!8m2!3d37.09024!4d-95.712891"
     },
     {
@@ -4181,6 +4243,8 @@
       "language": "Ukrainian",
       "language_phonetic": "/juːˈkreɪniən/",
       "emoji_code": "openmoji_1f1fa_1f1e6",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Ukraine/@47.9994777,22.1986152,5z/data=!3m1!4b1!4m5!3m4!1s0x40d1d9c154700e8f:0x1068488f64010!8m2!3d48.379433!4d31.1655799"
     },
     {
@@ -4192,6 +4256,8 @@
       "language": "English",
       "language_phonetic": "/ˈɪŋɡlɪʃ/",
       "emoji_code": "openmoji_1f1ec_1f1e7",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/United+Kingdom/@54.2311636,-13.4335005,5z/data=!3m1!4b1!4m5!3m4!1s0x25a3b1142c791a9:0xc4f8a0433288257a!8m2!3d55.378051!4d-3.435973"
     },
     {
@@ -4203,6 +4269,8 @@
       "language": "Welsh",
       "language_phonetic": "/ˈɪŋɡlɪʃ/",
       "emoji_code": "openmoji_1f3f4_e0067_e0062_e0077_e006c_e0073_e007f",
+      "latitude": "42.7075162",
+      "longitude": "23.2995661",
       "link_maps": "https://www.google.com/maps/place/Wales,+UK/@52.3874567,-6.402955,7z/data=!3m1!4b1!4m5!3m4!1s0x486434b66c1c0fed:0x1ebb71bc8aa5e8a2!8m2!3d52.1306607!4d-3.7837117"
     }
   ],

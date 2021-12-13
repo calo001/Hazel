@@ -68,6 +68,7 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
 
     def lifecycle_version = '2.4.0'
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
@@ -118,11 +119,11 @@ dependencies {
     implementation 'com.huawei.hms:awareness:1.0.8.301'
     implementation 'com.huawei.hms:hwid:6.1.0.302'
     implementation 'com.huawei.hms:hianalytics:6.3.0.301'
-    implementation 'com.huawei.hms:maps:6.0.0.301'
     implementation "com.huawei.hms:location:6.2.0.300"
     implementation 'com.huawei.hms:ml-computer-voice-asr-plugin:3.2.0.300'
     implementation 'com.huawei.hms:network-embedded:5.0.7.300'
     implementation 'com.huawei.hms:searchkit:5.0.4.303'
+    implementation 'com.huawei.hms:maps:6.2.0.301'
 }
 
 apply plugin: 'com.huawei.agconnect'

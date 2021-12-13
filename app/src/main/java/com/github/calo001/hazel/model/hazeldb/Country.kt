@@ -23,5 +23,9 @@ data class Country(
     @SerialName("nationality")
     val nationality: String, // British
     @SerialName("nationality_phonetic")
-    val nationalityPhonetic: String // /ˈbrɪtɪʃ/
+    val nationalityPhonetic: String, // /ˈbrɪtɪʃ/
+    @SerialName("latitude")
+    val latitude: String, // /ˈbrɪtɪʃ/
+    @SerialName("longitude")
+    val longitude: String, // /ˈbrɪtɪʃ/
 )

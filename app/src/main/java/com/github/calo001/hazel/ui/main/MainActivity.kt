@@ -21,12 +21,13 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.isSystemInDarkTheme
 import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.huawei.*
+import com.github.calo001.hazel.model.hazeldb.Country
 import com.github.calo001.hazel.platform.DataStoreProvider
 import com.github.calo001.hazel.routes.Routes
 import com.github.calo001.hazel.ui.common.SystemBars
+import com.github.calo001.hazel.ui.map.MapActivity
 import com.github.calo001.hazel.ui.settings.Dictionaries
 import com.github.calo001.hazel.util.*
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 @ExperimentalFoundationApi
@@ -62,6 +63,10 @@ class MainActivity : ComponentActivity() {
             viewModel.updateSpeechStatus(it)
         }
         asrHelper.manageResponse(result.resultCode, result.data)
+    }
+
+    private fun startMapActivity(country: Country) {
+        MapActivity.launch(this, country)
     }
 
     @SuppressLint("MissingPermission")
@@ -167,7 +172,9 @@ class MainActivity : ComponentActivity() {
                         painterIdentifier = painterIdentifier,
                         onListenClick = { speak(it) },
                         onOpenLink = { term -> openInBrowser(term, dictionary) },
-                        onOpenMaps = { link -> openMaps(link) },
+                        onOpenMaps = { country ->
+                            startMapActivity(country)
+                        },
                         colorScheme = colorScheme,
                         dictionary = dictionary,
                         darkMode = darkMode,
