@@ -25,6 +25,7 @@ import com.github.calo001.hazel.model.hazeldb.Phrase
 import com.github.calo001.hazel.routes.Routes
 import com.github.calo001.hazel.huawei.WeatherStatus
 import com.github.calo001.hazel.model.hazeldb.Country
+import com.github.calo001.hazel.model.hazeldb.Season
 import com.github.calo001.hazel.ui.animals.AnimalContentView
 import com.github.calo001.hazel.ui.animals.AnimalsView
 import com.github.calo001.hazel.ui.colors.SimpleExamplesView
@@ -33,6 +34,9 @@ import com.github.calo001.hazel.ui.colors.OneColorView
 import com.github.calo001.hazel.ui.countries.CountryContentView
 import com.github.calo001.hazel.ui.countries.CountryView
 import com.github.calo001.hazel.ui.gallery.GalleryView
+import com.github.calo001.hazel.ui.seasons.PanoramaView
+import com.github.calo001.hazel.ui.seasons.SeasonContentView
+import com.github.calo001.hazel.ui.seasons.SeasonsView
 import com.github.calo001.hazel.ui.settings.Dictionaries
 import com.github.calo001.hazel.ui.settings.SettingsView
 import com.github.calo001.hazel.ui.usefulexp.PhraseView
@@ -41,6 +45,7 @@ import com.github.calo001.hazel.ui.verbs.VerbContentView
 import com.github.calo001.hazel.ui.verbs.VerbData
 import com.github.calo001.hazel.ui.verbs.VerbsView
 import com.github.calo001.hazel.util.PainterIdentifier
+import com.huawei.hms.panorama.PanoramaInterface
 
 @SuppressLint("MissingPermission")
 
@@ -68,6 +73,8 @@ fun Router(
     onRequestWeather: () -> Unit,
     onSpeechClick: () -> Unit,
     speechStatus: SpeechStatus,
+    panoramaInterface: PanoramaInterface.PanoramaLocalInterface,
+    onPanoramaClick: (Season) -> Unit,
 ) {
     NavHost(
         navController = navController,
@@ -592,6 +599,65 @@ fun Router(
                 dictionaries = dictionary,
                 darkMode = darkMode,
             )
+        }
+
+        composable(route = Routes.Seasons.name) {
+            val seasons = viewModel.getSeasons()
+            SeasonsView(
+                seasons = seasons,
+                speechStatus = speechStatus,
+                onSpeechClick = onSpeechClick,
+                painterIdentifier = painterIdentifier,
+                onBackClick = { navController.navigateUp() },
+                onTextChangeSpeech = {
+                    viewModel.updateSpeechStatus(SpeechStatus.NoSpeech)
+                },
+                onClickSeason = { season ->
+                    navController.navigate("${Routes.Seasons.name}/${season.id}")
+                }
+            )
+        }
+
+        composable(
+            route = "${Routes.Seasons.name}/{season_id}",
+            arguments = listOf(
+                navArgument("season_id") { type = NavType.StringType }
+            )
+        ) { navBackStackEntry ->
+            var seasonIdArg by rememberSaveable {
+                mutableStateOf(navBackStackEntry.arguments?.getString("season_id") ?: "")
+            }
+            val currentSeason = viewModel.getSeasonById(seasonIdArg)
+            val seasons = viewModel.getSeasons()
+
+            currentSeason?.let {
+                val currentIndex = seasons.indexOfFirst { seasonFromList ->
+                    it.id == seasonFromList.id
+                }
+                val hasNext = currentIndex < seasons.lastIndex
+                val hasPrevious = currentIndex != 0
+                SeasonContentView(
+                    season = currentSeason,
+                    onOpenLink = { onOpenLink(currentSeason.name) },
+                    onNavBack = { navController.navigateUp() },
+                    onListen = { onListenClick(currentSeason.name) },
+                    onGallery = {
+                        navController.navigate(
+                            "${Routes.Gallery.name}/${currentSeason.name}"
+                        )
+                    },
+                    hasNext = hasNext,
+                    hasPrevious = hasPrevious,
+                    onNextClick = {
+                        seasonIdArg = seasons.getOrElse(currentIndex + 1) { currentSeason }.id
+                    },
+                    onPreviousClick = {
+                        seasonIdArg = seasons.getOrElse(currentIndex - 1) { currentSeason }.id
+                    },
+                    panorama = panoramaInterface,
+                    onPanoramaClick = { onPanoramaClick(currentSeason) }
+                )
+            }
         }
     }
 }

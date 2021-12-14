@@ -240,7 +240,7 @@ fun MainMenu(
         val seasons = ItemMenuData(
                 id = Routes.Seasons.name,
                 name = Routes.Seasons.label,
-                iconName = "openmoji_1f638"
+                iconName = "openmoji_1f33b"
             )
 
         sectionMenu(

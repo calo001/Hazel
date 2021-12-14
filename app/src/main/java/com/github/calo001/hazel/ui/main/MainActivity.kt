@@ -22,12 +22,15 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.huawei.*
 import com.github.calo001.hazel.model.hazeldb.Country
+import com.github.calo001.hazel.model.hazeldb.Season
 import com.github.calo001.hazel.platform.DataStoreProvider
 import com.github.calo001.hazel.routes.Routes
 import com.github.calo001.hazel.ui.common.SystemBars
 import com.github.calo001.hazel.ui.map.MapActivity
+import com.github.calo001.hazel.ui.panorama.PanoramaActivity
 import com.github.calo001.hazel.ui.settings.Dictionaries
 import com.github.calo001.hazel.util.*
+import com.huawei.hms.panorama.Panorama
 import kotlinx.coroutines.launch
 
 @ExperimentalFoundationApi
@@ -36,7 +39,12 @@ import kotlinx.coroutines.launch
 @ExperimentalMaterialApi
 class MainActivity : ComponentActivity() {
     private val viewModel: MainViewModel by viewModels()
+    private val panorama by lazy { Panorama.getInstance().getLocalInstance(this) }
 
+    override fun onDestroy() {
+        panorama.deInit()
+        super.onDestroy()
+    }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         val weatherHelper = WeatherHelper(this) { status ->
@@ -99,6 +107,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        panorama.init()
 
         val dataStore = DataStoreProvider(applicationContext)
         val hazelDb = resources.openRawResource(R.raw.hazel)
@@ -206,10 +215,24 @@ class MainActivity : ComponentActivity() {
                                     Manifest.permission.ACCESS_COARSE_LOCATION
                                 )
                             )
+                        },
+                        panoramaInterface = panorama,
+                        onPanoramaClick = { season ->
+                            startPanoramaActivity(season)
                         }
                     )
                 }
             }
         }
+    }
+
+    private fun startPanoramaActivity(season: Season) {
+        PanoramaActivity.launch(this, when(season.id) {
+            "seasons_1" -> R.drawable.winter_panorama
+            "seasons_2" -> R.drawable.spring_panoramic
+            "seasons_3" -> R.drawable.autumn_panoramic
+            "seasons_4" -> R.drawable.summer_panoramic
+            else -> -1
+        }, season.name)
     }
 }

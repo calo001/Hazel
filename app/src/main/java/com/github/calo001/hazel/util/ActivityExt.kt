@@ -8,6 +8,8 @@ import android.net.Uri
 import android.os.Build
 import android.speech.tts.TextToSpeech
 import android.util.Log
+import android.view.View
+import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
 import com.orhanobut.logger.Logger
 import java.util.*
@@ -49,4 +51,11 @@ fun Activity.speakOut(text: String, textToSpeech: TextToSpeech) {
 
 fun Activity.checkPermission(permissionName: String): Boolean {
     return ActivityCompat.checkSelfPermission(this, permissionName) == PackageManager.PERMISSION_GRANTED
+}
+
+fun View.setAllMatchParent() {
+    layoutParams = ViewGroup.LayoutParams(
+        ViewGroup.LayoutParams.MATCH_PARENT,
+        ViewGroup.LayoutParams.MATCH_PARENT,
+    )
 }

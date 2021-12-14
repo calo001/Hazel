@@ -102,6 +102,19 @@ class MainViewModel : ViewModel() {
         }
     }
 
+    fun getSeasonById(seasonId: String): Season? {
+        return getSeasons().firstOrNull {
+            it.id == seasonId
+        }
+    }
+
+    fun getSeasons(): List<Season> {
+        return (hazelContent.value as? HazelContentStatus.Success)
+            ?.content
+            ?.seasons
+            ?: listOf()
+    }
+
     fun searchUnsplash(query: String) = viewModelScope.launch {
         _galleryStatus.tryEmit(GalleryStatus.Loading)
         when (val result = unsplashRepository.search(query)) {

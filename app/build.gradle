@@ -124,6 +124,7 @@ dependencies {
     implementation 'com.huawei.hms:network-embedded:5.0.7.300'
     implementation 'com.huawei.hms:searchkit:5.0.4.303'
     implementation 'com.huawei.hms:maps:6.2.0.301'
+    implementation 'com.huawei.hms:panorama:5.0.2.306'
 }
 
 apply plugin: 'com.huawei.agconnect'

@@ -38,3 +38,5 @@ fun String?.isNullOrEmptyElse(value: String): String {
 fun Boolean.isTrue(run: () -> Unit) {
     if (this) run()
 }
+
+val Int.isZero get() = this == 0

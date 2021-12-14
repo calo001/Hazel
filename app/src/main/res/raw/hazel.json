@@ -4383,5 +4383,31 @@
       "phonetic": "/wʊlf/",
       "emoji_code": "openmoji_1f43a"
     }
+  ],
+  "seasons": [
+    {
+      "id": "seasons_1",
+      "name": "Winter",
+      "season_phonetic": "/ˈwɪntər/",
+      "emoji_code": "openmoji_2603"
+    },
+    {
+      "id": "seasons_2",
+      "name": "Spring",
+      "season_phonetic": "/sprɪŋ/",
+      "emoji_code": "openmoji_1f33b"
+    },
+    {
+      "id": "seasons_3",
+      "name": "Autumn",
+      "season_phonetic": "/ˈɔːtəm/",
+      "emoji_code": "openmoji_1f341"
+    },
+    {
+      "id": "seasons_4",
+      "name": "Summer",
+      "season_phonetic": "/ˈsʌmər/",
+      "emoji_code": "openmoji_1f3d6"
+    }
   ]
 }

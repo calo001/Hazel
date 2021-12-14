@@ -18,4 +18,6 @@ data class HazelContent(
     val usefulPhrases: List<UsefulPhrase>,
     @SerialName("animals")
     val animals: List<Animal>,
+    @SerialName("seasons")
+    val seasons: List<Season>,
 )
