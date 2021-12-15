@@ -21,6 +21,7 @@ import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.huawei.SearchKitHelper
 import com.github.calo001.hazel.huawei.SpeechStatus
+import com.github.calo001.hazel.huawei.TextToSpeechStatus
 import com.github.calo001.hazel.model.hazeldb.Phrase
 import com.github.calo001.hazel.routes.Routes
 import com.github.calo001.hazel.huawei.WeatherStatus
@@ -75,6 +76,7 @@ fun Router(
     speechStatus: SpeechStatus,
     panoramaInterface: PanoramaInterface.PanoramaLocalInterface,
     onPanoramaClick: (Season) -> Unit,
+    textToSpeechStatus: TextToSpeechStatus,
 ) {
     NavHost(
         navController = navController,
@@ -117,7 +119,7 @@ fun Router(
                     onOpenLink = { term ->
                         onOpenLink(term)
                     },
-                    onSeeExamples = { form ->
+                    onSeeExamples = {
                         navController.navigate("${when(type) {
                                 "regular" -> Routes.VerbsRegular.name
                                 "irregular" -> Routes.VerbsIrregular.name
@@ -130,6 +132,7 @@ fun Router(
                     hasNext = indexCurrent < verbs.lastIndex,
                     hasPrevious = indexCurrent != 0,
                     painterIdentifier = painterIdentifier,
+                    textToSpeechStatus = textToSpeechStatus,
                 )
             }
         }
@@ -218,6 +221,7 @@ fun Router(
                     onBackClick = { navController.navigateUp() },
                     hideNext = hideNext,
                     hidePrevious = hidePrevious,
+                    textToSpeechStatus = textToSpeechStatus,
                     onPreviousClick = {
                         verbIndex = if (verbIndex.minus(1) in examplesByForm.indices) {
                             verbIndex.minus(1)
@@ -293,6 +297,7 @@ fun Router(
                     hasNext = indexCurrent < countries.lastIndex,
                     hasPrevious = indexCurrent != 0,
                     painterIdentifier = painterIdentifier,
+                    textToSpeechStatus = textToSpeechStatus,
                 )
             }
         }
@@ -349,6 +354,7 @@ fun Router(
                     hasNext = indexCurrent < animals.lastIndex,
                     hasPrevious = indexCurrent != 0,
                     painterIdentifier = painterIdentifier,
+                    textToSpeechStatus = textToSpeechStatus,
                 )
             }
         }
@@ -422,6 +428,7 @@ fun Router(
                     onBackClick = { navController.navigateUp() },
                     hideNext = hideNext,
                     hidePrevious = hidePrevious,
+                    textToSpeechStatus = textToSpeechStatus,
                     onPreviousClick = {
                         colorExample = colorByCode.examples.getOrElse(indexOfExample - 1) { colorExample }
                     },
@@ -459,6 +466,7 @@ fun Router(
                     onOpenLink = { onOpenLink(color.name) },
                     onNavBack = { navController.navigateUp() },
                     onListen = onListenClick,
+                    textToSpeechStatus = textToSpeechStatus,
                     onSeeExamples = {
                         navController.navigate(
                             "${Routes.Colors.name}/color-example/${color.code}"
@@ -564,6 +572,7 @@ fun Router(
                         currentPhrase = currentPhrase,
                         hideNext = hideNext,
                         hidePrevious = hidePrevious,
+                        textToSpeechStatus = textToSpeechStatus,
                         onNextClick = {
                             if (currentIndex != -1) {
                                 phraseIdArg = usefulPhrases.phrases.getOrElse(currentIndex + 1) {
@@ -655,7 +664,8 @@ fun Router(
                         seasonIdArg = seasons.getOrElse(currentIndex - 1) { currentSeason }.id
                     },
                     panorama = panoramaInterface,
-                    onPanoramaClick = { onPanoramaClick(currentSeason) }
+                    onPanoramaClick = { onPanoramaClick(currentSeason) },
+                    textToSpeechStatus = textToSpeechStatus,
                 )
             }
         }

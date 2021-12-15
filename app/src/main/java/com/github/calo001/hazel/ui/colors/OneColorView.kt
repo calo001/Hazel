@@ -11,6 +11,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
+import com.github.calo001.hazel.huawei.TextToSpeechStatus
 import com.github.calo001.hazel.model.hazeldb.ColorHazel
 import com.github.calo001.hazel.ui.common.CircleColor
 import com.github.calo001.hazel.ui.common.HazelToolbarOneColor
@@ -32,6 +33,7 @@ fun OneColorView(
     onListen: (String) -> Unit,
     hasNext: Boolean,
     hasPrevious: Boolean,
+    textToSpeechStatus: TextToSpeechStatus,
 ) {
     ConstraintLayout {
         val (toolbar, content, controls) = createRefs()
@@ -63,6 +65,7 @@ fun OneColorView(
             onListenClick = { onListen(colorHazel.name) },
             hideNext = !hasNext,
             hidePrevious = !hasPrevious,
+            textToSpeechStatus = textToSpeechStatus,
             modifier = Modifier.constrainAs(controls) {
                 centerHorizontallyTo(parent)
                 bottom.linkTo(parent.bottom)
@@ -133,5 +136,6 @@ fun OneColorPreview() {
         onListen = {},
         hasNext = false,
         hasPrevious = false,
+        textToSpeechStatus = TextToSpeechStatus.NoPlaying,
     )
 }

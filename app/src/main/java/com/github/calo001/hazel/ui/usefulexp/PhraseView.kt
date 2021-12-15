@@ -7,15 +7,21 @@ import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
+import com.airbnb.lottie.compose.LottieAnimation
+import com.airbnb.lottie.compose.LottieCompositionSpec
+import com.airbnb.lottie.compose.rememberLottieComposition
+import com.github.calo001.hazel.huawei.TextToSpeechStatus
 import com.github.calo001.hazel.model.hazeldb.Phrase
 import com.github.calo001.hazel.ui.common.HazelToolbarButton
 import com.github.calo001.hazel.ui.common.HazelToolbarMiniButton
@@ -32,6 +38,7 @@ fun PhraseView(
     onNavigate: () -> Unit,
     hideNext: Boolean,
     hidePrevious: Boolean,
+    textToSpeechStatus: TextToSpeechStatus,
 ) {
     val bottomSheetScaffoldState = rememberBottomSheetScaffoldState(
         bottomSheetState = BottomSheetState(BottomSheetValue.Collapsed)
@@ -155,7 +162,8 @@ fun PhraseView(
                 modifier = Modifier.constrainAs(controls) {
                     centerHorizontallyTo(parent)
                     bottom.linkTo(parent.bottom)
-                }
+                },
+                textToSpeechStatus = textToSpeechStatus,
             )
         }
     }
@@ -172,6 +180,7 @@ fun ControlsItem(
     onListenClick: () -> Unit,
     hideNext: Boolean,
     hidePrevious: Boolean,
+    textToSpeechStatus: TextToSpeechStatus,
 ) {
     Row(
         horizontalArrangement = Arrangement.Center,
@@ -189,11 +198,43 @@ fun ControlsItem(
 
         ExtendedFloatingActionButton(
             text = {
-                Icon(
-                    imageVector = Icons.Filled.VolumeUp,
-                    contentDescription = "Listen",
-                    Modifier.padding(horizontal = 16.dp)
-                ) },
+                when (textToSpeechStatus) {
+                    TextToSpeechStatus.Playing -> {
+                        val composition by rememberLottieComposition(
+                            LottieCompositionSpec.RawRes(com.github.calo001.hazel.R.raw.sound_wave)
+                        )
+                        LottieAnimation(
+                            composition = composition,
+                            contentScale = ContentScale.FillHeight,
+                            modifier = Modifier
+                                .height(48.dp)
+                                .width(56.dp)
+                        )
+                    }
+                    TextToSpeechStatus.Loading -> {
+                        val composition by rememberLottieComposition(
+                            LottieCompositionSpec.RawRes(com.github.calo001.hazel.R.raw.loading_drop)
+                        )
+                        LottieAnimation(
+                            composition = composition,
+                            contentScale = ContentScale.FillHeight,
+                            modifier = Modifier
+                                .height(48.dp)
+                                .width(56.dp)
+                        )
+                    }
+                    TextToSpeechStatus.Finished,
+                    TextToSpeechStatus.NoPlaying,
+                    TextToSpeechStatus.Paused,
+                    TextToSpeechStatus.Stopped -> {
+                        Icon(
+                            imageVector = Icons.Filled.VolumeUp,
+                            contentDescription = "Listen",
+                            Modifier.padding(horizontal = 16.dp)
+                        )
+                    }
+                }
+            },
             onClick = onListenClick,
         )
 
@@ -242,6 +283,7 @@ fun PhraseViewPreview() {
         onListenClick = {},
         hideNext = false,
         hidePrevious = false,
-        onNavigate = {}
+        onNavigate = {},
+        textToSpeechStatus = TextToSpeechStatus.NoPlaying,
     )
 }

@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
+import com.github.calo001.hazel.huawei.TextToSpeechStatus
 import com.github.calo001.hazel.model.hazeldb.Verb
 import com.github.calo001.hazel.ui.animals.TextImageColumn
 import com.github.calo001.hazel.ui.common.HazelToolbarVerb
@@ -35,6 +36,7 @@ fun VerbContentView(
     hasPrevious: Boolean,
     painterIdentifier: PainterIdentifier,
     selectedForm: String,
+    textToSpeechStatus: TextToSpeechStatus,
 ) {
     var selectedInfoName by rememberSaveable { mutableStateOf(selectedForm) }
     val selectedInfo = when (selectedInfoName) {
@@ -103,6 +105,7 @@ fun VerbContentView(
             },
             hideNext = !hasNext,
             hidePrevious = !hasPrevious,
+            textToSpeechStatus = textToSpeechStatus,
             modifier = Modifier.constrainAs(controls) {
                 centerHorizontallyTo(parent)
                 bottom.linkTo(parent.bottom)

@@ -40,11 +40,14 @@ import kotlinx.coroutines.launch
 class MainActivity : ComponentActivity() {
     private val viewModel: MainViewModel by viewModels()
     private val panorama by lazy { Panorama.getInstance().getLocalInstance(this) }
+    private val textToSpeechHelper by lazy { TextToSpeechHelper() }
 
     override fun onDestroy() {
         panorama.deInit()
+        textToSpeechHelper.release()
         super.onDestroy()
     }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         val weatherHelper = WeatherHelper(this) { status ->
@@ -169,6 +172,7 @@ class MainActivity : ComponentActivity() {
                 val hazelContentStatus by viewModel.hazelContent.collectAsState()
                 val weatherStatus by viewModel.weatherStatus.collectAsState()
                 val speechStatus by viewModel.speechStatus.collectAsState()
+                val textToSpeechStatus by textToSpeechHelper.textToSpeechStatus.collectAsState()
 
                 Surface(
                     color = MaterialTheme.colors.background,
@@ -179,7 +183,7 @@ class MainActivity : ComponentActivity() {
                         navController = navController,
                         hazelContentStatus = hazelContentStatus,
                         painterIdentifier = painterIdentifier,
-                        onListenClick = { speak(it) },
+                        onListenClick = { textToSpeechHelper.startSpeak(it) },
                         onOpenLink = { term -> openInBrowser(term, dictionary) },
                         onOpenMaps = { country ->
                             startMapActivity(country)
@@ -189,6 +193,7 @@ class MainActivity : ComponentActivity() {
                         darkMode = darkMode,
                         defaultRoute = Routes.Main.name,
                         speechStatus = speechStatus,
+                        textToSpeechStatus = textToSpeechStatus,
                         onSpeechClick = {
                             if (speechStatus is SpeechStatus.NoSpeech ||
                                 speechStatus is SpeechStatus.Result) {

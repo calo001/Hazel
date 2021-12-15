@@ -9,6 +9,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
+import com.github.calo001.hazel.huawei.TextToSpeechStatus
 import com.github.calo001.hazel.model.hazeldb.Country
 import com.github.calo001.hazel.ui.common.HazelToolbarCountry
 import com.github.calo001.hazel.ui.usefulexp.ControlsItem
@@ -28,6 +29,7 @@ fun CountryContentView(
     hasNext: Boolean,
     hasPrevious: Boolean,
     painterIdentifier: PainterIdentifier,
+    textToSpeechStatus: TextToSpeechStatus,
 ) {
     var selectedInfo by remember { mutableStateOf<CountryData>(CountryData.Name) }
     ConstraintLayout(
@@ -79,6 +81,7 @@ fun CountryContentView(
             },
             hideNext = !hasNext,
             hidePrevious = !hasPrevious,
+            textToSpeechStatus = textToSpeechStatus,
             modifier = Modifier.constrainAs(controls) {
                 centerHorizontallyTo(parent)
                 bottom.linkTo(parent.bottom)

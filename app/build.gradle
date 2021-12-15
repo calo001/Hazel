@@ -109,6 +109,9 @@ dependencies {
     // logger
     implementation 'com.orhanobut:logger:2.2.0'
 
+    // Lottie
+    implementation "com.airbnb.android:lottie-compose:4.2.2"
+
     // Ktor
     implementation 'io.ktor:ktor-client-android:1.5.0'
     implementation 'io.ktor:ktor-client-serialization:1.5.0'
@@ -125,6 +128,7 @@ dependencies {
     implementation 'com.huawei.hms:searchkit:5.0.4.303'
     implementation 'com.huawei.hms:maps:6.2.0.301'
     implementation 'com.huawei.hms:panorama:5.0.2.306'
+    implementation 'com.huawei.hms:ml-computer-voice-tts:3.2.0.300'
 }
 
 apply plugin: 'com.huawei.agconnect'

@@ -13,6 +13,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
+import com.github.calo001.hazel.huawei.TextToSpeechStatus
 import com.github.calo001.hazel.ui.common.HazelToolbarSimple
 import com.github.calo001.hazel.ui.usefulexp.ControlsItem
 
@@ -29,6 +30,7 @@ fun SimpleExamplesView(
     onNextClick: () -> Unit,
     onListenClick: () -> Unit,
     modifier: Modifier = Modifier,
+    textToSpeechStatus: TextToSpeechStatus,
 ) {
     ConstraintLayout(
         modifier = modifier.fillMaxSize()
@@ -63,6 +65,7 @@ fun SimpleExamplesView(
             onListenClick = onListenClick,
             hideNext = hideNext,
             hidePrevious = hidePrevious,
+            textToSpeechStatus = textToSpeechStatus,
             modifier = Modifier.constrainAs(controls) {
                 centerHorizontallyTo(parent)
                 bottom.linkTo(parent.bottom)
@@ -84,6 +87,7 @@ fun ColorExamplesViewPreview() {
         hidePrevious = false,
         onPreviousClick = {},
         onNextClick = {},
-        onListenClick = {}
+        onListenClick = {},
+        textToSpeechStatus = TextToSpeechStatus.NoPlaying,
     )
 }

@@ -16,6 +16,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import com.github.calo001.hazel.R
+import com.github.calo001.hazel.huawei.TextToSpeechStatus
 import com.github.calo001.hazel.model.hazeldb.Season
 import com.github.calo001.hazel.ui.common.HazelToolbarSeasons
 import com.github.calo001.hazel.ui.usefulexp.ControlsItem
@@ -35,6 +36,7 @@ fun SeasonContentView(
     hasNext: Boolean,
     hasPrevious: Boolean,
     panorama: PanoramaInterface.PanoramaLocalInterface,
+    textToSpeechStatus: TextToSpeechStatus,
 ) {
     ConstraintLayout(
         modifier = Modifier.fillMaxSize()
@@ -97,6 +99,7 @@ fun SeasonContentView(
             onListenClick = onListen,
             hideNext = !hasNext,
             hidePrevious = !hasPrevious,
+            textToSpeechStatus = textToSpeechStatus,
             modifier = Modifier.constrainAs(controls) {
                 centerHorizontallyTo(parent)
                 bottom.linkTo(parent.bottom)
