@@ -235,7 +235,12 @@ fun ControlsItem(
                     }
                 }
             },
-            onClick = onListenClick,
+            onClick = {
+                if(textToSpeechStatus !is TextToSpeechStatus.Playing ||
+                    textToSpeechStatus !is TextToSpeechStatus.Loading) {
+                        onListenClick()
+                }
+            },
         )
 
         HazelToolbarButton(

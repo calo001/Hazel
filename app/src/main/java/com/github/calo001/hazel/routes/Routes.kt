@@ -19,4 +19,5 @@ sealed class Routes(val name: String, val label: String, val icon: Int = 0) {
     object Weather: Routes(name = "weather", label = "The weather", icon = R.drawable.outline_public_24)
     object Seasons: Routes(name = "seasons", label = "Seasons", icon = R.drawable.outline_public_24)
     object Map: Routes(name = "map", label = "Map", icon = R.drawable.outline_public_24)
+    object Time: Routes(name = "time", label = "Time", icon = R.drawable.outline_public_24)
 }

@@ -26,23 +26,25 @@ fun HazelToolbarButton(
             enabled = enabled,
             modifier = modifier
                 .background(
-                    color = background,
+                    color = if (enabled) background else background.copy(alpha = 0.4f),
                     shape = CircleShape
                 )
                 .size(48.dp)
         ) {
+            val colorOn = MaterialTheme.colors.onPrimary
+
             if (label.isNotEmpty()) {
                 Text(
                     text = label,
                     style = MaterialTheme.typography.button.copy(
-                        color = MaterialTheme.colors.onPrimary
+                        color = if (enabled) colorOn else colorOn.copy(alpha = 0.4f)
                     )
                 )
             } else {
                 Icon(
                     imageVector = icon,
                     contentDescription = null,
-                    tint = MaterialTheme.colors.onPrimary,
+                    tint = if (enabled) colorOn else colorOn.copy(alpha = 0.4f),
                 )
             }
         }

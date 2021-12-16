@@ -42,6 +42,7 @@ android {
         }
     }
     compileOptions {
+        coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
@@ -129,6 +130,14 @@ dependencies {
     implementation 'com.huawei.hms:maps:6.2.0.301'
     implementation 'com.huawei.hms:panorama:5.0.2.306'
     implementation 'com.huawei.hms:ml-computer-voice-tts:3.2.0.300'
+
+    // Java 8
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+
+    // Analog clock
+    implementation 'com.github.arbelkilani:Clock-view:2.1.0'
+
+    implementation 'com.ibm.icu:icu4j:70.1'
 }
 
 apply plugin: 'com.huawei.agconnect'

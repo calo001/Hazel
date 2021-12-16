@@ -37,7 +37,11 @@ import com.github.calo001.hazel.huawei.WeatherType
 import com.github.calo001.hazel.ui.common.*
 import com.github.calo001.hazel.util.PainterIdentifier
 import com.github.calo001.hazel.ui.theme.Lato
-import com.google.accompanist.permissions.*
+import kotlinx.coroutines.launch
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.util.*
+import kotlin.concurrent.schedule
 
 
 @ExperimentalFoundationApi
@@ -59,6 +63,7 @@ fun MainScreen(
     speechStatus: SpeechStatus,
     onSpeechClick: () -> Unit,
     clearSpeechResult: () -> Unit,
+    onClickTime: () -> Unit,
 ) {
     var querySearch by rememberSaveable { mutableStateOf("") }
 
@@ -85,6 +90,7 @@ fun MainScreen(
                     painterIdentifier = painterIdentifier,
                     onNavigate = onNavigate,
                     onCheckWeather = onCheckWeather,
+                    onClickTime = onClickTime,
                 )
             }
         }
@@ -155,8 +161,6 @@ fun MainScreen(
 
 }
 
-
-@OptIn(ExperimentalPermissionsApi::class)
 @ExperimentalMaterialApi
 @Composable
 fun MainMenu(
@@ -165,6 +169,7 @@ fun MainMenu(
     onNavigate: (String) -> Unit,
     temperature: WeatherStatus,
     onCheckWeather: () -> Unit,
+    onClickTime: () -> Unit,
 ) {
     val itemsPerColumns = calculateItemsPerColumn(
         LocalConfiguration.current.screenWidthDp.dp
@@ -179,7 +184,7 @@ fun MainMenu(
         safeSpacer(20.dp)
 
         headerSection(
-            onClickTime = {}
+            onClickTime = onClickTime,
         )
 
         bigSection(
@@ -263,7 +268,6 @@ fun MainMenu(
 }
 
 
-@ExperimentalPermissionsApi
 @ExperimentalMaterialApi
 fun LazyListScope.bigSection(
     title: String,
@@ -293,7 +297,7 @@ fun LazyListScope.bigSection(
                             painter = painterResource(id = imageLogoIds[index]),
                             contentDescription = null,
                             modifier = Modifier
-                                .size(if(imageLogoIds.size == 1) 60.dp else 50.dp)
+                                .size(if (imageLogoIds.size == 1) 60.dp else 50.dp)
                                 .align(if (index % 2 == 0) Alignment.TopStart else Alignment.BottomEnd)
                         )
                     }
@@ -399,16 +403,40 @@ fun LazyListScope.headerSection(
                     modifier = Modifier
                 )
             }
-            ItemMenu(
-                title = " 12:12 PM ",
-                titleStyle = MaterialTheme.typography.h5,
-                spaceText = "",
-                image = painterResource(id = R.drawable.openmoji_1f9ed),
-                onClick = onClickTime,
-                modifier = Modifier
-            )
+            Clock(onClickTime)
         }
     }
+}
+
+@ExperimentalMaterialApi
+@Composable
+private fun Clock(onClickTime: () -> Unit) {
+    val scope = rememberCoroutineScope()
+    var time by remember { mutableStateOf("  00:00  ") }
+    SideEffect {
+        fun updateTime() {
+            val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("KK:mm a", Locale.ENGLISH)
+            val localDateTime = LocalDateTime.now().format(formatter)
+            time = " $localDateTime "
+        }
+        scope.launch {
+            updateTime()
+            Timer().schedule(
+                delay = 1000,
+                period = 1000
+            ) {
+                updateTime()
+            }
+        }
+    }
+    ItemMenu(
+        title = time,
+        titleStyle = MaterialTheme.typography.h5,
+        spaceText = "",
+        image = painterResource(id = R.drawable.openmoji_1f9ed),
+        onClick = onClickTime,
+        modifier = Modifier
+    )
 }
 
 @ExperimentalFoundationApi

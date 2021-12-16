@@ -35,18 +35,24 @@ import com.github.calo001.hazel.ui.colors.OneColorView
 import com.github.calo001.hazel.ui.countries.CountryContentView
 import com.github.calo001.hazel.ui.countries.CountryView
 import com.github.calo001.hazel.ui.gallery.GalleryView
-import com.github.calo001.hazel.ui.seasons.PanoramaView
 import com.github.calo001.hazel.ui.seasons.SeasonContentView
 import com.github.calo001.hazel.ui.seasons.SeasonsView
 import com.github.calo001.hazel.ui.settings.Dictionaries
 import com.github.calo001.hazel.ui.settings.SettingsView
+import com.github.calo001.hazel.ui.time.TimeView
 import com.github.calo001.hazel.ui.usefulexp.PhraseView
 import com.github.calo001.hazel.ui.usefulexp.UsefulExpressionsView
 import com.github.calo001.hazel.ui.verbs.VerbContentView
 import com.github.calo001.hazel.ui.verbs.VerbData
 import com.github.calo001.hazel.ui.verbs.VerbsView
 import com.github.calo001.hazel.util.PainterIdentifier
+import com.github.calo001.hazel.util.TimeText
 import com.huawei.hms.panorama.PanoramaInterface
+import kotlinx.coroutines.launch
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.util.*
+import kotlin.concurrent.schedule
 
 @SuppressLint("MissingPermission")
 
@@ -512,6 +518,9 @@ fun Router(
                 speechStatus = speechStatus,
                 clearSpeechResult = {
                     viewModel.updateSpeechStatus(SpeechStatus.NoSpeech)
+                },
+                onClickTime = {
+                    navController.navigate(Routes.Time.name)
                 }
             )
         }
@@ -625,6 +634,56 @@ fun Router(
                     navController.navigate("${Routes.Seasons.name}/${season.id}")
                 }
             )
+        }
+
+        composable(route = Routes.Time.name) {
+            val scope = rememberCoroutineScope()
+            var timeInWords = listOf<String>()
+            var timeInNumbersPMAM by rememberSaveable { mutableStateOf("") }
+            var currentTimeInWordIndex by rememberSaveable { mutableStateOf(0) }
+
+            fun updateTime() {
+                val localDateTime = LocalDateTime.now()
+                timeInWords = TimeText(localDateTime.hour, localDateTime.minute)
+                    .getTimePhases()
+
+                val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("KK:mm\na", Locale.ENGLISH)
+                timeInNumbersPMAM = localDateTime.format(formatter)
+            }
+            updateTime()
+            SideEffect {
+                scope.launch {
+                    Timer().schedule(
+                        delay = 1000,
+                        period = 1000
+                    ) {
+                        updateTime()
+                    }
+                }
+            }
+            if(timeInWords.isNotEmpty()) {
+                val hasPrevious = currentTimeInWordIndex > 0
+                val hasNext = currentTimeInWordIndex < timeInWords.lastIndex
+                TimeView(
+                    onBackClick = { navController.navigateUp() },
+                    onPreviousClick = {
+                        if (currentTimeInWordIndex > 0) {
+                            currentTimeInWordIndex--
+                        }
+                    },
+                    onNextClick = {
+                        if (currentTimeInWordIndex < timeInWords.lastIndex) {
+                            currentTimeInWordIndex++
+                        }
+                    },
+                    onListen = { onListenClick(it) },
+                    hasPrevious = hasPrevious,
+                    hasNext = hasNext,
+                    textToSpeechStatus = textToSpeechStatus,
+                    timeInNumbersPMAM = timeInNumbersPMAM,
+                    timeInWords = timeInWords.getOrElse(currentTimeInWordIndex) { "" }
+                )
+            }
         }
 
         composable(
