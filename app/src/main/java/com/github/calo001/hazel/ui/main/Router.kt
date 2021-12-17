@@ -646,11 +646,9 @@ fun Router(
 
             fun updateTime() {
                 val localDateTime = LocalDateTime.now()
-                timeInWords = TimeText(localDateTime.hour, localDateTime.minute)
-                    .getTimePhases()
-
-                val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("KK:mm\na", Locale.ENGLISH)
-                timeInNumbersPMAM = localDateTime.format(formatter)
+                val timeText = TimeText(localDateTime.hour, localDateTime.minute)
+                timeInWords = timeText.getTimePhases()
+                timeInNumbersPMAM = timeText.getTimeAMPM(breakLine = true)
             }
             updateTime()
             SideEffect {

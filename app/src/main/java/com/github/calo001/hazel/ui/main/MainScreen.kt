@@ -37,6 +37,7 @@ import com.github.calo001.hazel.huawei.WeatherType
 import com.github.calo001.hazel.ui.common.*
 import com.github.calo001.hazel.util.PainterIdentifier
 import com.github.calo001.hazel.ui.theme.Lato
+import com.github.calo001.hazel.util.TimeText
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
@@ -415,9 +416,9 @@ private fun Clock(onClickTime: () -> Unit) {
     var time by remember { mutableStateOf("  00:00  ") }
     SideEffect {
         fun updateTime() {
-            val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("KK:mm a", Locale.ENGLISH)
-            val localDateTime = LocalDateTime.now().format(formatter)
-            time = " $localDateTime "
+            val localDateTime = LocalDateTime.now()
+            val timeText = TimeText(localDateTime.hour, localDateTime.minute)
+            time = " ${timeText.getTimeAMPM()} "
         }
         scope.launch {
             updateTime()
