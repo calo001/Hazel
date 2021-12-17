@@ -19,6 +19,7 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.lifecycle.lifecycleScope
 import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.huawei.*
 import com.github.calo001.hazel.model.hazeldb.Country
@@ -35,7 +36,7 @@ import com.huawei.hms.panorama.Panorama
 import kotlinx.coroutines.launch
 import com.huawei.hms.analytics.HiAnalyticsInstance
 import com.huawei.hms.analytics.HiAnalyticsTools
-import com.huawei.hms.analytics.type.HALogConfig
+import kotlinx.coroutines.delay
 
 
 @ExperimentalFoundationApi
@@ -68,14 +69,14 @@ class MainActivity : ComponentActivity() {
             val asrHelper = ASRHelper(this) { status ->
                 viewModel.updateSpeechStatus(status)
             }
-            asrHelper.startRecognizing()
+            asrHelper.startRecognizing(speechResult)
         }
     }
 
     private val speechResult = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
-        val asrHelper = ASRHelper2(this) {
+        val asrHelper = ASRHelper(this) {
             viewModel.updateSpeechStatus(it)
         }
         asrHelper.manageResponse(result.resultCode, result.data)
@@ -124,7 +125,7 @@ class MainActivity : ComponentActivity() {
         val weatherHelper = WeatherHelper(this) { status ->
             viewModel.updateWeatherStatus(status)
         }
-        val asrHelper = ASRHelper2(this) { status ->
+        val asrHelper = ASRHelper(this) { status ->
             viewModel.updateSpeechStatus(status)
         }
         viewModel.loadHazelContent(hazelDb)
@@ -208,6 +209,8 @@ class MainActivity : ComponentActivity() {
                                 } else {
                                     requestPermissionRecordAudio.launch(Manifest.permission.RECORD_AUDIO)
                                 }
+                            } else {
+
                             }
                         },
                         onSelectColorScheme = {

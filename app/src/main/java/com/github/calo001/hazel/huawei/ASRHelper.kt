@@ -1,93 +1,63 @@
 package com.github.calo001.hazel.huawei
 
-import android.content.Context
 import android.content.Intent
-import android.os.Bundle
-import android.speech.SpeechRecognizer
-import com.huawei.hms.common.util.Logger
+import androidx.activity.result.ActivityResultLauncher
+import androidx.core.app.ComponentActivity
+import com.huawei.hms.mlplugin.asr.MLAsrCaptureActivity
+import com.huawei.hms.mlplugin.asr.MLAsrCaptureConstants
 import com.huawei.hms.mlsdk.asr.MLAsrConstants
-import com.huawei.hms.mlsdk.asr.MLAsrListener
-import com.huawei.hms.mlsdk.asr.MLAsrRecognizer
 
-class ASRHelper(val context: Context, val result: (SpeechStatus) -> Unit) {
-    private val mSpeechRecognizer = MLAsrRecognizer.createAsrRecognizer(context)
-    private val mSpeechRecognizerIntent = Intent(MLAsrConstants.ACTION_HMS_ASR_SPEECH)
-
-    private fun setup() {
-        mSpeechRecognizer?.setAsrListener(SpeechRecognitionListener())
-        // Use Intent for recognition parameter settings.
-        mSpeechRecognizerIntent
-            // Set the language that can be recognized to English. If this parameter is not set, English is recognized by default. Example: "zh-CN": Chinese; "en-US": English; "fr-FR": French; "es-ES": Spanish; "de-DE": German; "it-IT": Italian; "ar": Arabic; "th_TH": Thai; "ms_MY": Malay; "fil_PH": Filipino.
-            .putExtra(MLAsrConstants.LANGUAGE, MLAsrConstants.LAN_EN_US) // Set to return the recognition result along with the speech. If you ignore the setting, this mode is used by default. Options are as follows:
-            // MLAsrConstants.FEATURE_WORDFLUX: Recognizes and returns texts through onRecognizingResults.
-            // MLAsrConstants.FEATURE_ALLINONE: After the recognition is complete, texts are returned through onResults.
-            .putExtra(MLAsrConstants.FEATURE, MLAsrConstants.FEATURE_ALLINONE) // Set the application scenario. MLAsrConstants.SCENES_SHOPPING indicates shopping, which is supported only for Chinese. Under this scenario, recognition for the name of Huawei products has been optimized.
-            //.putExtra(MLAsrConstants.SCENES, MLAsrConstants.SCENES_SHOPPING)
-    }
-
-    fun startRecognizing() {
-        setup()
-        mSpeechRecognizer?.startRecognizing(mSpeechRecognizerIntent)
+class ASRHelper(
+    private val activity: ComponentActivity,
+    val result: (SpeechStatus) -> Unit
+) {
+    fun startRecognizing(speechResult: ActivityResultLauncher<Intent>) {
         result(SpeechStatus.Recording)
+        val intent = Intent(activity, MLAsrCaptureActivity::class.java)
+            // Set the language that can be recognized to English. If this parameter is not set, English is recognized by default. Example: "zh-CN": Chinese; "en-US": English; "fr-FR": French; "es-ES": Spanish; "de-DE": German; "it-IT": Italian; "ar": Arabic; "ru-RU": Russian; "th_TH": Thai; "ms_MY": Malay; "fil_PH": Filipino.
+            .putExtra(MLAsrCaptureConstants.LANGUAGE, "en-US")
+            // Set whether to display the recognition result on the speech pickup UI. MLAsrCaptureConstants.FEATURE_ALLINONE: no; MLAsrCaptureConstants.FEATURE_WORDFLUX: yes.
+            .putExtra(MLAsrCaptureConstants.FEATURE, MLAsrCaptureConstants.FEATURE_WORDFLUX)
+            // Set the application scenario. MLAsrConstants.SCENES_SHOPPING indicates shopping, which is supported only for Chinese. Under this scenario, recognition for the name of Huawei products has been optimized.
+            //.putExtra(MLAsrConstants.SCENES, MLAsrConstants.SCENES_SHOPPING)
+
+        // REQUEST_CODE_ASR: request code between the current activity and speech pickup UI activity. You can use this code to obtain the processing result of the speech pickup UI.
+        //activity.startActivityForResult(intent, REQUEST_CODE_ASR)
+        speechResult.launch(intent)
     }
 
-    fun release() {
-        mSpeechRecognizer?.destroy()
-        result(SpeechStatus.NoSpeech)
-    }
-
-    internal inner class SpeechRecognitionListener : MLAsrListener {
-        override fun onStartListening() {
-            // The recorder starts to receive speech.
-            Logger.i("onStartListening", "")
-            result(SpeechStatus.Recording)
-        }
-
-        override fun onStartingOfSpeech() {
-            // The user starts to speak, that is, the speech recognizer detects that the user starts to speak.
-            Logger.i("onStartListening", "onStartingOfSpeech")
-            result(SpeechStatus.Recording)
-        }
-
-        override fun onVoiceDataReceived(data: ByteArray, energy: Float, bundle: Bundle) {
-            // Return the original PCM stream and audio power to the user. This API is not running in the main thread, and the return result is processed in the sub-thread.
-            Logger.i("onVoiceDataReceived", "")
-        }
-
-        override fun onRecognizingResults(partialResults: Bundle) {
-            // Receive the recognized text from MLAsrRecognizer. This API is not running in the main thread, and the return result is processed in the sub-thread.
-            Logger.i("onRecognizingResults", "")
-        }
-
-        override fun onResults(results: Bundle) {
-            Logger.i("onResults", "")
-        }
-
-        override fun onError(error: Int, errorMessage: String) {
-            // Called when an error occurs in recognition. This API is not running in the main thread, and the return result is processed in the sub-thread.
-            val error = when (error) {
-                MLAsrConstants.ERR_NO_NETWORK -> "ERR_NO_NETWORK"
-                MLAsrConstants.ERR_NO_UNDERSTAND -> "ERR_NO_UNDERSTAND"
-                MLAsrConstants.ERR_SERVICE_UNAVAILABLE -> "ERR_SERVICE_UNAVAILABLE"
-                else -> "unknown"
+    fun manageResponse(resultCode: Int, data: Intent?) {
+        when (resultCode) {
+            MLAsrCaptureConstants.ASR_SUCCESS -> if (data != null) {
+                val bundle = data.extras
+                // Obtain the text information recognized from speech.
+                if (bundle!!.containsKey(MLAsrCaptureConstants.ASR_RESULT)) {
+                    val text = bundle.getString(MLAsrCaptureConstants.ASR_RESULT).toString()
+                    // Process the recognized text information.
+                    result(SpeechStatus.Result(text))
+                }
             }
-
-            Logger.i("onError", error)
-            result(SpeechStatus.NoSpeech)
-        }
-
-        override fun onState(state: Int, params: Bundle) {
-            // Notify the app status change. This API is not running in the main thread, and the return result is processed in the sub-thread.
-            val state = when (state) {
-                MLAsrConstants.STATE_LISTENING -> "ERR_NO_NETWORK"
-                MLAsrConstants.STATE_NO_SOUND -> "ERR_NO_UNDERSTAND"
-                MLAsrConstants.STATE_NO_SOUND_TIMES_EXCEED -> "ERR_SERVICE_UNAVAILABLE"
-                MLAsrConstants.STATE_NO_UNDERSTAND -> "STATE_NO_UNDERSTAND"
-                MLAsrConstants.STATE_NO_NETWORK -> "STATE_NO_NETWORK"
-                MLAsrConstants.STATE_WAITING -> "STATE_WAITING"
-                else -> "unknown"
+            MLAsrCaptureConstants.ASR_FAILURE -> { // Processing logic for recognition failure.
+                if (data != null) {
+                    val bundle = data.extras
+                    // Check whether a result code is contained.
+                    if (bundle!!.containsKey(MLAsrCaptureConstants.ASR_ERROR_CODE)) {
+                        val errorCode = bundle.getInt(MLAsrCaptureConstants.ASR_ERROR_CODE)
+                        // Perform troubleshooting based on the result code.
+                    }
+                    // Check whether error information is contained.
+                    if (bundle.containsKey(MLAsrCaptureConstants.ASR_ERROR_MESSAGE)) {
+                        val errorMsg = bundle.getString(MLAsrCaptureConstants.ASR_ERROR_MESSAGE)
+                        // Perform troubleshooting based on the error information.
+                    }
+                    // Check whether a sub-result code is contained.
+                    if (bundle.containsKey(MLAsrCaptureConstants.ASR_SUB_ERROR_CODE)) {
+                        val subErrorCode = bundle.getInt(MLAsrCaptureConstants.ASR_SUB_ERROR_CODE)
+                        // Process the sub-result code.
+                    }
+                }
+                result(SpeechStatus.NoSpeech)
             }
-            Logger.i("onState", state)
         }
     }
 }
