@@ -68,6 +68,10 @@
         <meta-data
             android:name="com.huawei.hms.client.channel.androidMarket"
             android:value="false" />
+        <meta-data
+            android:name="install_channel"
+            android:value="AppGallery">
+        </meta-data>
     </application>
 
 </manifest>

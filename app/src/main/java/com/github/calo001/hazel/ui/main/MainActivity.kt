@@ -30,8 +30,13 @@ import com.github.calo001.hazel.ui.map.MapActivity
 import com.github.calo001.hazel.ui.panorama.PanoramaActivity
 import com.github.calo001.hazel.ui.settings.Dictionaries
 import com.github.calo001.hazel.util.*
+import com.huawei.hms.analytics.HiAnalytics
 import com.huawei.hms.panorama.Panorama
 import kotlinx.coroutines.launch
+import com.huawei.hms.analytics.HiAnalyticsInstance
+import com.huawei.hms.analytics.HiAnalyticsTools
+import com.huawei.hms.analytics.type.HALogConfig
+
 
 @ExperimentalFoundationApi
 @ExperimentalAnimationApi
@@ -110,6 +115,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        initAnalytics()
         panorama.init()
 
         val dataStore = DataStoreProvider(applicationContext)
@@ -229,6 +235,11 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    private fun initAnalytics() {
+        HiAnalyticsTools.enableLog()
+        val instance: HiAnalyticsInstance = HiAnalytics.getInstance(this)
     }
 
     private fun startPanoramaActivity(season: Season) {
