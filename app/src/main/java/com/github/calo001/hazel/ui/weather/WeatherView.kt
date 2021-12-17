@@ -1,12 +1,14 @@
-package com.github.calo001.hazel.ui.verbs
+package com.github.calo001.hazel.ui.weather
 
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -14,60 +16,64 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.github.calo001.hazel.huawei.SpeechStatus
-import com.github.calo001.hazel.model.hazeldb.Verb
+import com.github.calo001.hazel.model.hazeldb.Weather
 import com.github.calo001.hazel.ui.common.HazelToolbarContent
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.common.TextImageRow
 import com.github.calo001.hazel.ui.common.safeSpacer
 import com.github.calo001.hazel.util.PainterIdentifier
 
-@ExperimentalFoundationApi
 @ExperimentalComposeUiApi
+@ExperimentalFoundationApi
 @Composable
-fun VerbsView(
-    title: String,
-    verbs: List<Verb>,
-    onClickVerb: (Verb) -> Unit,
-    onBackClick: () -> Unit,
-    painterIdentifier: PainterIdentifier,
+fun WeatherView(
+    modifier: Modifier = Modifier,
+    weathers: List<Weather>,
     speechStatus: SpeechStatus,
-    onSpeechClick: () -> Unit,
     onTextChangeSpeech: (String) -> Unit,
-) {
-    var verbSearch by rememberSaveable { mutableStateOf("") }
+    onClickWeather: (Weather) -> Unit,
+    painterIdentifier: PainterIdentifier,
+    onBackClick: () -> Unit,
+    onSpeechClick: () -> Unit,
+
+    ) {
+    var querySearch by rememberSaveable { mutableStateOf("") }
     if (speechStatus is SpeechStatus.Result) {
         val inputSpeech = speechStatus.text.trim()
         if (inputSpeech.isNotEmpty()) {
             onTextChangeSpeech(inputSpeech)
-            verbSearch = inputSpeech
+            querySearch = inputSpeech
         }
     }
 
     Box(
-        modifier = Modifier.fillMaxSize()
+        modifier = modifier
+            .background(MaterialTheme.colors.background)
+            .fillMaxSize()
     ) {
         LazyColumn {
             safeSpacer(extraSpace = 100.dp)
 
-            val items = if (verbSearch.isNotEmpty()) {
-                verbs.filter {
-                    it.base.verb.lowercase().contains(verbSearch.lowercase())
+            val items = if (querySearch.isNotEmpty()) {
+                weathers.filter {
+                    it.name.lowercase().contains(querySearch.lowercase())
                 }
             } else {
-                verbs
+                weathers
             }
             items(
                 count = items.size,
                 key = { index -> items[index].id }
             ) { index ->
-                val painter = painterIdentifier.getPainter(identifier = items[index].emojiCode)
+                val painters = items[index].emojiCodes.map { painterIdentifier.getPainter(identifier = it) }
                 TextImageRow(
-                    text = items[index].base.verb,
-                    image = painter,
+                    text = items[index].name,
+                    images = painters,
                     modifier = Modifier
-                        .clickable { onClickVerb(items[index]) }
+                        .clickable { onClickWeather(items[index]) }
                         .padding(vertical = 18.dp)
                         .padding(horizontal = 16.dp)
                         .fillMaxWidth()
@@ -78,16 +84,22 @@ fun VerbsView(
 
         SurfaceToolbar {
             HazelToolbarContent(
-                title = title,
+                title = "Weather",
                 subtitle = "Basic vocabulary",
                 onBackClick = onBackClick,
                 onTextChange = {
-                    verbSearch = it
+                    querySearch = it
                 },
-                onSpeechClick = onSpeechClick,
                 speechStatus = speechStatus,
+                onSpeechClick = onSpeechClick,
                 onTextChangeSpeech = onTextChangeSpeech,
             )
         }
     }
+}
+
+@Preview
+@Composable
+fun WeatherViewPreview() {
+
 }

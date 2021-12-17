@@ -108,6 +108,12 @@ class MainViewModel : ViewModel() {
         }
     }
 
+    fun getWeatherById(weatherId: String): Weather? {
+        return getWeather().firstOrNull {
+            it.id == weatherId
+        }
+    }
+
     fun getSeasons(): List<Season> {
         return (hazelContent.value as? HazelContentStatus.Success)
             ?.content
@@ -171,6 +177,13 @@ class MainViewModel : ViewModel() {
         return (hazelContent.value as? HazelContentStatus.Success)
             ?.content
             ?.regularVerbs
+            ?: listOf()
+    }
+
+    fun getWeather(): List<Weather> {
+        return (hazelContent.value as? HazelContentStatus.Success)
+            ?.content
+            ?.weather
             ?: listOf()
     }
 

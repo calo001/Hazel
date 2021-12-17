@@ -191,7 +191,7 @@ fun MainMenu(
             title = "The weather",
             temperature = temperature,
             onCheckWeather = onCheckWeather,
-            onClick = {  },
+            onClick = { onNavigate(Routes.Weather.name) },
         )
 
         val usefulPhraseCategory = hazelContent.usefulPhrases

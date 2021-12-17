@@ -22,6 +22,7 @@ import com.github.calo001.hazel.huawei.SpeechStatus
 import com.github.calo001.hazel.model.hazeldb.Animal
 import com.github.calo001.hazel.ui.common.HazelToolbarContent
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
+import com.github.calo001.hazel.ui.common.TextImageRow
 import com.github.calo001.hazel.ui.common.safeSpacer
 import com.github.calo001.hazel.ui.theme.Lato
 import com.github.calo001.hazel.util.PainterIdentifier
@@ -121,28 +122,6 @@ fun TextImageColumn(
                 fontFamily = Lato
             ),
             modifier = Modifier.padding(top = 8.dp)
-        )
-    }
-}
-
-@Composable
-fun TextImageRow(
-    modifier: Modifier = Modifier,
-    text: String,
-    image: Painter,
-) {
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = modifier
-    ) {
-        Image(
-            painter = image,
-            contentDescription = null
-        )
-        Text(
-            text = text,
-            style = MaterialTheme.typography.h6,
-            modifier = Modifier.padding(start = 16.dp)
         )
     }
 }

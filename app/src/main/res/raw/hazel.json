@@ -4409,5 +4409,324 @@
       "season_phonetic": "/ˈsʌmər/",
       "emoji_code": "openmoji_1f3d6"
     }
+  ],
+  "weather": [
+    {
+      "id": "weather_1",
+      "name": "Sunny",
+      "phonetic": "/ˈsʌni/",
+      "emoji_codes": [
+        "openmoji_2600"
+      ]
+    },
+    {
+      "id": "weather_2",
+      "name": "Mostly sunny",
+      "phonetic": "/ˈməʊstli ˈsʌni/",
+      "emoji_codes": [
+        "openmoji_1f324"
+      ]
+    },
+    {
+      "id": "weather_3",
+      "name": "Partly sunny",
+      "phonetic": "/ˈpɑːrtli ˈsʌni/",
+      "emoji_codes": [
+        "openmoji_26c5"
+      ]
+    },
+    {
+      "id": "weather_4",
+      "name": "Intermittent clouds",
+      "phonetic": "/ˌɪntərˈmɪtənt klaʊds/",
+      "emoji_codes": [
+        "openmoji_1f32b"
+      ]
+    },
+    {
+      "id": "weather_5",
+      "name": "Hazy sunshine",
+      "phonetic": "/ˈheɪzi ˈsʌnʃaɪn/",
+      "emoji_codes": [
+        "openmoji_1f636_200d_1f32b_fe0f"
+      ]
+    },
+    {
+      "id": "weather_6",
+      "name": "Mostly cloudy",
+      "phonetic": "/ˈməʊstli ˈklaʊdi/",
+      "emoji_codes": [
+        "openmoji_1f325"
+      ]
+    },
+    {
+      "id": "weather_7",
+      "name": "Cloudy",
+      "phonetic": "/ˈklaʊdi/",
+      "emoji_codes": [
+        "openmoji_2601"
+      ]
+    },
+    {
+      "id": "weather_8",
+      "name": "Dreary",
+      "phonetic": "/ˈdrɪri/",
+      "emoji_codes": [
+        "openmoji_e20e"
+      ]
+    },
+    {
+      "id": "weather_9",
+      "name": "Fog",
+      "phonetic": "/fɑːɡ/",
+      "emoji_codes": [
+        "openmoji_1f301"
+      ]
+    },
+    {
+      "id": "weather_10",
+      "name": "Showers",
+      "phonetic": "/ˈʃaʊərs/",
+      "emoji_codes": [
+        "openmoji_2614"
+      ]
+    },
+    {
+      "id": "weather_11",
+      "name": "Mostly cloudy with showers",
+      "phonetic": "/ˈməʊstli ˈklaʊdi wɪθ ˈʃaʊərs/",
+      "emoji_codes": [
+        "openmoji_1f327"
+      ]
+    },
+    {
+      "id": "weather_12",
+      "name": "Partly sunny with showers",
+      "phonetic": "/ˈpɑːrtli ˈsʌni wɪθ ˈʃaʊərs/",
+      "emoji_codes": [
+        "openmoji_1f326"
+      ]
+    },
+    {
+      "id": "weather_13",
+      "name": "Storms",
+      "phonetic": "/stɔːrms/",
+      "emoji_codes": [
+        "openmoji_26a1"
+      ]
+    },
+    {
+      "id": "weather_14",
+      "name": "Mostly cloudy witht storm",
+      "phonetic": "/ˈməʊstli ˈklaʊdi wɪθ stɔːrm/",
+      "emoji_codes": [
+        "openmoji_1f329"
+      ]
+    },
+    {
+      "id": "weather_15",
+      "name": "Partly sunny with storm",
+      "phonetic": "/ˈpɑːrtli ˈsʌni wɪθ stɔːrm/",
+      "emoji_codes": [
+        "openmoji_2600",
+        "openmoji_1f329"
+      ]
+    },
+    {
+      "id": "weather_16",
+      "name": "Rain",
+      "phonetic": "/reɪn/",
+      "emoji_codes": [
+        "openmoji_2614"
+      ]
+    },
+    {
+      "id": "weather_17",
+      "name": "Flurries",
+      "phonetic": "/ˈflɜːri/",
+      "emoji_codes": [
+        "openmoji_2744"
+      ]
+    },
+    {
+      "id": "weather_18",
+      "name": "Mostly cloudy with flurries",
+      "phonetic": "/ˈməʊstli ˈklaʊdi wɪθ ˈflɜːri/",
+      "emoji_codes": [
+        "openmoji_1f328"
+      ]
+    },
+    {
+      "id": "weather_19",
+      "name": "Partly sunny with flurries",
+      "phonetic": "/ˈpɑːrtli ˈsʌni wɪθ ˈflɜːri/",
+      "emoji_codes": [
+        "openmoji_2600",
+        "openmoji_1f328"
+      ]
+    },
+    {
+      "id": "weather_20",
+      "name": "Snow",
+      "phonetic": "/snəʊ/",
+      "emoji_codes": [
+        "openmoji_2744"
+      ]
+    },
+    {
+      "id": "weather_21",
+      "name": "Mostly cloudy with snow",
+      "phonetic": "/ˈməʊstli ˈklaʊdi wɪθ snəʊ/",
+      "emoji_codes": [
+        "openmoji_1f328"
+      ]
+    },
+    {
+      "id": "weather_22",
+      "name": "Ice",
+      "phonetic": "/aɪs/",
+      "emoji_codes": [
+        "openmoji_1f9ca"
+      ]
+    },
+    {
+      "id": "weather_23",
+      "name": "Sleet",
+      "phonetic": "/sliːt/",
+      "emoji_codes": [
+        "openmoji_1f4a6"
+      ]
+    },
+    {
+      "id": "weather_24",
+      "name": "Freezing rain",
+      "phonetic": "/ˈfriːzɪŋ reɪn/",
+      "emoji_codes": [
+        "openmoji_1f976"
+      ]
+    },
+    {
+      "id": "weather_25",
+      "name": "Rain and snow",
+      "phonetic": "/reɪn ænd snəʊ/",
+      "emoji_codes": [
+        "openmoji_1f328"
+      ]
+    },
+    {
+      "id": "weather_26",
+      "name": "Hot",
+      "phonetic": "/hɑːt/",
+      "emoji_codes": [
+        "openmoji_1f975"
+      ]
+    },
+    {
+      "id": "weather_27",
+      "name": "Cold",
+      "phonetic": "/kəʊld/",
+      "emoji_codes": [
+        "openmoji_e2c0"
+      ]
+    },
+    {
+      "id": "weather_28",
+      "name": "Windy",
+      "phonetic": "/ˈwɪndi/",
+      "emoji_codes": [
+        "openmoji_1f32c"
+      ]
+    },
+    {
+      "id": "weather_29",
+      "name": "Clear",
+      "phonetic": "/klɪr/",
+      "emoji_codes": [
+        "openmoji_1f3f3_fe0f_200d_1f7e6"
+      ]
+    },
+    {
+      "id": "weather_30",
+      "name": "Mostly clear",
+      "phonetic": "/ˈməʊstli klɪr/",
+      "emoji_codes": [
+        "openmoji_1f3f3_fe0f_200d_1f7e6",
+        "openmoji_1f324"
+      ]
+    },
+    {
+      "id": "weather_31",
+      "name": "Partly cloudy",
+      "phonetic": "/ˈpɑːrtli ˈklaʊdi/",
+      "emoji_codes": [
+        "openmoji_26c5"
+      ]
+    },
+    {
+      "id": "weather_32",
+      "name": "Intermittent clouds",
+      "phonetic": "/ˌɪntərˈmɪtənt klaʊds/",
+      "emoji_codes": [
+        "openmoji_1f32b"
+      ]
+    },
+    {
+      "id": "weather_33",
+      "name": "Hazy moon light",
+      "phonetic": "/ˈheɪzi muːn laɪt/",
+      "emoji_codes": [
+        "openmoji_1f391"
+      ]
+    },
+    {
+      "id": "weather_34",
+      "name": "Mostly cloudy",
+      "phonetic": "/ˈməʊstli ˈklaʊdi/",
+      "emoji_codes": [
+        "openmoji_1f325"
+      ]
+    },
+    {
+      "id": "weather_35",
+      "name": "Partly cloudy with showers",
+      "phonetic": "/ˈpɑːrtli ˈklaʊdi wɪθ ˈʃaʊərs/",
+      "emoji_codes": [
+        "openmoji_1f3f3_fe0f_200d_1f7e6",
+        "openmoji_1f328"
+      ]
+    },
+    {
+      "id": "weather_36",
+      "name": "Partly cloudy with storms",
+      "phonetic": "/ˈpɑːrtli ˈklaʊdi wɪθ stɔːrms/",
+      "emoji_codes": [
+        "openmoji_1f3f3_fe0f_200d_1f7e6",
+        "openmoji_1f329"
+      ]
+    },
+    {
+      "id": "weather_37",
+      "name": "Mostly cloudy with storms",
+      "phonetic": "/ˈməʊstli ˈklaʊdi wɪθ stɔːrms/",
+      "emoji_codes": [
+        "openmoji_1f329"
+      ]
+    },
+    {
+      "id": "weather_38",
+      "name": "Mostly cloudy with flurries",
+      "phonetic": "/ˈməʊstli ˈklaʊdi wɪθ ˈflɜːri/",
+      "emoji_codes": [
+        "openmoji_1f328"
+      ]
+    },
+    {
+      "id": "weather_39",
+      "name": "Mostly cloudy with snow",
+      "phonetic": "/ˈməʊstli ˈklaʊdi wɪθ snəʊ/",
+      "emoji_codes": [
+        "openmoji_2603"
+      ]
+    }
   ]
 }

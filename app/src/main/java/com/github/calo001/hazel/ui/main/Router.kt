@@ -45,6 +45,8 @@ import com.github.calo001.hazel.ui.usefulexp.UsefulExpressionsView
 import com.github.calo001.hazel.ui.verbs.VerbContentView
 import com.github.calo001.hazel.ui.verbs.VerbData
 import com.github.calo001.hazel.ui.verbs.VerbsView
+import com.github.calo001.hazel.ui.weather.WeatherContentView
+import com.github.calo001.hazel.ui.weather.WeatherView
 import com.github.calo001.hazel.util.PainterIdentifier
 import com.github.calo001.hazel.util.TimeText
 import com.huawei.hms.panorama.PanoramaInterface
@@ -725,6 +727,59 @@ fun Router(
                     panorama = panoramaInterface,
                     onPanoramaClick = { onPanoramaClick(currentSeason) },
                     textToSpeechStatus = textToSpeechStatus,
+                )
+            }
+        }
+
+        composable(route = Routes.Weather.name) {
+            val weathers = viewModel.getWeather()
+            WeatherView(
+                weathers = weathers,
+                speechStatus = speechStatus,
+                onTextChangeSpeech = {
+                    viewModel.updateSpeechStatus(SpeechStatus.NoSpeech)
+                },
+                onClickWeather = { weather ->
+                    navController.navigate("${Routes.Weather.name}/${weather.id}")
+                },
+                painterIdentifier = painterIdentifier,
+                onBackClick = { navController.navigateUp() },
+                onSpeechClick = onSpeechClick,
+            )
+        }
+
+        composable(
+            route = "${Routes.Weather.name}/{weather_id}",
+            arguments = listOf(
+                navArgument("weather_id") { type = NavType.StringType }
+            )
+        ) { navBackStackEntry ->
+            var weatherIdArg by rememberSaveable {
+                mutableStateOf(navBackStackEntry.arguments?.getString("weather_id") ?: "")
+            }
+            val currentWeather = viewModel.getWeatherById(weatherIdArg)
+            val weathers = viewModel.getWeather()
+
+            currentWeather?.let {
+                val currentIndex = weathers.indexOfFirst { weatherFromList ->
+                    it.id == weatherFromList.id
+                }
+                val hasNext = currentIndex < weathers.lastIndex
+                val hasPrevious = currentIndex != 0
+                WeatherContentView(
+                    weather = currentWeather,
+                    onNavBack = { navController.navigateUp() },
+                    onListen = { onListenClick(currentWeather.name) },
+                    hasNext = hasNext,
+                    hasPrevious = hasPrevious,
+                    onNextClick = {
+                        weatherIdArg = weathers.getOrElse(currentIndex + 1) { currentWeather }.id
+                    },
+                    onPreviousClick = {
+                        weatherIdArg = weathers.getOrElse(currentIndex - 1) { currentWeather }.id
+                    },
+                    textToSpeechStatus = textToSpeechStatus,
+                    painterIdentifier = painterIdentifier,
                 )
             }
         }
