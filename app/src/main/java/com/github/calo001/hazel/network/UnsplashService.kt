@@ -2,8 +2,6 @@ package com.github.calo001.hazel.network
 
 import com.github.calo001.hazel.model.unsplash.UnsplashResult
 import io.ktor.client.*
-import io.ktor.client.features.*
-import io.ktor.client.features.get
 import io.ktor.client.request.*
 
 private const val API_URL = "https://api.unsplash.com/search/photos" +

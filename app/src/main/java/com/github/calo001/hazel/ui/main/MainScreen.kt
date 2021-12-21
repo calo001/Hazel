@@ -1,7 +1,10 @@
 package com.github.calo001.hazel.ui.main
 
 import androidx.compose.animation.*
-import androidx.compose.foundation.*
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
@@ -30,18 +33,17 @@ import androidx.compose.ui.unit.dp
 import com.github.calo001.hazel.R
 import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.huawei.SpeechStatus
+import com.github.calo001.hazel.huawei.WeatherStatus
+import com.github.calo001.hazel.huawei.WeatherType
 import com.github.calo001.hazel.model.hazeldb.HazelContent
 import com.github.calo001.hazel.model.view.ItemMenuData
 import com.github.calo001.hazel.routes.Routes
-import com.github.calo001.hazel.huawei.WeatherStatus
-import com.github.calo001.hazel.huawei.WeatherType
 import com.github.calo001.hazel.ui.common.*
-import com.github.calo001.hazel.util.PainterIdentifier
 import com.github.calo001.hazel.ui.theme.Lato
+import com.github.calo001.hazel.util.PainterIdentifier
 import com.github.calo001.hazel.util.TimeText
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.concurrent.schedule
 

@@ -2,14 +2,12 @@ package com.github.calo001.hazel
 
 import android.app.Application
 import com.huawei.hiai.vision.common.ConnectionCallback
+import com.huawei.hiai.vision.common.VisionBase
 import com.huawei.hms.mlsdk.common.MLApplication
-import com.orhanobut.logger.AndroidLogAdapter
-import com.orhanobut.logger.Logger
 import com.huawei.hms.network.NetworkKit
 import com.huawei.hms.searchkit.SearchKitInstance
-import com.huawei.hiai.vision.common.VisionBase
-
-
+import com.orhanobut.logger.AndroidLogAdapter
+import com.orhanobut.logger.Logger
 
 
 class Hazel: Application() {

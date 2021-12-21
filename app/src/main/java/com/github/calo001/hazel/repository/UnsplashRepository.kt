@@ -1,6 +1,5 @@
 package com.github.calo001.hazel.repository
 
-import com.github.calo001.hazel.model.unsplash.UnsplashResult
 import com.github.calo001.hazel.network.UnsplashService
 
 class UnsplashRepository(private val unsplashService: UnsplashService) {

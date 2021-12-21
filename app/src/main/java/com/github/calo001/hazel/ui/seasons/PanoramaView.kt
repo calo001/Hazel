@@ -3,7 +3,6 @@ package com.github.calo001.hazel.ui.seasons
 import android.annotation.SuppressLint
 import android.content.ContentResolver
 import android.net.Uri
-import android.view.View
 import android.view.ViewGroup
 import android.widget.RelativeLayout
 import androidx.compose.runtime.*

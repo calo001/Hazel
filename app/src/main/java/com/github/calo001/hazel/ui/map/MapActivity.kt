@@ -4,15 +4,13 @@ import android.content.Context
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
-import android.graphics.ColorFilter
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.github.calo001.hazel.R
 import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.model.hazeldb.Country
 import com.github.calo001.hazel.platform.DataStoreProvider
-import com.github.calo001.hazel.util.parse
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.huawei.hms.maps.CameraUpdateFactory
@@ -20,7 +18,6 @@ import com.huawei.hms.maps.HuaweiMap
 import com.huawei.hms.maps.OnMapReadyCallback
 import com.huawei.hms.maps.SupportMapFragment
 import com.huawei.hms.maps.model.LatLng
-import com.huawei.hms.maps.model.LatLngBounds
 import kotlinx.coroutines.flow.collect
 
 class MapActivity : AppCompatActivity(), OnMapReadyCallback {

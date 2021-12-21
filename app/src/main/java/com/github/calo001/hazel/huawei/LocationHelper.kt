@@ -1,15 +1,10 @@
 package com.github.calo001.hazel.huawei
 
-import android.app.Activity
 import android.content.IntentSender
 import androidx.activity.ComponentActivity
-import androidx.activity.result.ActivityResult
-import androidx.activity.result.IntentSenderRequest
 import com.huawei.hms.common.ApiException
 import com.huawei.hms.common.ResolvableApiException
 import com.huawei.hms.location.*
-import androidx.activity.result.contract.ActivityResultContracts
-import com.github.calo001.hazel.util.isTrue
 import com.orhanobut.logger.Logger
 
 class LocationHelper(private val activity: ComponentActivity) {

@@ -1,30 +1,31 @@
 package com.github.calo001.hazel.ui.camera
 
-import android.content.Context
+import android.content.ContentResolver
 import android.graphics.Bitmap
-import android.view.ViewGroup
-import androidx.camera.core.CameraSelector
-import androidx.camera.core.ImageCapture
-import androidx.camera.core.Preview
-import androidx.camera.view.PreviewView
+import android.graphics.BitmapFactory
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
-import androidx.compose.runtime.*
+import androidx.compose.material.Button
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.OutlinedButton
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.viewinterop.AndroidView
 import androidx.constraintlayout.compose.ChainStyle
 import androidx.constraintlayout.compose.ConstraintLayout
-import androidx.core.content.ContextCompat
 import com.github.calo001.hazel.R
 import com.github.calo001.hazel.config.ColorVariant
+import com.github.calo001.hazel.huawei.BarcodeDetectorStatus
 import com.github.calo001.hazel.huawei.TextRecognitionStatus
 import com.github.calo001.hazel.ui.common.HazelToolbarSimple
 import com.github.calo001.hazel.ui.theme.HazelTheme
@@ -33,13 +34,6 @@ import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.PermissionRequired
 import com.google.accompanist.permissions.rememberPermissionState
 import com.orhanobut.logger.Logger
-import kotlinx.coroutines.launch
-import java.util.concurrent.Executor
-import android.graphics.BitmapFactory
-
-import android.content.ContentResolver
-import androidx.compose.ui.platform.LocalContext
-import com.github.calo001.hazel.huawei.BarcodeDetectorStatus
 
 
 @ExperimentalComposeUiApi

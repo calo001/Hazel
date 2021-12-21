@@ -1,21 +1,14 @@
 package com.github.calo001.hazel.huawei
 
-import android.R.attr
 import android.content.Context
-import com.huawei.hiai.vision.text.TextDetector
-import android.R.attr.bitmap
 import android.graphics.Bitmap
 import com.huawei.hiai.vision.common.VisionCallback
-
 import com.huawei.hiai.vision.common.VisionImage
+import com.huawei.hiai.vision.text.TextDetector
 import com.huawei.hiai.vision.visionkit.text.Text
-import com.huawei.hiai.vision.visionkit.text.config.TextConfiguration
-
 import com.huawei.hiai.vision.visionkit.text.TextDetectType
-
+import com.huawei.hiai.vision.visionkit.text.config.TextConfiguration
 import com.huawei.hiai.vision.visionkit.text.config.VisionTextConfiguration
-import com.huawei.hms.common.util.Logger
-import java.lang.Exception
 
 
 class TextRecognitionHelper(

@@ -3,12 +3,13 @@ package com.github.calo001.hazel.huawei
 import com.github.calo001.hazel.BuildConfig
 import com.huawei.hms.network.httpclient.HttpClient
 import com.huawei.hms.network.httpclient.Response
-import com.huawei.hms.network.restclient.RestClient
 import com.huawei.hms.network.httpclient.Submit
-import com.huawei.hms.network.restclient.anno.*
-
+import com.huawei.hms.network.restclient.RestClient
+import com.huawei.hms.network.restclient.anno.Field
+import com.huawei.hms.network.restclient.anno.FormUrlEncoded
+import com.huawei.hms.network.restclient.anno.POST
+import com.huawei.hms.network.restclient.anno.Url
 import com.orhanobut.logger.Logger
-import java.lang.Exception
 
 
 object NetworkProvider {

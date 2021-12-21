@@ -4,9 +4,9 @@ import android.content.Context
 import com.github.calo001.hazel.BuildConfig
 import com.huawei.hms.searchkit.SearchKitInstance
 import com.huawei.hms.searchkit.bean.CommonSearchRequest
+import com.huawei.hms.searchkit.bean.ImageItem
 import com.huawei.hms.searchkit.utils.Language
 import com.huawei.hms.searchkit.utils.Region
-import com.huawei.hms.searchkit.bean.ImageItem
 
 class SearchKitHelper(context: Context) {
     init {

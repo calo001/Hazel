@@ -1,7 +1,5 @@
 package com.github.calo001.hazel.routes
 
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
 import com.github.calo001.hazel.R
 
 sealed class Routes(val name: String, val label: String, val icon: Int = 0) {

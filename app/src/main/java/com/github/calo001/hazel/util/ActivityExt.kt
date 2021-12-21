@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
 import com.ibm.icu.text.RuleBasedNumberFormat
-import java.text.MessageFormat
 import java.util.*
 
 fun Activity.checkPermission(permissionName: String): Boolean {

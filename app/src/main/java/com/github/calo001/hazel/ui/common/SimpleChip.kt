@@ -3,7 +3,6 @@ package com.github.calo001.hazel.ui.common
 import androidx.compose.animation.animateColor
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.core.updateTransition
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row

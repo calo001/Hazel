@@ -2,13 +2,11 @@ package com.github.calo001.hazel.ui.time
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.ExperimentalAnimationApi
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
@@ -30,14 +28,6 @@ import com.github.calo001.hazel.ui.common.CircleColor
 import com.github.calo001.hazel.ui.common.HazelToolbarSimple
 import com.github.calo001.hazel.ui.theme.HazelTheme
 import com.github.calo001.hazel.ui.usefulexp.ControlsItem
-import com.github.calo001.hazel.util.TimeText
-import com.github.calo001.hazel.util.toWords
-import kotlinx.coroutines.launch
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
-import java.util.*
-import kotlin.concurrent.schedule
-import kotlin.reflect.KProperty
 
 @ExperimentalAnimationApi
 @ExperimentalComposeUiApi

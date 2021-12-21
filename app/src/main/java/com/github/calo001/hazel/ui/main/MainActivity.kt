@@ -10,27 +10,18 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
-import androidx.compose.material.*
-import androidx.compose.runtime.*
-import androidx.navigation.compose.rememberNavController
-import com.github.calo001.hazel.config.ColorVariant
-import com.github.calo001.hazel.ui.theme.HazelTheme
-import com.github.calo001.hazel.R
-import com.google.accompanist.systemuicontroller.rememberSystemUiController
-import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalClipboardManager
@@ -38,10 +29,13 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.compose.rememberNavController
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.rememberLottieComposition
+import com.github.calo001.hazel.R
+import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.huawei.*
 import com.github.calo001.hazel.model.hazeldb.Country
@@ -55,15 +49,17 @@ import com.github.calo001.hazel.ui.common.SystemBars
 import com.github.calo001.hazel.ui.map.MapActivity
 import com.github.calo001.hazel.ui.panorama.PanoramaActivity
 import com.github.calo001.hazel.ui.settings.Dictionaries
+import com.github.calo001.hazel.ui.theme.HazelTheme
 import com.github.calo001.hazel.util.*
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.huawei.agconnect.applinking.AGConnectAppLinking
 import com.huawei.hms.analytics.HiAnalytics
-import com.huawei.hms.panorama.Panorama
-import kotlinx.coroutines.launch
 import com.huawei.hms.analytics.HiAnalyticsInstance
 import com.huawei.hms.analytics.HiAnalyticsTools
+import com.huawei.hms.panorama.Panorama
 import com.orhanobut.logger.Logger
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 
 @ExperimentalFoundationApi

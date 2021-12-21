@@ -1,17 +1,13 @@
 package com.github.calo001.hazel.huawei
 
-import android.R.attr
 import android.content.Context
-import com.huawei.hiai.vision.barcode.BarcodeDetector
-import android.R.attr.bitmap
 import android.graphics.Bitmap
+import com.huawei.hiai.vision.barcode.BarcodeDetector
 import com.huawei.hiai.vision.common.VisionCallback
-
 import com.huawei.hiai.vision.common.VisionImage
-import com.huawei.hiai.vision.visionkit.text.config.VisionTextConfiguration
-
-import com.huawei.hiai.vision.visionkit.barcode.ZxingBarcodeConfiguration
 import com.huawei.hiai.vision.visionkit.barcode.Barcode
+import com.huawei.hiai.vision.visionkit.barcode.ZxingBarcodeConfiguration
+import com.huawei.hiai.vision.visionkit.text.config.VisionTextConfiguration
 
 class BarcodeDetectorHelper(
     val context: Context,

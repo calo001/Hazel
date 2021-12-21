@@ -19,7 +19,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
-import com.github.calo001.hazel.model.unsplash.Result
 import com.github.calo001.hazel.ui.common.HazelToolbarSimple
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.common.safeSpacer

@@ -7,27 +7,24 @@ import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
-import com.github.calo001.hazel.R
-import android.widget.Toast
-
 import android.widget.RelativeLayout
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
+import com.github.calo001.hazel.R
 import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.platform.DataStoreProvider
 import com.github.calo001.hazel.util.isZero
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-
-import com.huawei.hms.panorama.PanoramaInterface
-
 import com.huawei.hms.panorama.Panorama
+import com.huawei.hms.panorama.PanoramaInterface
 import com.orhanobut.logger.Logger
 import kotlinx.coroutines.flow.collect
 

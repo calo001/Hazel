@@ -1,11 +1,9 @@
 package com.github.calo001.hazel.util
 
 import android.content.res.Resources
-import androidx.compose.foundation.Image
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
-import com.github.calo001.hazel.R
 
 class PainterIdentifier(
     private val resources: Resources,

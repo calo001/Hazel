@@ -1,6 +1,5 @@
 package com.github.calo001.hazel.ui.main
 
-import android.graphics.Bitmap
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.github.calo001.hazel.huawei.*
@@ -20,7 +19,6 @@ import kotlinx.serialization.json.Json
 import java.io.ByteArrayOutputStream
 import java.io.IOException
 import java.io.InputStream
-import java.lang.NullPointerException
 
 class MainViewModel : ViewModel() {
     private val _hazelContent = MutableStateFlow<HazelContentStatus>(HazelContentStatus.Loading)

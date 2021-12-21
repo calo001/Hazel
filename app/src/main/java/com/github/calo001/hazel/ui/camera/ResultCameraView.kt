@@ -1,7 +1,10 @@
 package com.github.calo001.hazel.ui.camera
 
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -10,14 +13,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.constraintlayout.compose.ConstraintLayout
 import com.github.calo001.hazel.ui.common.HazelToolbarCameraResult
-import com.github.calo001.hazel.ui.common.HazelToolbarWeather
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.main.SearchResults
 import com.github.calo001.hazel.ui.main.SearchStatus
-import com.github.calo001.hazel.ui.usefulexp.ControlsItem
-import com.github.calo001.hazel.ui.weather.ItemWeather
 import com.github.calo001.hazel.util.PainterIdentifier
 
 @ExperimentalFoundationApi

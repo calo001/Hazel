@@ -5,7 +5,6 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.core.app.ComponentActivity
 import com.huawei.hms.mlplugin.asr.MLAsrCaptureActivity
 import com.huawei.hms.mlplugin.asr.MLAsrCaptureConstants
-import com.huawei.hms.mlsdk.asr.MLAsrConstants
 
 class ASRHelper(
     private val activity: ComponentActivity,

@@ -1,8 +1,6 @@
 package com.github.calo001.hazel.huawei
 
-import android.content.Context
 import android.net.Uri
-import com.github.calo001.hazel.util.shareUrl
 import com.huawei.agconnect.applinking.AppLinking
 
 fun getAppLinking(

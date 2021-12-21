@@ -3,7 +3,6 @@ package com.github.calo001.hazel.model.widget
 import com.github.calo001.hazel.model.hazeldb.HazelContent
 import com.github.calo001.hazel.routes.Routes
 import com.github.calo001.hazel.ui.verbs.VerbData
-import com.github.calo001.hazel.ui.widget.*
 
 data class HazelSimpleItem(
     val name: String,
