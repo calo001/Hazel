@@ -10,6 +10,7 @@ import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.LocationDisabled
 import androidx.compose.material.icons.filled.LocationOff
+import androidx.compose.material.icons.filled.PhotoCamera
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
@@ -93,6 +94,39 @@ fun MainScreen(
                     onCheckWeather = onCheckWeather,
                     onClickTime = onClickTime,
                 )
+                ExtendedFloatingActionButton(
+                    icon = {
+                        Icon(
+                            imageVector = Icons.Filled.PhotoCamera,
+                            contentDescription = null,
+                            modifier = Modifier
+                                .padding(vertical = 8.dp)
+                                .padding(start = 8.dp)
+                        )
+                    },
+                    text = {
+                        Text(
+                            text = "Camera tool".uppercase(),
+                            style = MaterialTheme.typography.h6,
+                            modifier = Modifier
+                                .padding(vertical = 8.dp)
+                                .padding(end = 8.dp)
+                        )
+                    },
+                    onClick = {
+                        onNavigate(Routes.Camera.name)
+                    },
+                    elevation = FloatingActionButtonDefaults.elevation(
+                        defaultElevation = 12.dp,
+                        pressedElevation = 24.dp,
+                        hoveredElevation = 16.dp,
+                        focusedElevation = 16.dp,
+                    ),
+                    shape = MaterialTheme.shapes.medium,
+                    modifier = Modifier
+                        .align(Alignment.BottomCenter)
+                        .padding(16.dp)
+                )
             }
         }
 
@@ -112,7 +146,8 @@ fun MainScreen(
                                 querySearch = querySearch,
                                 searchStatus = searchStatus,
                                 onNavigate = onNavigate,
-                                painterIdentifier = painterIdentifier
+                                painterIdentifier = painterIdentifier,
+                                spacerTop = 180,
                             )
                         }
                         Box(
@@ -265,6 +300,10 @@ fun MainMenu(
                 }
             }
         )
+
+        item {
+            Spacer(modifier = Modifier.size(60.dp))
+        }
     }
 }
 
@@ -443,10 +482,13 @@ private fun Clock(onClickTime: () -> Unit) {
 @ExperimentalFoundationApi
 @Composable
 fun SearchResults(
+    modifier: Modifier = Modifier,
     querySearch: String,
     searchStatus: SearchStatus,
     onNavigate: (String) -> Unit,
-    painterIdentifier: PainterIdentifier
+    painterIdentifier: PainterIdentifier,
+    spacerTop: Int = 0,
+    header: @Composable () -> Unit = {},
 ) {
     when (searchStatus) {
         SearchStatus.Loading -> { }
@@ -454,7 +496,7 @@ fun SearchResults(
             Column(
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier.fillMaxSize()
+                modifier = modifier.fillMaxSize()
             ) {
                 Image(painter = painterIdentifier.getPainter(
                     identifier = "openmoji_1f50d"),
@@ -479,8 +521,9 @@ fun SearchResults(
             }
         }
         is SearchStatus.Success -> {
-            LazyColumn{
-                item { Spacer(modifier = Modifier.height(180.dp)) }
+            LazyColumn(modifier) {
+                item { Spacer(modifier = Modifier.height(spacerTop.dp)) }
+                item { header() }
                 items(
                     count = searchStatus.result.size,
                     key = { index -> searchStatus.result[index].route }

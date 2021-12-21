@@ -1,11 +1,16 @@
 package com.github.calo001.hazel
 
 import android.app.Application
+import com.huawei.hiai.vision.common.ConnectionCallback
 import com.huawei.hms.mlsdk.common.MLApplication
 import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.Logger
 import com.huawei.hms.network.NetworkKit
 import com.huawei.hms.searchkit.SearchKitInstance
+import com.huawei.hiai.vision.common.VisionBase
+
+
+
 
 class Hazel: Application() {
     override fun onCreate() {
@@ -20,6 +25,18 @@ class Hazel: Application() {
         initMLConfig()
         initNetworkKit()
         initSearchKit()
+        initVision()
+    }
+
+    private fun initVision() {
+        /** Initialize with the VisionBase static class and asynchronously get the connection of the service */
+        /** Initialize with the VisionBase static class and asynchronously get the connection of the service  */
+        VisionBase.init(this, object : ConnectionCallback {
+            override fun onServiceConnect() {
+            }
+            override fun onServiceDisconnect() {
+            }
+        })
     }
 
     private fun initSearchKit() {
