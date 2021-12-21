@@ -55,8 +55,8 @@ class MainViewModel : ViewModel() {
         }
     }
 
-    private val _bitmapQR = MutableStateFlow<Bitmap?>(null)
-    val bitmapQR = _bitmapQR.asStateFlow()
+    private val _deepLinkingStatus = MutableStateFlow<DeepLinkingStatus>(DeepLinkingStatus.NoAppLinking)
+    val deepLinkingStatus = _deepLinkingStatus.asStateFlow()
 
     private val networkHelper = NetworkHelper()
     private val galleryRepository = GalleryRepository(networkHelper)
@@ -225,8 +225,12 @@ class MainViewModel : ViewModel() {
         _barcodeStatus.tryEmit(status)
     }
 
-    fun updateQrCode(bitmap: Bitmap) {
-        _bitmapQR.tryEmit(bitmap)
+    fun loadAppLinkedRoute(route: String) {
+        _deepLinkingStatus.tryEmit(DeepLinkingStatus.AppLinkingRoute(route))
+    }
+
+    fun clearAppLinking() {
+        _deepLinkingStatus.tryEmit(DeepLinkingStatus.NoAppLinking)
     }
 }
 
@@ -252,4 +256,9 @@ sealed interface DialogShareQRStatus {
     object Normal: DialogShareQRStatus
     class RawRoute(val route: String): DialogShareQRStatus
     data class AppLinkingLink(val link: String, val route: String): DialogShareQRStatus
+}
+
+sealed interface DeepLinkingStatus {
+    object NoAppLinking: DeepLinkingStatus
+    class AppLinkingRoute(val route: String): DeepLinkingStatus
 }

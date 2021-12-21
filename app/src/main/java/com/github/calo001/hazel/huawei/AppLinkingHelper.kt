@@ -5,7 +5,7 @@ import android.net.Uri
 import com.github.calo001.hazel.util.shareUrl
 import com.huawei.agconnect.applinking.AppLinking
 
-fun Context.getAppLinking(
+fun getAppLinking(
     title: String,
     route: String,
     appLinkingHelper: AppLinkingHelper,
@@ -15,7 +15,7 @@ fun Context.getAppLinking(
     appLinkingHelper.buildShortAppLinking(
         title = title,
         description = title,
-        imageUrl = "https://raw.githubusercontent.com/calo001/Hazel/master/resources/summary.webp",
+        imageUrl = "https://calo001.github.io/hazel-web/images/HazelLogoExtDark.png",
         url = route,
         onSuccessListener = { url ->
             onSuccess(url)

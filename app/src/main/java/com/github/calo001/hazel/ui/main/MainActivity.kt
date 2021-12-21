@@ -56,6 +56,7 @@ import com.github.calo001.hazel.ui.map.MapActivity
 import com.github.calo001.hazel.ui.panorama.PanoramaActivity
 import com.github.calo001.hazel.ui.settings.Dictionaries
 import com.github.calo001.hazel.util.*
+import com.huawei.agconnect.applinking.AGConnectAppLinking
 import com.huawei.hms.analytics.HiAnalytics
 import com.huawei.hms.panorama.Panorama
 import kotlinx.coroutines.launch
@@ -78,6 +79,32 @@ class MainActivity : ComponentActivity() {
         panorama.deInit()
         textToSpeechHelper.release()
         super.onDestroy()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        lifecycleScope.launchWhenCreated {
+            AGConnectAppLinking.getInstance().getAppLinking(this@MainActivity).addOnSuccessListener { resolvedLinkData ->
+                val host = resolvedLinkData.deepLink.host ?: ""
+                val slug = resolvedLinkData.deepLink.path?.removePrefix("/")?.removeSuffix("/") ?: ""
+                if (host.contains("calo001.github.io")) {
+                    slug.split("hazel-web").getOrNull(1)?.let { route ->
+                        Logger.i(
+                            "${resolvedLinkData.deepLink.host}\n" +
+                            "${resolvedLinkData.deepLink.path}\n" +
+                            route
+                        )
+                        runCatching {
+                            viewModel.loadAppLinkedRoute(route.removePrefix("/").removeSuffix("/"))
+                        }
+                    }
+                }
+            }.addOnCompleteListener {
+                Logger.e(it?.exception?.localizedMessage ?: "complete applinking")
+            }.addOnFailureListener {
+                Logger.e(it?.localizedMessage ?: "error applinking")
+            }
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -209,6 +236,16 @@ class MainActivity : ComponentActivity() {
                 val speechStatus by viewModel.speechStatus.collectAsState()
                 val textToSpeechStatus by textToSpeechHelper.textToSpeechStatus.collectAsState()
                 val dialogShareQRStatus by viewModel.dialogShareQRStatus.collectAsState()
+                val deepLinkingStatus by viewModel.deepLinkingStatus.collectAsState()
+
+                if(deepLinkingStatus is DeepLinkingStatus.AppLinkingRoute) {
+                    kotlin.runCatching {
+                        (deepLinkingStatus as? DeepLinkingStatus.AppLinkingRoute)?.route?.let { route ->
+                            navController.navigate(route)
+                            viewModel.clearAppLinking()
+                        }
+                    }
+                }
 
                 navController.addOnDestinationChangedListener { _, destination, _ ->
                     requestedOrientation = when(destination.route) {
