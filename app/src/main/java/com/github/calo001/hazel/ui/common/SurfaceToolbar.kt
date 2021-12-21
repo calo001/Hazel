@@ -10,9 +10,9 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun SurfaceToolbar(content: @Composable () -> Unit) {
+fun SurfaceToolbar(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .background(
                 brush = Brush.verticalGradient(
                     (0f to MaterialTheme.colors.background),

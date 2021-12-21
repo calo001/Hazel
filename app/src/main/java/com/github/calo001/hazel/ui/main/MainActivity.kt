@@ -3,7 +3,9 @@ package com.github.calo001.hazel.ui.main
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
@@ -19,13 +21,26 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.CornerSize
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Camera
+import androidx.compose.material.icons.filled.PhotoCamera
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.unit.dp
+import androidx.glance.layout.Row
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavController
+import androidx.navigation.NavDestination
 import com.github.calo001.hazel.config.DarkMode
 import com.github.calo001.hazel.huawei.*
 import com.github.calo001.hazel.model.hazeldb.Country
 import com.github.calo001.hazel.model.hazeldb.Season
 import com.github.calo001.hazel.platform.DataStoreProvider
 import com.github.calo001.hazel.routes.Routes
+import com.github.calo001.hazel.ui.camera.CameraFeature
 import com.github.calo001.hazel.ui.common.SystemBars
 import com.github.calo001.hazel.ui.map.MapActivity
 import com.github.calo001.hazel.ui.panorama.PanoramaActivity
@@ -36,6 +51,8 @@ import com.huawei.hms.panorama.Panorama
 import kotlinx.coroutines.launch
 import com.huawei.hms.analytics.HiAnalyticsInstance
 import com.huawei.hms.analytics.HiAnalyticsTools
+import com.orhanobut.logger.Logger
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 
 
@@ -114,6 +131,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    @SuppressLint("SourceLockedOrientationActivity")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initAnalytics()
@@ -158,6 +176,7 @@ class MainActivity : ComponentActivity() {
                 DarkMode.Light -> true
                 DarkMode.FollowSystem -> !isSystemInDarkTheme()
             }
+            val localClipboardManager = LocalClipboardManager.current
             val systemUiController = rememberSystemUiController()
             val scope = rememberCoroutineScope()
 
@@ -181,6 +200,14 @@ class MainActivity : ComponentActivity() {
                 val speechStatus by viewModel.speechStatus.collectAsState()
                 val textToSpeechStatus by textToSpeechHelper.textToSpeechStatus.collectAsState()
 
+                navController.addOnDestinationChangedListener { _, destination, _ ->
+                    requestedOrientation = when(destination.route) {
+                        Routes.Camera.name ->
+                            ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR
+                        else ->
+                            ActivityInfo.SCREEN_ORIENTATION_USER_PORTRAIT
+                    }
+                }
                 Surface(
                     color = MaterialTheme.colors.background,
                 ) {
@@ -209,8 +236,6 @@ class MainActivity : ComponentActivity() {
                                 } else {
                                     requestPermissionRecordAudio.launch(Manifest.permission.RECORD_AUDIO)
                                 }
-                            } else {
-
                             }
                         },
                         onSelectColorScheme = {
@@ -231,13 +256,64 @@ class MainActivity : ComponentActivity() {
                             )
                         },
                         panoramaInterface = panorama,
+                        onCopy = { text ->
+                            localClipboardManager.setText(AnnotatedString(text))
+                            toast("Text copied!")
+                        },
                         onPanoramaClick = { season ->
                             startPanoramaActivity(season)
+                        },
+                        onAnalysisCapture = { bitmap, cameraFeature ->
+                            when (cameraFeature) {
+                                CameraFeature.QRReader -> {
+                                    val barcodeHelper = BarcodeDetectorHelper(
+                                        context = this,
+                                        onResultBD = { status ->
+                                            viewModel.updateBarcodeStatus(status)
+                                            if(status is BarcodeDetectorStatus.Result) {
+                                                lifecycleScope.launch(Dispatchers.Main) {
+                                                    if (status.value.contains("https://calo001.github.io/hazel-web/")) {
+                                                        val route = status.value
+                                                            .split("https://calo001.github.io/hazel-web/")
+                                                            .getOrElse(1) { "" }
+                                                        if (route.isNotEmpty()) {
+                                                            kotlin.runCatching { navController.navigate(route) }
+                                                        }
+                                                    } else {
+                                                        navController.navigate("${Routes.Camera.name}/results/qr")
+                                                    }
+                                                    Logger.i("navigate qr")
+                                                }
+                                            }
+                                        },
+                                    )
+                                    barcodeHelper.analyze(bitmap)
+                                }
+                                CameraFeature.TextRecognizer -> {
+                                    val textRecognitionHelper = TextRecognitionHelper(
+                                        context = this,
+                                        onResultTR = { status ->
+                                            viewModel.updateTextRecognitionStatus(status)
+                                            if (status is TextRecognitionStatus.Result) {
+                                                lifecycleScope.launch(Dispatchers.Main) {
+                                                    navController.navigate("${Routes.Camera.name}/results/text")
+                                                    Logger.i("navigate qr")
+                                                }
+                                            }
+                                        }
+                                    )
+                                    textRecognitionHelper.analyze(bitmap)
+                                }
+                            }
                         }
                     )
                 }
             }
         }
+    }
+
+    private fun toast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
     private fun initAnalytics() {

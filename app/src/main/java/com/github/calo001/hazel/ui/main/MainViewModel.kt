@@ -2,9 +2,7 @@ package com.github.calo001.hazel.ui.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.github.calo001.hazel.huawei.NetworkHelper
-import com.github.calo001.hazel.huawei.SpeechStatus
-import com.github.calo001.hazel.huawei.WeatherStatus
+import com.github.calo001.hazel.huawei.*
 import com.github.calo001.hazel.model.hazeldb.*
 import com.github.calo001.hazel.model.unsplash.UnsplashResult
 import com.github.calo001.hazel.network.UnsplashServiceProvider
@@ -51,6 +49,12 @@ class MainViewModel : ViewModel() {
 
     private val networkHelper = NetworkHelper()
     private val galleryRepository = GalleryRepository(networkHelper)
+
+    private val _textRecognitionStatus = MutableStateFlow<TextRecognitionStatus>(TextRecognitionStatus.Normal)
+    val textRecognitionStatus = _textRecognitionStatus.asStateFlow()
+
+    private val _barcodeStatus = MutableStateFlow<BarcodeDetectorStatus>(BarcodeDetectorStatus.Normal)
+    val barcodeStatus = _barcodeStatus.asStateFlow()
 
     private val _galleryStatus = MutableStateFlow<GalleryStatus>(GalleryStatus.Loading)
     val galleryStatus: StateFlow<GalleryStatus> get() = _galleryStatus
@@ -187,7 +191,7 @@ class MainViewModel : ViewModel() {
             ?: listOf()
     }
 
-    fun searchQuery(query: String) = viewModelScope.launch(Dispatchers.IO) {
+    fun searchQuery(query: List<String>) = viewModelScope.launch(Dispatchers.IO) {
         _searchStatus.tryEmit(SearchStatus.Loading)
         searchHelper?.searchQuery(query)?.apply {
             if (this.isNotEmpty()) {
@@ -200,6 +204,14 @@ class MainViewModel : ViewModel() {
 
     fun updateGalleryStatus(status: GalleryStatus) {
         _galleryStatus.tryEmit(status)
+    }
+
+    fun updateTextRecognitionStatus(status: TextRecognitionStatus) {
+        _textRecognitionStatus.tryEmit(status)
+    }
+
+    fun updateBarcodeStatus(status: BarcodeDetectorStatus) {
+        _barcodeStatus.tryEmit(status)
     }
 }
 

@@ -7,9 +7,9 @@ import com.github.calo001.hazel.ui.verbs.VerbData
 import com.github.calo001.hazel.util.parse
 
 class SearchHelper(private val hazelContent: HazelContent) {
-    suspend fun searchQuery(query: String): List<SearchResult> {
+    suspend fun searchQuery(queries: List<String>): List<SearchResult> {
         val results = mutableListOf<SearchResult>()
-        val queryLowerCase = query.lowercase()
+        val queryLowerCase = queries.map { it.lowercase() }
 
         val colorResults = queryInColors(queryLowerCase, hazelContent.colorHazels)
         val countriesResults = queryInCountries(queryLowerCase, hazelContent.countries)
@@ -28,13 +28,13 @@ class SearchHelper(private val hazelContent: HazelContent) {
     }
 
     private fun queryUsefulPhrases(
-        query: String,
+        queries: List<String>,
         usefulPhrases: List<UsefulPhrase>
     ): List<SearchResult> {
         val resultsUsefulPhrases = mutableListOf<SearchResult>()
 
         usefulPhrases.forEach { usefulPhrase ->
-            if (usefulPhrase.category.lowercase().contains(query)) {
+            if (queries.any { query -> usefulPhrase.category.lowercase().contains(query) }) {
                 resultsUsefulPhrases.add(SearchResult(
                     imageCode = usefulPhrase.emojiCode,
                     path = "Useful phrases",
@@ -43,7 +43,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                 ))
             }
             usefulPhrase.phrases.forEach { phrase ->
-                if (phrase.expression.lowercase().contains(query)) {
+                if (queries.any { query -> phrase.expression.lowercase().contains(query) }) {
                     resultsUsefulPhrases.add(SearchResult(
                         imageCode = usefulPhrase.emojiCode,
                         path = "Useful phrases / ${usefulPhrase.category}",
@@ -54,9 +54,11 @@ class SearchHelper(private val hazelContent: HazelContent) {
             }
         }
 
-        if ("useful".contains(query)
-            or "phrases".contains(query)
-            or "useful phrases".contains(query)
+        if (queries.any { query ->
+                "useful".contains(query) ||
+                "phrases".contains(query) ||
+                "useful phrases".contains(query)
+            }
         ) {
             usefulPhrases.forEach { usefulPhrase ->
                 resultsUsefulPhrases.add(SearchResult(
@@ -71,10 +73,10 @@ class SearchHelper(private val hazelContent: HazelContent) {
         return resultsUsefulPhrases
     }
 
-    private suspend fun queryInAnimals(query: String, animals: List<Animal>): List<SearchResult> {
+    private suspend fun queryInAnimals(queries: List<String>, animals: List<Animal>): List<SearchResult> {
         val resultsAnimals = mutableListOf<SearchResult>()
 
-        if ("animal".contains(query) or "animals".contains(query)) {
+        if (queries.any { query -> "animal".contains(query) or "animals".contains(query) }) {
             resultsAnimals.add(SearchResult(
                 imageCode = "openmoji_1f638",
                 path = "",
@@ -84,7 +86,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
         }
 
         animals.forEach { animal ->
-            if (animal.name.lowercase().contains(query)) {
+            if (queries.any { query -> animal.name.lowercase().contains(query) }) {
                 resultsAnimals.add(SearchResult(
                     imageCode = animal.emojiCode,
                     path = "Animals",
@@ -98,16 +100,14 @@ class SearchHelper(private val hazelContent: HazelContent) {
     }
 
     private suspend fun queryIrregularVerbs(
-        query: String,
+        queries: List<String>,
         verbs: List<Verb>,
     ): List<SearchResult> {
         val resultsVerbs = mutableListOf<SearchResult>()
 
-        if ("verb".contains(query)
-            or "verbs".contains(query)
-            or "irregular verbs".contains(query)
-            or "irregular verb".contains(query)
-        ) {
+        if (queries.any { query ->
+                "verb".contains(query) or "verbs".contains(query)or "irregular verbs".contains(query) or "irregular verb".contains(query)
+            }) {
             resultsVerbs.add(SearchResult(
                 imageCode = "openmoji_1f93e_200d_2640_fe0f",
                 path = "",
@@ -117,7 +117,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
         }
 
         verbs.forEach { verb ->
-            if (verb.base.verb.lowercase().contains(query)) {
+            if (queries.any { query -> verb.base.verb.lowercase().contains(query) }) {
                 resultsVerbs.add(SearchResult(
                     imageCode = verb.emojiCode,
                     path = "Irregular verbs / Base form",
@@ -126,7 +126,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                 ))
             }
 
-            if (verb.simplePast.verb.lowercase().contains(query)) {
+            if (queries.any { query -> verb.simplePast.verb.lowercase().contains(query) }) {
                 resultsVerbs.add(SearchResult(
                     imageCode = verb.emojiCode,
                     path = "Irregular verbs / Simple past form",
@@ -135,7 +135,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                 ))
             }
 
-            if (verb.pastParticiple.verb.lowercase().contains(query)) {
+            if (queries.any { query -> verb.pastParticiple.verb.lowercase().contains(query) }) {
                 resultsVerbs.add(SearchResult(
                     imageCode = verb.emojiCode,
                     path = "Irregular verbs / Past participle form",
@@ -144,7 +144,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                 ))
             }
 
-            if (verb.ing.verb.lowercase().contains(query)) {
+            if (queries.any { query -> verb.ing.verb.lowercase().contains(query) }) {
                 resultsVerbs.add(SearchResult(
                     imageCode = verb.emojiCode,
                     path = "Irregular verbs / Ing form",
@@ -158,15 +158,16 @@ class SearchHelper(private val hazelContent: HazelContent) {
     }
 
     private suspend fun queryRegularVerbs(
-        query: String,
+        queries: List<String>,
         verbs: List<Verb>,
     ): List<SearchResult> {
         val resultsVerbs = mutableListOf<SearchResult>()
 
-        if ("verb".contains(query)
-            or "verbs".contains(query)
-            or "regular verbs".contains(query)
-            or "regular verb".contains(query)
+        if (queries.any { query ->
+                "verb".contains(query) or
+                "verbs".contains(query) or
+                "regular verbs".contains(query) or
+                "regular verb".contains(query) }
         ) {
             resultsVerbs.add(SearchResult(
                 imageCode = "openmoji_1f939_200d_2642_fe0f",
@@ -177,7 +178,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
         }
 
         verbs.forEach { verb ->
-            if (verb.base.verb.lowercase().contains(query)) {
+            if (queries.any { query -> verb.base.verb.lowercase().contains(query) }) {
                 resultsVerbs.add(SearchResult(
                     imageCode = verb.emojiCode,
                     path = "Regular verbs / Base form",
@@ -186,7 +187,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                 ))
             }
 
-            if (verb.simplePast.verb.lowercase().contains(query)) {
+            if (queries.any { query -> verb.simplePast.verb.lowercase().contains(query) }) {
                 resultsVerbs.add(SearchResult(
                     imageCode = verb.emojiCode,
                     path = "Regular verbs / Simple past form",
@@ -195,7 +196,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                 ))
             }
 
-            if (verb.pastParticiple.verb.lowercase().contains(query)) {
+            if (queries.any { query -> verb.pastParticiple.verb.lowercase().contains(query) }) {
                 resultsVerbs.add(SearchResult(
                     imageCode = verb.emojiCode,
                     path = "Regular verbs / Past participle form",
@@ -204,7 +205,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
                 ))
             }
 
-            if (verb.ing.verb.lowercase().contains(query)) {
+            if (queries.any { query -> verb.ing.verb.lowercase().contains(query) }) {
                 resultsVerbs.add(SearchResult(
                     imageCode = verb.emojiCode,
                     path = "Regular verbs / Ing form",
@@ -217,10 +218,10 @@ class SearchHelper(private val hazelContent: HazelContent) {
         return resultsVerbs.toList()
     }
 
-    private suspend fun queryInCountries(query: String, countries: List<Country>): List<SearchResult> {
+    private suspend fun queryInCountries(queries: List<String>, countries: List<Country>): List<SearchResult> {
         val resultsCountries = mutableListOf<SearchResult>()
 
-        if ("country".contains(query) or "countries".contains(query)) {
+        if (queries.any { query -> "country".contains(query) or "countries".contains(query) }) {
             resultsCountries.add(SearchResult(
                 imageCode = "openmoji_1f5fa",
                 path = "",
@@ -230,7 +231,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
         }
 
         countries.forEach { country ->
-            if (country.name.lowercase().contains(query)) {
+            if (queries.any { query -> country.name.lowercase().contains(query) }) {
                 resultsCountries.add(SearchResult(
                     imageCode = country.emojiCode,
                     path = "Countries",
@@ -243,10 +244,10 @@ class SearchHelper(private val hazelContent: HazelContent) {
         return resultsCountries.toList()
     }
 
-    private suspend fun queryInColors(query: String, colorHazels: List<ColorHazel>): List<SearchResult> {
+    private suspend fun queryInColors(queries: List<String>, colorHazels: List<ColorHazel>): List<SearchResult> {
         val resultsColors = mutableListOf<SearchResult>()
 
-        if ("color".contains(query) or "colors".contains(query)) {
+        if (queries.any { query -> "color".contains(query) or "colors".contains(query)}) {
             resultsColors.add(SearchResult(
                 imageCode = "openmoji_2b21_fe0f_200d_1f308",
                 path = "",
@@ -256,7 +257,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
         }
 
         colorHazels.forEach { color ->
-            if (color.name.lowercase().contains(query)) {
+            if (queries.any { query -> color.name.lowercase().contains(query) }) {
                 resultsColors.add(SearchResult(
                     color = Color.parse(color.code),
                     path = "Colors",

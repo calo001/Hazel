@@ -1,12 +1,14 @@
 package com.github.calo001.hazel.ui.main
 
 import android.annotation.SuppressLint
+import android.graphics.Bitmap
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.ExperimentalComposeUiApi
@@ -19,16 +21,16 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.config.DarkMode
-import com.github.calo001.hazel.huawei.SearchKitHelper
-import com.github.calo001.hazel.huawei.SpeechStatus
-import com.github.calo001.hazel.huawei.TextToSpeechStatus
+import com.github.calo001.hazel.huawei.*
 import com.github.calo001.hazel.model.hazeldb.Phrase
 import com.github.calo001.hazel.routes.Routes
-import com.github.calo001.hazel.huawei.WeatherStatus
 import com.github.calo001.hazel.model.hazeldb.Country
 import com.github.calo001.hazel.model.hazeldb.Season
 import com.github.calo001.hazel.ui.animals.AnimalContentView
 import com.github.calo001.hazel.ui.animals.AnimalsView
+import com.github.calo001.hazel.ui.camera.CameraFeature
+import com.github.calo001.hazel.ui.camera.CameraToolView
+import com.github.calo001.hazel.ui.camera.ResultCameraView
 import com.github.calo001.hazel.ui.colors.SimpleExamplesView
 import com.github.calo001.hazel.ui.colors.ColorsView
 import com.github.calo001.hazel.ui.colors.OneColorView
@@ -49,13 +51,14 @@ import com.github.calo001.hazel.ui.weather.WeatherContentView
 import com.github.calo001.hazel.ui.weather.WeatherView
 import com.github.calo001.hazel.util.PainterIdentifier
 import com.github.calo001.hazel.util.TimeText
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.huawei.hms.panorama.PanoramaInterface
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.concurrent.schedule
 
+@OptIn(ExperimentalPermissionsApi::class)
 @SuppressLint("MissingPermission")
 
 @ExperimentalFoundationApi
@@ -85,6 +88,8 @@ fun Router(
     panoramaInterface: PanoramaInterface.PanoramaLocalInterface,
     onPanoramaClick: (Season) -> Unit,
     textToSpeechStatus: TextToSpeechStatus,
+    onAnalysisCapture: (Bitmap, CameraFeature) -> Unit,
+    onCopy: (String) -> Unit,
 ) {
     NavHost(
         navController = navController,
@@ -507,7 +512,7 @@ fun Router(
                 onSettingsClick = { navController.navigate(Routes.Settings.name) },
                 searchStatus = searchResult,
                 onSearchQuery = { query ->
-                    viewModel.searchQuery(query)
+                    viewModel.searchQuery(listOf(query))
                 },
                 onNavigate = { route ->
                     navController.navigate(route)
@@ -780,6 +785,63 @@ fun Router(
                     painterIdentifier = painterIdentifier,
                 )
             }
+        }
+
+        composable(route = Routes.Camera.name) {
+            val textRecognition by viewModel.textRecognitionStatus.collectAsState()
+            val barcodeStatus by viewModel.barcodeStatus.collectAsState()
+            CameraToolView(
+                onBackClick = { navController.navigateUp() },
+                textRecognition = textRecognition,
+                barcodeStatus = barcodeStatus,
+                onAnalysisCaptureError = { cameraFeature ->
+                    when (cameraFeature) {
+                        CameraFeature.QRReader -> viewModel.updateBarcodeStatus(BarcodeDetectorStatus.Error)
+                        CameraFeature.TextRecognizer -> viewModel.updateTextRecognitionStatus(TextRecognitionStatus.Error)
+                    }
+                },
+                onAnalysisStart = { cameraFeature ->
+                    when (cameraFeature) {
+                        CameraFeature.QRReader -> viewModel.updateBarcodeStatus(BarcodeDetectorStatus.Processing)
+                        CameraFeature.TextRecognizer -> viewModel.updateTextRecognitionStatus(TextRecognitionStatus.Processing)
+                    }
+                },
+                onAnalysisCapture = { bitmap, cameraFeature ->
+                    onAnalysisCapture(bitmap, cameraFeature)
+                },
+            )
+        }
+
+        composable(
+            route = "${Routes.Camera.name}/results/{type_result}",
+            arguments = listOf(
+                navArgument("type_result") { type = NavType.StringType }
+            )
+        ) { navBackStackEntry ->
+            Text("hello")
+            val typeResult = navBackStackEntry.arguments?.getString("type_result")
+            val textRecognition by viewModel.textRecognitionStatus.collectAsState()
+            val barcodeStatus by viewModel.barcodeStatus.collectAsState()
+            val searchStatus by viewModel.searchStatus.collectAsState()
+
+            val result = when(typeResult) {
+                "text" -> (textRecognition as TextRecognitionStatus.Result).value
+                "qr" -> (barcodeStatus as BarcodeDetectorStatus.Result).value
+                else -> ""
+            }
+
+            LaunchedEffect(key1 = result) {
+                viewModel.searchQuery(result.split(" ", ".", "\n", "_"))
+            }
+            ResultCameraView(
+                result = result,
+                onBackClick = { navController.navigateUp() },
+                onCopy = { onCopy(result) },
+                painterIdentifier = painterIdentifier,
+                onNavigate = { route ->
+                    navController.navigate(route) },
+                searchStatus = searchStatus,
+            )
         }
     }
 }
