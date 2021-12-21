@@ -5,10 +5,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.Collections
-import androidx.compose.material.icons.filled.FormatListBulleted
-import androidx.compose.material.icons.filled.Launch
+import androidx.compose.material.icons.filled.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -18,6 +15,7 @@ fun HazelToolbarVerb(
     onNavBack: () -> Unit,
     onOpenLink: () -> Unit,
     onSeeExamples: () -> Unit,
+    onShareClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Row(
@@ -39,6 +37,14 @@ fun HazelToolbarVerb(
                 icon = Icons.Filled.Launch,
                 onClick = onOpenLink,
                 modifier = Modifier
+                    .padding(vertical = 8.dp)
+            )
+
+            HazelToolbarButton(
+                icon = Icons.Filled.Share,
+                onClick = onShareClick,
+                modifier = Modifier
+                    .padding(start = 8.dp)
                     .padding(vertical = 8.dp)
             )
 

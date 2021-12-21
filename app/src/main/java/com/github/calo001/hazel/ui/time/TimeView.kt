@@ -53,6 +53,7 @@ fun TimeView(
     hasNext: Boolean,
     hasPrevious: Boolean,
     textToSpeechStatus: TextToSpeechStatus,
+    onShareClick: () -> Unit,
 ) {
     var selectedForm by remember {
         mutableStateOf<ClockForm>(ClockForm.Analog)
@@ -76,6 +77,8 @@ fun TimeView(
             onBackClick = onBackClick,
             title = "Time",
             subtitle = "Basic vocabulary",
+            showShare= true,
+            onShareClick = onShareClick,
             modifier = Modifier
                 .fillMaxWidth()
                 .constrainAs(toolbar) {
@@ -199,7 +202,8 @@ fun TimeViewPreview() {
             hasPrevious = true,
             textToSpeechStatus = TextToSpeechStatus.NoPlaying,
             timeInNumbersPMAM = "03:30\nPM",
-            timeInWords = "Twelve o'clock"
+            timeInWords = "Twelve o'clock",
+            onShareClick = {},
         )
     }
 }

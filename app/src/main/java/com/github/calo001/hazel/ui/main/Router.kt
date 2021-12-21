@@ -90,6 +90,7 @@ fun Router(
     textToSpeechStatus: TextToSpeechStatus,
     onAnalysisCapture: (Bitmap, CameraFeature) -> Unit,
     onCopy: (String) -> Unit,
+    showQRDialog: (String) -> Unit,
 ) {
     NavHost(
         navController = navController,
@@ -139,6 +140,9 @@ fun Router(
                                 else -> Routes.VerbsRegular.name }
                             }/example/${form}/${currentVerb.id}"
                         )
+                    },
+                    onShareClick = {
+                        showQRDialog("${Routes.Verbs.name}/${type}/${currentVerb.id}/${form}")
                     },
                     onListen = { onListenClick(it) },
                     onNavBack = { navController.navigateUp() },
@@ -307,6 +311,9 @@ fun Router(
                         "${Routes.Gallery.name}/${currentCountry.name}"
                         )
                     },
+                    onShareClick = {
+                        showQRDialog("${Routes.Countries.name}/${currentCountry.id}")
+                    },
                     hasNext = indexCurrent < countries.lastIndex,
                     hasPrevious = indexCurrent != 0,
                     painterIdentifier = painterIdentifier,
@@ -364,6 +371,9 @@ fun Router(
                     onGallery = { navController.navigate(
                         "${Routes.Gallery.name}/${currentAnimal.name}"
                     ) },
+                    onShareClick = {
+                         showQRDialog("${Routes.Animals.name}/${currentAnimal.id}")
+                    },
                     hasNext = indexCurrent < animals.lastIndex,
                     hasPrevious = indexCurrent != 0,
                     painterIdentifier = painterIdentifier,
@@ -490,6 +500,9 @@ fun Router(
                             "${Routes.Gallery.name}/${color.name}"
                         )
                     },
+                    onShareClick = {
+                        showQRDialog("${Routes.Colors.name}/${currentColor.id}")
+                    },
                     hasNext = hasNext,
                     hasPrevious = hasPrevious,
                     onNextClick = {
@@ -608,7 +621,10 @@ fun Router(
                         },
                         onNavigate = {
                             navController.navigateUp()
-                        }
+                        },
+                        onShareClick = {
+                            showQRDialog("${Routes.UsefulExpressionsPhrase.name}/${categoryIdArg}/${phraseIdArg}")
+                        },
                     )
                 }
             }
@@ -686,7 +702,8 @@ fun Router(
                     hasNext = hasNext,
                     textToSpeechStatus = textToSpeechStatus,
                     timeInNumbersPMAM = timeInNumbersPMAM,
-                    timeInWords = timeInWords.getOrElse(currentTimeInWordIndex) { "" }
+                    timeInWords = timeInWords.getOrElse(currentTimeInWordIndex) { "" },
+                    onShareClick = { showQRDialog(Routes.Time.name) },
                 )
             }
         }
@@ -726,6 +743,9 @@ fun Router(
                     },
                     onPreviousClick = {
                         seasonIdArg = seasons.getOrElse(currentIndex - 1) { currentSeason }.id
+                    },
+                    onShareClick = {
+                        showQRDialog("${Routes.Seasons.name}/${currentSeason.id}")
                     },
                     panorama = panoramaInterface,
                     onPanoramaClick = { onPanoramaClick(currentSeason) },
@@ -780,6 +800,9 @@ fun Router(
                     },
                     onPreviousClick = {
                         weatherIdArg = weathers.getOrElse(currentIndex - 1) { currentWeather }.id
+                    },
+                    onShareClick = {
+                        showQRDialog("${Routes.Weather.name}/${currentWeather.id}")
                     },
                     textToSpeechStatus = textToSpeechStatus,
                     painterIdentifier = painterIdentifier,

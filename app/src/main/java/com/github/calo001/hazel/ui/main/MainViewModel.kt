@@ -1,5 +1,6 @@
 package com.github.calo001.hazel.ui.main
 
+import android.graphics.Bitmap
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.github.calo001.hazel.huawei.*
@@ -31,6 +32,13 @@ class MainViewModel : ViewModel() {
     private val _speechStatus = MutableStateFlow<SpeechStatus>(SpeechStatus.NoSpeech)
     val speechStatus = _speechStatus.asStateFlow()
 
+    private val _dialogShareQRStatus = MutableStateFlow<DialogShareQRStatus>(DialogShareQRStatus.Normal)
+    val dialogShareQRStatus = _dialogShareQRStatus.asStateFlow()
+
+    fun updateDialogShareQRStatus(status: DialogShareQRStatus) {
+        _dialogShareQRStatus.tryEmit(status)
+    }
+
     fun updateWeatherStatus(status: WeatherStatus) {
         _weatherStatus.tryEmit(status)
     }
@@ -46,6 +54,9 @@ class MainViewModel : ViewModel() {
             SearchHelper(it)
         }
     }
+
+    private val _bitmapQR = MutableStateFlow<Bitmap?>(null)
+    val bitmapQR = _bitmapQR.asStateFlow()
 
     private val networkHelper = NetworkHelper()
     private val galleryRepository = GalleryRepository(networkHelper)
@@ -213,6 +224,10 @@ class MainViewModel : ViewModel() {
     fun updateBarcodeStatus(status: BarcodeDetectorStatus) {
         _barcodeStatus.tryEmit(status)
     }
+
+    fun updateQrCode(bitmap: Bitmap) {
+        _bitmapQR.tryEmit(bitmap)
+    }
 }
 
 sealed interface HazelContentStatus {
@@ -231,4 +246,10 @@ sealed interface SearchStatus {
     object Loading: SearchStatus
     class Success(val result: List<SearchResult>): SearchStatus
     object Error: SearchStatus
+}
+
+sealed interface DialogShareQRStatus {
+    object Normal: DialogShareQRStatus
+    class RawRoute(val route: String): DialogShareQRStatus
+    data class AppLinkingLink(val link: String, val route: String): DialogShareQRStatus
 }

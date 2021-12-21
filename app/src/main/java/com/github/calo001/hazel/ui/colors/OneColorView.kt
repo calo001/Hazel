@@ -30,6 +30,7 @@ fun OneColorView(
     onPreviousClick: () -> Unit,
     onSeeExamples: (ColorHazel) -> Unit,
     onGallery: (ColorHazel) -> Unit,
+    onShareClick: () -> Unit,
     onListen: (String) -> Unit,
     hasNext: Boolean,
     hasPrevious: Boolean,
@@ -43,6 +44,7 @@ fun OneColorView(
             onOpenLink = onOpenLink,
             onSeeExamples = { onSeeExamples(colorHazel) },
             onGallery = { onGallery(colorHazel) },
+            onShareClick = onShareClick,
             modifier = Modifier
                 .padding(horizontal = 16.dp)
                 .constrainAs(toolbar) {
@@ -134,6 +136,7 @@ fun OneColorPreview() {
         onSeeExamples = {},
         onGallery = {},
         onListen = {},
+        onShareClick = {},
         hasNext = false,
         hasPrevious = false,
         textToSpeechStatus = TextToSpeechStatus.NoPlaying,

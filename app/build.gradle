@@ -142,6 +142,9 @@ dependencies {
     // icu4j converts number to text
     implementation 'com.ibm.icu:icu4j:70.1'
 
+    // Qrcode generator
+    implementation 'com.google.zxing:core:3.4.1'
+
     def camerax_stable_version = '1.0.2'
     def camerax_alpha_version = '1.0.0-alpha32'
     implementation "androidx.camera:camera-camera2:$camerax_stable_version"

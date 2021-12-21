@@ -24,6 +24,7 @@ fun WeatherContentView(
     onPreviousClick: () -> Unit,
     onListen: () -> Unit,
     onNavBack: () -> Unit,
+    onShareClick: () -> Unit,
     hasNext: Boolean,
     hasPrevious: Boolean,
     textToSpeechStatus: TextToSpeechStatus,
@@ -35,6 +36,7 @@ fun WeatherContentView(
         val (toolbar, content, controls) = createRefs()
         HazelToolbarWeather(
             onNavBack = onNavBack,
+            onShareClick = onShareClick,
             modifier = Modifier
                 .padding(horizontal = 16.dp)
                 .fillMaxWidth()

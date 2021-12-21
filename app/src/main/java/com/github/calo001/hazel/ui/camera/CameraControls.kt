@@ -16,6 +16,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
+import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.github.calo001.hazel.R
 import com.github.calo001.hazel.huawei.BarcodeDetectorStatus
@@ -57,6 +58,7 @@ fun CameraControls(
                         LottieAnimation(
                             composition = composition,
                             contentScale = ContentScale.FillHeight,
+                            iterations = LottieConstants.IterateForever,
                             modifier = Modifier
                                 .height(48.dp)
                                 .width(56.dp)
@@ -114,6 +116,7 @@ fun CameraControls(
                         LottieAnimation(
                             composition = composition,
                             contentScale = ContentScale.FillHeight,
+                            iterations = LottieConstants.IterateForever,
                             modifier = Modifier
                                 .height(48.dp)
                                 .width(56.dp)

@@ -26,6 +26,7 @@ fun CountryContentView(
     onNavBack: () -> Unit,
     onOpenMap: () -> Unit,
     onGallery: () -> Unit,
+    onShareClick: () -> Unit,
     hasNext: Boolean,
     hasPrevious: Boolean,
     painterIdentifier: PainterIdentifier,
@@ -40,6 +41,7 @@ fun CountryContentView(
             onNavBack = onNavBack,
             onOpenMap = onOpenMap,
             onGallery = onGallery,
+            onShareClick = onShareClick,
             modifier = Modifier
                 .padding(horizontal = 16.dp)
                 .fillMaxWidth()

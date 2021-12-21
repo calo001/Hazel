@@ -36,6 +36,7 @@ fun PhraseView(
     onNextClick: () -> Unit,
     onListenClick: () -> Unit,
     onNavigate: () -> Unit,
+    onShareClick: () -> Unit,
     hideNext: Boolean,
     hidePrevious: Boolean,
     textToSpeechStatus: TextToSpeechStatus,
@@ -132,6 +133,7 @@ fun PhraseView(
                         }
                     }
                 },
+                onShareClick = onShareClick,
                 modifier = Modifier
                     .padding(16.dp)
                     .constrainAs(toolbar) {
@@ -257,6 +259,7 @@ fun PhraseToolbar(
     modifier: Modifier = Modifier,
     onNavigate: () -> Unit,
     onHelp: () -> Unit,
+    onShareClick: () -> Unit,
 ) {
     Row(
         horizontalArrangement = Arrangement.SpaceBetween,
@@ -266,10 +269,18 @@ fun PhraseToolbar(
             icon = Icons.Filled.ArrowBack,
             onClick = onNavigate
         )
-        HazelToolbarButton(
-            icon = Icons.Filled.Help,
-            onClick = onHelp
-        )
+        Row {
+            HazelToolbarButton(
+                icon = Icons.Filled.Share,
+                onClick = onShareClick,
+                modifier = Modifier
+            )
+            Spacer(modifier = Modifier.size(8.dp))
+            HazelToolbarButton(
+                icon = Icons.Filled.Help,
+                onClick = onHelp
+            )
+        }
     }
 }
 
@@ -289,6 +300,7 @@ fun PhraseViewPreview() {
         hideNext = false,
         hidePrevious = false,
         onNavigate = {},
+        onShareClick = {},
         textToSpeechStatus = TextToSpeechStatus.NoPlaying,
     )
 }

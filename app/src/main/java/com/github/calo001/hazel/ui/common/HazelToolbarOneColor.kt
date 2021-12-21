@@ -5,10 +5,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.Collections
-import androidx.compose.material.icons.filled.FormatListBulleted
-import androidx.compose.material.icons.filled.Launch
+import androidx.compose.material.icons.filled.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -20,6 +17,7 @@ fun HazelToolbarOneColor(
     onOpenLink: () -> Unit,
     onSeeExamples: () -> Unit,
     onGallery: () -> Unit,
+    onShareClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Row(
@@ -41,6 +39,7 @@ fun HazelToolbarOneColor(
                 icon = Icons.Filled.Launch,
                 onClick = onOpenLink,
                 modifier = Modifier
+                    .padding(start = 8.dp)
                     .padding(vertical = 8.dp)
             )
 
@@ -48,13 +47,24 @@ fun HazelToolbarOneColor(
                 icon = Icons.Filled.FormatListBulleted,
                 label = "e.g.",
                 onClick = onSeeExamples,
-                modifier = Modifier.padding(8.dp)
+                modifier = Modifier
+                    .padding(start = 8.dp)
+                    .padding(vertical = 8.dp)
+            )
+
+            HazelToolbarButton(
+                icon = Icons.Filled.Share,
+                onClick = onShareClick,
+                modifier = Modifier
+                    .padding(start = 8.dp)
+                    .padding(vertical = 8.dp)
             )
 
             HazelToolbarButton(
                 icon = Icons.Filled.Collections,
                 onClick = onGallery,
                 modifier = Modifier
+                    .padding(start = 8.dp)
                     .padding(vertical = 8.dp)
             )
         }
@@ -69,6 +79,7 @@ fun HazelToolbarOneColorPreview() {
         onOpenLink = {},
         onSeeExamples = {},
         onGallery = {},
+        onShareClick = {},
         modifier = Modifier
     )
 }

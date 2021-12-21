@@ -2,10 +2,7 @@ package com.github.calo001.hazel.ui.common
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.Collections
-import androidx.compose.material.icons.filled.FormatListBulleted
-import androidx.compose.material.icons.filled.Launch
+import androidx.compose.material.icons.filled.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -16,6 +13,7 @@ fun HazelToolbarAnimal(
     onNavBack: () -> Unit,
     onOpenLink: () -> Unit,
     onGallery: () -> Unit,
+    onShareClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Row(
@@ -40,6 +38,14 @@ fun HazelToolbarAnimal(
             Spacer(modifier = Modifier.size(8.dp))
 
             HazelToolbarButton(
+                icon = Icons.Filled.Share,
+                onClick = onShareClick,
+                modifier = Modifier.padding(8.dp)
+            )
+
+            Spacer(modifier = Modifier.size(8.dp))
+
+            HazelToolbarButton(
                 icon = Icons.Filled.Collections,
                 onClick = onGallery,
                 modifier = Modifier
@@ -55,6 +61,7 @@ fun HazelToolbarAnimalPreview() {
     HazelToolbarAnimal(
         onGallery = {},
         onNavBack = {},
-        onOpenLink = {}
+        onOpenLink = {},
+        onShareClick = {},
     )
 }

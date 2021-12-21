@@ -5,21 +5,23 @@ import android.net.Uri
 import com.github.calo001.hazel.util.shareUrl
 import com.huawei.agconnect.applinking.AppLinking
 
-fun Context.getAppLinking(title: String, route: String, appLinkingHelper: AppLinkingHelper) {
-    val linkToShare = "http://hazel.com/$route"
+fun Context.getAppLinking(
+    title: String,
+    route: String,
+    appLinkingHelper: AppLinkingHelper,
+    onSuccess: (String) -> Unit,
+    onError: () -> Unit,
+) {
     appLinkingHelper.buildShortAppLinking(
         title = title,
         description = title,
         imageUrl = "https://raw.githubusercontent.com/calo001/Hazel/master/resources/summary.webp",
-        url = linkToShare,
+        url = route,
         onSuccessListener = { url ->
-            shareUrl(
-                title = title,
-                url = url
-            )
+            onSuccess(url)
         },
         onErrorListener = {
-            shareUrl(linkToShare, "Share")
+            onError()
         }
     )
 }

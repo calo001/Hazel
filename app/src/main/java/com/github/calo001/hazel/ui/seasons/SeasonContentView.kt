@@ -32,6 +32,7 @@ fun SeasonContentView(
     onNavBack: () -> Unit,
     onOpenLink: () -> Unit,
     onGallery: () -> Unit,
+    onShareClick: () -> Unit,
     onPanoramaClick: () -> Unit,
     hasNext: Boolean,
     hasPrevious: Boolean,
@@ -46,6 +47,7 @@ fun SeasonContentView(
             onNavBack = onNavBack,
             onOpenLink = onOpenLink,
             onGallery = onGallery,
+            onShareClick = onShareClick,
             modifier = Modifier
                 .padding(horizontal = 16.dp)
                 .fillMaxWidth()

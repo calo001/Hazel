@@ -30,6 +30,7 @@ fun VerbContentView(
     onNext: () -> Unit,
     onPrevious: () -> Unit,
     onNavBack: () -> Unit,
+    onShareClick: () -> Unit,
     onOpenLink: (String) -> Unit,
     onSeeExamples: (String) -> Unit,
     hasNext: Boolean,
@@ -65,6 +66,7 @@ fun VerbContentView(
             onSeeExamples = {
                 onSeeExamples(selectedInfo.name)
             },
+            onShareClick = onShareClick,
             modifier = Modifier
                 .padding(horizontal = 16.dp)
                 .fillMaxWidth()

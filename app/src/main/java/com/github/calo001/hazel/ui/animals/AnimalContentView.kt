@@ -24,6 +24,7 @@ fun AnimalContentView(
     onNavBack: () -> Unit,
     onOpenLink: () -> Unit,
     onGallery: () -> Unit,
+    onShareClick: () -> Unit,
     hasNext: Boolean,
     hasPrevious: Boolean,
     painterIdentifier: PainterIdentifier,
@@ -37,6 +38,7 @@ fun AnimalContentView(
             onNavBack = onNavBack,
             onOpenLink = onOpenLink,
             onGallery = onGallery,
+            onShareClick = onShareClick,
             modifier = Modifier
                 .padding(horizontal = 16.dp)
                 .fillMaxWidth()
