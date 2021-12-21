@@ -13,8 +13,7 @@ class TimeText(private val hour: Int, private val minute: Int) {
     fun getTimeAMPM(breakLine: Boolean = false): String {
         val amPm = if(hour >= 12) "PM" else "AM"
         val hourText = if (hour == 0) "12" else if (hour > 12) "${hour - 12}" else "$hour"
-        val minuteText = "$minute"
-        return "$hourText:$minuteText${if (breakLine) "\n" else " "}$amPm"
+        return "$hourText:${if (minute < 10) "0$minute" else minute}${if (breakLine) "\n" else " "}$amPm"
     }
 
     fun getTimePhases(): List<String> {
