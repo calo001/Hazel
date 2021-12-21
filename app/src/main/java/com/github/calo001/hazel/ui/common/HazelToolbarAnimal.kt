@@ -40,7 +40,9 @@ fun HazelToolbarAnimal(
             HazelToolbarButton(
                 icon = Icons.Filled.Share,
                 onClick = onShareClick,
-                modifier = Modifier.padding(8.dp)
+                modifier = Modifier
+                    .padding(vertical = 8.dp)
+                    .padding(horizontal = 8.dp)
             )
 
             Spacer(modifier = Modifier.size(8.dp))

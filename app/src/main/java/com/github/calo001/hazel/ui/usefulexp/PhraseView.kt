@@ -275,7 +275,7 @@ fun PhraseToolbar(
                 onClick = onShareClick,
                 modifier = Modifier
             )
-            Spacer(modifier = Modifier.size(8.dp))
+            Spacer(modifier = Modifier.size(16.dp))
             HazelToolbarButton(
                 icon = Icons.Filled.Help,
                 onClick = onHelp

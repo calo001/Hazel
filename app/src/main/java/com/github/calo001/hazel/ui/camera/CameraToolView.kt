@@ -135,7 +135,7 @@ fun RationaleMessage(
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Image(
-                painter = painterResource(id = R.drawable.openmoji_e103),
+                painter = painterResource(id = R.drawable.openmoji_1f4f8),
                 contentDescription = null,
                 modifier = Modifier.size(180.dp)
             )
@@ -224,62 +224,6 @@ private fun RequestCameraPermissionView(
         }
     }
 }
-
-@Composable
-fun CameraPreview(
-    modifier: Modifier = Modifier,
-    scaleType: PreviewView.ScaleType = PreviewView.ScaleType.FILL_CENTER,
-    cameraSelector: CameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
-) {
-    val coroutineScope = rememberCoroutineScope()
-    val lifecycleOwner = LocalLifecycleOwner.current
-    AndroidView(
-        modifier = modifier,
-        factory = { context ->
-            val previewView = PreviewView(context).apply {
-                this.scaleType = scaleType
-                layoutParams = ViewGroup.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.MATCH_PARENT
-                )
-            }
-
-            // CameraX Preview UseCase
-            val previewUseCase = Preview.Builder()
-                .build()
-                .also {
-                    it.setSurfaceProvider(previewView.surfaceProvider)
-                }
-
-            coroutineScope.launch {
-                val cameraProvider = context.getCameraProvider()
-                val imageCapture = ImageCapture.Builder().build()
-                try {
-                    // Must unbind the use-cases before rebinding them.
-                    cameraProvider.unbindAll()
-                    cameraProvider.bindToLifecycle(
-                        lifecycleOwner, cameraSelector, previewUseCase, imageCapture
-                    )
-                } catch (ex: Exception) {
-                    Logger.e("CameraPreview", "Use case binding failed", ex)
-                }
-            }
-
-            previewView
-        }
-    )
-}
-
-//suspend fun Context.getCameraProvider(): ProcessCameraProvider = suspendCoroutine { continuation ->
-//    ProcessCameraProvider.getInstance(this).also { future ->
-//        future.addListener({
-//            continuation.resume(future.get())
-//        }, executor)
-//    }
-//}
-
-val Context.executor: Executor
-    get() = ContextCompat.getMainExecutor(this)
 
 @ExperimentalPermissionsApi
 @ExperimentalComposeUiApi

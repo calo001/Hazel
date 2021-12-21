@@ -8,6 +8,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -44,7 +45,7 @@ fun HazelToolbarVerb(
                 icon = Icons.Filled.Share,
                 onClick = onShareClick,
                 modifier = Modifier
-                    .padding(start = 8.dp)
+                    .padding(horizontal = 8.dp)
                     .padding(vertical = 8.dp)
             )
 
@@ -52,8 +53,19 @@ fun HazelToolbarVerb(
                 icon = Icons.Filled.FormatListBulleted,
                 label = "e.g.",
                 onClick = onSeeExamples,
-                modifier = Modifier.padding(8.dp)
+                modifier = Modifier.padding(vertical = 8.dp)
             )
         }
     }
+}
+
+@Preview
+@Composable
+fun HazelToolbarVerbPreview() {
+    HazelToolbarVerb(
+        onShareClick = {},
+        onNavBack = {},
+        onOpenLink = {},
+        onSeeExamples = {},
+    )
 }
