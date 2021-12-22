@@ -28,4 +28,6 @@ data class Country(
     val latitude: String, // /ˈbrɪtɪʃ/
     @SerialName("longitude")
     val longitude: String, // /ˈbrɪtɪʃ/
+    @SerialName("zoom")
+    val zoom: Int, // /ˈbrɪtɪʃ/
 )

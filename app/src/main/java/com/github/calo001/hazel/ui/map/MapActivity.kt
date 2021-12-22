@@ -25,12 +25,14 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         const val COUNTRY_NAME = "country_name"
         const val COUNTRY_LATITUDE = "country_latitude"
         const val COUNTRY_LONGITUDE = "country_longitude"
+        const val COUNTRY_ZOOM = "country_zoom"
 
         fun launch(context: Context, country: Country) {
             val intent = Intent(context, MapActivity::class.java).apply {
                 putExtra(COUNTRY_NAME, country.name)
                 putExtra(COUNTRY_LATITUDE, country.latitude)
                 putExtra(COUNTRY_LONGITUDE, country.longitude)
+                putExtra(COUNTRY_ZOOM, country.zoom)
             }
             context.startActivity(intent)
         }
@@ -80,16 +82,11 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
         val countryLatitude = intent.getStringExtra(COUNTRY_LATITUDE)?.toDoubleOrNull() ?: 0.0
         val countryLongitude = intent.getStringExtra(COUNTRY_LONGITUDE)?.toDoubleOrNull() ?: 0.0
+        val countryZoom = intent.getIntExtra(COUNTRY_ZOOM, 0)
 
         hMap?.setOnMapLoadedCallback {
             val currentCountry = LatLng(countryLatitude, countryLongitude)
-            hMap?.animateCamera(CameraUpdateFactory.newLatLngZoom(currentCountry, 0f))
-
-//            val currentCountry = LatLngBounds(
-//                LatLng(countryLatitude, countryLongitude), LatLng(countryLatitude, countryLongitude)
-//            )
-//
-//            hMap?.animateCamera(CameraUpdateFactory.newLatLngBounds(currentCountry, 12))
+            hMap?.animateCamera(CameraUpdateFactory.newLatLngZoom(currentCountry, countryZoom.toFloat()))
         }
     }
 }
