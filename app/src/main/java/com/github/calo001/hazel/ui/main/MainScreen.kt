@@ -424,6 +424,26 @@ fun LazyListScope.headerSection(
     onClickTime: () -> Unit
 ) {
     item {
+        val scope = rememberCoroutineScope()
+        var time by remember { mutableStateOf("  00:00  ") }
+        var timeDay by remember { mutableStateOf("day") }
+        SideEffect {
+            fun updateTime() {
+                val localDateTime = LocalDateTime.now()
+                val timeText = TimeText(localDateTime.hour, localDateTime.minute)
+                time = " ${timeText.getTimeAMPM()} "
+                timeDay = timeText.getGreeting()
+            }
+            scope.launch {
+                updateTime()
+                Timer().schedule(
+                    delay = 1000,
+                    period = 1000
+                ) {
+                    updateTime()
+                }
+            }
+        }
         Row(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically,
@@ -433,44 +453,29 @@ fun LazyListScope.headerSection(
                 verticalArrangement = Arrangement.Center,
             ) {
                 Text(
-                    text = "Good morning",
+                    text = "Good",
                     style = MaterialTheme.typography.h6.copy(
                         fontFamily = Lato
                     ),
                     modifier = Modifier
                 )
                 Text(
-                    text = "Your name",
+                    text = "$timeDay!",
                     style = MaterialTheme.typography.h4,
                     modifier = Modifier
                 )
             }
-            Clock(onClickTime)
+            Clock(onClickTime, time)
         }
     }
 }
 
 @ExperimentalMaterialApi
 @Composable
-private fun Clock(onClickTime: () -> Unit) {
-    val scope = rememberCoroutineScope()
-    var time by remember { mutableStateOf("  00:00  ") }
-    SideEffect {
-        fun updateTime() {
-            val localDateTime = LocalDateTime.now()
-            val timeText = TimeText(localDateTime.hour, localDateTime.minute)
-            time = " ${timeText.getTimeAMPM()} "
-        }
-        scope.launch {
-            updateTime()
-            Timer().schedule(
-                delay = 1000,
-                period = 1000
-            ) {
-                updateTime()
-            }
-        }
-    }
+private fun Clock(
+    onClickTime: () -> Unit,
+    time: String
+) {
     ItemMenu(
         title = time,
         titleStyle = MaterialTheme.typography.h5,

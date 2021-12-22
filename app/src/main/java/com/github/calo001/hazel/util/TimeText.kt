@@ -10,6 +10,16 @@ class TimeText(private val hour: Int, private val minute: Int) {
                                 else if (hour > 12) (hour - 12 + 1).toWords()
                                 else (hour + 1).toWords()
 
+    fun getGreeting(): String {
+        return when (hour) {
+            in (0 .. 4) -> "evening"
+            in (5 .. 11) -> "morning"
+            in (12 .. 16) -> "afternoon"
+            in (17 .. 24) -> "evening"
+            else -> "day"
+        }
+    }
+
     fun getTimeAMPM(breakLine: Boolean = false): String {
         val amPm = if(hour >= 12) "PM" else "AM"
         val hourText = if (hour == 0) "12" else if (hour > 12) "${hour - 12}" else "$hour"
