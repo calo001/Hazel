@@ -38,10 +38,14 @@ import com.github.calo001.hazel.huawei.WeatherType
 import com.github.calo001.hazel.model.hazeldb.HazelContent
 import com.github.calo001.hazel.model.view.ItemMenuData
 import com.github.calo001.hazel.routes.Routes
+import com.github.calo001.hazel.ui.ads.SimpleBanner
+import com.github.calo001.hazel.ui.ads.SimpleRoundedBanner
 import com.github.calo001.hazel.ui.common.*
+import com.github.calo001.hazel.ui.dialog.AdMainSection
 import com.github.calo001.hazel.ui.theme.Lato
 import com.github.calo001.hazel.util.PainterIdentifier
 import com.github.calo001.hazel.util.TimeText
+import com.google.accompanist.insets.navigationBarsWithImePadding
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
 import java.util.*
@@ -304,7 +308,11 @@ fun MainMenu(
         )
 
         item {
-            Spacer(modifier = Modifier.size(60.dp))
+            AdMainSection(itemsPerColumns)
+        }
+
+        item {
+            Spacer(modifier = Modifier.size(80.dp))
         }
     }
 }
@@ -550,6 +558,13 @@ fun SearchResults(
                             painterIdentifier = painterIdentifier
                         )
                     }
+                }
+                item {
+                    SimpleRoundedBanner(
+                        modifier = Modifier
+                            .padding(16.dp)
+                            .fillMaxWidth()
+                    )
                 }
             }
         }

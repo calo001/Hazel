@@ -24,7 +24,7 @@ class SearchHelper(private val hazelContent: HazelContent) {
         results.addAll(verbsIrregularResults)
         results.addAll(verbsRegularResults)
         results.addAll(usefulPhrasesResult)
-        return results.toList()
+        return results.distinctBy { it.route } .toList()
     }
 
     private fun queryUsefulPhrases(

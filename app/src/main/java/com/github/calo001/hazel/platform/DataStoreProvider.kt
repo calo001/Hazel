@@ -1,6 +1,7 @@
 package com.github.calo001.hazel.platform
 
 import android.content.Context
+import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import com.github.calo001.hazel.config.ColorVariant
@@ -11,9 +12,16 @@ import kotlinx.coroutines.flow.map
 private val COLOR_SCHEME = stringPreferencesKey("color_scheme")
 private val DICTIONARY = stringPreferencesKey("dictionary")
 private val DARK_MODE = stringPreferencesKey("dark_mode")
+private val COLORS_UNLOCKED = booleanPreferencesKey("colors_unlocked")
 
 class DataStoreProvider(val context: Context) {
     private val settingsDataStore = context.dataStore
+
+    suspend fun setColorsUnlocked(isUnlock: Boolean) {
+        settingsDataStore.edit { settings ->
+            settings[COLORS_UNLOCKED] = isUnlock
+        }
+    }
 
     suspend fun setDarkMode(darkMode: DarkMode) {
         settingsDataStore.edit { settings ->
@@ -72,5 +80,9 @@ class DataStoreProvider(val context: Context) {
             Dictionaries.WordReference.name -> Dictionaries.WordReference
             else -> Dictionaries.WordReference
         }
+    }
+
+    val colorsUnlocked = settingsDataStore.data.map { preferences ->
+        preferences[COLORS_UNLOCKED] ?: false
     }
 }

@@ -19,6 +19,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
+import com.github.calo001.hazel.ui.ads.SimpleBanner
+import com.github.calo001.hazel.ui.ads.SimpleRoundedBanner
 import com.github.calo001.hazel.ui.common.HazelToolbarSimple
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.common.safeSpacer
@@ -130,6 +132,14 @@ private fun PhotosContent(
     ) {
         val itemRows = galleryStatus.chunked(itemsPerColumns)
         safeSpacer(20.dp)
+
+        item {
+            SimpleRoundedBanner(
+                modifier = Modifier.fillMaxWidth()
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+        }
+
         items(itemRows.size) { indexRow ->
             val width = LocalConfiguration.current.screenWidthDp.div(itemsPerColumns).dp - 24.dp
             Row(
@@ -160,6 +170,13 @@ private fun PhotosContent(
                     Spacer(modifier = Modifier.size(16.dp))
                 }
             }
+        }
+
+        item {
+            SimpleRoundedBanner(
+                modifier = Modifier.fillMaxWidth()
+            )
+            Spacer(modifier = Modifier.height(16.dp))
         }
     }
 }

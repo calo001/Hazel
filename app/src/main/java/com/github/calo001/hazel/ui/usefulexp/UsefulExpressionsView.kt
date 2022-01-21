@@ -4,6 +4,7 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.MaterialTheme
@@ -19,6 +20,7 @@ import androidx.compose.ui.unit.dp
 import com.github.calo001.hazel.huawei.SpeechStatus
 import com.github.calo001.hazel.model.hazeldb.Phrase
 import com.github.calo001.hazel.model.hazeldb.UsefulPhrase
+import com.github.calo001.hazel.ui.ads.SimpleRoundedBanner
 import com.github.calo001.hazel.ui.common.HazelToolbarContent
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.common.safeSpacer
@@ -72,6 +74,17 @@ fun UsefulExpressionsView(
                         .fillMaxWidth()
                         .animateItemPlacement()
                 )
+            }
+            if (querySearch.isNotEmpty()) {
+                item {
+                    SimpleRoundedBanner(
+                        modifier = Modifier
+                            .padding(horizontal = 16.dp)
+                            .padding(bottom = 16.dp)
+                            .height(80.dp)
+                            .fillMaxWidth()
+                    )
+                }
             }
         }
 

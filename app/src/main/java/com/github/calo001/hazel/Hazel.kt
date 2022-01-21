@@ -3,6 +3,7 @@ package com.github.calo001.hazel
 import android.app.Application
 import com.huawei.hiai.vision.common.ConnectionCallback
 import com.huawei.hiai.vision.common.VisionBase
+import com.huawei.hms.ads.HwAds
 import com.huawei.hms.mlsdk.common.MLApplication
 import com.huawei.hms.network.NetworkKit
 import com.huawei.hms.searchkit.SearchKitInstance
@@ -24,6 +25,11 @@ class Hazel: Application() {
         initNetworkKit()
         initSearchKit()
         initVision()
+        initAds()
+    }
+
+    private fun initAds() {
+        HwAds.init(this)
     }
 
     private fun initVision() {
@@ -49,7 +55,7 @@ class Hazel: Application() {
     /**
      * Asynchronously load the NetworkKit object.
      */
-    fun initNetworkKit() {
+    private fun initNetworkKit() {
         // Initialization is performed once only. When the initialization method is called again, initialization is not performed but the onResult method is called again.
         NetworkKit.init(
             this, object : NetworkKit.Callback() {

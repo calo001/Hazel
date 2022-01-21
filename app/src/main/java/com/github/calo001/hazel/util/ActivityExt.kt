@@ -21,6 +21,13 @@ fun View.setAllMatchParent() {
     )
 }
 
+fun View.setWidthMatchParent() {
+    layoutParams = ViewGroup.LayoutParams(
+        ViewGroup.LayoutParams.MATCH_PARENT,
+        ViewGroup.LayoutParams.WRAP_CONTENT,
+    )
+}
+
 fun Int.toWords(language: String = "en", country: String = "US"): String {
     val formatter = RuleBasedNumberFormat(
         Locale(language, country),

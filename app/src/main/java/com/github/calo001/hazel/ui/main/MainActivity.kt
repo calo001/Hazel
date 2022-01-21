@@ -12,28 +12,16 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Close
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.asImageBitmap
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.text.AnnotatedString
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.window.Dialog
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.compose.rememberNavController
-import com.airbnb.lottie.compose.LottieAnimation
-import com.airbnb.lottie.compose.LottieCompositionSpec
-import com.airbnb.lottie.compose.LottieConstants
-import com.airbnb.lottie.compose.rememberLottieComposition
 import com.github.calo001.hazel.R
 import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.config.DarkMode
@@ -41,18 +29,23 @@ import com.github.calo001.hazel.huawei.*
 import com.github.calo001.hazel.model.hazeldb.Country
 import com.github.calo001.hazel.model.hazeldb.Season
 import com.github.calo001.hazel.platform.DataStoreProvider
-import com.github.calo001.hazel.platform.QRGenerator
 import com.github.calo001.hazel.routes.Routes
+import com.github.calo001.hazel.ui.ads.AdInitializer
+import com.github.calo001.hazel.ui.ads.RewardAdHelper
 import com.github.calo001.hazel.ui.camera.CameraFeature
-import com.github.calo001.hazel.ui.common.HazelToolbarButton
 import com.github.calo001.hazel.ui.common.SystemBars
+import com.github.calo001.hazel.ui.dialog.ShareDialog
 import com.github.calo001.hazel.ui.map.MapActivity
 import com.github.calo001.hazel.ui.panorama.PanoramaActivity
 import com.github.calo001.hazel.ui.settings.Dictionaries
 import com.github.calo001.hazel.ui.theme.HazelTheme
 import com.github.calo001.hazel.util.*
+import com.google.accompanist.insets.ProvideWindowInsets
+import com.google.accompanist.insets.imePadding
+import com.google.accompanist.insets.navigationBarsWithImePadding
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.huawei.agconnect.applinking.AGConnectAppLinking
+import com.huawei.hms.ads.HwAds
 import com.huawei.hms.analytics.HiAnalytics
 import com.huawei.hms.analytics.HiAnalyticsInstance
 import com.huawei.hms.analytics.HiAnalyticsTools
@@ -168,6 +161,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         initAnalytics()
         panorama.init()
+        AdInitializer(this).init()
 
         val dataStore = DataStoreProvider(applicationContext)
         val hazelDb = resources.openRawResource(R.raw.hazel)
@@ -203,6 +197,8 @@ class MainActivity : ComponentActivity() {
             val colorScheme by dataStore.colorScheme.collectAsState(initial = ColorVariant.Green)
             val dictionary by dataStore.dictionary.collectAsState(initial = Dictionaries.Oxford)
             val darkMode by dataStore.darkMode.collectAsState(initial = DarkMode.FollowSystem)
+            val isColorsUnlocked by dataStore.colorsUnlocked.collectAsState(initial = false)
+
             val useDarkIcons = when(darkMode) {
                 DarkMode.Dark -> false
                 DarkMode.Light -> true
@@ -252,100 +248,18 @@ class MainActivity : ComponentActivity() {
                     }
                 }
                 Surface(
-                    color = MaterialTheme.colors.background,
+                    color = MaterialTheme.colors.background
                 ) {
-                    if (dialogShareQRStatus is DialogShareQRStatus.RawRoute ||
-                        dialogShareQRStatus is DialogShareQRStatus.AppLinkingLink) {
-                        Dialog(
-                            onDismissRequest = { viewModel.updateDialogShareQRStatus(DialogShareQRStatus.Normal) },
-                        ) {
-                            when (dialogShareQRStatus) {
-                                DialogShareQRStatus.Normal -> {}
-                                is DialogShareQRStatus.RawRoute -> {
-                                    val route = (dialogShareQRStatus as? DialogShareQRStatus.RawRoute)?.route ?: ""
-                                    val urlRoute = "https://calo001.github.io/hazel-web/$route"
-                                    DisposableEffect(key1 = route) {
-                                        getAppLinking(
-                                            title = "Share",
-                                            route = urlRoute,
-                                            appLinkingHelper = AppLinkingHelper(),
-                                            onSuccess = { linkHuawei ->
-                                                viewModel.updateDialogShareQRStatus(
-                                                    DialogShareQRStatus.AppLinkingLink(linkHuawei, urlRoute)
-                                                )
-                                            },
-                                            onError = {},
-                                        )
-                                        onDispose { }
-                                    }
-                                    Surface(
-                                        shape = MaterialTheme.shapes.medium,
-                                        color = MaterialTheme.colors.primaryVariant.copy(alpha = 0.9f),
-                                        elevation = 16.dp,
-                                        modifier = Modifier
-                                            .width(300.dp)
-                                            .height(400.dp)
-                                    ) {
-                                        Box(
-                                            contentAlignment = Alignment.Center,
-                                            modifier = Modifier.padding(16.dp)
-                                        ) {
-                                            val composition by rememberLottieComposition(
-                                                LottieCompositionSpec.RawRes(R.raw.loading_drop)
-                                            )
-                                            LottieAnimation(
-                                                composition = composition,
-                                                contentScale = ContentScale.FillHeight,
-                                                iterations = LottieConstants.IterateForever,
-                                                modifier = Modifier
-                                                    .size(80.dp)
-                                            )
-                                        }
-                                    }
-                                }
-                                is DialogShareQRStatus.AppLinkingLink -> {
-                                    val link = (dialogShareQRStatus as? DialogShareQRStatus.AppLinkingLink)?.link ?: ""
-                                    val routeLink = (dialogShareQRStatus as? DialogShareQRStatus.AppLinkingLink)?.route ?: ""
-                                    if (link.isNotEmpty()) {
-                                        val qrGenerator = QRGenerator(routeLink).getBarcodeBitmapSync()
-                                        Surface(
-                                            shape = MaterialTheme.shapes.medium,
-                                            color = MaterialTheme.colors.primaryVariant.copy(alpha = 0.9f),
-                                            elevation = 16.dp,
-                                        ) {
-                                            Column(
-                                                modifier = Modifier.padding(16.dp)
-                                            ) {
-                                                Image(
-                                                    bitmap = qrGenerator.asImageBitmap(),
-                                                    contentDescription = null,
-                                                    modifier = Modifier.size(300.dp)
-                                                )
-                                                Row(
-                                                    horizontalArrangement = Arrangement.SpaceBetween,
-                                                    modifier = Modifier
-                                                        .padding(vertical = 8.dp)
-                                                        .fillMaxWidth()
-                                                ) {
-                                                    Button(onClick = { shareUrl(link, "Share Hazel") }) {
-                                                        Text(
-                                                            text = "Share link",
-                                                            style = MaterialTheme.typography.h6
-                                                        )
-                                                    }
-                                                    HazelToolbarButton(
-                                                        icon = Icons.Filled.Close,
-                                                        onClick = { viewModel.updateDialogShareQRStatus(DialogShareQRStatus.Normal) },
-                                                        modifier = Modifier
-                                                    )
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
+                    ShareDialog(
+                        dialogShareQRStatus = dialogShareQRStatus,
+                        onDismissRequest = { viewModel.updateDialogShareQRStatus(DialogShareQRStatus.Normal) },
+                        updateDialogShareQRStatus = { statusDialog ->
+                            viewModel.updateDialogShareQRStatus(statusDialog)
+                        },
+                        onShareUrl = { link ->
+                            shareUrl(link, "Share Hazel")
                         }
-                    }
+                    )
 
                     Router(
                         viewModel = viewModel,
@@ -361,9 +275,18 @@ class MainActivity : ComponentActivity() {
                         colorScheme = colorScheme,
                         dictionary = dictionary,
                         darkMode = darkMode,
+                        isColorsUnlocked = isColorsUnlocked,
                         defaultRoute = Routes.Main.name,
                         speechStatus = speechStatus,
                         textToSpeechStatus = textToSpeechStatus,
+                        onClickUnlockColors = {
+                            RewardAdHelper(this, this)
+                                .loadRewardAd {
+                                    scope.launch {
+                                        dataStore.setColorsUnlocked(true)
+                                    }
+                                }
+                        },
                         onSpeechClick = {
                             if (speechStatus is SpeechStatus.NoSpeech ||
                                 speechStatus is SpeechStatus.Result) {
@@ -402,52 +325,52 @@ class MainActivity : ComponentActivity() {
                         onPanoramaClick = { season ->
                             startPanoramaActivity(season)
                         }, onAnalysisCapture = { bitmap, cameraFeature ->
-                        when (cameraFeature) {
-                            CameraFeature.QRReader -> {
-                                val barcodeHelper = BarcodeDetectorHelper(
-                                    context = this,
-                                    onResultBD = { status ->
-                                        viewModel.updateBarcodeStatus(status)
-                                        if (status is BarcodeDetectorStatus.Result) {
-                                            lifecycleScope.launch(Dispatchers.Main) {
-                                                if (status.value.contains("https://calo001.github.io/hazel-web/")) {
-                                                    val route = status.value
-                                                        .split("https://calo001.github.io/hazel-web/")
-                                                        .getOrElse(1) { "" }
-                                                    if (route.isNotEmpty()) {
-                                                        kotlin.runCatching {
-                                                            navController.navigate(
-                                                                route
-                                                            )
+                            when (cameraFeature) {
+                                CameraFeature.QRReader -> {
+                                    val barcodeHelper = BarcodeDetectorHelper(
+                                        context = this,
+                                        onResultBD = { status ->
+                                            viewModel.updateBarcodeStatus(status)
+                                            if (status is BarcodeDetectorStatus.Result) {
+                                                lifecycleScope.launch(Dispatchers.Main) {
+                                                    if (status.value.contains("https://calo001.github.io/hazel-web/")) {
+                                                        val route = status.value
+                                                            .split("https://calo001.github.io/hazel-web/")
+                                                            .getOrElse(1) { "" }
+                                                        if (route.isNotEmpty()) {
+                                                            kotlin.runCatching {
+                                                                navController.navigate(
+                                                                    route
+                                                                )
+                                                            }
                                                         }
+                                                    } else {
+                                                        navController.navigate("${Routes.Camera.name}/results/qr")
                                                     }
-                                                } else {
-                                                    navController.navigate("${Routes.Camera.name}/results/qr")
+                                                    Logger.i("navigate qr")
                                                 }
-                                                Logger.i("navigate qr")
+                                            }
+                                        },
+                                    )
+                                    barcodeHelper.analyze(bitmap)
+                                }
+                                CameraFeature.TextRecognizer -> {
+                                    val textRecognitionHelper = TextRecognitionHelper(
+                                        context = this,
+                                        onResultTR = { status ->
+                                            viewModel.updateTextRecognitionStatus(status)
+                                            if (status is TextRecognitionStatus.Result) {
+                                                lifecycleScope.launch(Dispatchers.Main) {
+                                                    navController.navigate("${Routes.Camera.name}/results/text")
+                                                    Logger.i("navigate qr")
+                                                }
                                             }
                                         }
-                                    },
-                                )
-                                barcodeHelper.analyze(bitmap)
+                                    )
+                                    textRecognitionHelper.analyze(bitmap)
+                                }
                             }
-                            CameraFeature.TextRecognizer -> {
-                                val textRecognitionHelper = TextRecognitionHelper(
-                                    context = this,
-                                    onResultTR = { status ->
-                                        viewModel.updateTextRecognitionStatus(status)
-                                        if (status is TextRecognitionStatus.Result) {
-                                            lifecycleScope.launch(Dispatchers.Main) {
-                                                navController.navigate("${Routes.Camera.name}/results/text")
-                                                Logger.i("navigate qr")
-                                            }
-                                        }
-                                    }
-                                )
-                                textRecognitionHelper.analyze(bitmap)
-                            }
-                        }
-                    })
+                        })
                 }
             }
         }
@@ -459,7 +382,8 @@ class MainActivity : ComponentActivity() {
 
     private fun initAnalytics() {
         HiAnalyticsTools.enableLog()
-        val instance: HiAnalyticsInstance = HiAnalytics.getInstance(this)
+        val instance: HiAnalyticsInstance = HiAnalytics.getInstance(this.applicationContext)
+        instance.setAnalyticsEnabled(true)
     }
 
     private fun startPanoramaActivity(season: Season) {

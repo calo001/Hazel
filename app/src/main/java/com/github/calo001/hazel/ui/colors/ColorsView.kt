@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.huawei.SpeechStatus
 import com.github.calo001.hazel.model.hazeldb.ColorHazel
+import com.github.calo001.hazel.ui.ads.SimpleRoundedBanner
 import com.github.calo001.hazel.ui.common.CircleColor
 import com.github.calo001.hazel.ui.common.HazelToolbarContent
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
@@ -76,6 +77,15 @@ fun ColorsView(
                         .padding(horizontal = 16.dp)
                         .fillMaxWidth()
                         .animateItemPlacement()
+                )
+            }
+            item {
+                SimpleRoundedBanner(
+                    modifier = Modifier
+                        .padding(horizontal = 16.dp)
+                        .padding(bottom = 16.dp)
+                        .height(80.dp)
+                        .fillMaxWidth()
                 )
             }
         }

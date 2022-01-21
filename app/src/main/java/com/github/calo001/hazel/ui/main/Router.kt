@@ -91,6 +91,8 @@ fun Router(
     onAnalysisCapture: (Bitmap, CameraFeature) -> Unit,
     onCopy: (String) -> Unit,
     showQRDialog: (String) -> Unit,
+    isColorsUnlocked: Boolean,
+    onClickUnlockColors: () -> Unit,
 ) {
     NavHost(
         navController = navController,
@@ -639,6 +641,8 @@ fun Router(
                 colorVariant = colorScheme,
                 dictionaries = dictionary,
                 darkMode = darkMode,
+                isColorsUnlocked = isColorsUnlocked,
+                onClickUnlockColors = onClickUnlockColors,
             )
         }
 

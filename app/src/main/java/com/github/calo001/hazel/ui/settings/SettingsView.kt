@@ -1,12 +1,14 @@
 package com.github.calo001.hazel.ui.settings
 
+import androidx.compose.animation.animateColor
+import androidx.compose.animation.core.*
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
@@ -15,6 +17,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.config.DarkMode
+import com.github.calo001.hazel.ui.ads.SimpleBanner
 import com.github.calo001.hazel.ui.common.HazelToolbarSimple
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.theme.*
@@ -33,6 +36,8 @@ fun SettingsView(
     onSelectColorScheme: (ColorVariant) -> Unit,
     onSelectDictionary: (Dictionaries) -> Unit,
     onSelectDarkMode: (DarkMode) -> Unit,
+    isColorsUnlocked: Boolean,
+    onClickUnlockColors: () -> Unit,
 ) {
 
     Box(modifier = Modifier
@@ -51,7 +56,9 @@ fun SettingsView(
                 colorVariant,
                 onSelectColorScheme,
                 darkMode,
-                onSelectDarkMode
+                onSelectDarkMode,
+                isColorsUnlocked,
+                onClickUnlockColors,
             )
         }
         SurfaceToolbar {
@@ -73,7 +80,9 @@ private fun SettingsContent(
     colorVariant: ColorVariant,
     onSelectColorScheme: (ColorVariant) -> Unit,
     darkMode: DarkMode,
-    onSelectDarkMode: (DarkMode) -> Unit
+    onSelectDarkMode: (DarkMode) -> Unit,
+    isColorsUnlocked: Boolean,
+    onClickUnlockColors: () -> Unit,
 ) {
     ListItem(
         icon = {
@@ -107,6 +116,17 @@ private fun SettingsContent(
         onSelectDictionary = onSelectDictionary,
     )
 
+    var showIndicatorToUnlock by remember { mutableStateOf(false) }
+    val infiniteTransition = rememberInfiniteTransition()
+    val colorInfiniteTransition by infiniteTransition.animateColor(
+        initialValue = MaterialTheme.colors.primary.copy(alpha = 0.3f),
+        targetValue = MaterialTheme.colors.primary.copy(alpha = 0.7f),
+        animationSpec = infiniteRepeatable(
+            animation = tween(1000, easing = LinearOutSlowInEasing),
+            repeatMode = RepeatMode.Reverse
+        )
+    )
+
     ListItem(
         icon = {
             Icon(
@@ -115,14 +135,33 @@ private fun SettingsContent(
                 modifier = Modifier
             )
         },
-        text = { Text(text = "Color scheme") },
+        trailing = {
+            if (!isColorsUnlocked) {
+                IconButton(
+                    onClick = onClickUnlockColors,
+                    modifier = Modifier.background(
+                        shape = CircleShape,
+                        color = if (showIndicatorToUnlock) colorInfiniteTransition else Color.Transparent,
+                    )
+                ) {
+                    Icon(
+                        imageVector = Icons.Filled.Lock,
+                        contentDescription = null,
+                        modifier = Modifier
+                    )
+                }
+            }
+        },
+        text = { Text(text = "App color") },
         secondaryText = { Text(text = "Select a color scheme for the app.") },
         modifier = Modifier.fillMaxWidth()
     )
 
     ColorSchemeGroup(
         selected = colorVariant,
-        onSelectColorScheme = onSelectColorScheme
+        onSelectColorScheme = if (isColorsUnlocked) {
+            onSelectColorScheme
+        } else { _ -> showIndicatorToUnlock = true }
     )
 
     ListItem(
@@ -144,6 +183,9 @@ private fun SettingsContent(
     )
     
     About()
+    SimpleBanner(
+        modifier = Modifier.fillMaxWidth()
+    )
 }
 
 @Composable
@@ -495,12 +537,14 @@ fun SettingsViewPreview() {
     HazelTheme(colorVariant = ColorVariant.Green) {
         SettingsView(
             onBackClick = {},
+            darkMode = DarkMode.FollowSystem,
+            colorVariant = ColorVariant.Green,
+            dictionaries = Dictionaries.Oxford,
             onSelectColorScheme = {},
             onSelectDictionary = {},
             onSelectDarkMode = {},
-            colorVariant = ColorVariant.Green,
-            dictionaries = Dictionaries.Oxford,
-            darkMode = DarkMode.FollowSystem,
+            isColorsUnlocked = false,
+            onClickUnlockColors = {},
         )
     }
 }
