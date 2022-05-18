@@ -2,6 +2,7 @@ package com.github.calo001.hazel.ui.seasons
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -14,8 +15,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.github.calo001.hazel.providers.PanoramaHelper
 import com.github.calo001.hazel.ui.theme.Lato
-import com.huawei.hms.panorama.PanoramaInterface
 
 @Composable
 fun ItemSeason(
@@ -23,7 +24,7 @@ fun ItemSeason(
     text: String,
     phonetic: String,
     panoramaId: Int,
-    panorama: PanoramaInterface.PanoramaLocalInterface,
+    panorama: PanoramaHelper,
 ) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -39,7 +40,8 @@ fun ItemSeason(
         ) {
             PanoramaView(
                 drawableId = panoramaId,
-                panorama = panorama,
+                panoramaHelper = panorama,
+                modifier = Modifier.fillMaxSize()
             )
         }
 

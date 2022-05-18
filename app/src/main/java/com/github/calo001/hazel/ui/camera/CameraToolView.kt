@@ -25,13 +25,13 @@ import androidx.constraintlayout.compose.ChainStyle
 import androidx.constraintlayout.compose.ConstraintLayout
 import com.github.calo001.hazel.R
 import com.github.calo001.hazel.config.ColorVariant
-import com.github.calo001.hazel.huawei.BarcodeDetectorStatus
-import com.github.calo001.hazel.huawei.TextRecognitionStatus
+import com.github.calo001.hazel.model.status.BarcodeDetectorStatus
+import com.github.calo001.hazel.model.status.TextRecognitionStatus
 import com.github.calo001.hazel.ui.common.HazelToolbarSimple
 import com.github.calo001.hazel.ui.theme.HazelTheme
 import com.github.calo001.hazel.ui.theme.Lato
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
-import com.google.accompanist.permissions.PermissionRequired
+import com.google.accompanist.permissions.isGranted
 import com.google.accompanist.permissions.rememberPermissionState
 import com.orhanobut.logger.Logger
 
@@ -51,30 +51,8 @@ fun CameraToolView(
     var doNotShowRationale by rememberSaveable { mutableStateOf(false) }
 
     val cameraPermissionState = rememberPermissionState(android.Manifest.permission.CAMERA)
-    PermissionRequired(
-        permissionState = cameraPermissionState,
-        permissionNotGrantedContent = {
-            if (doNotShowRationale) {
-                RationaleMessage(
-                    onBackClick = onBackClick,
-                    modifier = Modifier.fillMaxSize()
-                )
-            } else {
-                RequestCameraPermissionView(
-                    onBackClick = onBackClick,
-                    onRequestPermission = { cameraPermissionState.launchPermissionRequest() },
-                    onDoNotShowRationale = { doNotShowRationale = true  },
-                    modifier = Modifier.fillMaxSize()
-                )
-            }
-        },
-        permissionNotAvailableContent = {
-            RationaleMessage(
-                onBackClick = onBackClick,
-                modifier = Modifier.fillMaxSize()
-            )
-        }
-    ) {
+
+    if (cameraPermissionState.status.isGranted) {
         val context = LocalContext.current
         var featureSelected by rememberSaveable {
             mutableStateOf(CameraFeature.TextRecognizer.name)
@@ -102,6 +80,20 @@ fun CameraToolView(
             featureSelected = CameraFeature.fromString(featureSelected),
             onFeatureSelectedChange = { featureSelected = it.name }
         )
+    } else {
+        if (doNotShowRationale) {
+            RationaleMessage(
+                onBackClick = onBackClick,
+                modifier = Modifier.fillMaxSize()
+            )
+        } else {
+            RequestCameraPermissionView(
+                onBackClick = onBackClick,
+                onRequestPermission = { cameraPermissionState.launchPermissionRequest() },
+                onDoNotShowRationale = { doNotShowRationale = true  },
+                modifier = Modifier.fillMaxSize()
+            )
+        }
     }
 }
 

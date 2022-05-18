@@ -18,7 +18,9 @@ import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.main.SearchResults
 import com.github.calo001.hazel.ui.main.SearchStatus
 import com.github.calo001.hazel.util.PainterIdentifier
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
 
+@OptIn(ExperimentalPermissionsApi::class)
 @ExperimentalFoundationApi
 @Composable
 fun ResultCameraView(

@@ -2,8 +2,12 @@ package com.github.calo001.hazel.ui.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.github.calo001.hazel.huawei.*
+import com.github.calo001.hazel.providers.*
 import com.github.calo001.hazel.model.hazeldb.*
+import com.github.calo001.hazel.model.status.BarcodeDetectorStatus
+import com.github.calo001.hazel.model.status.SpeechStatus
+import com.github.calo001.hazel.model.status.TextRecognitionStatus
+import com.github.calo001.hazel.model.status.WeatherStatus
 import com.github.calo001.hazel.model.unsplash.UnsplashResult
 import com.github.calo001.hazel.network.UnsplashServiceProvider
 import com.github.calo001.hazel.repository.GalleryRepository
@@ -70,6 +74,10 @@ class MainViewModel : ViewModel() {
 
     private val _searchStatus = MutableStateFlow<SearchStatus>(SearchStatus.Loading)
     val searchStatus: StateFlow<SearchStatus> get() = _searchStatus
+
+    fun initWithSearchKitHelper(searchKitHelper: SearchKitHelper) {
+        galleryRepository.initSearchHelper(searchKitHelper)
+    }
 
     fun loadHazelContent(hazelDb: InputStream) {
         viewModelScope.launch(Dispatchers.IO) {
@@ -150,21 +158,6 @@ class MainViewModel : ViewModel() {
         }
     }
 
-    fun getToken(onTokenSuccess: (String) -> Unit) = viewModelScope.launch(Dispatchers.IO) {
-        when(val result = galleryRepository.getToken()) {
-            is NetworkResult.Error -> _galleryStatus.tryEmit(GalleryStatus.Error(result.error))
-            NetworkResult.Loading -> _galleryStatus.tryEmit(GalleryStatus.Loading)
-            is NetworkResult.Success<*> -> {
-                val token = (result.content as? String)
-                if (!token.isNullOrEmpty()) {
-                    onTokenSuccess(token)
-                } else {
-                    _galleryStatus.tryEmit(GalleryStatus.Error(NullPointerException()))
-                }
-            }
-        }
-    }
-
     fun getAnimals(): List<Animal> {
         return (hazelContent.value as? HazelContentStatus.Success)
             ?.content
@@ -229,6 +222,16 @@ class MainViewModel : ViewModel() {
 
     fun clearAppLinking() {
         _deepLinkingStatus.tryEmit(DeepLinkingStatus.NoAppLinking)
+    }
+
+    fun searchImage(queryArg: String) = viewModelScope.launch(Dispatchers.IO) {
+        updateGalleryStatus(GalleryStatus.Loading)
+        val imagesList = galleryRepository.getImage(queryArg)
+        if (imagesList.isNotEmpty()) {
+            updateGalleryStatus(GalleryStatus.Success(imagesList))
+        } else {
+            updateGalleryStatus(GalleryStatus.Error(NullPointerException()))
+        }
     }
 }
 

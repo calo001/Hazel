@@ -23,7 +23,7 @@ import com.arbelkilani.clock.enumeration.analogical.DegreeType
 import com.arbelkilani.clock.enumeration.analogical.DegreesStep
 import com.github.calo001.hazel.R
 import com.github.calo001.hazel.config.ColorVariant
-import com.github.calo001.hazel.huawei.TextToSpeechStatus
+import com.github.calo001.hazel.model.status.TextToSpeechStatus
 import com.github.calo001.hazel.ui.common.CircleColor
 import com.github.calo001.hazel.ui.common.HazelToolbarSimple
 import com.github.calo001.hazel.ui.theme.HazelTheme

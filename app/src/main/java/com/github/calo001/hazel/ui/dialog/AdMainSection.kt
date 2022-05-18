@@ -1,15 +1,17 @@
 package com.github.calo001.hazel.ui.dialog
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.github.calo001.hazel.ui.ads.SimpleItemBanner
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
 
+@OptIn(ExperimentalPermissionsApi::class)
 @Composable
-fun AdMainSection(itemsPerColumns: Int) {
+fun AdMainSection() {
     Column {
         Text(
             text = "Ads",
@@ -19,14 +21,9 @@ fun AdMainSection(itemsPerColumns: Int) {
                 .padding(top = 8.dp)
         )
         Row {
-            (0 until itemsPerColumns).forEachIndexed { index, _ ->
-                SimpleItemBanner(
-                    modifier = Modifier.weight(1f)
-                )
-                if (index < itemsPerColumns - 1) {
-                    Spacer(modifier = Modifier.width(16.dp))
-                }
-            }
+//            SimpleItemBanner(
+//                modifier = Modifier.fillMaxWidth()
+//            )
         }
     }
 }

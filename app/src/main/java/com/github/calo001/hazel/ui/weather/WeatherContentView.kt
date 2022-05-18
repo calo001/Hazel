@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
-import com.github.calo001.hazel.huawei.TextToSpeechStatus
 import com.github.calo001.hazel.model.hazeldb.Weather
+import com.github.calo001.hazel.model.status.TextToSpeechStatus
 import com.github.calo001.hazel.ui.common.HazelToolbarWeather
 import com.github.calo001.hazel.ui.theme.Lato
 import com.github.calo001.hazel.ui.usefulexp.ControlsItem

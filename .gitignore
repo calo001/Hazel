@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+/app/libs
+/app/release
+/app/agconnect-services.json

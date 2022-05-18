@@ -13,11 +13,9 @@ import androidx.activity.viewModels
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.ExperimentalComposeUiApi
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.text.AnnotatedString
 import androidx.lifecycle.lifecycleScope
@@ -25,13 +23,16 @@ import androidx.navigation.compose.rememberNavController
 import com.github.calo001.hazel.R
 import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.config.DarkMode
-import com.github.calo001.hazel.huawei.*
+import com.github.calo001.hazel.providers.*
 import com.github.calo001.hazel.model.hazeldb.Country
 import com.github.calo001.hazel.model.hazeldb.Season
+import com.github.calo001.hazel.model.status.BarcodeDetectorStatus
+import com.github.calo001.hazel.model.status.SpeechStatus
+import com.github.calo001.hazel.model.status.TextRecognitionStatus
+import com.github.calo001.hazel.model.status.WeatherStatus
 import com.github.calo001.hazel.platform.DataStoreProvider
+import com.github.calo001.hazel.platform.RecognizerContract
 import com.github.calo001.hazel.routes.Routes
-import com.github.calo001.hazel.ui.ads.AdInitializer
-import com.github.calo001.hazel.ui.ads.RewardAdHelper
 import com.github.calo001.hazel.ui.camera.CameraFeature
 import com.github.calo001.hazel.ui.common.SystemBars
 import com.github.calo001.hazel.ui.dialog.ShareDialog
@@ -40,20 +41,10 @@ import com.github.calo001.hazel.ui.panorama.PanoramaActivity
 import com.github.calo001.hazel.ui.settings.Dictionaries
 import com.github.calo001.hazel.ui.theme.HazelTheme
 import com.github.calo001.hazel.util.*
-import com.google.accompanist.insets.ProvideWindowInsets
-import com.google.accompanist.insets.imePadding
-import com.google.accompanist.insets.navigationBarsWithImePadding
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
-import com.huawei.agconnect.applinking.AGConnectAppLinking
-import com.huawei.hms.ads.HwAds
-import com.huawei.hms.analytics.HiAnalytics
-import com.huawei.hms.analytics.HiAnalyticsInstance
-import com.huawei.hms.analytics.HiAnalyticsTools
-import com.huawei.hms.panorama.Panorama
 import com.orhanobut.logger.Logger
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-
 
 @ExperimentalFoundationApi
 @ExperimentalAnimationApi
@@ -61,8 +52,12 @@ import kotlinx.coroutines.launch
 @ExperimentalMaterialApi
 class MainActivity : ComponentActivity() {
     private val viewModel: MainViewModel by viewModels()
-    private val panorama by lazy { Panorama.getInstance().getLocalInstance(this) }
-    private val textToSpeechHelper by lazy { TextToSpeechHelper() }
+    private val panorama by lazy { PanoramaHelper(this) }
+    private val textToSpeechHelper by lazy { TextToSpeechHelper(this) }
+    private val asrHelper by lazy { ASRHelper(this) {
+            viewModel.updateSpeechStatus(it)
+        }
+    }
 
     override fun onDestroy() {
         panorama.deInit()
@@ -73,26 +68,10 @@ class MainActivity : ComponentActivity() {
     override fun onResume() {
         super.onResume()
         lifecycleScope.launchWhenCreated {
-            AGConnectAppLinking.getInstance().getAppLinking(this@MainActivity).addOnSuccessListener { resolvedLinkData ->
-                val host = resolvedLinkData.deepLink.host ?: ""
-                val slug = resolvedLinkData.deepLink.path?.removePrefix("/")?.removeSuffix("/") ?: ""
-                if (host.contains("calo001.github.io")) {
-                    slug.split("hazel-web").getOrNull(1)?.let { route ->
-                        Logger.i(
-                            "${resolvedLinkData.deepLink.host}\n" +
-                            "${resolvedLinkData.deepLink.path}\n" +
-                            route
-                        )
-                        runCatching {
-                            viewModel.loadAppLinkedRoute(route.removePrefix("/").removeSuffix("/"))
-                        }
-                    }
+            AGConnectALHelper(this@MainActivity)
+                .initialize { route ->
+                    viewModel.loadAppLinkedRoute(route)
                 }
-            }.addOnCompleteListener {
-                Logger.e(it?.exception?.localizedMessage ?: "complete applinking")
-            }.addOnFailureListener {
-                Logger.e(it?.localizedMessage ?: "error applinking")
-            }
         }
     }
 
@@ -108,20 +87,19 @@ class MainActivity : ComponentActivity() {
         ActivityResultContracts.RequestPermission()
     ) { result ->
         if (result) {
-            val asrHelper = ASRHelper(this) { status ->
-                viewModel.updateSpeechStatus(status)
-            }
-            asrHelper.startRecognizing(speechResult)
+            asrHelper.startRecognizing(getIntentSpeech(), speechResult, recognizerResult)
         }
     }
 
     private val speechResult = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
-        val asrHelper = ASRHelper(this) {
-            viewModel.updateSpeechStatus(it)
-        }
-        asrHelper.manageResponse(result.resultCode, result.data)
+        asrHelper.manageResponse(result.resultCode, result.data, "")
+    }
+
+    private val recognizerResult = registerForActivityResult(RecognizerContract()) {
+        val result = it?.toString() ?: ""
+        asrHelper.manageResponse(0, null, result)
     }
 
     private fun startMapActivity(country: Country) {
@@ -156,7 +134,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    @SuppressLint("SourceLockedOrientationActivity")
+    @SuppressLint("SourceLockedOrientationActivity", "MissingPermission")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initAnalytics()
@@ -169,10 +147,10 @@ class MainActivity : ComponentActivity() {
         val weatherHelper = WeatherHelper(this) { status ->
             viewModel.updateWeatherStatus(status)
         }
-        val asrHelper = ASRHelper(this) { status ->
-            viewModel.updateSpeechStatus(status)
-        }
+        val rewardHelper = RewardAdHelper(this, this)
+        val searchKitHelper = SearchKitHelper(this)
         viewModel.loadHazelContent(hazelDb)
+        viewModel.initWithSearchKitHelper(searchKitHelper)
 
         locationHelper.checkLocationSettings(
             onLocationAvailable = {
@@ -197,7 +175,7 @@ class MainActivity : ComponentActivity() {
             val colorScheme by dataStore.colorScheme.collectAsState(initial = ColorVariant.Green)
             val dictionary by dataStore.dictionary.collectAsState(initial = Dictionaries.Oxford)
             val darkMode by dataStore.darkMode.collectAsState(initial = DarkMode.FollowSystem)
-            val isColorsUnlocked by dataStore.colorsUnlocked.collectAsState(initial = false)
+            //val isColorsUnlocked by dataStore.colorsUnlocked.collectAsState(initial = false)
 
             val useDarkIcons = when(darkMode) {
                 DarkMode.Dark -> false
@@ -231,7 +209,7 @@ class MainActivity : ComponentActivity() {
                 val deepLinkingStatus by viewModel.deepLinkingStatus.collectAsState()
 
                 if(deepLinkingStatus is DeepLinkingStatus.AppLinkingRoute) {
-                    kotlin.runCatching {
+                    runCatching {
                         (deepLinkingStatus as? DeepLinkingStatus.AppLinkingRoute)?.route?.let { route ->
                             navController.navigate(route)
                             viewModel.clearAppLinking()
@@ -275,23 +253,22 @@ class MainActivity : ComponentActivity() {
                         colorScheme = colorScheme,
                         dictionary = dictionary,
                         darkMode = darkMode,
-                        isColorsUnlocked = isColorsUnlocked,
+                        isColorsUnlocked = true,
                         defaultRoute = Routes.Main.name,
                         speechStatus = speechStatus,
                         textToSpeechStatus = textToSpeechStatus,
                         onClickUnlockColors = {
-                            RewardAdHelper(this, this)
-                                .loadRewardAd {
-                                    scope.launch {
-                                        dataStore.setColorsUnlocked(true)
-                                    }
+                            rewardHelper.loadRewardAd {
+                                scope.launch {
+                                    dataStore.setColorsUnlocked(true)
                                 }
+                            }
                         },
                         onSpeechClick = {
                             if (speechStatus is SpeechStatus.NoSpeech ||
                                 speechStatus is SpeechStatus.Result) {
                                 if (checkPermission(Manifest.permission.RECORD_AUDIO)) {
-                                    asrHelper.startRecognizing(speechResult)
+                                    asrHelper.startRecognizing(getIntentSpeech(), speechResult, recognizerResult)
                                 } else {
                                     requestPermissionRecordAudio.launch(Manifest.permission.RECORD_AUDIO)
                                 }
@@ -381,9 +358,7 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun initAnalytics() {
-        HiAnalyticsTools.enableLog()
-        val instance: HiAnalyticsInstance = HiAnalytics.getInstance(this.applicationContext)
-        instance.setAnalyticsEnabled(true)
+        AnalyticsHelper(this).init()
     }
 
     private fun startPanoramaActivity(season: Season) {

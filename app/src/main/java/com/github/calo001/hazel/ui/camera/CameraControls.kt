@@ -19,8 +19,8 @@ import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.github.calo001.hazel.R
-import com.github.calo001.hazel.huawei.BarcodeDetectorStatus
-import com.github.calo001.hazel.huawei.TextRecognitionStatus
+import com.github.calo001.hazel.model.status.BarcodeDetectorStatus
+import com.github.calo001.hazel.model.status.TextRecognitionStatus
 
 @Composable
 fun CameraControls(

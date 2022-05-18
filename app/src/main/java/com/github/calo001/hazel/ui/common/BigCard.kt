@@ -33,6 +33,7 @@ fun BigCard(
         ConstraintLayout(
             modifier = Modifier
                 .padding(16.dp)
+                .padding(end = 8.dp)
                 .fillMaxSize()
         ) {
             val (text, shape) = createRefs()

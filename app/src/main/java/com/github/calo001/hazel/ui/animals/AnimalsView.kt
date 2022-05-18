@@ -18,17 +18,17 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.unit.dp
-import com.github.calo001.hazel.huawei.SpeechStatus
 import com.github.calo001.hazel.model.hazeldb.Animal
-import com.github.calo001.hazel.ui.ads.SimpleBanner
-import com.github.calo001.hazel.ui.ads.SimpleRoundedBanner
+import com.github.calo001.hazel.model.status.SpeechStatus
 import com.github.calo001.hazel.ui.common.HazelToolbarContent
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.common.TextImageRow
 import com.github.calo001.hazel.ui.common.safeSpacer
 import com.github.calo001.hazel.ui.theme.Lato
 import com.github.calo001.hazel.util.PainterIdentifier
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
 
+@OptIn(ExperimentalPermissionsApi::class)
 @ExperimentalFoundationApi
 @ExperimentalComposeUiApi
 @Composable
@@ -80,13 +80,13 @@ fun AnimalsView(
                 )
             }
             item {
-                SimpleRoundedBanner(
-                    modifier = Modifier
-                        .padding(horizontal = 16.dp)
-                        .padding(bottom = 16.dp)
-                        .height(80.dp)
-                        .fillMaxWidth()
-                )
+//                SimpleRoundedBanner(
+//                    modifier = Modifier
+//                        .padding(horizontal = 16.dp)
+//                        .padding(bottom = 16.dp)
+//                        .height(80.dp)
+//                        .fillMaxWidth()
+//                )
             }
         }
 

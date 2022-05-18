@@ -13,7 +13,7 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.github.calo001.hazel.huawei.SpeechStatus
+import com.github.calo001.hazel.model.status.SpeechStatus
 
 @ExperimentalComposeUiApi
 @Composable

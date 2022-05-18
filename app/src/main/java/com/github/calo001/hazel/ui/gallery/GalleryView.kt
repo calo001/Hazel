@@ -19,14 +19,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
-import com.github.calo001.hazel.ui.ads.SimpleBanner
-import com.github.calo001.hazel.ui.ads.SimpleRoundedBanner
 import com.github.calo001.hazel.ui.common.HazelToolbarSimple
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.common.safeSpacer
 import com.github.calo001.hazel.ui.main.GalleryStatus
 import com.github.calo001.hazel.ui.main.calculateItemsPerColumn
 import com.github.calo001.hazel.util.PainterIdentifier
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
 
 @ExperimentalComposeUiApi
 @Composable
@@ -120,6 +119,7 @@ fun GalleryView(
     }
 }
 
+@OptIn(ExperimentalPermissionsApi::class)
 @Composable
 private fun PhotosContent(
     galleryStatus: List<String>,
@@ -133,12 +133,12 @@ private fun PhotosContent(
         val itemRows = galleryStatus.chunked(itemsPerColumns)
         safeSpacer(20.dp)
 
-        item {
-            SimpleRoundedBanner(
-                modifier = Modifier.fillMaxWidth()
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-        }
+//        item {
+//            SimpleRoundedBanner(
+//                modifier = Modifier.fillMaxWidth()
+//            )
+//            Spacer(modifier = Modifier.height(16.dp))
+//        }
 
         items(itemRows.size) { indexRow ->
             val width = LocalConfiguration.current.screenWidthDp.div(itemsPerColumns).dp - 24.dp
@@ -172,11 +172,11 @@ private fun PhotosContent(
             }
         }
 
-        item {
-            SimpleRoundedBanner(
-                modifier = Modifier.fillMaxWidth()
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-        }
+//        item {
+//            SimpleRoundedBanner(
+//                modifier = Modifier.fillMaxWidth()
+//            )
+//            Spacer(modifier = Modifier.height(16.dp))
+//        }
     }
 }

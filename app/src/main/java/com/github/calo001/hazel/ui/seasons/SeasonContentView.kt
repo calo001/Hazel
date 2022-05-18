@@ -16,11 +16,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import com.github.calo001.hazel.R
-import com.github.calo001.hazel.huawei.TextToSpeechStatus
 import com.github.calo001.hazel.model.hazeldb.Season
+import com.github.calo001.hazel.model.status.TextToSpeechStatus
+import com.github.calo001.hazel.providers.PanoramaHelper
 import com.github.calo001.hazel.ui.common.HazelToolbarSeasons
 import com.github.calo001.hazel.ui.usefulexp.ControlsItem
-import com.huawei.hms.panorama.PanoramaInterface
 
 @ExperimentalMaterialApi
 @Composable
@@ -36,7 +36,7 @@ fun SeasonContentView(
     onPanoramaClick: () -> Unit,
     hasNext: Boolean,
     hasPrevious: Boolean,
-    panorama: PanoramaInterface.PanoramaLocalInterface,
+    panorama: PanoramaHelper,
     textToSpeechStatus: TextToSpeechStatus,
 ) {
     ConstraintLayout(

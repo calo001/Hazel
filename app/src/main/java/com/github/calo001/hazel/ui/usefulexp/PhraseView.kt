@@ -21,8 +21,8 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
-import com.github.calo001.hazel.huawei.TextToSpeechStatus
 import com.github.calo001.hazel.model.hazeldb.Phrase
+import com.github.calo001.hazel.model.status.TextToSpeechStatus
 import com.github.calo001.hazel.ui.common.HazelToolbarButton
 import com.github.calo001.hazel.ui.common.HazelToolbarMiniButton
 import com.github.calo001.hazel.ui.theme.Lato

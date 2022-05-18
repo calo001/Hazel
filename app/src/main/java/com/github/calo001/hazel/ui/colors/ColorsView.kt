@@ -19,16 +19,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.github.calo001.hazel.config.ColorVariant
-import com.github.calo001.hazel.huawei.SpeechStatus
 import com.github.calo001.hazel.model.hazeldb.ColorHazel
-import com.github.calo001.hazel.ui.ads.SimpleRoundedBanner
+import com.github.calo001.hazel.model.status.SpeechStatus
 import com.github.calo001.hazel.ui.common.CircleColor
 import com.github.calo001.hazel.ui.common.HazelToolbarContent
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.common.safeSpacer
 import com.github.calo001.hazel.ui.theme.HazelTheme
 import com.github.calo001.hazel.util.parse
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
 
+@OptIn(ExperimentalPermissionsApi::class)
 @ExperimentalFoundationApi
 @ExperimentalComposeUiApi
 @Composable
@@ -80,13 +81,13 @@ fun ColorsView(
                 )
             }
             item {
-                SimpleRoundedBanner(
-                    modifier = Modifier
-                        .padding(horizontal = 16.dp)
-                        .padding(bottom = 16.dp)
-                        .height(80.dp)
-                        .fillMaxWidth()
-                )
+//                SimpleRoundedBanner(
+//                    modifier = Modifier
+//                        .padding(horizontal = 16.dp)
+//                        .padding(bottom = 16.dp)
+//                        .height(80.dp)
+//                        .fillMaxWidth()
+//                )
             }
         }
 

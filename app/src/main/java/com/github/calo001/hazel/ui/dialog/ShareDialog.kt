@@ -1,8 +1,6 @@
 package com.github.calo001.hazel.ui.dialog
 
-import android.util.Log
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
@@ -12,34 +10,27 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.ui.window.Dialog
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.github.calo001.hazel.R
-import com.github.calo001.hazel.huawei.AppLinkingHelper
-import com.github.calo001.hazel.huawei.getAppLinking
+import com.github.calo001.hazel.providers.AppLinkingHelper
+import com.github.calo001.hazel.providers.getAppLinking
 import com.github.calo001.hazel.platform.QRGenerator
-import com.github.calo001.hazel.ui.ads.SimpleBanner
-import com.github.calo001.hazel.ui.ads.SimpleRoundedBanner
 import com.github.calo001.hazel.ui.common.HazelToolbarButton
 import com.github.calo001.hazel.ui.main.DialogShareQRStatus
-import com.github.calo001.hazel.util.setWidthMatchParent
-import com.github.calo001.hazel.util.shareUrl
-import com.huawei.hms.ads.AdListener
-import com.huawei.hms.ads.AdParam
-import com.huawei.hms.ads.BannerAdSize
-import com.huawei.hms.ads.banner.BannerView
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
 
+@OptIn(ExperimentalPermissionsApi::class)
 @Composable
 fun ShareDialog(
     dialogShareQRStatus: DialogShareQRStatus,
@@ -56,10 +47,9 @@ fun ShareDialog(
             when (dialogShareQRStatus) {
                 DialogShareQRStatus.Normal -> {}
                 is DialogShareQRStatus.RawRoute -> {
-                    val route =
-                        (dialogShareQRStatus as? DialogShareQRStatus.RawRoute)?.route ?: ""
+                    val route = (dialogShareQRStatus as? DialogShareQRStatus.RawRoute)?.route ?: ""
                     val urlRoute = "https://calo001.github.io/hazel-web/$route"
-                    DisposableEffect(key1 = route) {
+                    LaunchedEffect(key1 = route) {
                         getAppLinking(
                             title = "Share",
                             route = urlRoute,
@@ -67,9 +57,8 @@ fun ShareDialog(
                             onSuccess = { linkHuawei ->
                                 updateDialogShareQRStatus(DialogShareQRStatus.AppLinkingLink(linkHuawei, urlRoute))
                             },
-                            onError = {},
+                            onError = { onDismissRequest() },
                         )
-                        onDispose { }
                     }
                     Surface(
                         shape = MaterialTheme.shapes.medium,
@@ -77,7 +66,7 @@ fun ShareDialog(
                         elevation = 16.dp,
                         modifier = Modifier
                             .width(300.dp)
-                            .height(460.dp)
+                            .height(390.dp)
                     ) {
                         Box(
                             contentAlignment = Alignment.Center,
@@ -137,7 +126,7 @@ fun ShareDialog(
                                     )
                                 }
                                 Spacer(modifier = Modifier.height(8.dp))
-                                SimpleRoundedBanner()
+                                //SimpleRoundedBanner()
                             }
                         }
                     }

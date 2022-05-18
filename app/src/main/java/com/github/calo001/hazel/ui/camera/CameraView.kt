@@ -35,8 +35,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.content.ContextCompat
 import com.github.calo001.hazel.config.ColorVariant
-import com.github.calo001.hazel.huawei.BarcodeDetectorStatus
-import com.github.calo001.hazel.huawei.TextRecognitionStatus
+import com.github.calo001.hazel.model.status.BarcodeDetectorStatus
+import com.github.calo001.hazel.model.status.TextRecognitionStatus
 import com.github.calo001.hazel.ui.common.HazelToolbarCamera
 import com.github.calo001.hazel.ui.common.SimpleChip
 import com.github.calo001.hazel.ui.theme.HazelTheme

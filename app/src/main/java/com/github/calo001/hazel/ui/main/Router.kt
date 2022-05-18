@@ -13,7 +13,6 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -21,10 +20,11 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.config.DarkMode
-import com.github.calo001.hazel.huawei.*
+import com.github.calo001.hazel.providers.*
 import com.github.calo001.hazel.model.hazeldb.Country
 import com.github.calo001.hazel.model.hazeldb.Phrase
 import com.github.calo001.hazel.model.hazeldb.Season
+import com.github.calo001.hazel.model.status.*
 import com.github.calo001.hazel.routes.Routes
 import com.github.calo001.hazel.ui.animals.AnimalContentView
 import com.github.calo001.hazel.ui.animals.AnimalsView
@@ -52,7 +52,6 @@ import com.github.calo001.hazel.ui.weather.WeatherView
 import com.github.calo001.hazel.util.PainterIdentifier
 import com.github.calo001.hazel.util.TimeText
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
-import com.huawei.hms.panorama.PanoramaInterface
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
 import java.util.*
@@ -60,7 +59,6 @@ import kotlin.concurrent.schedule
 
 @OptIn(ExperimentalPermissionsApi::class)
 @SuppressLint("MissingPermission")
-
 @ExperimentalFoundationApi
 @ExperimentalAnimationApi
 @ExperimentalComposeUiApi
@@ -85,7 +83,7 @@ fun Router(
     onRequestWeather: () -> Unit,
     onSpeechClick: () -> Unit,
     speechStatus: SpeechStatus,
-    panoramaInterface: PanoramaInterface.PanoramaLocalInterface,
+    panoramaInterface: PanoramaHelper,
     onPanoramaClick: (Season) -> Unit,
     textToSpeechStatus: TextToSpeechStatus,
     onAnalysisCapture: (Bitmap, CameraFeature) -> Unit,
@@ -409,17 +407,9 @@ fun Router(
         ) { navBackStackEntry ->
             val queryArg = navBackStackEntry.arguments?.getString("query") ?: ""
             val result by viewModel.galleryStatus.collectAsState()
-            val context = LocalContext.current
             DisposableEffect(queryArg) {
                 if (queryArg.isNotEmpty()) {
-                    viewModel.updateGalleryStatus(GalleryStatus.Loading)
-                    viewModel.getToken { token ->
-                        val searchHelper = SearchKitHelper(context)
-                        val images = searchHelper.searchImage(token, queryArg)
-                        viewModel.updateGalleryStatus(GalleryStatus.Success(images.mapNotNull {
-                            it.sourceImage.imageContentUrl
-                        }))
-                    }
+                    viewModel.searchImage(queryArg)
                 }
                 onDispose {  }
             }
@@ -519,6 +509,27 @@ fun Router(
 
         composable(Routes.Main.name) {
             val searchResult by viewModel.searchStatus.collectAsState()
+            val scope = rememberCoroutineScope()
+            var time by remember { mutableStateOf("  00:00  ") }
+            var timeDay by remember { mutableStateOf("day") }
+            SideEffect {
+                fun updateTime() {
+                    val localDateTime = LocalDateTime.now()
+                    val timeText = TimeText(localDateTime.hour, localDateTime.minute)
+                    time = " ${timeText.getTimeAMPM()} "
+                    timeDay = timeText.getGreeting()
+                }
+                scope.launch {
+                    updateTime()
+                    Timer().schedule(
+                        delay = 1000,
+                        period = 1000
+                    ) {
+                        updateTime()
+                    }
+                }
+            }
+
             MainScreen(
                 darkMode = darkMode,
                 status = hazelContentStatus,
@@ -543,7 +554,9 @@ fun Router(
                 },
                 onClickTime = {
                     navController.navigate(Routes.Time.name)
-                }
+                },
+                timeDay = timeDay,
+                time = time,
             )
         }
 

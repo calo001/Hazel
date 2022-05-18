@@ -28,7 +28,7 @@ import androidx.compose.ui.platform.SoftwareKeyboardController
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.github.calo001.hazel.huawei.SpeechStatus
+import com.github.calo001.hazel.model.status.SpeechStatus
 import com.github.calo001.hazel.ui.theme.Red500
 
 @ExperimentalComposeUiApi

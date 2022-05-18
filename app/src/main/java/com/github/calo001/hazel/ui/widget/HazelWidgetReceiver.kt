@@ -315,7 +315,11 @@ class HazelWidget: GlanceAppWidget() {
 @ExperimentalAnimationApi
 @ExperimentalFoundationApi
 class ChangeSectionCallback : ActionCallback {
-    override suspend fun onRun(context: Context, glanceId: GlanceId, parameters: ActionParameters) {
+    override suspend fun onAction(
+        context: Context,
+        glanceId: GlanceId,
+        parameters: ActionParameters
+    ) {
         val preferences = context.hazelAppPreferences
         try {
             val param = parameters[ActionParameters.Key(WIDGET_ACTION_SECTION)]

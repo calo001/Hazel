@@ -32,26 +32,25 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.github.calo001.hazel.R
 import com.github.calo001.hazel.config.DarkMode
-import com.github.calo001.hazel.huawei.SpeechStatus
-import com.github.calo001.hazel.huawei.WeatherStatus
-import com.github.calo001.hazel.huawei.WeatherType
+import com.github.calo001.hazel.providers.WeatherType
 import com.github.calo001.hazel.model.hazeldb.HazelContent
+import com.github.calo001.hazel.model.status.SpeechStatus
+import com.github.calo001.hazel.model.status.WeatherStatus
 import com.github.calo001.hazel.model.view.ItemMenuData
 import com.github.calo001.hazel.routes.Routes
-import com.github.calo001.hazel.ui.ads.SimpleBanner
-import com.github.calo001.hazel.ui.ads.SimpleRoundedBanner
 import com.github.calo001.hazel.ui.common.*
 import com.github.calo001.hazel.ui.dialog.AdMainSection
 import com.github.calo001.hazel.ui.theme.Lato
 import com.github.calo001.hazel.util.PainterIdentifier
 import com.github.calo001.hazel.util.TimeText
-import com.google.accompanist.insets.navigationBarsWithImePadding
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
 import java.util.*
 import kotlin.concurrent.schedule
 
 
+@ExperimentalPermissionsApi
 @ExperimentalFoundationApi
 @ExperimentalAnimationApi
 @ExperimentalComposeUiApi
@@ -72,6 +71,8 @@ fun MainScreen(
     onSpeechClick: () -> Unit,
     clearSpeechResult: () -> Unit,
     onClickTime: () -> Unit,
+    timeDay: String,
+    time: String,
 ) {
     var querySearch by rememberSaveable { mutableStateOf("") }
 
@@ -99,6 +100,8 @@ fun MainScreen(
                     onNavigate = onNavigate,
                     onCheckWeather = onCheckWeather,
                     onClickTime = onClickTime,
+                    timeDay = timeDay,
+                    time = time,
                 )
                 ExtendedFloatingActionButton(
                     icon = {
@@ -212,6 +215,8 @@ fun MainMenu(
     temperature: WeatherStatus,
     onCheckWeather: () -> Unit,
     onClickTime: () -> Unit,
+    timeDay: String,
+    time: String,
 ) {
     val itemsPerColumns = calculateItemsPerColumn(
         LocalConfiguration.current.screenWidthDp.dp
@@ -227,6 +232,8 @@ fun MainMenu(
 
         headerSection(
             onClickTime = onClickTime,
+            timeDay = timeDay,
+            time = time,
         )
 
         bigSection(
@@ -307,9 +314,9 @@ fun MainMenu(
             }
         )
 
-        item {
-            AdMainSection(itemsPerColumns)
-        }
+//        item {
+//            AdMainSection()
+//        }
 
         item {
             Spacer(modifier = Modifier.size(80.dp))
@@ -366,6 +373,7 @@ fun getLogosId(temperature: WeatherStatus): List<Int> = when(temperature) {
     WeatherStatus.Loading -> listOf(R.drawable.openmoji_1f325)
     WeatherStatus.LocationFailure -> listOf(R.drawable.openmoji_1f325)
     WeatherStatus.LocationNotGranted -> listOf(R.drawable.openmoji_1f325)
+    WeatherStatus.NoAvailable -> listOf(R.drawable.openmoji_1f325)
     is WeatherStatus.Success -> WeatherType.getIdRes(temperature.typeWeather)
 }
 
@@ -429,29 +437,11 @@ private fun WeatherLogo(
 
 @ExperimentalMaterialApi
 fun LazyListScope.headerSection(
-    onClickTime: () -> Unit
+    onClickTime: () -> Unit,
+    timeDay: String,
+    time: String,
 ) {
     item {
-        val scope = rememberCoroutineScope()
-        var time by remember { mutableStateOf("  00:00  ") }
-        var timeDay by remember { mutableStateOf("day") }
-        SideEffect {
-            fun updateTime() {
-                val localDateTime = LocalDateTime.now()
-                val timeText = TimeText(localDateTime.hour, localDateTime.minute)
-                time = " ${timeText.getTimeAMPM()} "
-                timeDay = timeText.getGreeting()
-            }
-            scope.launch {
-                updateTime()
-                Timer().schedule(
-                    delay = 1000,
-                    period = 1000
-                ) {
-                    updateTime()
-                }
-            }
-        }
         Row(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically,
@@ -494,6 +484,7 @@ private fun Clock(
     )
 }
 
+@ExperimentalPermissionsApi
 @ExperimentalFoundationApi
 @Composable
 fun SearchResults(
@@ -560,11 +551,11 @@ fun SearchResults(
                     }
                 }
                 item {
-                    SimpleRoundedBanner(
-                        modifier = Modifier
-                            .padding(16.dp)
-                            .fillMaxWidth()
-                    )
+//                    SimpleRoundedBanner(
+//                        modifier = Modifier
+//                            .padding(16.dp)
+//                            .fillMaxWidth()
+//                    )
                 }
             }
         }

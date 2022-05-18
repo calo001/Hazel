@@ -17,13 +17,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.github.calo001.hazel.config.ColorVariant
 import com.github.calo001.hazel.config.DarkMode
-import com.github.calo001.hazel.ui.ads.SimpleBanner
 import com.github.calo001.hazel.ui.common.HazelToolbarSimple
 import com.github.calo001.hazel.ui.common.SurfaceToolbar
 import com.github.calo001.hazel.ui.theme.*
 import com.google.accompanist.flowlayout.FlowCrossAxisAlignment
 import com.google.accompanist.flowlayout.FlowMainAxisAlignment
 import com.google.accompanist.flowlayout.FlowRow
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
 
 @ExperimentalMaterialApi
 @ExperimentalComposeUiApi
@@ -72,6 +72,7 @@ fun SettingsView(
     }
 }
 
+@OptIn(ExperimentalPermissionsApi::class)
 @ExperimentalMaterialApi
 @Composable
 private fun SettingsContent(
@@ -183,9 +184,9 @@ private fun SettingsContent(
     )
     
     About()
-    SimpleBanner(
-        modifier = Modifier.fillMaxWidth()
-    )
+//    SimpleBanner(
+//        modifier = Modifier.fillMaxWidth()
+//    )
 }
 
 @Composable
