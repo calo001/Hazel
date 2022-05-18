@@ -5,7 +5,7 @@
 Learn a variety of English vocabulary by using the most beautiful and colorful visual dictionary app to learn verbs, colors, countries and nationalities, and much more.
 
 <a href="https://play.google.com/store/apps/details?id=com.github.calo001.hazel"> 
-<img src="resources/Google_Play-Badge-Logo.wine.svg">
+<img src="resources/Google-play.png">
 </a>
 
 <a href="https://appgallery.huawei.com/app/C105049969"> 
